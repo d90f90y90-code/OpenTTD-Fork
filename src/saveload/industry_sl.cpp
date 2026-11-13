@@ -198,6 +198,7 @@ static const SaveLoad _industry_desc[] = {
 	SaveLoad::Variable<VarFileType::U8>("selected_layout", SLE_OBJECT_ADDRESS(Industry, selected_layout), SaveLoadVersion::NewGRFIndustryLayout),
 	SaveLoad::Variable<VarFileType::U8>("exclusive_supplier", SLE_OBJECT_ADDRESS(Industry, exclusive_supplier), SaveLoadVersion::GSIndustryControl),
 	SaveLoad::Variable<VarFileType::U8>("exclusive_consumer", SLE_OBJECT_ADDRESS(Industry, exclusive_consumer), SaveLoadVersion::GSIndustryControl),
+	SaveLoad::Array<VarFileType::U8, MAX_COMPANIES>("investor_stakes", SLE_OBJECT_ADDRESS(Industry, investor_stakes), SaveLoadVersion::IndustryInvestments),
 
 	SaveLoad::Array<VarFileType::U32, 16>("storage", SLE_GLOBAL_ADDRESS(_old_ind_persistent_storage.storage), SaveLoadVersion::NewGRFPersistentStorage, SaveLoadVersion::PersistentStoragePool),
 	SaveLoad::Reference<SLRefType::Storage>("psa", SLE_OBJECT_ADDRESS(Industry, psa), SaveLoadVersion::PersistentStoragePool),

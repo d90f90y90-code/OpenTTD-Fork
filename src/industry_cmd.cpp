@@ -45,6 +45,7 @@
 #include "game/game.hpp"
 #include "error.h"
 #include "industry_cmd.h"
+#include "investment.h"
 #include "landscape_cmd.h"
 #include "terraform_cmd.h"
 #include "map_func.h"
@@ -3142,6 +3143,7 @@ static const IntervalTimer<TimerGameEconomy> _economy_industries_monthly({TimerG
 
 	for (Industry *i : Industry::Iterate()) {
 		UpdateIndustryStatistics(i);
+		PayIndustryDividends(i);
 		if (i->prod_level == PRODLEVEL_CLOSURE) {
 			delete i;
 		} else {

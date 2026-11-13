@@ -12,6 +12,7 @@
 #include "company_func.h"
 #include "command_func.h"
 #include "industry.h"
+#include "investment.h"
 #include "town.h"
 #include "news_func.h"
 #include "network/network.h"
@@ -328,6 +329,7 @@ void ChangeOwnershipOfCompanyItems(Owner old_owner, Owner new_owner)
 	 * the client. This is needed as it needs to know whether "you" really
 	 * are the current local company. */
 	AutoRestoreBackup cur_company(_current_company, old_owner);
+	TransferIndustryInvestments(old_owner, new_owner);
 	/* In all cases, make spectators of clients connected to that company */
 	if (_networking) NetworkClientsToSpectators(old_owner);
 	if (old_owner == _local_company) {

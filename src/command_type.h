@@ -264,6 +264,8 @@ enum class Commands : uint8_t {
 	IndustrySetExclusivity, ///< change industry exclusive consumer/supplier
 	IndustrySetText, ///< change additional text for the industry
 	IndustrySetProduction, ///< change industry production
+	InvestInIndustry, ///< buy a stake in an industry
+	SellIndustryStake, ///< sell a stake in an industry
 
 	SetCompanyManagerFace, ///< set the manager's face of the company
 	SetCompanyColour, ///< set the colour of the company

@@ -30,6 +30,9 @@ enum IndustryViewWidgets : WidgetID {
 	WID_IV_GOTO,     ///< Goto button.
 	WID_IV_DISPLAY,  ///< Display chain button.
 	WID_IV_GRAPH,    ///< Production history button.
+	WID_IV_INVEST_INFO, ///< Investment info (own stake, price, dividend).
+	WID_IV_INVEST,   ///< Buy a stake button.
+	WID_IV_DIVEST,   ///< Sell a stake button.
 };
 
 /** Widgets of the #IndustryDirectoryWindow class. */

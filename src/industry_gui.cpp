@@ -42,6 +42,8 @@
 #include "clear_map.h"
 #include "zoom_func.h"
 #include "industry_cmd.h"
+#include "investment.h"
+#include "investment_cmd.h"
 #include "graph_gui.h"
 #include "querystring_gui.h"
 #include "stringfilter_type.h"
@@ -988,6 +990,16 @@ public:
 		return ir.top - 1 + WidgetDimensions::scaled.framerect.bottom;
 	}
 
+	void DrawWidget(const Rect &r, WidgetID widget) const override
+	{
+		if (widget != WID_IV_INVEST_INFO || !Company::IsValidID(_local_company)) return;
+
+		const Industry *i = Industry::Get(this->window_number);
+		uint8_t stake = i->investor_stakes[_local_company.base()];
+		Money dividend = GetIndustryOutputValue(i, true) * stake / 100;
+		DrawString(r.Shrink(WidgetDimensions::scaled.framerect), GetString(STR_INDUSTRY_VIEW_INVESTMENT_INFO, stake, GetIndustryStakeBuyPrice(i, INVESTMENT_STEP), dividend));
+	}
+
 	std::string GetWidgetString(WidgetID widget, StringID stringid) const override
 	{
 		if (widget == WID_IV_CAPTION) return GetString(STR_INDUSTRY_VIEW_CAPTION, this->window_number);
@@ -1104,6 +1116,14 @@ public:
 			case WID_IV_GRAPH:
 				ShowIndustryProductionGraph(this->window_number);
 				break;
+
+			case WID_IV_INVEST:
+				Command<Commands::InvestInIndustry>::Post(STR_ERROR_CAN_T_INVEST_IN_INDUSTRY, static_cast<IndustryID>(this->window_number), INVESTMENT_STEP);
+				break;
+
+			case WID_IV_DIVEST:
+				Command<Commands::SellIndustryStake>::Post(STR_ERROR_CAN_T_SELL_INDUSTRY_STAKE, static_cast<IndustryID>(this->window_number), INVESTMENT_STEP);
+				break;
 		}
 	}
 
@@ -1211,6 +1231,12 @@ static constexpr std::initializer_list<NWidgetPart> _nested_industry_view_widget
 		EndContainer(),
 	EndContainer(),
 	NWidget(WWT_PANEL, Colours::Cream, WID_IV_INFO), SetMinimalSize(260, 0), SetMinimalTextLines(2, WidgetDimensions::unscaled.framerect.Vertical()), SetResize(1, 0),
+	EndContainer(),
+	NWidget(WWT_PANEL, Colours::Cream, WID_IV_INVEST_INFO), SetMinimalSize(260, 0), SetMinimalTextLines(1, WidgetDimensions::unscaled.framerect.Vertical()), SetResize(1, 0),
+	EndContainer(),
+	NWidget(NWID_HORIZONTAL),
+		NWidget(WWT_PUSHTXTBTN, Colours::Cream, WID_IV_INVEST), SetFill(1, 0), SetResize(1, 0), SetStringTip(STR_INDUSTRY_VIEW_INVEST, STR_INDUSTRY_VIEW_INVEST_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Cream, WID_IV_DIVEST), SetFill(1, 0), SetResize(1, 0), SetStringTip(STR_INDUSTRY_VIEW_DIVEST, STR_INDUSTRY_VIEW_DIVEST_TOOLTIP),
 	EndContainer(),
 	NWidget(NWID_HORIZONTAL),
 		NWidget(WWT_PUSHTXTBTN, Colours::Cream, WID_IV_DISPLAY), SetFill(1, 0), SetResize(1, 0), SetStringTip(STR_INDUSTRY_DISPLAY_CHAIN, STR_INDUSTRY_DISPLAY_CHAIN_TOOLTIP),

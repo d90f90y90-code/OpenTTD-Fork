@@ -4132,6 +4132,11 @@ STR_INDUSTRY_VIEW_TRANSPORTED                                   :{YELLOW}{CARGO_
 STR_INDUSTRY_VIEW_LOCATION_TOOLTIP                              :{BLACK}Centre the main view on industry location. Ctrl+Click to open a new viewport on industry location
 STR_INDUSTRY_VIEW_CARGO_GRAPH                                   :{BLACK}Cargo Graph
 STR_INDUSTRY_VIEW_CARGO_GRAPH_TOOLTIP                           :{BLACK}Shows the graph of industry cargo history
+STR_INDUSTRY_VIEW_INVEST                                        :{BLACK}Invest 10%
+STR_INDUSTRY_VIEW_INVEST_TOOLTIP                                :{BLACK}Buy a 10% stake in this industry. You receive a share of the value of the cargo transported away each month
+STR_INDUSTRY_VIEW_DIVEST                                        :{BLACK}Sell 10%
+STR_INDUSTRY_VIEW_DIVEST_TOOLTIP                                :{BLACK}Sell 10% of your stake in this industry
+STR_INDUSTRY_VIEW_INVESTMENT_INFO                               :{BLACK}Your stake: {COMMA}%   Buy 10%: {CURRENCY_LONG}   Monthly dividend: {CURRENCY_LONG}
 STR_INDUSTRY_VIEW_PRODUCTION_LEVEL                              :{BLACK}Production level: {YELLOW}{COMMA}%
 STR_INDUSTRY_VIEW_INDUSTRY_ANNOUNCED_CLOSURE                    :{YELLOW}The industry has announced imminent closure!
 
@@ -5198,6 +5203,12 @@ STR_ERROR_TOO_MANY_INDUSTRIES                                   :too many indust
 STR_ERROR_CAN_T_GENERATE_INDUSTRIES                             :Can't generate industries...
 STR_ERROR_CAN_T_BUILD_HERE                                      :Can't build {STRING} here...
 STR_ERROR_CAN_T_CONSTRUCT_THIS_INDUSTRY                         :Can't construct this industry type here...
+STR_ERROR_CAN_T_INVEST_IN_INDUSTRY                              :{WHITE}Can't buy a stake in this industry...
+STR_ERROR_CAN_T_SELL_INDUSTRY_STAKE                             :{WHITE}Can't sell a stake in this industry...
+STR_ERROR_INDUSTRY_NO_PRODUCTION_VALUE                          :{WHITE}This industry has no production to invest in
+STR_ERROR_INDUSTRY_STAKE_LIMIT                                  :{WHITE}You can't own more than 50% of an industry
+STR_ERROR_INDUSTRY_NO_FREE_SHARES                               :{WHITE}Not enough shares are left to buy
+STR_ERROR_INDUSTRY_NOT_ENOUGH_STAKE                             :{WHITE}You don't own that much of this industry
 STR_ERROR_CAN_T_PROSPECT_INDUSTRY                               :Can't prospect industry...
 STR_ERROR_INDUSTRY_TOO_CLOSE                                    :too close to another industry
 STR_ERROR_MUST_FOUND_TOWN_FIRST                                 :must found town first

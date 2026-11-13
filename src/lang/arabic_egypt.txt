@@ -4161,6 +4161,17 @@ STR_ERROR_TOO_MANY_INDUSTRIES                                   :{WHITE}... ال
 STR_ERROR_CAN_T_GENERATE_INDUSTRIES                             :{WHITE}لا يمكن انشاء مصانع ...
 STR_ERROR_CAN_T_BUILD_HERE                                      :{WHITE}تعذر بناء {STRING} هنا...
 STR_ERROR_CAN_T_CONSTRUCT_THIS_INDUSTRY                         :{WHITE}لا بمكن بناء المصنع هنا ...
+STR_ERROR_CAN_T_INVEST_IN_INDUSTRY                              :{WHITE}لا يمكن شراء حصة في هذا المصنع ...
+STR_ERROR_CAN_T_SELL_INDUSTRY_STAKE                             :{WHITE}لا يمكن بيع حصة في هذا المصنع ...
+STR_ERROR_INDUSTRY_NO_PRODUCTION_VALUE                          :{WHITE}هذا المصنع لا ينتج شيئاً للاستثمار فيه
+STR_ERROR_INDUSTRY_STAKE_LIMIT                                  :{WHITE}لا يمكنك امتلاك أكثر من 50% من المصنع
+STR_ERROR_INDUSTRY_NO_FREE_SHARES                               :{WHITE}لا توجد حصص كافية للشراء
+STR_ERROR_INDUSTRY_NOT_ENOUGH_STAKE                             :{WHITE}أنت لا تملك هذه النسبة من المصنع
+STR_INDUSTRY_VIEW_INVEST                                        :{BLACK}استثمار 10%
+STR_INDUSTRY_VIEW_INVEST_TOOLTIP                                :{BLACK}شراء حصة 10% في هذا المصنع. تحصل شهرياً على نصيبك من قيمة البضائع المنقولة منه
+STR_INDUSTRY_VIEW_DIVEST                                        :{BLACK}بيع 10%
+STR_INDUSTRY_VIEW_DIVEST_TOOLTIP                                :{BLACK}بيع 10% من حصتك في هذا المصنع
+STR_INDUSTRY_VIEW_INVESTMENT_INFO                               :{BLACK}حصتك: {COMMA}%   شراء 10%: {CURRENCY_LONG}   الأرباح الشهرية: {CURRENCY_LONG}
 STR_ERROR_INDUSTRY_TOO_CLOSE                                    :{WHITE}قريب جدا من مصنع آخر
 STR_ERROR_MUST_FOUND_TOWN_FIRST                                 :{WHITE}... يجب بناء مدينة اولا
 STR_ERROR_ONLY_ONE_ALLOWED_PER_TOWN                             :{WHITE}... يسمح بواحد في المدينة فقط

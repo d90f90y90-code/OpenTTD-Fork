@@ -244,6 +244,9 @@ add_files(
     industry_cmd.h
     industry_gui.cpp
     industry_map.h
+    investment.cpp
+    investment.h
+    investment_cmd.h
     industry_type.h
     industrytype.h
     ini.cpp
