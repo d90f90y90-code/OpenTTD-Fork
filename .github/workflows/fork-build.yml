@@ -7,6 +7,9 @@ on:
     - investments
     - master
 
+permissions:
+  contents: write
+
 jobs:
   linux:
     name: Linux build
@@ -26,10 +29,10 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
 
     - name: Configure
-      run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+      run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release 2>&1 | tee configure.log; test ${PIPESTATUS[0]} -eq 0
 
     - name: Build
-      run: cmake --build build -j4
+      run: cmake --build build -j4 2>&1 | tee build.log; test ${PIPESTATUS[0]} -eq 0
 
     - name: Package
       run: |
@@ -41,3 +44,15 @@ jobs:
       with:
         name: openttd-fork-linux
         path: openttd-fork-linux.tar.gz
+
+    - name: Publish logs
+      if: always()
+      run: |
+        mkdir -p /tmp/logs
+        for f in configure.log build.log; do [ -f $f ] && tail -n 400 $f > /tmp/logs/$f; done
+        [ -f build/CMakeFiles/CMakeError.log ] && tail -n 80 build/CMakeFiles/CMakeError.log > /tmp/logs/CMakeError.log
+        cd /tmp && rm -rf logrepo && mkdir logrepo && cd logrepo
+        git init -q && git checkout -q -b ci-logs
+        cp /tmp/logs/* . 2>/dev/null || echo "no logs" > none.txt
+        git add -A && git -c user.name=ci -c user.email=ci@example.com commit -qm "logs for ${GITHUB_SHA}"
+        git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-logs
