@@ -22,7 +22,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y --no-install-recommends \
           cmake ninja-build g++ \
-          libsdl2-dev libfreetype-dev libfontconfig-dev libharfbuzz-dev libicu-dev \
+          liballegro4-dev libfreetype-dev libfontconfig-dev libharfbuzz-dev libicu-dev \
           liblzma-dev liblzo2-dev libpng-dev zlib1g-dev libcurl4-openssl-dev libzstd-dev \
           libogg-dev libopus-dev libopusfile-dev libsoxr-dev
       env:
