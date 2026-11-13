@@ -1,0 +1,43 @@
+name: Fork build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - investments
+    - master
+
+jobs:
+  linux:
+    name: Linux build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends \
+          cmake ninja-build g++ \
+          libsdl2-dev libfreetype-dev libfontconfig-dev libharfbuzz-dev libicu-dev \
+          liblzma-dev liblzo2-dev libpng-dev zlib1g-dev libcurl4-openssl-dev libzstd-dev \
+          libogg-dev libopus-dev libopusfile-dev libsoxr-dev
+      env:
+        DEBIAN_FRONTEND: noninteractive
+
+    - name: Configure
+      run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+
+    - name: Build
+      run: cmake --build build -j4
+
+    - name: Package
+      run: |
+        mkdir -p dist
+        cp -r build/openttd build/baseset build/lang build/ai build/game build/scripts dist/ 2>/dev/null || true
+        tar czf openttd-fork-linux.tar.gz dist
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: openttd-fork-linux
+        path: openttd-fork-linux.tar.gz
