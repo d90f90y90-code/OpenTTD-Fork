@@ -21,6 +21,7 @@
 #include "../depot_cmd.h"
 #include "../dock_cmd.h"
 #include "../economy_cmd.h"
+#include "../investment_cmd.h"
 #include "../engine_cmd.h"
 #include "../error_func.h"
 #include "../goal_cmd.h"
