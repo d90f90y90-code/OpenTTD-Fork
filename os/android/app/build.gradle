@@ -1,10 +1,10 @@
-// Release signing key comes from the CI environment so every build has the same signature
-// (needed to update the app without uninstalling it first).
-def forkKeystoreFile = System.getenv('FORK_KEYSTORE_FILE')
-
 plugins {
     id 'com.android.application'
 }
+
+// Release signing key comes from the CI environment so every build has the same signature
+// (needed to update the app without uninstalling it first).
+def forkKeystoreFile = System.getenv('FORK_KEYSTORE_FILE')
 
 android {
     namespace 'org.openttdfork.game'
