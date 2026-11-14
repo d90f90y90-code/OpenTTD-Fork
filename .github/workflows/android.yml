@@ -1,0 +1,238 @@
+name: Android build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - android
+
+permissions:
+  contents: write
+
+env:
+  ANDROID_PLATFORM: android-24
+
+jobs:
+  data:
+    name: Game data
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends cmake ninja-build g++ liballegro4-dev \
+          libfreetype-dev libfontconfig-dev libharfbuzz-dev libicu-dev liblzma-dev liblzo2-dev \
+          libpng-dev zlib1g-dev unzip curl
+      env:
+        DEBIAN_FRONTEND: noninteractive
+
+    - name: Build host game (for language files and tools)
+      run: |
+        mkdir -p /tmp/logs
+        cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release 2>&1 | tee /tmp/logs/data-configure.log
+        cmake --build build -j4 2>&1 | tee /tmp/logs/data-build.log | tail -n 5
+        cmake --install build --prefix /tmp/inst 2>&1 | tee /tmp/logs/data-install.log | tail -n 3
+
+    - name: Collect game data
+      run: |
+        mkdir -p assets/openttd
+        langdir=$(find /tmp/inst -type d -name lang | head -1)
+        echo "lang dir: $langdir" | tee -a /tmp/logs/data-collect.log
+        datadir=$(dirname "$langdir")
+        cp -r "$datadir"/. assets/openttd/
+        find /tmp/inst -type f | head -50 >> /tmp/logs/data-collect.log
+        mkdir -p assets/openttd/baseset
+        cd assets/openttd/baseset
+        curl -fL https://cdn.openttd.org/opengfx-releases/0.6.0/opengfx-0.6.0-all.zip -o gfx.zip && unzip -o gfx.zip && rm gfx.zip
+        curl -fL https://cdn.openttd.org/opensfx-releases/0.2.3/opensfx-0.2.3-all.zip -o sfx.zip && unzip -o sfx.zip && rm sfx.zip || true
+        curl -fL https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip -o msx.zip && unzip -o msx.zip && rm msx.zip || true
+        cd ../../..
+        rm -rf assets/openttd/bin assets/openttd/*.md 2>/dev/null || true
+        echo "${GITHUB_SHA}" > assets/openttd/version.txt
+        du -sh assets/openttd >> /tmp/logs/data-collect.log
+        ls -R assets/openttd | head -60 >> /tmp/logs/data-collect.log
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: game-data
+        path: assets
+
+    - name: Publish logs
+      if: always()
+      run: .github/ci-publish-logs.sh ci-logs-android-data
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+
+  native:
+    name: Native (${{ matrix.abi }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - abi: arm64-v8a
+          triplet: arm64-android
+        - abi: armeabi-v7a
+          triplet: arm-neon-android
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends cmake ninja-build g++ pkg-config zip unzip curl git \
+          autoconf automake libtool python3 nasm
+        echo "ANDROID_NDK_HOME=${ANDROID_NDK_LATEST_HOME}" >> $GITHUB_ENV
+      env:
+        DEBIAN_FRONTEND: noninteractive
+
+    - name: Build host tools
+      run: |
+        mkdir -p /tmp/logs
+        cmake -S . -B build-host -G Ninja -DOPTION_TOOLS_ONLY=ON 2>&1 | tee /tmp/logs/${{ matrix.abi }}-host-configure.log
+        cmake --build build-host --target tools -j4 2>&1 | tee /tmp/logs/${{ matrix.abi }}-host-build.log | tail -n 3
+
+    - name: Build SDL3
+      run: |
+        for b in release-3.4.x release-3.2.x; do
+          git clone --depth 1 -b $b https://github.com/libsdl-org/SDL.git sdl-src && break
+        done
+        cmake -S sdl-src -B sdl-build -G Ninja \
+          -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake \
+          -DANDROID_ABI=${{ matrix.abi }} -DANDROID_PLATFORM=$ANDROID_PLATFORM \
+          -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PWD/sdl-install \
+          -DSDL_SHARED=ON -DSDL_STATIC=OFF -DSDL_TESTS=OFF -DSDL_EXAMPLES=OFF 2>&1 | tee /tmp/logs/${{ matrix.abi }}-sdl-configure.log
+        cmake --build sdl-build -j4 2>&1 | tee /tmp/logs/${{ matrix.abi }}-sdl-build.log | tail -n 3
+        cmake --install sdl-build 2>&1 | tail -n 3
+        mkdir -p sdl-java
+        cp -r sdl-src/android-project/app/src/main/java/org sdl-java/
+
+    - name: Setup vcpkg
+      run: |
+        git clone --depth 1 https://github.com/microsoft/vcpkg.git vcpkg
+        ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
+        mv vcpkg.json vcpkg-original.json
+        cat > vcpkg.json <<'EOF'
+        {
+          "dependencies": ["freetype", "harfbuzz", "icu", "liblzma", "libpng", "lzo", "zlib"]
+        }
+        EOF
+
+    - name: Cache vcpkg binaries
+      uses: actions/cache@v4
+      with:
+        path: vcpkg-cache
+        key: vcpkg-android-${{ matrix.triplet }}-v1
+
+    - name: Configure
+      run: |
+        mkdir -p vcpkg-cache
+        export VCPKG_BINARY_SOURCES="clear;files,$PWD/vcpkg-cache,readwrite"
+        cmake -S . -B build-android -G Ninja \
+          -DCMAKE_BUILD_TYPE=Release \
+          -DCMAKE_TOOLCHAIN_FILE=$PWD/vcpkg/scripts/buildsystems/vcpkg.cmake \
+          -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake \
+          -DVCPKG_TARGET_TRIPLET=${{ matrix.triplet }} \
+          -DANDROID_ABI=${{ matrix.abi }} -DANDROID_PLATFORM=$ANDROID_PLATFORM \
+          -DHOST_BINARY_DIR=$PWD/build-host \
+          -DCMAKE_PREFIX_PATH=$PWD/sdl-install -DCMAKE_FIND_ROOT_PATH=$PWD/sdl-install \
+          2>&1 | tee /tmp/logs/${{ matrix.abi }}-configure.log
+        test ${PIPESTATUS[0]} -eq 0
+
+    - name: Build
+      run: |
+        cmake --build build-android --target main -j4 2>&1 | tee /tmp/logs/${{ matrix.abi }}-build.log
+        test ${PIPESTATUS[0]} -eq 0
+
+    - name: Collect libraries
+      run: |
+        mkdir -p out/${{ matrix.abi }}
+        cp build-android/libmain.so out/${{ matrix.abi }}/
+        cp sdl-install/lib/libSDL3.so out/${{ matrix.abi }}/
+        ls -la out/${{ matrix.abi }}
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: native-${{ matrix.abi }}
+        path: out
+
+    - name: Upload SDL Java sources
+      if: matrix.abi == 'arm64-v8a'
+      uses: actions/upload-artifact@v4
+      with:
+        name: sdl-java
+        path: sdl-java
+
+    - name: Publish logs
+      if: always()
+      run: |
+        for f in /tmp/logs/${{ matrix.abi }}-*.log; do tail -n 300 "$f" > "$f.tail" && mv "$f.tail" "$f"; done
+        tail -n 100 build-android/vcpkg-manifest-install.log > /tmp/logs/${{ matrix.abi }}-vcpkg.log 2>/dev/null || true
+        find vcpkg/buildtrees -name "*-err.log" 2>/dev/null | head -3 | while read f; do tail -n 80 "$f" > /tmp/logs/${{ matrix.abi }}-$(basename "$f"); done
+        .github/ci-publish-logs.sh ci-logs-android-${{ matrix.abi }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+
+  apk:
+    name: APK
+    needs: [data, native]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/download-artifact@v4
+      with:
+        path: dl
+
+    - name: Assemble project
+      run: |
+        mkdir -p /tmp/logs
+        cp -r dl/game-data/openttd os/android/app/src/main/assets/ 2>/dev/null || { mkdir -p os/android/app/src/main/assets; cp -r dl/game-data/openttd os/android/app/src/main/assets/; }
+        mkdir -p os/android/app/src/main/java os/android/app/src/main/jniLibs
+        cp -r dl/sdl-java/org os/android/app/src/main/java/
+        for abi in arm64-v8a armeabi-v7a; do
+          mkdir -p os/android/app/src/main/jniLibs/$abi
+          cp dl/native-$abi/$abi/*.so os/android/app/src/main/jniLibs/$abi/
+        done
+        find os/android/app/src/main/jniLibs -type f | tee /tmp/logs/apk-files.log
+        du -sh os/android/app/src/main/assets | tee -a /tmp/logs/apk-files.log
+
+    - name: Install Android SDK parts
+      run: |
+        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
+        $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0" || true
+
+    - uses: gradle/actions/setup-gradle@v4
+      with:
+        gradle-version: 8.10.2
+
+    - name: Build APK
+      working-directory: os/android
+      run: |
+        gradle assembleRelease --no-daemon 2>&1 | tee /tmp/logs/apk-gradle.log | tail -n 20
+        test ${PIPESTATUS[0]} -eq 0
+        cp app/build/outputs/apk/release/app-release.apk ../../openttd-fork-android.apk
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: openttd-fork-android-apk
+        path: openttd-fork-android.apk
+
+    - name: Publish release
+      run: |
+        gh release create "android-${GITHUB_RUN_NUMBER}" openttd-fork-android.apk \
+          --title "OpenTTD Fork for Android (build ${GITHUB_RUN_NUMBER})" \
+          --notes "Debug-signed APK for arm64-v8a and armeabi-v7a. Install by allowing unknown sources." \
+          --target "${GITHUB_SHA}"
+      env:
+        GH_TOKEN: ${{ github.token }}
+
+    - name: Publish logs
+      if: always()
+      run: |
+        tail -n 200 /tmp/logs/apk-gradle.log > /tmp/logs/apk-gradle.tail 2>/dev/null && mv /tmp/logs/apk-gradle.tail /tmp/logs/apk-gradle.log || true
+        .github/ci-publish-logs.sh ci-logs-android-apk
+      env:
+        GITHUB_TOKEN: ${{ github.token }}

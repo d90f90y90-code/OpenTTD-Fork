@@ -293,6 +293,19 @@ if(ANDROID)
     target_link_libraries(openttd_test PRIVATE log)
 endif()
 
+if(ANDROID)
+    # On Android the game is a shared library, loaded by SDL's activity.
+    add_library(main SHARED src/os/android/android_main.cpp)
+    target_link_libraries(main PRIVATE
+        openttd_lib
+        openttd::media
+        openttd::basesets
+        log
+        android
+    )
+    set_target_properties(main PROPERTIES CXX_VISIBILITY_PRESET default)
+endif()
+
 include(Catch)
 catch_discover_tests(openttd_test)
 

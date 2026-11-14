@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'org.openttdfork.game'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'org.openttdfork.game'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0-fork'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+}
