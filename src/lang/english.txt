@@ -6094,7 +6094,7 @@ STR_BADGE_FILTER_ANY_LABEL                                      :Any {STRING}
 
 STR_FORK_BUSINESS_TOOLTIP                                       :{BLACK}Business: market, assets and ledger
 STR_FORK_BUSINESS_CAPTION                                       :Business
-STR_FORK_BUSINESS_MARKET                                        :Market index: {NUM}%
+STR_FORK_BUSINESS_MARKET                                        :Market: {STRING} ({NUM}%)
 STR_FORK_BUSINESS_ASSETS                                        :Assets owned: {NUM}
 STR_FORK_LEDGER_ROW                                             :{STRING}, last month: {CURRENCY_LONG}
 STR_FORK_CATEGORY_TAX                                           :Taxes
@@ -6105,3 +6105,9 @@ STR_FORK_CATEGORY_ADVERTISING                                   :Advertising
 STR_FORK_CATEGORY_TRADE                                         :Trade and customs
 STR_FORK_CATEGORY_LEASING                                       :Leasing
 STR_FORK_CATEGORY_OTHER                                         :Other
+STR_FORK_PHASE_NORMAL                                           :Stable
+STR_FORK_PHASE_BOOM                                             :Boom
+STR_FORK_PHASE_RECESSION                                        :Recession
+STR_FORK_NEWS_BOOM                                              :{BIG_FONT}{BLACK}Economic boom! Cargo payments, rents and share prices are rising
+STR_FORK_NEWS_RECESSION                                         :{BIG_FONT}{BLACK}Recession! Cargo payments, rents and share prices are falling
+STR_FORK_NEWS_STABLE                                            :{BIG_FONT}{BLACK}The economy has stabilised

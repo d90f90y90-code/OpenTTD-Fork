@@ -31,6 +31,14 @@ enum class ForkLedgerCategory : uint8_t {
 	End, ///< End marker.
 };
 
+/** Phases of the economic cycle. */
+enum class ForkMarketPhase : uint8_t {
+	Normal, ///< Stable economy.
+	Boom, ///< Rising prices, rents and share prices.
+	Recession, ///< Falling prices, rents and share prices.
+	End, ///< End marker.
+};
+
 /** Things the market state (boom/recession) can influence. Every factor is a percentage, 100 means neutral. */
 enum class ForkMarketFactor : uint8_t {
 	CargoPrice, ///< Payment for transported cargo.
@@ -69,7 +77,8 @@ struct ForkEconomyState {
 	uint32_t data_version = FORK_ECONOMY_DATA_VERSION; ///< Version of this data, for conversions after the layout changed.
 	uint8_t market_phase = 0; ///< Current phase of the economic cycle (0 = normal).
 	int32_t market_index = 1000; ///< Strength of the market in permille; 1000 is neutral.
-	uint16_t market_months_left = 0; ///< Months until the market phase changes.
+	int32_t market_target = 1000; ///< Value the market index moves towards, set when a phase starts.
+	uint16_t market_months_left = 24; ///< Months until the market phase changes.
 	std::array<Money, FORK_LEDGER_SIZE> ledger_month{}; ///< Ledger amounts of the current month.
 	std::array<Money, FORK_LEDGER_SIZE> ledger_last{}; ///< Ledger amounts of the previous month.
 };

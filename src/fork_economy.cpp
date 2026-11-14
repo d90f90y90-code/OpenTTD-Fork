@@ -13,11 +13,16 @@
 #include "company_func.h"
 #include "core/pool_func.hpp"
 #include "economy_func.h"
+#include "core/random_func.hpp"
 #include "fork_economy.h"
+#include "news_func.h"
+#include "strings_func.h"
 #include "timer/timer.h"
 #include "timer/timer_game_economy.h"
 #include "town.h"
 #include "window_func.h"
+
+#include "table/strings.h"
 
 #include "safeguards.h"
 
@@ -49,10 +54,19 @@ void RegisterForkAssetHandler(ForkAssetType type, ForkAssetMonthlyHandler handle
  * @param factor What to look at.
  * @return Percentage, where 100 is neutral.
  */
-uint GetForkMarketFactor([[maybe_unused]] ForkMarketFactor factor)
+uint GetForkMarketFactor(ForkMarketFactor factor)
 {
-	/* All factors follow the market index for now; features can give each factor its own curve later. */
-	return static_cast<uint>(std::max<int32_t>(1, _fork_economy.market_index / 10));
+	/* Distance of the market from neutral, in permille. Each factor reacts with its own strength. */
+	const int32_t delta = _fork_economy.market_index - 1000;
+	int32_t percent = 100;
+	switch (factor) {
+		case ForkMarketFactor::CargoPrice: percent += delta / 20; break; // +-12% in the extremes.
+		case ForkMarketFactor::Rent: percent += delta / 10; break; // +-25%
+		case ForkMarketFactor::StockPrice: percent += delta / 5; break; // +-50%
+		case ForkMarketFactor::Interest: percent += delta / 10; break; // +-25%
+		default: break;
+	}
+	return static_cast<uint>(std::max<int32_t>(10, percent));
 }
 
 /** @return Index into the ledger arrays, or SIZE_MAX if the company or category is invalid. */
@@ -116,9 +130,53 @@ uint GetForkAssetCount(CompanyID company)
 	return count;
 }
 
+/** Move the economic cycle one month forward: pick a new phase when the old one ran out, and drift towards its level. */
+static void UpdateMarketCycle()
+{
+	ForkEconomyState &s = _fork_economy;
+	const ForkMarketPhase old_phase = static_cast<ForkMarketPhase>(s.market_phase);
+
+	if (s.market_months_left > 0) s.market_months_left--;
+	if (s.market_months_left == 0) {
+		const uint r = RandomRange(100);
+		ForkMarketPhase phase;
+		switch (old_phase) {
+			case ForkMarketPhase::Normal: phase = r < 35 ? ForkMarketPhase::Boom : (r < 70 ? ForkMarketPhase::Recession : ForkMarketPhase::Normal); break;
+			case ForkMarketPhase::Boom: phase = r < 60 ? ForkMarketPhase::Normal : ForkMarketPhase::Recession; break;
+			default: phase = r < 70 ? ForkMarketPhase::Normal : ForkMarketPhase::Boom; break;
+		}
+
+		switch (phase) {
+			case ForkMarketPhase::Boom:
+				s.market_months_left = 8 + RandomRange(17);
+				s.market_target = 1120 + RandomRange(131);
+				break;
+			case ForkMarketPhase::Recession:
+				s.market_months_left = 6 + RandomRange(13);
+				s.market_target = 780 + RandomRange(111);
+				break;
+			default:
+				s.market_months_left = 12 + RandomRange(25);
+				s.market_target = 980 + RandomRange(41);
+				break;
+		}
+		s.market_phase = static_cast<uint8_t>(phase);
+
+		if (phase != old_phase) {
+			StringID news = phase == ForkMarketPhase::Boom ? STR_FORK_NEWS_BOOM : (phase == ForkMarketPhase::Recession ? STR_FORK_NEWS_RECESSION : STR_FORK_NEWS_STABLE);
+			AddNewsItem(GetEncodedString(news), NewsType::Economy, NewsStyle::Normal, {});
+		}
+	}
+
+	/* The market changes gradually, never more than 3% per month. */
+	s.market_index += std::clamp<int32_t>(s.market_target - s.market_index, -30, 30);
+}
+
 /** Everything the extended economy does at the start of a month. */
 static void ForkEconomyMonthly()
 {
+	UpdateMarketCycle();
+
 	_fork_economy.ledger_last = _fork_economy.ledger_month;
 	_fork_economy.ledger_month.fill(0);
 

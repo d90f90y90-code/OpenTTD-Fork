@@ -15,6 +15,7 @@
 #include "investment.h"
 #include "town.h"
 #include "news_func.h"
+#include "fork_economy.h"
 #include "network/network.h"
 #include "network/network_func.h"
 #include "ai/ai.hpp"
@@ -821,10 +822,12 @@ static void CompaniesPayInterest()
 		 * taking a loan) we make companies pay interest on negative cash as well,
 		 * except if infinite money is enabled.
 		 */
-		Money yearly_fee = c->current_loan * _economy.interest_rate / 100;
+		/* The interest rate follows the economic cycle of the fork economy. */
+		const int interest_rate = static_cast<int>(_economy.interest_rate * GetForkMarketFactor(ForkMarketFactor::Interest) / 100);
+		Money yearly_fee = c->current_loan * interest_rate / 100;
 		Money available_money = GetAvailableMoney(c->index);
 		if (available_money < 0) {
-			yearly_fee += -available_money * _economy.interest_rate / 100;
+			yearly_fee += -available_money * interest_rate / 100;
 		}
 		Money up_to_previous_month = yearly_fee * TimerGameEconomy::month / 12;
 		Money up_to_this_month = yearly_fee * (TimerGameEconomy::month + 1) / 12;
@@ -956,7 +959,7 @@ Money GetPrice(Price index, uint cost_factor, const GRFFile *grf_file, int shift
 	return cost;
 }
 
-Money GetTransportedGoodsIncome(uint num_pieces, uint dist, uint16_t transit_periods, CargoType cargo_type)
+static Money GetTransportedGoodsIncomeBase(uint num_pieces, uint dist, uint16_t transit_periods, CargoType cargo_type)
 {
 	const CargoSpec *cs = CargoSpec::Get(cargo_type);
 	if (!cs->IsValid()) {
@@ -1018,6 +1021,19 @@ Money GetTransportedGoodsIncome(uint num_pieces, uint dist, uint16_t transit_per
 		const int time_factor = std::max(MAX_TIME_FACTOR - periods_over_periods1 - periods_over_periods2, MIN_TIME_FACTOR);
 		return BigMulS(dist * time_factor * num_pieces, cs->current_payment, 21);
 	}
+}
+
+/**
+ * Calculate the income of transporting cargo, including the effect of the economic cycle of the fork economy.
+ * @param num_pieces Number of cargo units.
+ * @param dist Distance in tiles.
+ * @param transit_periods Number of cargo aging periods the cargo was in transit.
+ * @param cargo_type Type of the cargo.
+ * @return Payment for the cargo.
+ */
+Money GetTransportedGoodsIncome(uint num_pieces, uint dist, uint16_t transit_periods, CargoType cargo_type)
+{
+	return GetTransportedGoodsIncomeBase(num_pieces, dist, transit_periods, cargo_type) * GetForkMarketFactor(ForkMarketFactor::CargoPrice) / 100;
 }
 
 /** The industries we've currently brought cargo to. */

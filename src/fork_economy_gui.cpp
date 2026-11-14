@@ -54,7 +54,7 @@ struct ForkBusinessWindow : Window {
 		const int line = GetCharacterHeight(FontSize::Normal);
 		int y = ir.top;
 
-		DrawString(ir.left, ir.right, y, GetString(STR_FORK_BUSINESS_MARKET, GetForkMarketFactor(ForkMarketFactor::CargoPrice)));
+		DrawString(ir.left, ir.right, y, GetString(STR_FORK_BUSINESS_MARKET, STR_FORK_PHASE_NORMAL + _fork_economy.market_phase, _fork_economy.market_index / 10));
 		y += line;
 		DrawString(ir.left, ir.right, y, GetString(STR_FORK_BUSINESS_ASSETS, GetForkAssetCount(_local_company)));
 		y += line;

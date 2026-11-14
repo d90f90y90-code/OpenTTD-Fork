@@ -17,6 +17,7 @@ const SaveLoadCompat _fork_economy_sl_compat[] = {
 	SLC_VAR("data_version"),
 	SLC_VAR("market_phase"),
 	SLC_VAR("market_index"),
+	SLC_VAR("market_target"),
 	SLC_VAR("market_months_left"),
 	SLC_VAR("ledger_month"),
 	SLC_VAR("ledger_last"),
