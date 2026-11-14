@@ -13,17 +13,24 @@
         android:largeHeap="true">
 
         <activity
-            android:name=".OpenTTDActivity"
+            android:name=".DiagnosticsActivity"
             android:exported="true"
+            android:label="OpenTTD Fork"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".OpenTTDActivity"
+            android:exported="false"
             android:label="OpenTTD Fork"
             android:launchMode="singleInstance"
             android:screenOrientation="sensorLandscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:configChanges="layoutDirection|locale|orientation|uiMode|screenLayout|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 </manifest>
