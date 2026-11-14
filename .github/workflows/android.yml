@@ -219,7 +219,14 @@ jobs:
 
     - name: Build release APK (phones only)
       working-directory: os/android
+      env:
+        FORK_KEYSTORE_B64: ${{ secrets.FORK_KEYSTORE_B64 }}
+        FORK_KEYSTORE_PASSWORD: ${{ secrets.FORK_KEYSTORE_PASSWORD }}
       run: |
+        if [ -n "$FORK_KEYSTORE_B64" ]; then
+          echo "$FORK_KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/fork.p12"
+          export FORK_KEYSTORE_FILE="$RUNNER_TEMP/fork.p12"
+        fi
         rm -rf app/src/main/jniLibs/x86_64
         gradle assembleRelease --no-daemon 2>&1 | tee /tmp/logs/apk-gradle.log | tail -n 20
         test ${PIPESTATUS[0]} -eq 0

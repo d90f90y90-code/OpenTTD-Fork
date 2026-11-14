@@ -1,3 +1,7 @@
+// Release signing key comes from the CI environment so every build has the same signature
+// (needed to update the app without uninstalling it first).
+def forkKeystoreFile = System.getenv('FORK_KEYSTORE_FILE')
+
 plugins {
     id 'com.android.application'
 }
@@ -10,14 +14,26 @@ android {
         applicationId 'org.openttdfork.game'
         minSdk 24
         targetSdk 34
-        versionCode 1
+        versionCode (System.getenv('GITHUB_RUN_NUMBER') ?: '1').toInteger()
         versionName '1.0-fork'
+    }
+
+    signingConfigs {
+        if (forkKeystoreFile) {
+            fork {
+                storeFile file(forkKeystoreFile)
+                storeType 'pkcs12'
+                storePassword System.getenv('FORK_KEYSTORE_PASSWORD')
+                keyAlias 'openttdfork'
+                keyPassword System.getenv('FORK_KEYSTORE_PASSWORD')
+            }
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            signingConfig signingConfigs.debug
+            signingConfig forkKeystoreFile ? signingConfigs.fork : signingConfigs.debug
         }
     }
 
