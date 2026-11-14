@@ -189,7 +189,7 @@ static void ForkEconomyMonthly()
 	InvalidateWindowData(WindowClass::ForkBusiness, 0);
 }
 
-static const IntervalTimer<TimerGameEconomy> _fork_economy_monthly({TimerGameEconomy::Trigger::Month, TimerGameEconomy::Priority::Company}, [](auto)
+static const IntervalTimer<TimerGameEconomy> _fork_economy_monthly({TimerGameEconomy::Trigger::Month, TimerGameEconomy::Priority::Fork}, [](auto)
 {
 	ForkEconomyMonthly();
 });
