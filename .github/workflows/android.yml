@@ -151,6 +151,10 @@ jobs:
     - name: Collect libraries
       run: |
         mkdir -p out/${{ matrix.abi }}
+        if [ "${{ matrix.abi }}" = "x86_64" ]; then
+          # Keep function names (but not the big debug info) in the emulator test build, so crash reports are readable.
+          $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip --strip-debug build-android/libmain.so
+        fi
         cp build-android/libmain.so out/${{ matrix.abi }}/
         cp sdl-install/lib/libSDL3.so out/${{ matrix.abi }}/
         ls -la out/${{ matrix.abi }}

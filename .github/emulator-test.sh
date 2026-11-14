@@ -14,7 +14,13 @@ for t in 10 20 30 45 60 75 90; do
   echo "after ~${t}s alive=$alive" | tee -a /tmp/logs/emu-alive.log
 done
 
-adb logcat -d -t 3000 > /tmp/logs/emu-logcat-full.txt
+adb logcat -d -b all -t 8000 > /tmp/logs/emu-logcat-full.txt
+# The report of the crashing thread: abort message and the top of the backtrace.
+n=$(grep -n -m1 "Fatal signal" /tmp/logs/emu-logcat-full.txt | cut -d: -f1)
+if [ -n "$n" ]; then
+  sed -n "$((n-12)),$((n+45))p" /tmp/logs/emu-logcat-full.txt | cut -c1-300 > /tmp/logs/emu-tombstone.txt
+fi
+grep -E "Abort message|terminate called|what\(\)|assertion|Assertion|OpenTTD|openttd" /tmp/logs/emu-logcat-full.txt | head -n 40 | cut -c1-300 > /tmp/logs/emu-messages.txt
 grep -iE "openttd|SDL|libmain|AndroidRuntime|FATAL|DEBUG|crash|signal|UnsatisfiedLink|Exception" /tmp/logs/emu-logcat-full.txt | tail -n 300 > /tmp/logs/emu-logcat.txt
 adb exec-out screencap -p > /tmp/logs/emu-screen.png
 adb shell run-as $PKG ls -la files files/data/openttd files/config/openttd > /tmp/logs/emu-files.txt 2>&1

@@ -40,6 +40,8 @@ android {
     packaging {
         jniLibs {
             useLegacyPackaging = true
+            // Only the x86_64 build used for the emulator test keeps its function names.
+            keepDebugSymbols += ['**/x86_64/libmain.so']
         }
     }
 }
