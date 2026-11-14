@@ -214,6 +214,7 @@ add_files(
     fork_economy.cpp
     fork_economy.h
     fork_economy_gui.cpp
+    fork_tax.cpp
     goal.cpp
     goal_base.h
     goal_cmd.h

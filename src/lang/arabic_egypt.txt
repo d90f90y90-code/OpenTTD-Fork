@@ -4973,3 +4973,4 @@ STR_SHIP                                                        :{BLACK}{SHIP}
 
 STR_TOOLBAR_RAILTYPE_VELOCITY                                   :{STRING} ({VELOCITY})
 
+STR_FORK_TOWN_TAX_RATE                                          :الضريبة المحلية على المحطات والممتلكات: {NUM}.{NUM}%

@@ -180,6 +180,8 @@ static void ForkEconomyMonthly()
 	_fork_economy.ledger_last = _fork_economy.ledger_month;
 	_fork_economy.ledger_month.fill(0);
 
+	ChargeForkMunicipalTaxes();
+
 	for (ForkAsset *a : ForkAsset::Iterate()) {
 		a->age_months++;
 		ForkAssetMonthlyHandler handler = _fork_asset_handlers[a->type < static_cast<uint8_t>(ForkAssetType::End) ? a->type : 0];

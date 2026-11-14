@@ -34,6 +34,7 @@
 #include "window_func.h"
 #include "townname_func.h"
 #include "core/backup_type.hpp"
+#include "fork_economy.h"
 #include "core/geometry_func.hpp"
 #include "core/string_consumer.hpp"
 #include "genworld.h"
@@ -396,6 +397,10 @@ public:
 		DrawString(tr, GetString(STR_TOWN_VIEW_POPULATION_HOUSES, this->town->cache.population, this->town->cache.num_houses));
 		tr.top += GetCharacterHeight(FontSize::Normal);
 
+		const uint tax_rate = GetForkTownTaxPermille(this->town);
+		DrawString(tr, GetString(STR_FORK_TOWN_TAX_RATE, tax_rate / 10, tax_rate % 10));
+		tr.top += GetCharacterHeight(FontSize::Normal);
+
 		StringID str_last_period = TimerGameEconomy::UsingWallclockUnits() ? STR_TOWN_VIEW_CARGO_LAST_MINUTE_MAX : STR_TOWN_VIEW_CARGO_LAST_MONTH_MAX;
 
 		for (auto tpe : {TownProductionEffect::Passengers, TownProductionEffect::Mail}) {
@@ -534,7 +539,7 @@ public:
 	 */
 	uint GetDesiredInfoHeight(int width) const
 	{
-		uint aimed_height = static_cast<uint>(1 + CargoSpec::town_production_cargoes[TownProductionEffect::Passengers].size() + CargoSpec::town_production_cargoes[TownProductionEffect::Mail].size()) * GetCharacterHeight(FontSize::Normal);
+		uint aimed_height = static_cast<uint>(2 + CargoSpec::town_production_cargoes[TownProductionEffect::Passengers].size() + CargoSpec::town_production_cargoes[TownProductionEffect::Mail].size()) * GetCharacterHeight(FontSize::Normal);
 
 		bool first = true;
 		for (TownAcceptanceEffect i : EnumRange(TownAcceptanceEffect::End)) {

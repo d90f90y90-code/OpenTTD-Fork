@@ -123,6 +123,8 @@ uint GetForkMarketFactor(ForkMarketFactor factor);
 void ForkLedgerBook(CompanyID company, ForkLedgerCategory category, Money amount);
 Money GetForkLedger(CompanyID company, ForkLedgerCategory category, bool last_month);
 uint GetForkTownSizeLevel(const Town *t);
+uint GetForkTownTaxPermille(const Town *t);
+void ChargeForkMunicipalTaxes();
 uint GetForkAssetCount(CompanyID company);
 
 void ShowForkBusinessWindow();

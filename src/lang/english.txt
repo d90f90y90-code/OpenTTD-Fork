@@ -6098,6 +6098,7 @@ STR_FORK_BUSINESS_MARKET                                        :Market: {STRING
 STR_FORK_BUSINESS_ASSETS                                        :Assets owned: {NUM}
 STR_FORK_LEDGER_ROW                                             :{STRING}, last month: {CURRENCY_LONG}
 STR_FORK_CATEGORY_TAX                                           :Taxes
+STR_FORK_TOWN_TAX_RATE                                          :Local tax rate on stations and property: {NUM}.{NUM}%
 STR_FORK_CATEGORY_RENT                                          :Rent
 STR_FORK_CATEGORY_SALARIES                                      :Salaries
 STR_FORK_CATEGORY_DIVIDENDS                                     :Dividends
