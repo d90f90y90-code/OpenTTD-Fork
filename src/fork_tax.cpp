@@ -9,6 +9,7 @@
 
 #include "stdafx.h"
 
+#include "company_base.h"
 #include "company_func.h"
 #include "economy_func.h"
 #include "fork_economy.h"
