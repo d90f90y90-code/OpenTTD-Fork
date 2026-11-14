@@ -21,7 +21,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../safeguards.h"
 
 static char _android_crash_path[512]; ///< File to write a native crash report to.
 
