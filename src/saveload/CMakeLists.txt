@@ -15,6 +15,7 @@ add_files(
     engine_sl.cpp
     game_sl.cpp
     gamelog_sl.cpp
+    fork_economy_sl.cpp
     goal_sl.cpp
     group_sl.cpp
     industry_sl.cpp

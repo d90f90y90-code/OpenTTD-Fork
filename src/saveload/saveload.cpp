@@ -73,6 +73,8 @@
 #include "../table/control_codes.h"
 #include "table/strings.h"
 
+#include "../fork_economy.h"
+
 #include "../safeguards.h"
 
 extern const SaveLoadVersion SAVEGAME_VERSION{to_underlying(SaveLoadVersion::MaxVersion) - 1}; ///< Current savegame version of OpenTTD.
@@ -243,6 +245,7 @@ static const std::vector<ChunkHandlerRef> &ChunkHandlers()
 	extern const ChunkHandlerTable _subsidy_chunk_handlers;
 	extern const ChunkHandlerTable _cargomonitor_chunk_handlers;
 	extern const ChunkHandlerTable _goal_chunk_handlers;
+	extern const ChunkHandlerTable _fork_economy_chunk_handlers;
 	extern const ChunkHandlerTable _story_page_chunk_handlers;
 	extern const ChunkHandlerTable _league_chunk_handlers;
 	extern const ChunkHandlerTable _ai_chunk_handlers;
@@ -277,6 +280,7 @@ static const std::vector<ChunkHandlerRef> &ChunkHandlers()
 		_subsidy_chunk_handlers,
 		_cargomonitor_chunk_handlers,
 		_goal_chunk_handlers,
+		_fork_economy_chunk_handlers,
 		_story_page_chunk_handlers,
 		_league_chunk_handlers,
 		_engine_chunk_handlers,
@@ -2974,6 +2978,7 @@ static void ResetSaveloadData()
 	ClearRoadTypeLabelList();
 	ResetOldWaypoints();
 	ResetSettings();
+	ResetForkEconomy();
 }
 
 /**

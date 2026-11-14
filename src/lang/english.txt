@@ -6091,3 +6091,17 @@ STR_BADGE_CONFIG_FILTERS                                        :{WHITE}Badge Fi
 STR_BADGE_CONFIG_PREVIEW                                        :Preview Image
 STR_BADGE_CONFIG_NAME                                           :Name
 STR_BADGE_FILTER_ANY_LABEL                                      :Any {STRING}
+
+STR_FORK_BUSINESS_TOOLTIP                                       :{BLACK}Business: market, assets and ledger
+STR_FORK_BUSINESS_CAPTION                                       :Business
+STR_FORK_BUSINESS_MARKET                                        :Market index: {NUM}%
+STR_FORK_BUSINESS_ASSETS                                        :Assets owned: {NUM}
+STR_FORK_LEDGER_ROW                                             :{STRING}, last month: {CURRENCY_LONG}
+STR_FORK_CATEGORY_TAX                                           :Taxes
+STR_FORK_CATEGORY_RENT                                          :Rent
+STR_FORK_CATEGORY_SALARIES                                      :Salaries
+STR_FORK_CATEGORY_DIVIDENDS                                     :Dividends
+STR_FORK_CATEGORY_ADVERTISING                                   :Advertising
+STR_FORK_CATEGORY_TRADE                                         :Trade and customs
+STR_FORK_CATEGORY_LEASING                                       :Leasing
+STR_FORK_CATEGORY_OTHER                                         :Other

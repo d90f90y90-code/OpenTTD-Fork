@@ -211,6 +211,9 @@ add_files(
     gfx_type.h
     gfxinit.cpp
     gfxinit.h
+    fork_economy.cpp
+    fork_economy.h
+    fork_economy_gui.cpp
     goal.cpp
     goal_base.h
     goal_cmd.h

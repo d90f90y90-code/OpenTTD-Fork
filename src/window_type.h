@@ -313,6 +313,12 @@ enum class WindowClass : uint16_t {
 	StoryBook,
 
 	/**
+	 * Fork business overview; %Window numbers:
+	 *   - 0 = #ForkBusinessWidgets
+	 */
+	ForkBusiness,
+
+	/**
 	 * Station list; %Window numbers:
 	 *   - #CompanyID = #StationListWidgets
 	 */

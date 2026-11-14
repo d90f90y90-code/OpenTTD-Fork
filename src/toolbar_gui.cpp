@@ -53,6 +53,7 @@
 #include "goal_gui.h"
 #include "story_base.h"
 #include "toolbar_gui.h"
+#include "fork_economy.h"
 #include "framerate_type.h"
 #include "screenshot_gui.h"
 #include "misc_cmd.h"
@@ -705,6 +706,12 @@ static CallBackFunction ToolbarGraphsClick(Window *w)
 
 static CallBackFunction ToolbarLeagueClick(Window *w)
 {
+	/* On the side toolbars this button opens the fork's business overview instead of the league table menu. */
+	if (AreSideToolbarsActive()) {
+		ShowForkBusinessWindow();
+		return CallBackFunction::None;
+	}
+
 	DropDownList list;
 
 	AddDropDownLeagueTableOptions(list);
@@ -2320,7 +2327,8 @@ static std::unique_ptr<NWidgetBase> MakeSideToolbar(const WidgetID (&buttons)[N]
 	for (WidgetID widget : buttons) {
 		for (const auto &[wid, tp, sprite] : _toolbar_button_sprites) {
 			if (wid != widget) continue;
-			auto leaf = std::make_unique<NWidgetLeaf>(tp, Colours::Grey, widget, WidgetData{.sprite = sprite}, STR_TOOLBAR_TOOLTIP_PAUSE_GAME + widget);
+			StringID tooltip = (widget == WID_TN_LEAGUE) ? STR_FORK_BUSINESS_TOOLTIP : STR_TOOLBAR_TOOLTIP_PAUSE_GAME + widget;
+			auto leaf = std::make_unique<NWidgetLeaf>(tp, Colours::Grey, widget, WidgetData{.sprite = sprite}, tooltip);
 			leaf->SetMinimalSizeAbsolute(size, size);
 			column->Add(std::move(leaf));
 			break;
@@ -2341,6 +2349,7 @@ static std::unique_ptr<NWidgetBase> MakeLeftToolbar()
 		WID_TN_STATIONS,
 		WID_TN_FINANCES,
 		WID_TN_COMPANIES,
+		WID_TN_LEAGUE, // Opens the business overview.
 		WID_TN_GRAPHS,
 		WID_TN_INDUSTRIES,
 		WID_TN_MUSIC_SOUND,

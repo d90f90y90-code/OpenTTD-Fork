@@ -1,0 +1,137 @@
+/*
+ * This file is part of OpenTTD.
+ * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <https://www.gnu.org/licenses/old-licenses/gpl-2.0>.
+ */
+
+/** @file fork_economy.cpp Foundation of the fork's extended economy: market state, business ledger and the asset registry. */
+
+#include "stdafx.h"
+
+#include "company_base.h"
+#include "company_func.h"
+#include "core/pool_func.hpp"
+#include "economy_func.h"
+#include "fork_economy.h"
+#include "timer/timer.h"
+#include "timer/timer_game_economy.h"
+#include "town.h"
+#include "window_func.h"
+
+#include "safeguards.h"
+
+ForkEconomyState _fork_economy;
+ForkAssetPool _fork_asset_pool("ForkAsset");
+INSTANTIATE_POOL_METHODS(ForkAsset)
+
+/** Monthly handlers of the asset types, set by the features. */
+static std::array<ForkAssetMonthlyHandler, static_cast<size_t>(ForkAssetType::End)> _fork_asset_handlers{};
+
+/** Reset the extended economy to its initial state, for a new game or before loading a savegame. */
+void ResetForkEconomy()
+{
+	_fork_economy = {};
+}
+
+/**
+ * Register what happens to assets of a type every month.
+ * @param type Type of asset.
+ * @param handler Function to call for each asset of the type.
+ */
+void RegisterForkAssetHandler(ForkAssetType type, ForkAssetMonthlyHandler handler)
+{
+	_fork_asset_handlers[static_cast<size_t>(type)] = handler;
+}
+
+/**
+ * Get the effect of the market (boom/recession) on something.
+ * @param factor What to look at.
+ * @return Percentage, where 100 is neutral.
+ */
+uint GetForkMarketFactor([[maybe_unused]] ForkMarketFactor factor)
+{
+	/* All factors follow the market index for now; features can give each factor its own curve later. */
+	return static_cast<uint>(std::max<int32_t>(1, _fork_economy.market_index / 10));
+}
+
+/** @return Index into the ledger arrays, or SIZE_MAX if the company or category is invalid. */
+static size_t LedgerIndex(CompanyID company, ForkLedgerCategory category)
+{
+	if (!Company::IsValidID(company) || category >= ForkLedgerCategory::End) return SIZE_MAX;
+	return static_cast<size_t>(company.base()) * FORK_LEDGER_CATEGORIES + static_cast<size_t>(category);
+}
+
+/**
+ * Book income or costs of the extended economy: the money moves to or from the company and the ledger remembers it.
+ * @param company Company that gets or pays the money.
+ * @param category Ledger category to book in.
+ * @param amount Positive for income, negative for costs.
+ */
+void ForkLedgerBook(CompanyID company, ForkLedgerCategory category, Money amount)
+{
+	size_t index = LedgerIndex(company, category);
+	if (index == SIZE_MAX || amount == 0) return;
+
+	_fork_economy.ledger_month[index] += amount;
+	SubtractMoneyFromCompany(company, CommandCost(ExpensesType::Other, -amount));
+	InvalidateWindowData(WindowClass::ForkBusiness, 0);
+}
+
+/**
+ * Get what a company booked in a ledger category.
+ * @param company Company to look at.
+ * @param category Ledger category.
+ * @param last_month Use the previous month instead of the current one.
+ * @return The booked amount, positive for income.
+ */
+Money GetForkLedger(CompanyID company, ForkLedgerCategory category, bool last_month)
+{
+	size_t index = LedgerIndex(company, category);
+	if (index == SIZE_MAX) return 0;
+	return last_month ? _fork_economy.ledger_last[index] : _fork_economy.ledger_month[index];
+}
+
+/**
+ * How big a town is, as input for features that depend on the size of a town (taxes, rents, shops).
+ * @param t Town to look at.
+ * @return Level between 0 (hamlet) and 100 (metropolis), derived from the population.
+ */
+uint GetForkTownSizeLevel(const Town *t)
+{
+	return std::min<uint>(100, t->cache.population / 100);
+}
+
+/**
+ * Count the assets of a company.
+ * @param company Owner to count for.
+ * @return Number of assets.
+ */
+uint GetForkAssetCount(CompanyID company)
+{
+	uint count = 0;
+	for (const ForkAsset *a : ForkAsset::Iterate()) {
+		if (a->owner == company) count++;
+	}
+	return count;
+}
+
+/** Everything the extended economy does at the start of a month. */
+static void ForkEconomyMonthly()
+{
+	_fork_economy.ledger_last = _fork_economy.ledger_month;
+	_fork_economy.ledger_month.fill(0);
+
+	for (ForkAsset *a : ForkAsset::Iterate()) {
+		a->age_months++;
+		ForkAssetMonthlyHandler handler = _fork_asset_handlers[a->type < static_cast<uint8_t>(ForkAssetType::End) ? a->type : 0];
+		if (handler != nullptr) handler(a);
+	}
+
+	InvalidateWindowData(WindowClass::ForkBusiness, 0);
+}
+
+static const IntervalTimer<TimerGameEconomy> _fork_economy_monthly({TimerGameEconomy::Trigger::Month, TimerGameEconomy::Priority::Company}, [](auto)
+{
+	ForkEconomyMonthly();
+});
