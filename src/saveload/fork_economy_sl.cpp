@@ -30,6 +30,8 @@ static const SaveLoad _fork_economy_desc[] = {
 	SaveLoad::Variable<VarFileType::U16>("market_months_left", SLE_OBJECT_ADDRESS(ForkEconomyState, market_months_left), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Array<VarFileType::I64, FORK_LEDGER_SIZE>("ledger_month", SLE_OBJECT_ADDRESS(ForkEconomyState, ledger_month), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Array<VarFileType::I64, FORK_LEDGER_SIZE>("ledger_last", SLE_OBJECT_ADDRESS(ForkEconomyState, ledger_last), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::I32>("used_month", SLE_OBJECT_ADDRESS(ForkEconomyState, used_month), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Array<VarFileType::U8, MAX_COMPANIES * FORK_USED_SLOTS>("used_sold", SLE_OBJECT_ADDRESS(ForkEconomyState, used_sold), SaveLoadVersion::ForkEconomy),
 };
 
 struct FKECChunkHandler : ChunkHandler {

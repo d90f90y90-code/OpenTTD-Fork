@@ -223,7 +223,14 @@ add_files(
     fork_shop.cpp
     fork_shop_cmd.h
     fork_shop_gui.cpp
+    fork_logos.cpp
+    fork_logos.h
+    fork_logos_data.h
     fork_tax.cpp
+    fork_usedmarket.cpp
+    fork_usedmarket.h
+    fork_usedmarket_cmd.h
+    fork_usedmarket_gui.cpp
     goal.cpp
     goal_base.h
     goal_cmd.h

@@ -6125,6 +6125,25 @@ STR_ERROR_FORK_CAN_T_SET_RENT                                   :{WHITE}Can't ch
 STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}The town is too small, houses are only sold in towns with at least 100 inhabitants
 STR_ERROR_FORK_HOUSE_LIMIT                                      :{WHITE}You can't own more houses here than the town has
 STR_ERROR_FORK_NO_HOUSES                                        :{WHITE}You don't own enough houses in this town
+STR_FORK_UM_TOOLTIP                                             :{BLACK}Used vehicle market: second-hand vehicles from three dealers
+STR_FORK_UM_CAPTION                                             :Used vehicle market
+STR_FORK_UM_DEALER_TOOLTIP                                      :{BLACK}Show the offers of this dealer
+STR_FORK_UM_DEALER_0                                            :{BLACK}TTD MAX: used trains and wagons
+STR_FORK_UM_DEALER_1                                            :{BLACK}TAJCAR: used cars, buses and trucks
+STR_FORK_UM_DEALER_2                                            :{BLACK}LIMANO: used vehicles of every kind
+STR_FORK_UM_OFFERS_HINT                                         :{BLACK}Offers of this month. Tap an offer, then press Buy.
+STR_FORK_UM_NO_OFFERS                                           :{BLACK}This dealer has nothing to offer right now
+STR_FORK_UM_PICK_DEPOT                                          :{BLACK}Tap one of your depots to receive the vehicle...
+STR_FORK_UM_OFFER_LINE1                                         :{BLACK}{ENGINE}   {NUM} years {NUM} months old
+STR_FORK_UM_OFFER_FAIR                                          :{BLACK}   {NUM}% of the new price: {CURRENCY_LONG} (new: {CURRENCY_LONG})   Left: {NUM}
+STR_FORK_UM_OFFER_BARGAIN                                       :{GREEN}   Bargain! {NUM}% of the new price: {CURRENCY_LONG} (new: {CURRENCY_LONG})   Left: {NUM}
+STR_FORK_UM_OFFER_PRICEY                                        :{RED}   {NUM}% of the new price: {CURRENCY_LONG} (new: {CURRENCY_LONG})   Left: {NUM}
+STR_FORK_UM_OFFER_SOLD                                          :{SILVER}   Sold out
+STR_FORK_UM_BUY                                                 :{BLACK}Buy selected
+STR_FORK_UM_BUY_TOOLTIP                                         :{BLACK}Buy the selected vehicle, then tap one of your depots to receive it
+STR_ERROR_FORK_UM_CAN_T_BUY                                     :{WHITE}Can't buy this used vehicle...
+STR_ERROR_FORK_UM_NO_OFFER                                      :{WHITE}This offer is no longer available
+STR_ERROR_FORK_UM_SOLD_OUT                                      :{WHITE}This vehicle has already been sold
 STR_ERROR_FORK_TOO_MANY_ASSETS                                  :{WHITE}There are too many assets in the game
 STR_FORK_CATEGORY_RENT                                          :Rent
 STR_FORK_CATEGORY_SALARIES                                      :Salaries

@@ -5046,3 +5046,22 @@ STR_ERROR_FORK_CAN_T_FIRE                                       :{WHITE}لا ي�
 STR_ERROR_FORK_STAFF_TOWN_TOO_SMALL                             :{WHITE}المدينة صغيرة جداً، يُوظَّف الموظفون فقط في مدن فيها 100 ساكن على الأقل
 STR_ERROR_FORK_STAFF_LIMIT                                      :{WHITE}لا يمكنك توظيف موظفين أكثر هنا: عدد العمال في المدينة قليل
 STR_ERROR_FORK_NO_STAFF                                         :{WHITE}لا توظّف هذا العدد من الموظفين في هذه المدينة
+STR_FORK_UM_TOOLTIP                                             :{BLACK}سوق المركبات المستعملة: مركبات مستعملة من ثلاث شركات
+STR_FORK_UM_CAPTION                                             :سوق المركبات المستعملة
+STR_FORK_UM_DEALER_TOOLTIP                                      :{BLACK}عرض عروض هذه الشركة
+STR_FORK_UM_DEALER_0                                            :{BLACK}TTD MAX: قطارات وعربات مستعملة
+STR_FORK_UM_DEALER_1                                            :{BLACK}TAJCAR: سيارات وحافلات وشاحنات مستعملة
+STR_FORK_UM_DEALER_2                                            :{BLACK}LIMANO: مركبات مستعملة من كل الأنواع
+STR_FORK_UM_OFFERS_HINT                                         :{BLACK}عروض هذا الشهر. اضغط على عرض ثم اضغط شراء.
+STR_FORK_UM_NO_OFFERS                                           :{BLACK}لا توجد عروض عند هذه الشركة الآن
+STR_FORK_UM_PICK_DEPOT                                          :{BLACK}اضغط على أحد مستودعاتك لاستلام المركبة ...
+STR_FORK_UM_OFFER_LINE1                                         :{BLACK}{ENGINE}   عمرها {NUM} سنة و{NUM} شهر
+STR_FORK_UM_OFFER_FAIR                                          :{BLACK}   {NUM}% من سعر الجديدة: {CURRENCY_LONG} (الجديدة: {CURRENCY_LONG})   المتبقي: {NUM}
+STR_FORK_UM_OFFER_BARGAIN                                       :{GREEN}   صيدة! {NUM}% من سعر الجديدة: {CURRENCY_LONG} (الجديدة: {CURRENCY_LONG})   المتبقي: {NUM}
+STR_FORK_UM_OFFER_PRICEY                                        :{RED}   {NUM}% من سعر الجديدة: {CURRENCY_LONG} (الجديدة: {CURRENCY_LONG})   المتبقي: {NUM}
+STR_FORK_UM_OFFER_SOLD                                          :{SILVER}   نفدت
+STR_FORK_UM_BUY                                                 :{BLACK}شراء المحدد
+STR_FORK_UM_BUY_TOOLTIP                                         :{BLACK}شراء المركبة المحددة ثم الضغط على أحد مستودعاتك لاستلامها
+STR_ERROR_FORK_UM_CAN_T_BUY                                     :{WHITE}لا يمكن شراء هذه المركبة المستعملة ...
+STR_ERROR_FORK_UM_NO_OFFER                                      :{WHITE}هذا العرض لم يعد متاحاً
+STR_ERROR_FORK_UM_SOLD_OUT                                      :{WHITE}هذه المركبة بيعت بالفعل

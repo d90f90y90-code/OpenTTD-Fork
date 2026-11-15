@@ -76,6 +76,10 @@ static constexpr size_t FORK_LEDGER_SIZE = MAX_COMPANIES * FORK_LEDGER_CATEGORIE
 static constexpr uint32_t FORK_ECONOMY_DATA_VERSION = 1; ///< Version of the data layout inside the fork economy savegame chunks.
 
 /** Global state of the extended economy. Saved in the 'FKEC' chunk. */
+static constexpr size_t FORK_DEALER_COUNT = 3; ///< Number of dealers of used vehicles.
+static constexpr size_t FORK_OFFERS_PER_DEALER = 8; ///< Number of offers each dealer makes.
+static constexpr size_t FORK_USED_SLOTS = FORK_DEALER_COUNT * FORK_OFFERS_PER_DEALER; ///< Number of offers per company.
+
 struct ForkEconomyState {
 	uint32_t data_version = FORK_ECONOMY_DATA_VERSION; ///< Version of this data, for conversions after the layout changed.
 	uint8_t market_phase = 0; ///< Current phase of the economic cycle (0 = normal).
@@ -84,6 +88,8 @@ struct ForkEconomyState {
 	uint16_t market_months_left = 24; ///< Months until the market phase changes.
 	std::array<Money, FORK_LEDGER_SIZE> ledger_month{}; ///< Ledger amounts of the current month.
 	std::array<Money, FORK_LEDGER_SIZE> ledger_last{}; ///< Ledger amounts of the previous month.
+	int32_t used_month = -1; ///< Month of the used vehicle offers that #used_sold is about.
+	std::array<uint8_t, MAX_COMPANIES * FORK_USED_SLOTS> used_sold{}; ///< Per company and offer, how many vehicles were bought this month.
 };
 
 extern ForkEconomyState _fork_economy;

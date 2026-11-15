@@ -54,6 +54,9 @@
 #include "story_base.h"
 #include "toolbar_gui.h"
 #include "fork_economy.h"
+#include "fork_logos.h"
+#include "fork_usedmarket.h"
+#include "zoom_func.h"
 #include "framerate_type.h"
 #include "screenshot_gui.h"
 #include "misc_cmd.h"
@@ -1973,6 +1976,13 @@ class NWidgetScenarioToolbarContainer : public NWidgetToolbarContainer {
  * @param w The clicked window.
  * @return The callback function.
  */
+/** Open the used vehicle market. */
+static CallBackFunction ToolbarUsedMarketClick(Window *)
+{
+	ShowForkUsedMarketWindow();
+	return CallBackFunction::None;
+}
+
 using ToolbarButtonProc = CallBackFunction(Window *w);
 
 static ToolbarButtonProc * const _toolbar_button_procs[] = {
@@ -2006,6 +2016,7 @@ static ToolbarButtonProc * const _toolbar_button_procs[] = {
 	ToolbarMusicClick,
 	ToolbarNewspaperClick,
 	ToolbarHelpClick,
+	ToolbarUsedMarketClick,
 	ToolbarSwitchClick,
 };
 
@@ -2024,6 +2035,11 @@ struct MainToolbarWindow : Window {
 		this->SetWidgetDisabledState(WID_TN_FAST_FORWARD, _networking); // if networking, disable fast-forward button
 		PositionMainToolbar(this);
 		if (this->HasZoomButtons()) DoZoomInOutWindow(ZOOM_NONE, this);
+	}
+
+	void DrawWidget(const Rect &r, WidgetID widget) const override
+	{
+		if (widget == WID_TN_USED_MARKET) DrawForkLogo(ForkLogo::CarMarket, r.Shrink(ScaleGUITrad(4)));
 	}
 
 	/** Whether this window contains the zoom and pause buttons; side columns only have some of the buttons. */
@@ -2238,6 +2254,7 @@ static constexpr std::tuple<WidgetID, WidgetType, SpriteID> _toolbar_button_spri
 	{WID_TN_MUSIC_SOUND,  WWT_IMGBTN,     SPR_IMG_MUSIC},
 	{WID_TN_MESSAGES,     WWT_IMGBTN,     SPR_IMG_MESSAGES},
 	{WID_TN_HELP,         WWT_IMGBTN,     SPR_IMG_QUERY},
+	{WID_TN_USED_MARKET, WWT_PUSHBTN,    SPR_IMG_QUERY},
 	{WID_TN_SWITCH_BAR,   WWT_IMGBTN,     SPR_IMG_SWITCH_TOOLBAR},
 };
 
@@ -2327,7 +2344,9 @@ static std::unique_ptr<NWidgetBase> MakeSideToolbar(const WidgetID (&buttons)[N]
 	for (WidgetID widget : buttons) {
 		for (const auto &[wid, tp, sprite] : _toolbar_button_sprites) {
 			if (wid != widget) continue;
-			StringID tooltip = (widget == WID_TN_LEAGUE) ? STR_FORK_BUSINESS_TOOLTIP : STR_TOOLBAR_TOOLTIP_PAUSE_GAME + widget;
+			StringID tooltip = STR_TOOLBAR_TOOLTIP_PAUSE_GAME + widget;
+			if (widget == WID_TN_LEAGUE) tooltip = STR_FORK_BUSINESS_TOOLTIP;
+			if (widget == WID_TN_USED_MARKET) tooltip = STR_FORK_UM_TOOLTIP;
 			auto leaf = std::make_unique<NWidgetLeaf>(tp, Colours::Grey, widget, WidgetData{.sprite = sprite}, tooltip);
 			leaf->SetMinimalSizeAbsolute(size, size);
 			column->Add(std::move(leaf));
@@ -2352,6 +2371,7 @@ static std::unique_ptr<NWidgetBase> MakeLeftToolbar()
 		WID_TN_LEAGUE, // Opens the business overview.
 		WID_TN_GRAPHS,
 		WID_TN_INDUSTRIES,
+		WID_TN_USED_MARKET, // Opens the used vehicle market.
 		WID_TN_MUSIC_SOUND,
 		WID_TN_MESSAGES,
 		WID_TN_HELP,
