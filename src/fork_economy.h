@@ -12,6 +12,7 @@
 
 #include "company_type.h"
 #include "core/pool_type.hpp"
+#include "cargo_type.h"
 #include "economy_type.h"
 #include "town_type.h"
 
@@ -171,6 +172,9 @@ uint GetForkStaffEfficiency(CompanyID company, TownID town);
 void RegisterForkLabor();
 void ShowForkStaffWindow(uint town);
 void ShowForkRealEstateWindow(uint town);
+
+uint GetForkCargoQuality(CargoType cargo, uint periods_in_transit);
+Money GetForkSpoilageFee(uint num_pieces, uint dist, CargoType cargo);
 
 void ShowForkBusinessWindow();
 

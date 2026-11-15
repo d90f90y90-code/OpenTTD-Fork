@@ -219,6 +219,7 @@ add_files(
     fork_labor.cpp
     fork_labor_cmd.h
     fork_labor_gui.cpp
+    fork_quality.cpp
     fork_realestate_cmd.h
     fork_shop.cpp
     fork_shop_cmd.h

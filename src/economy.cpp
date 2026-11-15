@@ -1034,7 +1034,21 @@ static Money GetTransportedGoodsIncomeBase(uint num_pieces, uint dist, uint16_t 
  */
 Money GetTransportedGoodsIncome(uint num_pieces, uint dist, uint16_t transit_periods, CargoType cargo_type)
 {
-	return GetTransportedGoodsIncomeBase(num_pieces, dist, transit_periods, cargo_type) * GetForkMarketFactor(ForkMarketFactor::CargoPrice) / 100;
+	Money income = GetTransportedGoodsIncomeBase(num_pieces, dist, transit_periods, cargo_type) * GetForkMarketFactor(ForkMarketFactor::CargoPrice) / 100;
+	/* Spoiled food and rusty metal are worth less; what is not worth anything pays nothing. */
+	return income * GetForkCargoQuality(cargo_type, transit_periods) / 100;
+}
+
+/**
+ * Fee for getting rid of cargo that spoiled completely on its way: a fifth of what the cargo would have paid when fresh.
+ * @param num_pieces Number of cargo units.
+ * @param dist Distance in tiles.
+ * @param cargo_type Type of the cargo.
+ * @return The (positive) fee.
+ */
+Money GetForkSpoilageFee(uint num_pieces, uint dist, CargoType cargo_type)
+{
+	return GetTransportedGoodsIncomeBase(num_pieces, dist, 0, cargo_type) / 5;
 }
 
 /** The industries we've currently brought cargo to. */
@@ -1236,6 +1250,11 @@ CargoPayment::~CargoPayment()
  */
 void CargoPayment::PayFinalDelivery(CargoType cargo, const CargoPacket *cp, uint count, TileIndex current_tile)
 {
+	/* Cargo that spoiled completely is garbage: it pays nothing and the owner has to pay for its disposal. */
+	if (GetForkCargoQuality(cargo, cp->GetPeriodsInTransit()) == 0) {
+		ForkLedgerBook(this->front->owner, ForkLedgerCategory::Trade, -GetForkSpoilageFee(count, cp->GetDistance(current_tile), cargo));
+	}
+
 	/* Handle end of route payment */
 	Money profit = DeliverGoods(count, cargo, this->current_station, cp->GetDistance(current_tile), cp->GetPeriodsInTransit(), Company::Get(this->front->owner), cp->GetSource());
 	this->route_profit += profit;
