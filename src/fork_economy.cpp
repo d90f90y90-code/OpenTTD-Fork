@@ -37,6 +37,7 @@ static std::array<ForkAssetMonthlyHandler, static_cast<size_t>(ForkAssetType::En
 void ResetForkEconomy()
 {
 	_fork_economy = {};
+	RegisterForkRealEstate();
 }
 
 /**
@@ -170,6 +171,31 @@ static void UpdateMarketCycle()
 
 	/* The market changes gradually, never more than 3% per month. */
 	s.market_index += std::clamp<int32_t>(s.market_target - s.market_index, -30, 30);
+}
+
+/**
+ * A company goes away or is taken over: its assets are passed on to the new owner, or removed when there is none.
+ * @param old_owner Company that disappears.
+ * @param new_owner Company that takes over, or an invalid owner.
+ */
+void TransferForkAssets(Owner old_owner, Owner new_owner)
+{
+	for (ForkAsset *a : ForkAsset::Iterate()) {
+		if (a->owner != old_owner) continue;
+		if (Company::IsValidID(new_owner) && new_owner != old_owner) {
+			a->owner = new_owner;
+		} else {
+			delete a;
+		}
+	}
+
+	/* Clear the ledger of the company, so a new company that gets the same number starts fresh. */
+	for (size_t c = 0; c < FORK_LEDGER_CATEGORIES; c++) {
+		size_t index = static_cast<size_t>(old_owner.base()) * FORK_LEDGER_CATEGORIES + c;
+		if (index >= FORK_LEDGER_SIZE) break;
+		_fork_economy.ledger_month[index] = 0;
+		_fork_economy.ledger_last[index] = 0;
+	}
 }
 
 /** Everything the extended economy does at the start of a month. */

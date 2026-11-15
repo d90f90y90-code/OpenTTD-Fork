@@ -6099,6 +6099,17 @@ STR_FORK_BUSINESS_ASSETS                                        :Assets owned: {
 STR_FORK_LEDGER_ROW                                             :{STRING}, last month: {CURRENCY_LONG}
 STR_FORK_CATEGORY_TAX                                           :Taxes
 STR_FORK_TOWN_TAX_RATE                                          :Local tax rate on stations and property: {NUM}.{NUM}%
+STR_FORK_TOWN_PLOTS_INFO                                         :Your plots here: {NUM} of {NUM}   Price: {CURRENCY_LONG}   Rent: {CURRENCY_LONG} per month
+STR_FORK_BUY_PLOT                                               :{BLACK}Buy plot
+STR_FORK_BUY_PLOT_TOOLTIP                                       :{BLACK}Buy a plot of land in this town. It earns rent every month and its value follows the growth of the town
+STR_FORK_SELL_PLOT                                              :{BLACK}Sell plot
+STR_FORK_SELL_PLOT_TOOLTIP                                      :{BLACK}Sell your oldest plot of land in this town
+STR_ERROR_FORK_CAN_T_BUY_PLOT                                   :{WHITE}Can't buy a plot of land here...
+STR_ERROR_FORK_CAN_T_SELL_PLOT                                  :{WHITE}Can't sell a plot of land here...
+STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}The town is too small, land is only sold in towns with at least 200 inhabitants
+STR_ERROR_FORK_PLOT_LIMIT                                       :{WHITE}You already own as many plots here as this town allows
+STR_ERROR_FORK_NO_PLOT                                          :{WHITE}You don't own a plot of land in this town
+STR_ERROR_FORK_TOO_MANY_ASSETS                                  :{WHITE}There are too many assets in the game
 STR_FORK_CATEGORY_RENT                                          :Rent
 STR_FORK_CATEGORY_SALARIES                                      :Salaries
 STR_FORK_CATEGORY_DIVIDENDS                                     :Dividends

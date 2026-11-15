@@ -126,6 +126,15 @@ uint GetForkTownSizeLevel(const Town *t);
 uint GetForkTownTaxPermille(const Town *t);
 void ChargeForkMunicipalTaxes();
 uint GetForkAssetCount(CompanyID company);
+void TransferForkAssets(Owner old_owner, Owner new_owner);
+
+Money GetForkPlotValue(const Town *t);
+Money GetForkPlotBuyPrice(const Town *t);
+Money GetForkPlotSellValue(const Town *t);
+Money GetForkPlotRent(const Town *t);
+uint GetForkPlotLimit(const Town *t);
+uint GetForkCompanyPlots(CompanyID company, TownID town);
+void RegisterForkRealEstate();
 
 void ShowForkBusinessWindow();
 

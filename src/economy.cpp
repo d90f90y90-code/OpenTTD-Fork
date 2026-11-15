@@ -331,6 +331,7 @@ void ChangeOwnershipOfCompanyItems(Owner old_owner, Owner new_owner)
 	 * are the current local company. */
 	AutoRestoreBackup cur_company(_current_company, old_owner);
 	TransferIndustryInvestments(old_owner, new_owner);
+	TransferForkAssets(old_owner, new_owner);
 	/* In all cases, make spectators of clients connected to that company */
 	if (_networking) NetworkClientsToSpectators(old_owner);
 	if (old_owner == _local_company) {

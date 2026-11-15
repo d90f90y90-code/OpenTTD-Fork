@@ -35,6 +35,7 @@
 #include "townname_func.h"
 #include "core/backup_type.hpp"
 #include "fork_economy.h"
+#include "fork_realestate_cmd.h"
 #include "core/geometry_func.hpp"
 #include "core/string_consumer.hpp"
 #include "genworld.h"
@@ -388,6 +389,12 @@ public:
 		this->DrawWidgets();
 	}
 
+	/** @return Whether the line about the land of the local company is shown. */
+	bool ShowForkPlots() const
+	{
+		return Company::IsValidID(_local_company);
+	}
+
 	void DrawWidget(const Rect &r, WidgetID widget) const override
 	{
 		if (widget != WID_TV_INFO) return;
@@ -400,6 +407,11 @@ public:
 		const uint tax_rate = GetForkTownTaxPermille(this->town);
 		DrawString(tr, GetString(STR_FORK_TOWN_TAX_RATE, tax_rate / 10, tax_rate % 10));
 		tr.top += GetCharacterHeight(FontSize::Normal);
+
+		if (this->ShowForkPlots()) {
+			DrawString(tr, GetString(STR_FORK_TOWN_PLOTS_INFO, GetForkCompanyPlots(_local_company, this->town->index), GetForkPlotLimit(this->town), GetForkPlotBuyPrice(this->town), GetForkPlotRent(this->town)));
+			tr.top += GetCharacterHeight(FontSize::Normal);
+		}
 
 		StringID str_last_period = TimerGameEconomy::UsingWallclockUnits() ? STR_TOWN_VIEW_CARGO_LAST_MINUTE_MAX : STR_TOWN_VIEW_CARGO_LAST_MONTH_MAX;
 
@@ -520,6 +532,14 @@ public:
 				ShowTownCargoGraph(this->window_number);
 				break;
 			}
+
+			case WID_TV_BUY_PLOT:
+				Command<Commands::BuyForkPlot>::Post(STR_ERROR_FORK_CAN_T_BUY_PLOT, static_cast<TownID>(this->window_number));
+				break;
+
+			case WID_TV_SELL_PLOT:
+				Command<Commands::SellForkPlot>::Post(STR_ERROR_FORK_CAN_T_SELL_PLOT, static_cast<TownID>(this->window_number));
+				break;
 		}
 	}
 
@@ -539,7 +559,7 @@ public:
 	 */
 	uint GetDesiredInfoHeight(int width) const
 	{
-		uint aimed_height = static_cast<uint>(2 + CargoSpec::town_production_cargoes[TownProductionEffect::Passengers].size() + CargoSpec::town_production_cargoes[TownProductionEffect::Mail].size()) * GetCharacterHeight(FontSize::Normal);
+		uint aimed_height = static_cast<uint>(2 + (this->ShowForkPlots() ? 1 : 0) + CargoSpec::town_production_cargoes[TownProductionEffect::Passengers].size() + CargoSpec::town_production_cargoes[TownProductionEffect::Mail].size()) * GetCharacterHeight(FontSize::Normal);
 
 		bool first = true;
 		for (TownAcceptanceEffect i : EnumRange(TownAcceptanceEffect::End)) {
@@ -633,6 +653,10 @@ static constexpr std::initializer_list<NWidgetPart> _nested_town_game_view_widge
 		EndContainer(),
 	EndContainer(),
 	NWidget(WWT_PANEL, Colours::Brown, WID_TV_INFO), SetMinimalSize(260, 32), SetResize(1, 0), SetFill(1, 0), EndContainer(),
+	NWidget(NWID_HORIZONTAL, NWidContainerFlag::EqualSize),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_BUY_PLOT), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_BUY_PLOT, STR_FORK_BUY_PLOT_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_SELL_PLOT), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_SELL_PLOT, STR_FORK_SELL_PLOT_TOOLTIP),
+	EndContainer(),
 	NWidget(NWID_HORIZONTAL, NWidContainerFlag::EqualSize),
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_SHOW_AUTHORITY), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_TOWN_VIEW_LOCAL_AUTHORITY_BUTTON, STR_TOWN_VIEW_LOCAL_AUTHORITY_TOOLTIP),
 		NWidget(WWT_TEXTBTN, Colours::Brown, WID_TV_CATCHMENT), SetMinimalSize(40, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_BUTTON_CATCHMENT, STR_TOOLTIP_CATCHMENT),

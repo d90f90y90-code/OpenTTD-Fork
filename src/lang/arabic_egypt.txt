@@ -4974,3 +4974,14 @@ STR_SHIP                                                        :{BLACK}{SHIP}
 STR_TOOLBAR_RAILTYPE_VELOCITY                                   :{STRING} ({VELOCITY})
 
 STR_FORK_TOWN_TAX_RATE                                          :الضريبة المحلية على المحطات والممتلكات: {NUM}.{NUM}%
+STR_FORK_TOWN_PLOTS_INFO                                         :قطع أرضك هنا: {NUM} من {NUM}   السعر: {CURRENCY_LONG}   الإيجار: {CURRENCY_LONG} شهرياً
+STR_FORK_BUY_PLOT                                               :{BLACK}شراء قطعة أرض
+STR_FORK_BUY_PLOT_TOOLTIP                                       :{BLACK}شراء قطعة أرض في هذه المدينة. تدرّ إيجاراً كل شهر وتتبع قيمتها نمو المدينة
+STR_FORK_SELL_PLOT                                              :{BLACK}بيع قطعة أرض
+STR_FORK_SELL_PLOT_TOOLTIP                                      :{BLACK}بيع أقدم قطعة أرض تملكها في هذه المدينة
+STR_ERROR_FORK_CAN_T_BUY_PLOT                                   :{WHITE}لا يمكن شراء قطعة أرض هنا ...
+STR_ERROR_FORK_CAN_T_SELL_PLOT                                  :{WHITE}لا يمكن بيع قطعة أرض هنا ...
+STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}المدينة صغيرة جداً، تُباع الأراضي فقط في مدن فيها 200 ساكن على الأقل
+STR_ERROR_FORK_PLOT_LIMIT                                       :{WHITE}تملك هنا أقصى عدد من القطع تسمح به المدينة
+STR_ERROR_FORK_NO_PLOT                                          :{WHITE}لا تملك قطعة أرض في هذه المدينة
+STR_ERROR_FORK_TOO_MANY_ASSETS                                  :{WHITE}عدد الأصول في اللعبة كبير جداً
