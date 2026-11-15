@@ -401,6 +401,9 @@ public:
 		DrawString(tr, GetString(STR_FORK_TOWN_TAX_RATE, tax_rate / 10, tax_rate % 10, tax_rate * 3 / 2 / 10, tax_rate * 3 / 2 % 10));
 		tr.top += GetCharacterHeight(FontSize::Normal);
 
+		DrawString(tr, GetString(STR_FORK_TOWN_CUSTOMS_RATE, GetForkCustomsRate(this->town)));
+		tr.top += GetCharacterHeight(FontSize::Normal);
+
 		StringID str_last_period = TimerGameEconomy::UsingWallclockUnits() ? STR_TOWN_VIEW_CARGO_LAST_MINUTE_MAX : STR_TOWN_VIEW_CARGO_LAST_MONTH_MAX;
 
 		for (auto tpe : {TownProductionEffect::Passengers, TownProductionEffect::Mail}) {
@@ -551,7 +554,7 @@ public:
 	 */
 	uint GetDesiredInfoHeight(int width) const
 	{
-		uint aimed_height = static_cast<uint>(2 + CargoSpec::town_production_cargoes[TownProductionEffect::Passengers].size() + CargoSpec::town_production_cargoes[TownProductionEffect::Mail].size()) * GetCharacterHeight(FontSize::Normal);
+		uint aimed_height = static_cast<uint>(3 + CargoSpec::town_production_cargoes[TownProductionEffect::Passengers].size() + CargoSpec::town_production_cargoes[TownProductionEffect::Mail].size()) * GetCharacterHeight(FontSize::Normal);
 
 		bool first = true;
 		for (TownAcceptanceEffect i : EnumRange(TownAcceptanceEffect::End)) {

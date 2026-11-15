@@ -5065,3 +5065,4 @@ STR_FORK_UM_BUY_TOOLTIP                                         :{BLACK}شراء
 STR_ERROR_FORK_UM_CAN_T_BUY                                     :{WHITE}لا يمكن شراء هذه المركبة المستعملة ...
 STR_ERROR_FORK_UM_NO_OFFER                                      :{WHITE}هذا العرض لم يعد متاحاً
 STR_ERROR_FORK_UM_SOLD_OUT                                      :{WHITE}هذه المركبة بيعت بالفعل
+STR_FORK_TOWN_CUSTOMS_RATE                                      :{BLACK}جمارك البضائع الواصلة إلى هنا من مدن أخرى: {NUM}%

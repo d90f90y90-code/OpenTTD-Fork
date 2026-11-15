@@ -6203,3 +6203,4 @@ STR_ERROR_FORK_CAN_T_FIRE                                       :{WHITE}Can't fi
 STR_ERROR_FORK_STAFF_TOWN_TOO_SMALL                             :{WHITE}The town is too small, staff can only be hired in towns with at least 100 inhabitants
 STR_ERROR_FORK_STAFF_LIMIT                                      :{WHITE}You can't employ more staff here: the town has too few workers
 STR_ERROR_FORK_NO_STAFF                                         :{WHITE}You don't employ that many staff in this town
+STR_FORK_TOWN_CUSTOMS_RATE                                      :{BLACK}Customs duty on goods delivered here from other towns: {NUM}%

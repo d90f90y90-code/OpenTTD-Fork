@@ -12,7 +12,10 @@
 
 #include "company_type.h"
 #include "core/pool_type.hpp"
+#include "cargo_type.h"
 #include "economy_type.h"
+#include "source_type.h"
+#include "station_type.h"
 #include "town_type.h"
 
 /**
@@ -175,6 +178,9 @@ uint GetForkRequiredStaff(uint houses, uint shops);
 uint GetForkStaffEfficiencyFor(CompanyID company, TownID town, uint houses, uint shops);
 uint GetForkStaffEfficiency(CompanyID company, TownID town);
 void RegisterForkLabor();
+
+uint GetForkCustomsRate(const Town *t);
+Money GetForkCustomsDuty(CargoType cargo, const Source &source, StationID destination, Money payment);
 void ShowForkStaffWindow(uint town);
 void ShowForkRealEstateWindow(uint town);
 

@@ -226,6 +226,7 @@ add_files(
     fork_logos.cpp
     fork_logos.h
     fork_logos_data.h
+    fork_customs.cpp
     fork_tax.cpp
     fork_usedmarket.cpp
     fork_usedmarket.h

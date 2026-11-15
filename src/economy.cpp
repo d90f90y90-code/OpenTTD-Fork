@@ -1242,6 +1242,13 @@ void CargoPayment::PayFinalDelivery(CargoType cargo, const CargoPacket *cp, uint
 
 	/* The vehicle's profit is whatever route profit there is minus feeder shares. */
 	this->visual_profit += profit - cp->GetFeederShare(count);
+
+	/* Goods that cross from one town to another pay customs duty to the destination town. */
+	const Money duty = GetForkCustomsDuty(cargo, cp->GetSource(), this->current_station, profit);
+	if (duty > 0) {
+		ForkLedgerBook(this->front->owner, ForkLedgerCategory::Trade, -duty);
+		this->visual_profit -= duty;
+	}
 }
 
 /**
