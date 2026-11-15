@@ -5001,3 +5001,28 @@ STR_ERROR_FORK_CAN_T_SET_RENT                                   :{WHITE}لا ي�
 STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}المدينة صغيرة جداً، تُباع البيوت فقط في مدن فيها 100 ساكن على الأقل
 STR_ERROR_FORK_HOUSE_LIMIT                                      :{WHITE}لا يمكنك امتلاك بيوت هنا أكثر مما في المدينة
 STR_ERROR_FORK_NO_HOUSES                                        :{WHITE}لا تملك هذا العدد من البيوت في هذه المدينة
+STR_FORK_SHOP_BUTTON                                            :{BLACK}متاجر
+STR_FORK_SHOP_TOOLTIP                                           :{BLACK}فتح وبيع المتاجر في هذه المدينة وتحديد الأسعار
+STR_FORK_SHOP_CAPTION                                           :متاجر: {TOWN}
+STR_FORK_SHOP_BUY_1                                             :{BLACK}فتح متجر
+STR_FORK_SHOP_BUY_10                                            :{BLACK}فتح 10 متاجر
+STR_FORK_SHOP_SELL_1                                            :{BLACK}بيع متجر
+STR_FORK_SHOP_SELL_10                                           :{BLACK}بيع 10 متاجر
+STR_FORK_SHOP_BUY_TOOLTIP                                       :{BLACK}فتح متاجر في هذه المدينة. دخلها من إنفاق السكان
+STR_FORK_SHOP_SELL_TOOLTIP                                      :{BLACK}بيع متاجر في هذه المدينة
+STR_FORK_SHOP_PRICE_DOWN                                        :{BLACK}الأسعار -10%
+STR_FORK_SHOP_PRICE_UP                                          :{BLACK}الأسعار +10%
+STR_FORK_SHOP_PRICE_DOWN_TOOLTIP                                :{BLACK}تخفيض الأسعار: زبائن أكثر، لكن ربح أقل في كل عملية بيع
+STR_FORK_SHOP_PRICE_UP_TOOLTIP                                  :{BLACK}رفع الأسعار: ربح أكبر في كل عملية بيع، لكن يذهب الزبائن إلى المنافسين
+STR_FORK_SHOP_OWNED                                             :{BLACK}المتاجر التي تملكها: {NUM} من {NUM}   القيمة: {CURRENCY_LONG}
+STR_FORK_SHOP_PRICE                                             :{BLACK}سعر المتجر: {CURRENCY_LONG}   تبيع بـ: {CURRENCY_LONG}
+STR_FORK_SHOP_SPENDING                                          :{BLACK}ينفق السكان في المتاجر: {CURRENCY_LONG} شهرياً
+STR_FORK_SHOP_YOUR_PRICES                                       :{BLACK}أسعارك: {NUM}% من المعتاد   حصتك من السوق: {NUM}.{NUM}%
+STR_FORK_SHOP_SALES                                             :{BLACK}المبيعات: {CURRENCY_LONG} شهرياً   التكاليف: {CURRENCY_LONG} شهرياً
+STR_FORK_SHOP_PROFIT                                            :{BLACK}الربح: {CURRENCY_LONG} شهرياً   ضريبة العقارات: {CURRENCY_LONG} شهرياً
+STR_ERROR_FORK_CAN_T_BUY_SHOPS                                  :{WHITE}لا يمكن فتح متاجر هنا ...
+STR_ERROR_FORK_CAN_T_SELL_SHOPS                                 :{WHITE}لا يمكن بيع متاجر هنا ...
+STR_ERROR_FORK_CAN_T_SET_SHOP_PRICE                             :{WHITE}لا يمكن تغيير الأسعار هنا ...
+STR_ERROR_FORK_SHOP_TOWN_TOO_SMALL                              :{WHITE}المدينة صغيرة جداً، تُفتح المتاجر فقط في مدن فيها 300 ساكن على الأقل
+STR_ERROR_FORK_SHOP_LIMIT                                       :{WHITE}لا يمكنك امتلاك متاجر أكثر هنا: الحد نصف عدد بيوت المدينة، وبحد أقصى 40
+STR_ERROR_FORK_NO_SHOPS                                         :{WHITE}لا تملك هذا العدد من المتاجر في هذه المدينة

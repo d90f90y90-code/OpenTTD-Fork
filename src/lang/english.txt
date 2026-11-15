@@ -6139,3 +6139,28 @@ STR_FORK_PHASE_RECESSION                                        :Recession
 STR_FORK_NEWS_BOOM                                              :{BIG_FONT}{BLACK}Economic boom! Cargo payments, rents and share prices are rising
 STR_FORK_NEWS_RECESSION                                         :{BIG_FONT}{BLACK}Recession! Cargo payments, rents and share prices are falling
 STR_FORK_NEWS_STABLE                                            :{BIG_FONT}{BLACK}The economy has stabilised
+STR_FORK_SHOP_BUTTON                                            :{BLACK}Shops
+STR_FORK_SHOP_TOOLTIP                                           :{BLACK}Open and sell shops in this town and set the prices
+STR_FORK_SHOP_CAPTION                                           :Shops: {TOWN}
+STR_FORK_SHOP_BUY_1                                             :{BLACK}Open 1 shop
+STR_FORK_SHOP_BUY_10                                            :{BLACK}Open 10 shops
+STR_FORK_SHOP_SELL_1                                            :{BLACK}Sell 1 shop
+STR_FORK_SHOP_SELL_10                                           :{BLACK}Sell 10 shops
+STR_FORK_SHOP_BUY_TOOLTIP                                       :{BLACK}Open shops in this town. They earn from what the inhabitants spend
+STR_FORK_SHOP_SELL_TOOLTIP                                      :{BLACK}Sell shops in this town
+STR_FORK_SHOP_PRICE_DOWN                                        :{BLACK}Prices -10%
+STR_FORK_SHOP_PRICE_UP                                          :{BLACK}Prices +10%
+STR_FORK_SHOP_PRICE_DOWN_TOOLTIP                                :{BLACK}Lower the prices: more customers, but less profit per sale
+STR_FORK_SHOP_PRICE_UP_TOOLTIP                                  :{BLACK}Raise the prices: more profit per sale, but customers go to the competition
+STR_FORK_SHOP_OWNED                                             :{BLACK}Shops you own: {NUM} of {NUM}   Value: {CURRENCY_LONG}
+STR_FORK_SHOP_PRICE                                             :{BLACK}Price per shop: {CURRENCY_LONG}   You sell for: {CURRENCY_LONG}
+STR_FORK_SHOP_SPENDING                                          :{BLACK}Inhabitants spend in shops: {CURRENCY_LONG} per month
+STR_FORK_SHOP_YOUR_PRICES                                       :{BLACK}Your prices: {NUM}% of normal   Your share of the market: {NUM}.{NUM}%
+STR_FORK_SHOP_SALES                                             :{BLACK}Sales: {CURRENCY_LONG} per month   Costs: {CURRENCY_LONG} per month
+STR_FORK_SHOP_PROFIT                                            :{BLACK}Profit: {CURRENCY_LONG} per month   Property tax: {CURRENCY_LONG} per month
+STR_ERROR_FORK_CAN_T_BUY_SHOPS                                  :{WHITE}Can't open shops here...
+STR_ERROR_FORK_CAN_T_SELL_SHOPS                                 :{WHITE}Can't sell shops here...
+STR_ERROR_FORK_CAN_T_SET_SHOP_PRICE                             :{WHITE}Can't change the prices here...
+STR_ERROR_FORK_SHOP_TOWN_TOO_SMALL                              :{WHITE}The town is too small, shops can only be opened in towns with at least 300 inhabitants
+STR_ERROR_FORK_SHOP_LIMIT                                       :{WHITE}You can't own more shops here: at most half the number of houses in the town, and 40
+STR_ERROR_FORK_NO_SHOPS                                         :{WHITE}You don't own enough shops in this town

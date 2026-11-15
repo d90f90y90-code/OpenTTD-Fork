@@ -45,6 +45,7 @@ enum class ForkMarketFactor : uint8_t {
 	Rent, ///< Rents of property.
 	StockPrice, ///< Prices of shares.
 	Interest, ///< Interest rates.
+	Consumption, ///< What inhabitants spend in shops.
 	End, ///< End marker.
 };
 
@@ -138,6 +139,26 @@ uint GetForkCompanyHouses(CompanyID company, TownID town);
 uint GetForkRentPercent(CompanyID company, TownID town);
 uint GetForkOccupancy(uint rent_percent);
 void RegisterForkRealEstate();
+
+/** Result of the retail shops of a company in a town, per month. */
+struct ForkShopResult {
+	Money sales = 0; ///< Money taken at the cash registers.
+	Money gross = 0; ///< Sales minus the cost of the goods.
+	Money fixed = 0; ///< Fixed costs of running the shops.
+	Money profit = 0; ///< Gross profit minus fixed costs.
+	uint share_permille = 0; ///< Share of the spending in the town that goes to the shops, in permille.
+};
+
+Money GetForkTownRetailSpending(const Town *t);
+Money GetForkShopValue(const Town *t);
+Money GetForkShopBuyPrice(const Town *t);
+Money GetForkShopSellValue(const Town *t);
+uint GetForkShopLimit(const Town *t);
+uint GetForkCompanyShops(CompanyID company, TownID town);
+uint GetForkShopPrice(CompanyID company, TownID town);
+ForkShopResult GetForkShopResult(const Town *t, CompanyID company, uint shops, uint price_percent);
+void RegisterForkShops();
+void ShowForkShopsWindow(uint town);
 void ShowForkRealEstateWindow(uint town);
 
 void ShowForkBusinessWindow();

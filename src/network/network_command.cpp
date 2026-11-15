@@ -23,6 +23,7 @@
 #include "../economy_cmd.h"
 #include "../investment_cmd.h"
 #include "../fork_realestate_cmd.h"
+#include "../fork_shop_cmd.h"
 #include "../engine_cmd.h"
 #include "../error_func.h"
 #include "../goal_cmd.h"

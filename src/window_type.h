@@ -325,6 +325,12 @@ enum class WindowClass : uint16_t {
 	ForkRealEstate,
 
 	/**
+	 * Fork retail shops of a town; %Window numbers:
+	 *   - #TownID = #ForkShopsWidgets
+	 */
+	ForkShops,
+
+	/**
 	 * Station list; %Window numbers:
 	 *   - #CompanyID = #StationListWidgets
 	 */

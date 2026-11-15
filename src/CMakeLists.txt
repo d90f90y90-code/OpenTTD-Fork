@@ -217,6 +217,9 @@ add_files(
     fork_realestate.cpp
     fork_realestate_gui.cpp
     fork_realestate_cmd.h
+    fork_shop.cpp
+    fork_shop_cmd.h
+    fork_shop_gui.cpp
     fork_tax.cpp
     goal.cpp
     goal_base.h

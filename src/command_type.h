@@ -269,6 +269,9 @@ enum class Commands : uint8_t {
 	BuyForkHouses, ///< buy houses in a town
 	SellForkHouses, ///< sell houses in a town
 	SetForkRent, ///< change the rent asked for houses in a town
+	BuyForkShops, ///< open shops in a town
+	SellForkShops, ///< sell shops in a town
+	SetForkShopPrice, ///< change the prices of the shops in a town
 
 	SetCompanyManagerFace, ///< set the manager's face of the company
 	SetCompanyColour, ///< set the colour of the company
