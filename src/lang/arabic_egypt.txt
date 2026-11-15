@@ -5026,3 +5026,23 @@ STR_ERROR_FORK_CAN_T_SET_SHOP_PRICE                             :{WHITE}لا ي�
 STR_ERROR_FORK_SHOP_TOWN_TOO_SMALL                              :{WHITE}المدينة صغيرة جداً، تُفتح المتاجر فقط في مدن فيها 300 ساكن على الأقل
 STR_ERROR_FORK_SHOP_LIMIT                                       :{WHITE}لا يمكنك امتلاك متاجر أكثر هنا: الحد نصف عدد بيوت المدينة، وبحد أقصى 40
 STR_ERROR_FORK_NO_SHOPS                                         :{WHITE}لا تملك هذا العدد من المتاجر في هذه المدينة
+STR_FORK_STAFF_BUTTON                                           :{BLACK}الموظفون
+STR_FORK_STAFF_TOOLTIP                                          :{BLACK}توظيف وفصل المديرين والإداريين في هذه المدينة
+STR_FORK_STAFF_CAPTION                                          :الموظفون: {TOWN}
+STR_FORK_STAFF_HIRE_1                                           :{BLACK}توظيف 1
+STR_FORK_STAFF_HIRE_5                                           :{BLACK}توظيف 5
+STR_FORK_STAFF_FIRE_1                                           :{BLACK}فصل 1
+STR_FORK_STAFF_FIRE_5                                           :{BLACK}فصل 5
+STR_FORK_STAFF_HIRE_TOOLTIP                                     :{BLACK}توظيف موظفين. التوظيف يكلّف راتبين شهريين عن كل شخص
+STR_FORK_STAFF_FIRE_TOOLTIP                                     :{BLACK}فصل موظفين. تعويض الفصل راتب شهري عن كل شخص
+STR_FORK_STAFF_EMPLOYED                                         :{BLACK}الموظفون لديك: {NUM} من {NUM}   المطلوب لأصولك: {NUM}
+STR_FORK_STAFF_WAGE                                             :{BLACK}راتب الشخص: {CURRENCY_LONG} شهرياً
+STR_FORK_STAFF_COSTS                                            :{BLACK}كلفة التوظيف: {CURRENCY_LONG} للشخص   تعويض الفصل: {CURRENCY_LONG} للشخص
+STR_FORK_STAFF_ASSETS                                           :{BLACK}أصولك هنا: {NUM} بيوت، {NUM} متاجر
+STR_FORK_STAFF_EFFICIENCY                                       :{BLACK}كفاءة أصولك هنا: {NUM}%
+STR_FORK_STAFF_SALARIES                                         :{BLACK}الرواتب: {CURRENCY_LONG} شهرياً
+STR_ERROR_FORK_CAN_T_HIRE                                       :{WHITE}لا يمكن توظيف موظفين هنا ...
+STR_ERROR_FORK_CAN_T_FIRE                                       :{WHITE}لا يمكن فصل موظفين هنا ...
+STR_ERROR_FORK_STAFF_TOWN_TOO_SMALL                             :{WHITE}المدينة صغيرة جداً، يُوظَّف الموظفون فقط في مدن فيها 100 ساكن على الأقل
+STR_ERROR_FORK_STAFF_LIMIT                                      :{WHITE}لا يمكنك توظيف موظفين أكثر هنا: عدد العمال في المدينة قليل
+STR_ERROR_FORK_NO_STAFF                                         :{WHITE}لا توظّف هذا العدد من الموظفين في هذه المدينة

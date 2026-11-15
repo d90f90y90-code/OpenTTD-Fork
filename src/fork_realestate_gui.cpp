@@ -76,7 +76,7 @@ struct ForkRealEstateWindow : Window {
 		const uint rent_percent = GetForkRentPercent(_local_company, t->index);
 		const int swing = GetForkPropertySwing();
 		const Money value = GetForkHouseValue(t);
-		const Money income = GetForkHouseRent(t, rent_percent) * houses;
+		const Money income = GetForkHouseRent(t, rent_percent) * houses * GetForkStaffEfficiency(_local_company, t->index) / 100;
 		const Money tax = value * houses * GetForkTownTaxPermille(t) / 8000;
 
 		const Rect ir = r.Shrink(WidgetDimensions::scaled.frametext);

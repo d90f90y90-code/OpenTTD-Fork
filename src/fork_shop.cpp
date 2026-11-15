@@ -170,11 +170,13 @@ ForkShopResult GetForkShopResult(const Town *t, CompanyID company, uint shops, u
 	const uint64_t own = static_cast<uint64_t>(shops) * ShopAttraction(price_percent);
 	const uint64_t share = own * 1000 / (others + own);
 
-	const Money volume = GetForkTownRetailSpending(t) * static_cast<int64_t>(share) / 1000; // Sales at normal prices.
+	/* Shops with too little staff serve fewer customers. */
+	const uint efficiency = GetForkStaffEfficiencyFor(company, t->index, GetForkCompanyHouses(company, t->index), shops);
+	const Money volume = GetForkTownRetailSpending(t) * static_cast<int64_t>(share) / 1000 * efficiency / 100; // Sales at normal prices.
 	r.share_permille = static_cast<uint>(share);
 	r.sales = volume * price_percent / 100;
 	r.gross = r.sales - volume * FORK_SHOP_COGS_PERCENT / 100;
-	r.fixed = _price[Price::BuildStationRail] * shops / 2;
+	r.fixed = _price[Price::BuildStationRail] * shops / 4; // Premises; the staff is paid through the labor market.
 	r.profit = r.gross - r.fixed;
 	return r;
 }

@@ -39,6 +39,7 @@ void ResetForkEconomy()
 	_fork_economy = {};
 	RegisterForkRealEstate();
 	RegisterForkShops();
+	RegisterForkLabor();
 }
 
 /**
@@ -67,6 +68,7 @@ uint GetForkMarketFactor(ForkMarketFactor factor)
 		case ForkMarketFactor::StockPrice: percent += delta / 5; break; // +-50%
 		case ForkMarketFactor::Interest: percent += delta / 10; break; // +-25%
 		case ForkMarketFactor::Consumption: percent += delta / 10; break; // +-25%
+		case ForkMarketFactor::Wages: percent += delta / 15; break; // +-17%
 		default: break;
 	}
 	return static_cast<uint>(std::max<int32_t>(10, percent));

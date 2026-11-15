@@ -46,6 +46,7 @@ enum class ForkMarketFactor : uint8_t {
 	StockPrice, ///< Prices of shares.
 	Interest, ///< Interest rates.
 	Consumption, ///< What inhabitants spend in shops.
+	Wages, ///< Salaries of staff.
 	End, ///< End marker.
 };
 
@@ -58,6 +59,7 @@ enum class ForkAssetType : uint8_t {
 	MiningRight, ///< Right to the output of an industry.
 	MediaChannel, ///< Radio or TV channel.
 	Shares, ///< Shares of an NPC company.
+	Staff, ///< Managers and administrative staff in a town.
 	End, ///< End marker.
 };
 
@@ -159,6 +161,15 @@ uint GetForkShopPrice(CompanyID company, TownID town);
 ForkShopResult GetForkShopResult(const Town *t, CompanyID company, uint shops, uint price_percent);
 void RegisterForkShops();
 void ShowForkShopsWindow(uint town);
+
+Money GetForkWage(const Town *t);
+uint GetForkStaffLimit(const Town *t);
+uint GetForkCompanyStaff(CompanyID company, TownID town);
+uint GetForkRequiredStaff(uint houses, uint shops);
+uint GetForkStaffEfficiencyFor(CompanyID company, TownID town, uint houses, uint shops);
+uint GetForkStaffEfficiency(CompanyID company, TownID town);
+void RegisterForkLabor();
+void ShowForkStaffWindow(uint town);
 void ShowForkRealEstateWindow(uint town);
 
 void ShowForkBusinessWindow();

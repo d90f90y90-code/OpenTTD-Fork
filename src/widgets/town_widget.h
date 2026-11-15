@@ -48,6 +48,7 @@ enum TownViewWidgets : WidgetID {
 	WID_TV_GRAPH,
 	WID_TV_REAL_ESTATE,    ///< Open the real estate window of this town.
 	WID_TV_SHOPS,          ///< Open the shops window of this town.
+	WID_TV_STAFF,          ///< Open the staff window of this town.
 };
 
 /** Widgets of the #FoundTownWindow class. */

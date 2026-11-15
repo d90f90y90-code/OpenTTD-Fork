@@ -180,7 +180,8 @@ static void RefreshForkProperty(ForkAsset *a, const Town *t)
 	a->data[2] = houses;
 	a->data[1] = GetForkOccupancy(rent_percent);
 	a->value = GetForkHouseValue(t) * houses;
-	a->monthly_income = GetForkHouseRent(t, rent_percent) * houses;
+	/* Houses that are not looked after well earn less rent; the staff of the labor market decides how well. */
+	a->monthly_income = GetForkHouseRent(t, rent_percent) * houses * GetForkStaffEfficiency(a->owner, t->index) / 100;
 }
 
 /**

@@ -528,6 +528,10 @@ public:
 			case WID_TV_SHOPS:
 				ShowForkShopsWindow(this->window_number);
 				break;
+
+			case WID_TV_STAFF:
+				ShowForkStaffWindow(this->window_number);
+				break;
 		}
 	}
 
@@ -648,6 +652,9 @@ static constexpr std::initializer_list<NWidgetPart> _nested_town_game_view_widge
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_REAL_ESTATE), SetFill(1, 0), SetResize(1, 0), SetStringTip(STR_FORK_REAL_ESTATE_BUTTON, STR_FORK_REAL_ESTATE_TOOLTIP),
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_SHOPS), SetFill(1, 0), SetResize(1, 0), SetStringTip(STR_FORK_SHOP_BUTTON, STR_FORK_SHOP_TOOLTIP),
 		NWidget(WWT_RESIZEBOX, Colours::Brown),
+	EndContainer(),
+	NWidget(NWID_HORIZONTAL, NWidContainerFlag::EqualSize),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_STAFF), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_STAFF_BUTTON, STR_FORK_STAFF_TOOLTIP),
 	EndContainer(),
 };
 

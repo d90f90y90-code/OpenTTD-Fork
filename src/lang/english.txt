@@ -6164,3 +6164,23 @@ STR_ERROR_FORK_CAN_T_SET_SHOP_PRICE                             :{WHITE}Can't ch
 STR_ERROR_FORK_SHOP_TOWN_TOO_SMALL                              :{WHITE}The town is too small, shops can only be opened in towns with at least 300 inhabitants
 STR_ERROR_FORK_SHOP_LIMIT                                       :{WHITE}You can't own more shops here: at most half the number of houses in the town, and 40
 STR_ERROR_FORK_NO_SHOPS                                         :{WHITE}You don't own enough shops in this town
+STR_FORK_STAFF_BUTTON                                           :{BLACK}Staff
+STR_FORK_STAFF_TOOLTIP                                          :{BLACK}Hire and fire managers and administrative staff in this town
+STR_FORK_STAFF_CAPTION                                          :Staff: {TOWN}
+STR_FORK_STAFF_HIRE_1                                           :{BLACK}Hire 1
+STR_FORK_STAFF_HIRE_5                                           :{BLACK}Hire 5
+STR_FORK_STAFF_FIRE_1                                           :{BLACK}Fire 1
+STR_FORK_STAFF_FIRE_5                                           :{BLACK}Fire 5
+STR_FORK_STAFF_HIRE_TOOLTIP                                     :{BLACK}Hire staff. Hiring costs two monthly salaries per person
+STR_FORK_STAFF_FIRE_TOOLTIP                                     :{BLACK}Fire staff. Severance pay is one monthly salary per person
+STR_FORK_STAFF_EMPLOYED                                         :{BLACK}Staff you employ: {NUM} of {NUM}   Needed for your assets: {NUM}
+STR_FORK_STAFF_WAGE                                             :{BLACK}Salary per person: {CURRENCY_LONG} per month
+STR_FORK_STAFF_COSTS                                            :{BLACK}Hiring costs: {CURRENCY_LONG} per person   Severance pay: {CURRENCY_LONG} per person
+STR_FORK_STAFF_ASSETS                                           :{BLACK}Your assets here: {NUM} houses, {NUM} shops
+STR_FORK_STAFF_EFFICIENCY                                       :{BLACK}Efficiency of your assets here: {NUM}%
+STR_FORK_STAFF_SALARIES                                         :{BLACK}Salaries: {CURRENCY_LONG} per month
+STR_ERROR_FORK_CAN_T_HIRE                                       :{WHITE}Can't hire staff here...
+STR_ERROR_FORK_CAN_T_FIRE                                       :{WHITE}Can't fire staff here...
+STR_ERROR_FORK_STAFF_TOWN_TOO_SMALL                             :{WHITE}The town is too small, staff can only be hired in towns with at least 100 inhabitants
+STR_ERROR_FORK_STAFF_LIMIT                                      :{WHITE}You can't employ more staff here: the town has too few workers
+STR_ERROR_FORK_NO_STAFF                                         :{WHITE}You don't employ that many staff in this town
