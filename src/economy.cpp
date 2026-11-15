@@ -1250,9 +1250,15 @@ CargoPayment::~CargoPayment()
  */
 void CargoPayment::PayFinalDelivery(CargoType cargo, const CargoPacket *cp, uint count, TileIndex current_tile)
 {
-	/* Cargo that spoiled completely is garbage: it pays nothing and the owner has to pay for its disposal. */
+	/* Cargo that spoiled completely is garbage: the owner pays for its disposal and it is thrown away on the spot.
+	 * It is not delivered to an industry or town, does not count as delivered and does not count for subsidies. */
 	if (GetForkCargoQuality(cargo, cp->GetPeriodsInTransit()) == 0) {
-		ForkLedgerBook(this->front->owner, ForkLedgerCategory::Trade, -GetForkSpoilageFee(count, cp->GetDistance(current_tile), cargo));
+		const Money fee = GetForkSpoilageFee(count, cp->GetDistance(current_tile), cargo);
+		ForkLedgerBook(this->front->owner, ForkLedgerCategory::Trade, -fee);
+
+		/* Nothing is earned; vehicle that carried it last loses what feeders were already paid, plus the fee (as shown in the floating text). */
+		this->visual_profit += -cp->GetFeederShare(count) - fee;
+		return;
 	}
 
 	/* Handle end of route payment */
