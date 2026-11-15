@@ -6098,17 +6098,33 @@ STR_FORK_BUSINESS_MARKET                                        :Market: {STRING
 STR_FORK_BUSINESS_ASSETS                                        :Assets owned: {NUM}
 STR_FORK_LEDGER_ROW                                             :{STRING}, last month: {CURRENCY_LONG}
 STR_FORK_CATEGORY_TAX                                           :Taxes
-STR_FORK_TOWN_TAX_RATE                                          :Local tax rate on stations and property: {NUM}.{NUM}%
-STR_FORK_TOWN_PLOTS_INFO                                         :Your plots here: {NUM} of {NUM}   Price: {CURRENCY_LONG}   Rent: {CURRENCY_LONG} per month
-STR_FORK_BUY_PLOT                                               :{BLACK}Buy plot
-STR_FORK_BUY_PLOT_TOOLTIP                                       :{BLACK}Buy a plot of land in this town. It earns rent every month and its value follows the growth of the town
-STR_FORK_SELL_PLOT                                              :{BLACK}Sell plot
-STR_FORK_SELL_PLOT_TOOLTIP                                      :{BLACK}Sell your oldest plot of land in this town
-STR_ERROR_FORK_CAN_T_BUY_PLOT                                   :{WHITE}Can't buy a plot of land here...
-STR_ERROR_FORK_CAN_T_SELL_PLOT                                  :{WHITE}Can't sell a plot of land here...
-STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}The town is too small, land is only sold in towns with at least 200 inhabitants
-STR_ERROR_FORK_PLOT_LIMIT                                       :{WHITE}You already own as many plots here as this town allows
-STR_ERROR_FORK_NO_PLOT                                          :{WHITE}You don't own a plot of land in this town
+STR_FORK_TOWN_TAX_RATE                                          :{BLACK}Local tax rate: {NUM}.{NUM}% (property: {NUM}.{NUM}% a year)
+STR_FORK_REAL_ESTATE_BUTTON                                     :{BLACK}Real estate
+STR_FORK_REAL_ESTATE_TOOLTIP                                    :{BLACK}Buy and sell houses in this town and set the rent
+STR_FORK_RE_CAPTION                                             :Real estate: {TOWN}
+STR_FORK_RE_BUY_1                                               :{BLACK}Buy 1 house
+STR_FORK_RE_BUY_10                                              :{BLACK}Buy 10 houses
+STR_FORK_RE_SELL_1                                              :{BLACK}Sell 1 house
+STR_FORK_RE_SELL_10                                             :{BLACK}Sell 10 houses
+STR_FORK_RE_BUY_TOOLTIP                                         :{BLACK}Buy houses in this town. They are rented out to the inhabitants
+STR_FORK_RE_SELL_TOOLTIP                                        :{BLACK}Sell the houses you have owned the longest
+STR_FORK_RE_RENT_DOWN                                           :{BLACK}Rent -10%
+STR_FORK_RE_RENT_UP                                             :{BLACK}Rent +10%
+STR_FORK_RE_RENT_DOWN_TOOLTIP                                   :{BLACK}Lower the rent: more people want your houses, but you earn less from each one
+STR_FORK_RE_RENT_UP_TOOLTIP                                     :{BLACK}Raise the rent: you earn more from each house, but fewer tenants stay
+STR_FORK_RE_OWNED                                               :{BLACK}Houses you own: {NUM} of {NUM}   Value: {CURRENCY_LONG}
+STR_FORK_RE_PRICE                                               :{BLACK}Price per house: {CURRENCY_LONG}   You sell for: {CURRENCY_LONG}
+STR_FORK_RE_MARKET_UP                                           :{BLACK}Property market this month: up {NUM}.{NUM}%
+STR_FORK_RE_MARKET_DOWN                                         :{BLACK}Property market this month: down {NUM}.{NUM}%
+STR_FORK_RE_MARKET_RENT                                         :{BLACK}Market rent: {CURRENCY_LONG} per house per month
+STR_FORK_RE_YOUR_RENT                                           :{BLACK}Your rent: {NUM}% of market   Occupancy: {NUM}%
+STR_FORK_RE_INCOME                                              :{BLACK}Rent income: {CURRENCY_LONG} per month   Property tax: {CURRENCY_LONG} per month
+STR_ERROR_FORK_CAN_T_BUY_HOUSES                                 :{WHITE}Can't buy houses here...
+STR_ERROR_FORK_CAN_T_SELL_HOUSES                                :{WHITE}Can't sell houses here...
+STR_ERROR_FORK_CAN_T_SET_RENT                                   :{WHITE}Can't change the rent here...
+STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}The town is too small, houses are only sold in towns with at least 100 inhabitants
+STR_ERROR_FORK_HOUSE_LIMIT                                      :{WHITE}You can't own more houses here than the town has
+STR_ERROR_FORK_NO_HOUSES                                        :{WHITE}You don't own enough houses in this town
 STR_ERROR_FORK_TOO_MANY_ASSETS                                  :{WHITE}There are too many assets in the game
 STR_FORK_CATEGORY_RENT                                          :Rent
 STR_FORK_CATEGORY_SALARIES                                      :Salaries

@@ -4973,15 +4973,31 @@ STR_SHIP                                                        :{BLACK}{SHIP}
 
 STR_TOOLBAR_RAILTYPE_VELOCITY                                   :{STRING} ({VELOCITY})
 
-STR_FORK_TOWN_TAX_RATE                                          :الضريبة المحلية على المحطات والممتلكات: {NUM}.{NUM}%
-STR_FORK_TOWN_PLOTS_INFO                                         :قطع أرضك هنا: {NUM} من {NUM}   السعر: {CURRENCY_LONG}   الإيجار: {CURRENCY_LONG} شهرياً
-STR_FORK_BUY_PLOT                                               :{BLACK}شراء قطعة أرض
-STR_FORK_BUY_PLOT_TOOLTIP                                       :{BLACK}شراء قطعة أرض في هذه المدينة. تدرّ إيجاراً كل شهر وتتبع قيمتها نمو المدينة
-STR_FORK_SELL_PLOT                                              :{BLACK}بيع قطعة أرض
-STR_FORK_SELL_PLOT_TOOLTIP                                      :{BLACK}بيع أقدم قطعة أرض تملكها في هذه المدينة
-STR_ERROR_FORK_CAN_T_BUY_PLOT                                   :{WHITE}لا يمكن شراء قطعة أرض هنا ...
-STR_ERROR_FORK_CAN_T_SELL_PLOT                                  :{WHITE}لا يمكن بيع قطعة أرض هنا ...
-STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}المدينة صغيرة جداً، تُباع الأراضي فقط في مدن فيها 200 ساكن على الأقل
-STR_ERROR_FORK_PLOT_LIMIT                                       :{WHITE}تملك هنا أقصى عدد من القطع تسمح به المدينة
-STR_ERROR_FORK_NO_PLOT                                          :{WHITE}لا تملك قطعة أرض في هذه المدينة
 STR_ERROR_FORK_TOO_MANY_ASSETS                                  :{WHITE}عدد الأصول في اللعبة كبير جداً
+STR_FORK_TOWN_TAX_RATE                                          :{BLACK}الضريبة المحلية: {NUM}.{NUM}% (على العقارات: {NUM}.{NUM}% سنوياً)
+STR_FORK_REAL_ESTATE_BUTTON                                     :{BLACK}عقارات
+STR_FORK_REAL_ESTATE_TOOLTIP                                    :{BLACK}شراء وبيع البيوت في هذه المدينة وتحديد الإيجار
+STR_FORK_RE_CAPTION                                             :عقارات: {TOWN}
+STR_FORK_RE_BUY_1                                               :{BLACK}شراء بيت
+STR_FORK_RE_BUY_10                                              :{BLACK}شراء 10 بيوت
+STR_FORK_RE_SELL_1                                              :{BLACK}بيع بيت
+STR_FORK_RE_SELL_10                                             :{BLACK}بيع 10 بيوت
+STR_FORK_RE_BUY_TOOLTIP                                         :{BLACK}شراء بيوت في هذه المدينة. تُؤجَّر للسكان
+STR_FORK_RE_SELL_TOOLTIP                                        :{BLACK}بيع البيوت التي تملكها منذ أطول فترة
+STR_FORK_RE_RENT_DOWN                                           :{BLACK}الإيجار -10%
+STR_FORK_RE_RENT_UP                                             :{BLACK}الإيجار +10%
+STR_FORK_RE_RENT_DOWN_TOOLTIP                                   :{BLACK}تخفيض الإيجار: يرغب الناس أكثر في بيوتك، لكن ربح كل بيت أقل
+STR_FORK_RE_RENT_UP_TOOLTIP                                     :{BLACK}رفع الإيجار: ربح كل بيت أكبر، لكن يبقى مستأجرون أقل
+STR_FORK_RE_OWNED                                               :{BLACK}البيوت التي تملكها: {NUM} من {NUM}   القيمة: {CURRENCY_LONG}
+STR_FORK_RE_PRICE                                               :{BLACK}سعر البيت: {CURRENCY_LONG}   تبيع بـ: {CURRENCY_LONG}
+STR_FORK_RE_MARKET_UP                                           :{BLACK}سوق العقارات هذا الشهر: صعود {NUM}.{NUM}%
+STR_FORK_RE_MARKET_DOWN                                         :{BLACK}سوق العقارات هذا الشهر: هبوط {NUM}.{NUM}%
+STR_FORK_RE_MARKET_RENT                                         :{BLACK}إيجار السوق: {CURRENCY_LONG} للبيت شهرياً
+STR_FORK_RE_YOUR_RENT                                           :{BLACK}إيجارك: {NUM}% من إيجار السوق   الإشغال: {NUM}%
+STR_FORK_RE_INCOME                                              :{BLACK}دخل الإيجار: {CURRENCY_LONG} شهرياً   ضريبة العقارات: {CURRENCY_LONG} شهرياً
+STR_ERROR_FORK_CAN_T_BUY_HOUSES                                 :{WHITE}لا يمكن شراء بيوت هنا ...
+STR_ERROR_FORK_CAN_T_SELL_HOUSES                                :{WHITE}لا يمكن بيع بيوت هنا ...
+STR_ERROR_FORK_CAN_T_SET_RENT                                   :{WHITE}لا يمكن تغيير الإيجار هنا ...
+STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}المدينة صغيرة جداً، تُباع البيوت فقط في مدن فيها 100 ساكن على الأقل
+STR_ERROR_FORK_HOUSE_LIMIT                                      :{WHITE}لا يمكنك امتلاك بيوت هنا أكثر مما في المدينة
+STR_ERROR_FORK_NO_HOUSES                                        :{WHITE}لا تملك هذا العدد من البيوت في هذه المدينة

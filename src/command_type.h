@@ -266,8 +266,9 @@ enum class Commands : uint8_t {
 	IndustrySetProduction, ///< change industry production
 	InvestInIndustry, ///< buy a stake in an industry
 	SellIndustryStake, ///< sell a stake in an industry
-	BuyForkPlot, ///< buy a plot of land in a town
-	SellForkPlot, ///< sell a plot of land in a town
+	BuyForkHouses, ///< buy houses in a town
+	SellForkHouses, ///< sell houses in a town
+	SetForkRent, ///< change the rent asked for houses in a town
 
 	SetCompanyManagerFace, ///< set the manager's face of the company
 	SetCompanyColour, ///< set the colour of the company

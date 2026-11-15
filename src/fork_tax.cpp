@@ -67,8 +67,8 @@ void ChargeForkMunicipalTaxes()
 		const Town *t = Town::GetIfValid(static_cast<TownID>(a->location));
 		if (t == nullptr) continue;
 
-		/* The rate is a yearly rate on the value of the asset. */
-		Money tax = a->value * GetForkTownTaxPermille(t) / 12000;
+		/* Property pays a yearly tax of one and a half times the town rate, charged monthly. */
+		Money tax = a->value * GetForkTownTaxPermille(t) / 8000;
 		ForkLedgerBook(a->owner, ForkLedgerCategory::Tax, -tax);
 	}
 }

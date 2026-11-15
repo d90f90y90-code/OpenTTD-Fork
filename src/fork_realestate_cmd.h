@@ -13,10 +13,12 @@
 #include "command_type.h"
 #include "town_type.h"
 
-CommandCost CmdBuyForkPlot(DoCommandFlags flags, TownID town_id);
-CommandCost CmdSellForkPlot(DoCommandFlags flags, TownID town_id);
+CommandCost CmdBuyForkHouses(DoCommandFlags flags, TownID town_id, uint8_t count);
+CommandCost CmdSellForkHouses(DoCommandFlags flags, TownID town_id, uint8_t count);
+CommandCost CmdSetForkRent(DoCommandFlags flags, TownID town_id, uint16_t percent);
 
-DEF_CMD_TRAIT(Commands::BuyForkPlot, CmdBuyForkPlot, {}, CommandType::MoneyManagement)
-DEF_CMD_TRAIT(Commands::SellForkPlot, CmdSellForkPlot, {}, CommandType::MoneyManagement)
+DEF_CMD_TRAIT(Commands::BuyForkHouses, CmdBuyForkHouses, {}, CommandType::MoneyManagement)
+DEF_CMD_TRAIT(Commands::SellForkHouses, CmdSellForkHouses, {}, CommandType::MoneyManagement)
+DEF_CMD_TRAIT(Commands::SetForkRent, CmdSetForkRent, {}, CommandType::OtherManagement)
 
 #endif /* FORK_REALESTATE_CMD_H */

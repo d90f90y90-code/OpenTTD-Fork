@@ -215,6 +215,7 @@ add_files(
     fork_economy.h
     fork_economy_gui.cpp
     fork_realestate.cpp
+    fork_realestate_gui.cpp
     fork_realestate_cmd.h
     fork_tax.cpp
     goal.cpp

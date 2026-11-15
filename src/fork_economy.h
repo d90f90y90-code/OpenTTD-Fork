@@ -128,13 +128,17 @@ void ChargeForkMunicipalTaxes();
 uint GetForkAssetCount(CompanyID company);
 void TransferForkAssets(Owner old_owner, Owner new_owner);
 
-Money GetForkPlotValue(const Town *t);
-Money GetForkPlotBuyPrice(const Town *t);
-Money GetForkPlotSellValue(const Town *t);
-Money GetForkPlotRent(const Town *t);
-uint GetForkPlotLimit(const Town *t);
-uint GetForkCompanyPlots(CompanyID company, TownID town);
+int GetForkPropertySwing();
+Money GetForkHouseValue(const Town *t);
+Money GetForkHouseBuyPrice(const Town *t);
+Money GetForkHouseSellValue(const Town *t);
+Money GetForkHouseRent(const Town *t, uint rent_percent);
+uint GetForkHouseLimit(const Town *t);
+uint GetForkCompanyHouses(CompanyID company, TownID town);
+uint GetForkRentPercent(CompanyID company, TownID town);
+uint GetForkOccupancy(uint rent_percent);
 void RegisterForkRealEstate();
+void ShowForkRealEstateWindow(uint town);
 
 void ShowForkBusinessWindow();
 
