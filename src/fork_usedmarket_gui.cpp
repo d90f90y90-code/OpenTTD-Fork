@@ -13,6 +13,7 @@
 #include "company_base.h"
 #include "company_func.h"
 #include "engine_type.h"
+#include "fork_economy.h"
 #include "fork_logos.h"
 #include "fork_usedmarket.h"
 #include "fork_usedmarket_cmd.h"
