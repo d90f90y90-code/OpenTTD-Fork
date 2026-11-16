@@ -40,6 +40,7 @@ void ResetForkEconomy()
 	RegisterForkRealEstate();
 	RegisterForkShops();
 	RegisterForkLabor();
+	RegisterForkEducation();
 }
 
 /**

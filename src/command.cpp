@@ -31,6 +31,7 @@
 #include "fork_realestate_cmd.h"
 #include "fork_labor_cmd.h"
 #include "fork_shop_cmd.h"
+#include "fork_education_cmd.h"
 #include "engine_cmd.h"
 #include "goal_cmd.h"
 #include "group_cmd.h"

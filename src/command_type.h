@@ -274,6 +274,10 @@ enum class Commands : uint8_t {
 	SetForkShopPrice, ///< change the prices of the shops in a town
 	HireForkStaff, ///< hire staff in a town
 	FireForkStaff, ///< fire staff in a town
+	BuildForkSchool, ///< build a private school or university in a town
+	SellForkSchool, ///< sell a private school or university
+	ForkSchoolAction, ///< change settings of a school or university, enlarge it, open or close faculties
+	RenameForkSchool, ///< rename a private school or university
 
 	SetCompanyManagerFace, ///< set the manager's face of the company
 	SetCompanyColour, ///< set the colour of the company

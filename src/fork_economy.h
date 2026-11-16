@@ -14,6 +14,7 @@
 #include "core/pool_type.hpp"
 #include "cargo_type.h"
 #include "economy_type.h"
+#include "strings_type.h"
 #include "town_type.h"
 
 /**
@@ -61,6 +62,7 @@ enum class ForkAssetType : uint8_t {
 	MediaChannel, ///< Radio or TV channel.
 	Shares, ///< Shares of an NPC company.
 	Staff, ///< Managers and administrative staff in a town.
+	Education, ///< Private school or university in a town.
 	End, ///< End marker.
 };
 
@@ -106,6 +108,8 @@ struct ForkAsset : ForkAssetPool::PoolItem<&_fork_asset_pool> {
 	Money monthly_cost = 0; ///< Costs per month.
 	uint32_t age_months = 0; ///< Age of the asset.
 	std::array<int64_t, 4> data{}; ///< Free for the feature that owns this asset type.
+	std::array<int64_t, 4> data2{}; ///< More free data, for features that need more room.
+	std::string name{}; ///< Name given by the owner; empty for the default name.
 
 	/**
 	 * Construct an asset.
@@ -172,6 +176,59 @@ uint GetForkStaffEfficiency(CompanyID company, TownID town);
 void RegisterForkLabor();
 void ShowForkStaffWindow(uint town);
 void ShowForkRealEstateWindow(uint town);
+
+/** Kinds of private education institutions a company can build in a town. */
+enum class ForkSchoolKind : uint8_t {
+	Primary, ///< Private primary school.
+	Secondary, ///< Private secondary school.
+	University, ///< Private university with faculties.
+	End, ///< End marker.
+};
+
+/** Things a company can do with an institution, for #CmdForkSchoolAction. */
+enum class ForkSchoolAction : uint8_t {
+	SetFee, ///< Set the fee per seat per year (schools); argument is the fee.
+	ToggleShift, ///< Switch the double-shift mode on or off.
+	Upgrade, ///< Enlarge a school, once.
+	OpenFaculty, ///< Open a faculty (universities); argument is the faculty.
+	CloseFaculty, ///< Close a faculty (universities); argument is the faculty.
+	SetFacultyFee, ///< Set the yearly tuition of a faculty; argument is the faculty in the low byte and the tuition in the rest.
+};
+
+static constexpr uint FORK_FACULTIES = 10; ///< Number of faculties a university can have.
+
+/** Result of one institution, per month unless said otherwise. */
+struct ForkSchoolResult {
+	uint capacity = 0; ///< Number of seats (including double shift).
+	uint enrolled = 0; ///< Number of students.
+	uint quality = 0; ///< Quality in percent: age of the building, what is taught, and how pleased the town is.
+	uint popularity = 0; ///< Popularity in percent: quality weighed against what the institution asks for.
+	Money income = 0; ///< Tuition received.
+	Money running = 0; ///< Costs of running it.
+	Money tax = 0; ///< Tax to the town.
+	uint tax_percent = 0; ///< Tax rate of this year.
+	std::array<uint, 10> fac_enrolled{}; ///< Students per faculty (universities).
+	std::array<uint, 10> fac_popularity{}; ///< Popularity per faculty (universities).
+};
+
+const ForkAsset *GetForkSchool(CompanyID company, TownID town, ForkSchoolKind kind);
+ForkSchoolResult GetForkSchoolResult(const Town *t, const ForkAsset *a);
+std::string GetForkSchoolName(const ForkAsset *a);
+Money GetForkSchoolBuildCost(ForkSchoolKind kind);
+Money GetForkSchoolSellValue(const ForkAsset *a);
+Money GetForkSchoolUpgradeCost(ForkSchoolKind kind);
+uint GetForkSchoolMinPopulation(ForkSchoolKind kind);
+uint GetForkSchoolFeeMax(ForkSchoolKind kind);
+bool IsForkSchoolUpgraded(const ForkAsset *a);
+bool IsForkSchoolDoubleShift(const ForkAsset *a);
+uint GetForkSchoolFee(const ForkAsset *a);
+uint GetForkFacultyOpenMask(const ForkAsset *a);
+uint GetForkFacultyFee(const ForkAsset *a, uint faculty);
+Money GetForkFacultyCost(uint faculty);
+uint GetForkFacultyDesire(const Town *t, uint faculty);
+StringID GetForkFacultyName(uint faculty);
+void RegisterForkEducation();
+void ShowForkEducationWindow(uint town);
 
 uint GetForkCargoQuality(CargoType cargo, uint periods_in_transit);
 Money GetForkSpoilageFee(uint num_pieces, uint dist, CargoType cargo);

@@ -64,6 +64,8 @@ static const SaveLoad _fork_asset_desc[] = {
 	SaveLoad::Variable<VarFileType::I64>("monthly_cost", SLE_OBJECT_ADDRESS(ForkAsset, monthly_cost), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::U32>("age_months", SLE_OBJECT_ADDRESS(ForkAsset, age_months), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Array<VarFileType::I64, 4>("data", SLE_OBJECT_ADDRESS(ForkAsset, data), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Array<VarFileType::I64, 4>("data2", SLE_OBJECT_ADDRESS(ForkAsset, data2), SaveLoadVersion::ForkEconomy),
+	SaveLoad::String("name", SLE_OBJECT_ADDRESS(ForkAsset, name), StringValidationSetting::AllowControlCode, SaveLoadVersion::ForkEconomy),
 };
 
 struct FKASChunkHandler : ChunkHandler {
