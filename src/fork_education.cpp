@@ -25,7 +25,7 @@
 
 #include "safeguards.h"
 
-static constexpr uint FORK_FACULTY_SEATS = 60; ///< Seats of one faculty.
+static constexpr uint FORK_FACULTY_SEATS = 200; ///< Seats of one faculty.
 static constexpr uint FORK_FACULTY_FEE_MIN = 100; ///< Lowest yearly tuition of a faculty.
 static constexpr uint FORK_FACULTY_FEE_MAX = 1000; ///< Highest yearly tuition of a faculty.
 static constexpr uint FORK_FACULTY_FEE_STEP = 50; ///< Tuition is changed in steps of this much.
@@ -51,9 +51,9 @@ struct ForkSchoolSpec {
 };
 
 static constexpr ForkSchoolSpec FORK_SCHOOL_SPECS[] = {
-	/* Primary   */ {10000, 5000, 250, 400, 50, 25, 25, 7, 400, 5, 10, 60},
-	/* Secondary */ {25000, 12000, 300, 500, 100, 50, 45, 5, 800, 5, 10, 55},
-	/* University */ {60000, 0, 0, 0, FORK_FACULTY_FEE_MAX, 0, 400, 4, 2000, 8, 20, 35},
+	/* Primary   */ {10000, 5000, 250, 400, 50, 25, 25, 7, 300, 5, 10, 60},
+	/* Secondary */ {25000, 12000, 300, 500, 100, 50, 45, 5, 650, 5, 10, 55},
+	/* University */ {60000, 0, 0, 0, FORK_FACULTY_FEE_MAX, 0, 400, 4, 1300, 8, 20, 35},
 };
 
 /** Fixed properties of the faculties of a university. */
@@ -289,7 +289,8 @@ ForkSchoolResult GetForkSchoolResult(const Town *t, const ForkAsset *a)
 		r.popularity = popularity_count == 0 ? 0 : popularity_sum / popularity_count;
 	}
 
-	/* Teaching costs depend on the number of students; the buildings cost upkeep. Double shift doubles all running costs. */
+	/* Teaching costs depend on the number of students; the buildings cost upkeep. A double shift needs twice the teachers and staff,
+	 * so it doubles all running costs, and it takes twice the students (morning and afternoon shift). */
 	Money running = static_cast<Money>(r.enrolled) * spec.cost_per_seat / 12 + a->purchase_price * FORK_UPKEEP_PERMILLE / 1000;
 	running = running * shift * GetForkMarketFactor(ForkMarketFactor::Wages) / 100;
 
