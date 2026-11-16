@@ -5089,7 +5089,7 @@ STR_FORK_EDU_INCOME                                             :{BLACK}الأق
 STR_FORK_EDU_TAX                                                :{BLACK}ضريبة المدينة هذه السنة: {NUM}% من الأقساط = {CURRENCY_LONG} شهرياً
 STR_FORK_EDU_PROFIT                                             :{BLACK}الربح: {CURRENCY_LONG} شهرياً
 STR_FORK_EDU_FACULTY_OPEN_ROW                                   :{BLACK}{RAW_STRING} {STRING}   الرغبة {NUM}%   القسط {CURRENCY_LONG}   الطلاب {NUM}   الشعبية {NUM}%
-STR_FORK_EDU_FACULTY_CLOSED_ROW                                 :{GREY}{RAW_STRING} {STRING}   الرغبة {NUM}%   تكلفة الفتح {CURRENCY_LONG}
+STR_FORK_EDU_FACULTY_CLOSED_ROW                                 :{SILVER}{RAW_STRING} {STRING}   الرغبة {NUM}%   تكلفة الفتح {CURRENCY_LONG}
 STR_FORK_FACULTY_MEDICINE                                       :كلية الطب
 STR_FORK_FACULTY_PHARMACY                                       :كلية الصيدلة
 STR_FORK_FACULTY_ENGINEERING                                    :كلية الهندسة

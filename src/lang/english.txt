@@ -6227,7 +6227,7 @@ STR_FORK_EDU_INCOME                                             :{BLACK}Tuition:
 STR_FORK_EDU_TAX                                                :{BLACK}Town tax this year: {NUM}% of the tuition = {CURRENCY_LONG} per month
 STR_FORK_EDU_PROFIT                                             :{BLACK}Profit: {CURRENCY_LONG} per month
 STR_FORK_EDU_FACULTY_OPEN_ROW                                   :{BLACK}{RAW_STRING} {STRING}   Interest {NUM}%   Tuition {CURRENCY_LONG}   Students {NUM}   Popularity {NUM}%
-STR_FORK_EDU_FACULTY_CLOSED_ROW                                 :{GREY}{RAW_STRING} {STRING}   Interest {NUM}%   Opening costs {CURRENCY_LONG}
+STR_FORK_EDU_FACULTY_CLOSED_ROW                                 :{SILVER}{RAW_STRING} {STRING}   Interest {NUM}%   Opening costs {CURRENCY_LONG}
 STR_FORK_FACULTY_MEDICINE                                       :Medicine
 STR_FORK_FACULTY_PHARMACY                                       :Pharmacy
 STR_FORK_FACULTY_ENGINEERING                                    :Engineering
