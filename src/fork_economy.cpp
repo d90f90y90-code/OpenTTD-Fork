@@ -41,6 +41,7 @@ void ResetForkEconomy()
 	RegisterForkRealEstate();
 	RegisterForkShops();
 	RegisterForkLabor();
+	RegisterForkRights();
 }
 
 /**
@@ -207,6 +208,7 @@ void TransferForkAssets(Owner old_owner, Owner new_owner)
 static void ForkEconomyMonthly()
 {
 	UpdateMarketCycle();
+	ForkRightsOnNewMonth();
 
 	_fork_economy.ledger_last = _fork_economy.ledger_month;
 	_fork_economy.ledger_month.fill(0);

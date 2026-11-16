@@ -42,6 +42,24 @@ enum class ForkMarketPhase : uint8_t {
 	End, ///< End marker.
 };
 
+/** Kinds of rights a town sells. Each one allows the transport of a group of cargoes that come from the town. */
+enum class ForkRightCategory : uint8_t {
+	Mining, ///< Coal, iron ore and copper ore.
+	Logging, ///< Wood.
+	Oil, ///< Oil.
+	Water, ///< Water.
+	FoodGoods, ///< Food, goods and all other cargo.
+	Valuables, ///< Valuables, gold and diamonds.
+	PeopleMail, ///< Passengers and mail.
+	End, ///< End marker.
+};
+
+/** What a company holds of a right in a town. */
+struct ForkRightStatus {
+	bool owned = false; ///< The company owns the right for good.
+	uint license_months = 0; ///< Months a license has left, zero if there is none.
+};
+
 /** Things the market state (boom/recession) can influence. Every factor is a percentage, 100 means neutral. */
 enum class ForkMarketFactor : uint8_t {
 	CargoPrice, ///< Payment for transported cargo.
@@ -178,6 +196,19 @@ uint GetForkRequiredStaff(uint houses, uint shops);
 uint GetForkStaffEfficiencyFor(CompanyID company, TownID town, uint houses, uint shops);
 uint GetForkStaffEfficiency(CompanyID company, TownID town);
 void RegisterForkLabor();
+
+ForkRightCategory GetForkRightCategory(CargoType cargo);
+bool IsForkRightAvailable(const Town *t, ForkRightCategory category);
+Money GetForkRightPrice(const Town *t, ForkRightCategory category);
+Money GetForkLicenseMonthlyRent(const Town *t, ForkRightCategory category);
+ForkRightStatus GetForkRightStatus(CompanyID company, TownID town, ForkRightCategory category);
+const Town *GetForkSourceTown(const Source &source);
+bool IsForkTransportAllowed(CompanyID company, CargoType cargo, const Source &source);
+void ForkNoteConfiscation(CompanyID company);
+void ForkRightsOnNewMonth();
+void RegisterForkRights();
+void ShowForkRightsWindow(uint town);
+void ShowForkLicenseWindow(uint town, uint category);
 
 uint GetForkCustomsRate(const Town *t);
 Money GetForkCustomsDuty(CargoType cargo, const Source &source, StationID destination, Money payment);

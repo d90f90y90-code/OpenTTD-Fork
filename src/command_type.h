@@ -274,6 +274,8 @@ enum class Commands : uint8_t {
 	SetForkShopPrice, ///< change the prices of the shops in a town
 	HireForkStaff, ///< hire staff in a town
 	FireForkStaff, ///< fire staff in a town
+	BuyForkRight, ///< buy a right to transport cargo from a town
+	SignForkLicense, ///< sign an annual license to transport cargo from a town
 	BuyUsedVehicle, ///< buy a used vehicle from a dealer
 
 	SetCompanyManagerFace, ///< set the manager's face of the company

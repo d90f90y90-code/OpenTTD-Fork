@@ -41,7 +41,7 @@ uint GetForkCustomsRate(const Town *t)
  * @param source Where the cargo came from.
  * @return The town, or nullptr if the cargo does not come from a town or industry.
  */
-static const Town *GetSourceTown(const Source &source)
+const Town *GetForkSourceTown(const Source &source)
 {
 	switch (source.type) {
 		case SourceType::Industry: {
@@ -74,7 +74,7 @@ Money GetForkCustomsDuty(CargoType cargo, const Source &source, StationID destin
 	const CargoSpec *cs = CargoSpec::Get(cargo);
 	if (!cs->IsValid() || cs->classes.Test(CargoClass::Passengers) || cs->classes.Test(CargoClass::Mail)) return 0;
 
-	const Town *from = GetSourceTown(source);
+	const Town *from = GetForkSourceTown(source);
 	const Station *st = Station::GetIfValid(destination);
 	if (from == nullptr || st == nullptr || st->town == nullptr || st->town == from) return 0;
 

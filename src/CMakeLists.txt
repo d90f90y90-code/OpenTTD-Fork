@@ -220,6 +220,9 @@ add_files(
     fork_labor_cmd.h
     fork_labor_gui.cpp
     fork_realestate_cmd.h
+    fork_rights.cpp
+    fork_rights_cmd.h
+    fork_rights_gui.cpp
     fork_shop.cpp
     fork_shop_cmd.h
     fork_shop_gui.cpp

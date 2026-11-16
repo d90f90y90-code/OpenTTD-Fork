@@ -1243,6 +1243,14 @@ void CargoPayment::PayFinalDelivery(CargoType cargo, const CargoPacket *cp, uint
 	/* The vehicle's profit is whatever route profit there is minus feeder shares. */
 	this->visual_profit += profit - cp->GetFeederShare(count);
 
+	/* A town only lets a company transport the cargo that comes from it with the right or a license. Without them the payment is confiscated. */
+	if (profit > 0 && !IsForkTransportAllowed(this->front->owner, cargo, cp->GetSource())) {
+		ForkLedgerBook(this->front->owner, ForkLedgerCategory::Trade, -profit);
+		this->visual_profit -= profit;
+		ForkNoteConfiscation(this->front->owner);
+		return;
+	}
+
 	/* Goods that cross from one town to another pay customs duty to the destination town. */
 	const Money duty = GetForkCustomsDuty(cargo, cp->GetSource(), this->current_station, profit);
 	if (duty > 0) {

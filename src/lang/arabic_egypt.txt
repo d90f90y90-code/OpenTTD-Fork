@@ -5066,3 +5066,38 @@ STR_ERROR_FORK_UM_CAN_T_BUY                                     :{WHITE}لا ي�
 STR_ERROR_FORK_UM_NO_OFFER                                      :{WHITE}هذا العرض لم يعد متاحاً
 STR_ERROR_FORK_UM_SOLD_OUT                                      :{WHITE}هذه المركبة بيعت بالفعل
 STR_FORK_TOWN_CUSTOMS_RATE                                      :{BLACK}جمارك البضائع الواصلة إلى هنا من مدن أخرى: {NUM}%
+STR_FORK_RIGHTS_BUTTON                                          :{BLACK}التراخيص
+STR_FORK_RIGHTS_TOOLTIP                                         :{BLACK}شراء حقوق أو توقيع تراخيص سنوية لنقل البضائع التي تخرج من هذه المدينة
+STR_FORK_RIGHTS_CAPTION                                         :التراخيص: {TOWN}
+STR_FORK_RIGHT_NAME_MINING                                      :حق التعدين: الفحم والحديد والنحاس
+STR_FORK_RIGHT_NAME_LOGGING                                     :حق قطع الأشجار ونقل الخشب
+STR_FORK_RIGHT_NAME_OIL                                         :حق استخراج ونقل النفط
+STR_FORK_RIGHT_NAME_WATER                                       :حق نقل المياه
+STR_FORK_RIGHT_NAME_FOODGOODS                                   :حق نقل الأغذية والبضائع
+STR_FORK_RIGHT_NAME_VALUABLES                                   :حق نقل المجوهرات والمقتنيات الثمينة
+STR_FORK_RIGHT_NAME_PEOPLEMAIL                                  :حق نقل الناس والبريد
+STR_FORK_RIGHT_LINE_NAME                                        :{BLACK}{STRING}
+STR_FORK_RIGHT_STATUS_OWNED                                     :{GREEN}تملك هذا الحق
+STR_FORK_RIGHT_STATUS_LICENSED                                  :{GREEN}مرخّص، متبقي {NUM} أشهر
+STR_FORK_RIGHT_STATUS_NONE                                      :{RED}غير مملوك
+STR_FORK_RIGHT_PRICE                                            :{BLACK}السعر: {CURRENCY_LONG}
+STR_FORK_RIGHT_LICENSE_LINE                                     :{BLACK}الترخيص السنوي: {CURRENCY_LONG} شهرياً
+STR_FORK_RIGHT_BUY                                              :شراء
+STR_FORK_RIGHT_LICENSE_BTN                                      :ترخيص سنوي
+STR_FORK_LICENSE_CAPTION                                        :الترخيص: {TOWN}
+STR_FORK_LICENSE_TYPE                                           :{BLACK}نوع الترخيص: {STRING}
+STR_FORK_LICENSE_RENT                                           :{BLACK}الإيجار الشهري: {CURRENCY_LONG}
+STR_FORK_LICENSE_DURATION                                       :{BLACK}المدة: {NUM} سنة، حتى 3 سنوات كحد أقصى
+STR_FORK_LICENSE_TOTAL                                          :{BLACK}مجموع الإيجار طوال المدة: {CURRENCY_LONG}
+STR_FORK_LICENSE_NOTE                                           :{BLACK}يُدفع الإيجار كل شهر، ولا يُدفع شيء عند التوقيع
+STR_FORK_LICENSE_YEAR_DOWN                                      :{BLACK}-1 سنة
+STR_FORK_LICENSE_YEAR_UP                                        :{BLACK}+1 سنة
+STR_FORK_LICENSE_YEAR_TOOLTIP                                   :{BLACK}تغيير مدة الترخيص قبل التوقيع (من 1 إلى 3 سنوات)
+STR_FORK_LICENSE_SIGN                                           :{BLACK}توقيع الاتفاق
+STR_FORK_LICENSE_SIGN_TOOLTIP                                   :{BLACK}توقيع الترخيص للمدة المختارة
+STR_FORK_NEWS_LICENSE_EXPIRED                                   :{BIG_FONT}{BLACK}انتهى ترخيصك ({STRING}) في {TOWN}
+STR_FORK_NEWS_CONFISCATED                                       :{BIG_FONT}{BLACK}تمت مصادرة {NUM} شحنة الشهر الماضي: ليس لديك حق أو ترخيص لتلك البضاعة. انظر زر التراخيص في نوافذ المدن
+STR_ERROR_FORK_CAN_T_BUY_RIGHT                                  :{WHITE}لا يمكن شراء هذا الحق ...
+STR_ERROR_FORK_CAN_T_SIGN_LICENSE                               :{WHITE}لا يمكن توقيع هذا الترخيص ...
+STR_ERROR_FORK_RIGHT_ALREADY_OWNED                              :{WHITE}أنت تملك هذا الحق بالفعل
+STR_ERROR_FORK_RIGHT_NOT_AVAILABLE                              :{WHITE}هذا الحق غير معروض للبيع في هذه المدينة

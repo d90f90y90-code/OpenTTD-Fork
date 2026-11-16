@@ -6204,3 +6204,38 @@ STR_ERROR_FORK_STAFF_TOWN_TOO_SMALL                             :{WHITE}The town
 STR_ERROR_FORK_STAFF_LIMIT                                      :{WHITE}You can't employ more staff here: the town has too few workers
 STR_ERROR_FORK_NO_STAFF                                         :{WHITE}You don't employ that many staff in this town
 STR_FORK_TOWN_CUSTOMS_RATE                                      :{BLACK}Customs duty on goods delivered here from other towns: {NUM}%
+STR_FORK_RIGHTS_BUTTON                                          :{BLACK}Licenses
+STR_FORK_RIGHTS_TOOLTIP                                         :{BLACK}Buy rights or sign annual licenses to transport cargo that comes from this town
+STR_FORK_RIGHTS_CAPTION                                         :Licenses: {TOWN}
+STR_FORK_RIGHT_NAME_MINING                                      :Mining right: coal, iron ore, copper ore
+STR_FORK_RIGHT_NAME_LOGGING                                     :Logging right: wood
+STR_FORK_RIGHT_NAME_OIL                                         :Oil right: extraction and transport of oil
+STR_FORK_RIGHT_NAME_WATER                                       :Water right: transport of water
+STR_FORK_RIGHT_NAME_FOODGOODS                                   :Food and goods right
+STR_FORK_RIGHT_NAME_VALUABLES                                   :Valuables right: jewelry and precious goods
+STR_FORK_RIGHT_NAME_PEOPLEMAIL                                  :People and mail right
+STR_FORK_RIGHT_LINE_NAME                                        :{BLACK}{STRING}
+STR_FORK_RIGHT_STATUS_OWNED                                     :{GREEN}You own this right
+STR_FORK_RIGHT_STATUS_LICENSED                                  :{GREEN}Licensed, {NUM} months left
+STR_FORK_RIGHT_STATUS_NONE                                      :{RED}Not held
+STR_FORK_RIGHT_PRICE                                            :{BLACK}Price: {CURRENCY_LONG}
+STR_FORK_RIGHT_LICENSE_LINE                                     :{BLACK}Annual license: {CURRENCY_LONG} per month
+STR_FORK_RIGHT_BUY                                              :Buy
+STR_FORK_RIGHT_LICENSE_BTN                                      :Annual license
+STR_FORK_LICENSE_CAPTION                                        :License: {TOWN}
+STR_FORK_LICENSE_TYPE                                           :{BLACK}Type of license: {STRING}
+STR_FORK_LICENSE_RENT                                           :{BLACK}Monthly rent: {CURRENCY_LONG}
+STR_FORK_LICENSE_DURATION                                       :{BLACK}Duration: {NUM} year(s), up to 3 years
+STR_FORK_LICENSE_TOTAL                                          :{BLACK}Total rent over the whole duration: {CURRENCY_LONG}
+STR_FORK_LICENSE_NOTE                                           :{BLACK}The rent is paid every month; nothing is paid when signing
+STR_FORK_LICENSE_YEAR_DOWN                                      :{BLACK}-1 year
+STR_FORK_LICENSE_YEAR_UP                                        :{BLACK}+1 year
+STR_FORK_LICENSE_YEAR_TOOLTIP                                   :{BLACK}Change the duration of the license before signing (1 to 3 years)
+STR_FORK_LICENSE_SIGN                                           :{BLACK}Sign the agreement
+STR_FORK_LICENSE_SIGN_TOOLTIP                                   :{BLACK}Sign the license for the chosen duration
+STR_FORK_NEWS_LICENSE_EXPIRED                                   :{BIG_FONT}{BLACK}Your license ({STRING}) in {TOWN} has expired
+STR_FORK_NEWS_CONFISCATED                                       :{BIG_FONT}{BLACK}{NUM} deliveries were confiscated last month: you hold no right or license for that cargo. See the Licenses button in the town windows
+STR_ERROR_FORK_CAN_T_BUY_RIGHT                                  :{WHITE}Can't buy this right...
+STR_ERROR_FORK_CAN_T_SIGN_LICENSE                               :{WHITE}Can't sign this license...
+STR_ERROR_FORK_RIGHT_ALREADY_OWNED                              :{WHITE}You already own this right
+STR_ERROR_FORK_RIGHT_NOT_AVAILABLE                              :{WHITE}This right is not sold in this town
