@@ -6239,3 +6239,32 @@ STR_ERROR_FORK_CAN_T_BUY_RIGHT                                  :{WHITE}Can't bu
 STR_ERROR_FORK_CAN_T_SIGN_LICENSE                               :{WHITE}Can't sign this license...
 STR_ERROR_FORK_RIGHT_ALREADY_OWNED                              :{WHITE}You already own this right
 STR_ERROR_FORK_RIGHT_NOT_AVAILABLE                              :{WHITE}This right is not sold in this town
+STR_FORK_UM_MODE_USED                                           :{BLACK}Used vehicles
+STR_FORK_UM_MODE_LEASE                                          :{BLACK}Installment vehicles
+STR_FORK_UM_MODE_RENT                                           :{BLACK}Rented vehicles
+STR_FORK_UM_MODE_TOOLTIP                                        :{BLACK}Choose how to get a vehicle: buy it used, pay it in installments, or rent it
+STR_FORK_UM_LEASE_BUY                                           :{BLACK}Take on installments
+STR_FORK_UM_RENT_BUY                                            :{BLACK}Rent selected
+STR_FORK_UM_MONTH_DOWN                                          :{BLACK}- month
+STR_FORK_UM_MONTH_UP                                            :{BLACK}+ month
+STR_FORK_UM_MONTH_TOOLTIP                                       :{BLACK}Change the duration of the contract. The longer the contract, the more it costs
+STR_FORK_UM_LEASE_HINT                                          :{BLACK}Pay about 25% now and the rest in installments (10 to 24 months). After the last installment the vehicle is yours. Repairs are yours
+STR_FORK_UM_RENT_HINT                                           :{BLACK}No down payment. A longer contract than offered costs a surcharge. At the end you can renew at a higher rent, or the vehicle is taken back
+STR_FORK_UM_CONTRACTS                                           :{BLACK}Your contracts: {NUM} installment, {NUM} rented   Paid per month: {CURRENCY_LONG}
+STR_FORK_UM_LEASE_LINE                                          :{BLACK}Down payment: {CURRENCY_LONG}   Installment: {CURRENCY_LONG} for {NUM} months   Interest: {NUM}%   Total: {CURRENCY_LONG}
+STR_FORK_UM_RENT_LINE                                           :{BLACK}Rent: {CURRENCY_LONG} per month for {NUM} months (offered: {NUM})   Extension surcharge: {NUM}%
+STR_FORK_LEASE_RENEW_CAPTION                                    :Rental contract ended
+STR_FORK_LEASE_RENEW_TEXT                                       :{BLACK}The rental contract of {ENGINE} has ended
+STR_FORK_LEASE_RENEW_OFFER                                      :{BLACK}Renew for {NUM} months at {CURRENCY_LONG} per month
+STR_FORK_LEASE_RENEW_OLD                                        :{BLACK}The rent was {CURRENCY_LONG} per month; a renewal costs 40% more
+STR_FORK_LEASE_RENEW_HINT                                       :{BLACK}If you do not decide this month, the vehicle is taken back
+STR_FORK_LEASE_RENEW_BTN                                        :{BLACK}Renew
+STR_FORK_LEASE_RENEW_BTN_TOOLTIP                                :{BLACK}Renew the contract for a higher rent
+STR_FORK_LEASE_RETURN_BTN                                       :{BLACK}Return the vehicle
+STR_FORK_LEASE_RETURN_BTN_TOOLTIP                               :{BLACK}The vehicle goes to a depot and is taken back
+STR_FORK_NEWS_LEASE_OWNED                                       :{BIG_FONT}{BLACK}The last installment of {ENGINE} is paid: the vehicle is yours now
+STR_FORK_NEWS_LEASE_RETURNED                                    :{BIG_FONT}{BLACK}The rented vehicle {ENGINE} is taken back
+STR_ERROR_FORK_LEASE_CAN_T                                      :{WHITE}Can't take this vehicle on a contract...
+STR_ERROR_FORK_LEASE_MONTHS                                     :{WHITE}The duration of the contract is not allowed
+STR_ERROR_FORK_LEASE_NOT_PENDING                                :{WHITE}This contract does not wait for a decision
+STR_ERROR_FORK_LEASE_CAN_T_RENEW                                :{WHITE}Can't change this contract...

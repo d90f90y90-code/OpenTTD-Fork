@@ -29,6 +29,7 @@ struct ForkUsedOffer {
 
 std::vector<ForkUsedOffer> GetForkUsedOffers(uint dealer, CompanyID company);
 void ForkUsedMarketMonthly();
+void ForkUsedMarketNoteSold(CompanyID company, uint dealer, uint slot);
 void ShowForkUsedMarketWindow();
 
 #endif /* FORK_USEDMARKET_H */

@@ -5101,3 +5101,32 @@ STR_ERROR_FORK_CAN_T_BUY_RIGHT                                  :{WHITE}لا ي�
 STR_ERROR_FORK_CAN_T_SIGN_LICENSE                               :{WHITE}لا يمكن توقيع هذا الترخيص ...
 STR_ERROR_FORK_RIGHT_ALREADY_OWNED                              :{WHITE}أنت تملك هذا الحق بالفعل
 STR_ERROR_FORK_RIGHT_NOT_AVAILABLE                              :{WHITE}هذا الحق غير معروض للبيع في هذه المدينة
+STR_FORK_UM_MODE_USED                                           :{BLACK}المركبات المستعملة
+STR_FORK_UM_MODE_LEASE                                          :{BLACK}المركبات ذات القسط
+STR_FORK_UM_MODE_RENT                                           :{BLACK}المركبات المؤجرة
+STR_FORK_UM_MODE_TOOLTIP                                        :{BLACK}اختر طريقة الحصول على المركبة: شراء مستعملة، أو بالأقساط، أو بالإيجار
+STR_FORK_UM_LEASE_BUY                                           :{BLACK}شراء بالأقساط
+STR_FORK_UM_RENT_BUY                                            :{BLACK}استئجار المحدد
+STR_FORK_UM_MONTH_DOWN                                          :{BLACK}- شهر
+STR_FORK_UM_MONTH_UP                                            :{BLACK}+ شهر
+STR_FORK_UM_MONTH_TOOLTIP                                       :{BLACK}تغيير مدة العقد. كلما طالت المدة زادت الكلفة
+STR_FORK_UM_LEASE_HINT                                          :{BLACK}ادفع نحو 25% الآن والباقي أقساطاً (من 10 إلى 24 شهراً). بعد القسط الأخير تصبح المركبة ملكك. الأعطال عليك
+STR_FORK_UM_RENT_HINT                                           :{BLACK}بلا مقدم. تمديد العقد عن المعروض بزيادة في الإيجار. عند الانتهاء تجدد بإيجار أعلى أو تُسحب المركبة
+STR_FORK_UM_CONTRACTS                                           :{BLACK}عقودك: {NUM} بالأقساط، {NUM} مؤجرة   المدفوع شهرياً: {CURRENCY_LONG}
+STR_FORK_UM_LEASE_LINE                                          :{BLACK}المقدم: {CURRENCY_LONG}   القسط: {CURRENCY_LONG} لمدة {NUM} شهراً   الفائدة: {NUM}%   المجموع: {CURRENCY_LONG}
+STR_FORK_UM_RENT_LINE                                           :{BLACK}الإيجار: {CURRENCY_LONG} شهرياً لمدة {NUM} شهراً (المعروض: {NUM})   زيادة التمديد: {NUM}%
+STR_FORK_LEASE_RENEW_CAPTION                                    :انتهى عقد الإيجار
+STR_FORK_LEASE_RENEW_TEXT                                       :{BLACK}انتهى عقد إيجار {ENGINE}
+STR_FORK_LEASE_RENEW_OFFER                                      :{BLACK}التجديد لمدة {NUM} شهراً بإيجار {CURRENCY_LONG} شهرياً
+STR_FORK_LEASE_RENEW_OLD                                        :{BLACK}كان الإيجار {CURRENCY_LONG} شهرياً؛ والتجديد أغلى بنسبة 40%
+STR_FORK_LEASE_RENEW_HINT                                       :{BLACK}إن لم تقرر خلال هذا الشهر تُسحب المركبة
+STR_FORK_LEASE_RENEW_BTN                                        :{BLACK}تجديد
+STR_FORK_LEASE_RENEW_BTN_TOOLTIP                                :{BLACK}تجديد العقد بإيجار أعلى
+STR_FORK_LEASE_RETURN_BTN                                       :{BLACK}إرجاع المركبة
+STR_FORK_LEASE_RETURN_BTN_TOOLTIP                               :{BLACK}تذهب المركبة إلى المرآب وتُسحب
+STR_FORK_NEWS_LEASE_OWNED                                       :{BIG_FONT}{BLACK}دُفع آخر قسط لـ {ENGINE}: صارت المركبة ملكك
+STR_FORK_NEWS_LEASE_RETURNED                                    :{BIG_FONT}{BLACK}سُحبت المركبة المؤجرة {ENGINE}
+STR_ERROR_FORK_LEASE_CAN_T                                      :{WHITE}لا يمكن التعاقد على هذه المركبة ...
+STR_ERROR_FORK_LEASE_MONTHS                                     :{WHITE}مدة العقد غير مسموحة
+STR_ERROR_FORK_LEASE_NOT_PENDING                                :{WHITE}هذا العقد لا ينتظر قراراً
+STR_ERROR_FORK_LEASE_CAN_T_RENEW                                :{WHITE}لا يمكن تغيير هذا العقد ...

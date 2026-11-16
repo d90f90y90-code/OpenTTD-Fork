@@ -112,6 +112,30 @@ std::vector<ForkUsedOffer> GetForkUsedOffers(uint dealer, CompanyID company)
 	return offers;
 }
 
+/**
+ * Remember that a vehicle of an offer was taken, so the dealer has one less.
+ * @param company Company that took the vehicle.
+ * @param dealer Number of the dealer.
+ * @param slot Number of the offer at that dealer.
+ */
+void ForkUsedMarketNoteSold(CompanyID company, uint dealer, uint slot)
+{
+	_fork_economy.used_sold[GetSoldIndex(company, dealer, slot)]++;
+}
+
+/**
+ * Number of months a dealer offers a vehicle for rent. It is different for every offer, from 3 to 9 months,
+ * and stays the same for the whole month.
+ * @param dealer Number of the dealer.
+ * @param slot Number of the offer at that dealer.
+ * @param company Company that looks at the offer.
+ * @return Number of months.
+ */
+uint GetForkRentalBaseMonths(uint dealer, uint slot, CompanyID company)
+{
+	return 3 + Mix(Mix(GetMonthIndex() * 31 + dealer) * 131 + slot * 7919 + company.base() + 99) % 7;
+}
+
 /** A new month: the dealers have new offers. */
 void ForkUsedMarketMonthly()
 {

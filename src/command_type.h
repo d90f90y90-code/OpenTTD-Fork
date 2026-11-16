@@ -276,6 +276,8 @@ enum class Commands : uint8_t {
 	FireForkStaff, ///< fire staff in a town
 	BuyForkRight, ///< buy a right to transport cargo from a town
 	SignForkLicense, ///< sign an annual license to transport cargo from a town
+	LeaseForkVehicle, ///< take a vehicle on installments or rent
+	RenewForkLease, ///< renew a rental contract that ended, or return the vehicle
 	BuyUsedVehicle, ///< buy a used vehicle from a dealer
 
 	SetCompanyManagerFace, ///< set the manager's face of the company

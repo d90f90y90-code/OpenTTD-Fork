@@ -15,6 +15,7 @@
 #include "economy_func.h"
 #include "core/random_func.hpp"
 #include "fork_economy.h"
+#include "fork_lease.h"
 #include "fork_usedmarket.h"
 #include "news_func.h"
 #include "strings_func.h"
@@ -42,6 +43,7 @@ void ResetForkEconomy()
 	RegisterForkShops();
 	RegisterForkLabor();
 	RegisterForkRights();
+	RegisterForkLease();
 }
 
 /**
