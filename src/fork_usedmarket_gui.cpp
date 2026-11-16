@@ -38,6 +38,8 @@ enum ForkUsedMarketWidgets : WidgetID {
 	WID_UM_DEALER_0, ///< Dealer TTD MAX.
 	WID_UM_DEALER_1, ///< Dealer TAJCAR.
 	WID_UM_DEALER_2, ///< Dealer LIMANO.
+	WID_UM_DEALER_3, ///< Dealer SEAMAR.
+	WID_UM_DEALER_4, ///< Dealer AIRIX.
 	WID_UM_OFFERS, ///< Panel with the offers of the selected dealer.
 	WID_UM_BUY, ///< Buy the selected offer.
 	WID_UM_MODE_USED, ///< Show the used vehicles that can be bought.
@@ -47,9 +49,9 @@ enum ForkUsedMarketWidgets : WidgetID {
 	WID_UM_MONTH_UP, ///< One month more.
 };
 
-static constexpr ForkLogo _dealer_logos[FORK_DEALER_COUNT] = {ForkLogo::TtdMax, ForkLogo::Tajcar, ForkLogo::Limano};
+static constexpr ForkLogo _dealer_logos[FORK_DEALER_COUNT] = {ForkLogo::TtdMax, ForkLogo::Tajcar, ForkLogo::Limano, ForkLogo::Seamar, ForkLogo::Airix};
 
-/** Window that shows the offers of the three dealers. */
+/** Window that shows the offers of the five dealers. */
 struct ForkUsedMarketWindow : Window {
 	uint dealer = 0; ///< Dealer that is shown.
 	int selected = -1; ///< Index in #offers of the offer that is selected, or -1.
@@ -136,7 +138,7 @@ struct ForkUsedMarketWindow : Window {
 
 	void DrawWidget(const Rect &r, WidgetID widget) const override
 	{
-		if (widget >= WID_UM_DEALER_0 && widget <= WID_UM_DEALER_2) {
+		if (widget >= WID_UM_DEALER_0 && widget <= WID_UM_DEALER_4) {
 			const uint index = widget - WID_UM_DEALER_0;
 			const Rect ir = r.Shrink(WidgetDimensions::scaled.frametext);
 			DrawForkLogo(_dealer_logos[index], ir);
@@ -199,7 +201,7 @@ struct ForkUsedMarketWindow : Window {
 
 	void OnClick([[maybe_unused]] Point pt, WidgetID widget, [[maybe_unused]] int click_count) override
 	{
-		if (widget >= WID_UM_DEALER_0 && widget <= WID_UM_DEALER_2) {
+		if (widget >= WID_UM_DEALER_0 && widget <= WID_UM_DEALER_4) {
 			this->dealer = widget - WID_UM_DEALER_0;
 			this->selected = -1;
 			this->Refresh();
@@ -277,11 +279,15 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_used_market_wid
 		NWidget(WWT_STICKYBOX, Colours::Grey),
 	EndContainer(),
 	NWidget(NWID_HORIZONTAL, NWidContainerFlag::EqualSize),
-		NWidget(WWT_PANEL, Colours::Grey, WID_UM_DEALER_0), SetMinimalSize(96, 52), SetFill(1, 0), SetResize(1, 0), SetToolTip(STR_FORK_UM_DEALER_TOOLTIP),
+		NWidget(WWT_PANEL, Colours::Grey, WID_UM_DEALER_0), SetMinimalSize(72, 52), SetFill(1, 0), SetResize(1, 0), SetToolTip(STR_FORK_UM_DEALER_TOOLTIP),
 		EndContainer(),
-		NWidget(WWT_PANEL, Colours::Grey, WID_UM_DEALER_1), SetMinimalSize(96, 52), SetFill(1, 0), SetResize(1, 0), SetToolTip(STR_FORK_UM_DEALER_TOOLTIP),
+		NWidget(WWT_PANEL, Colours::Grey, WID_UM_DEALER_1), SetMinimalSize(72, 52), SetFill(1, 0), SetResize(1, 0), SetToolTip(STR_FORK_UM_DEALER_TOOLTIP),
 		EndContainer(),
-		NWidget(WWT_PANEL, Colours::Grey, WID_UM_DEALER_2), SetMinimalSize(96, 52), SetFill(1, 0), SetResize(1, 0), SetToolTip(STR_FORK_UM_DEALER_TOOLTIP),
+		NWidget(WWT_PANEL, Colours::Grey, WID_UM_DEALER_2), SetMinimalSize(72, 52), SetFill(1, 0), SetResize(1, 0), SetToolTip(STR_FORK_UM_DEALER_TOOLTIP),
+		EndContainer(),
+		NWidget(WWT_PANEL, Colours::Grey, WID_UM_DEALER_3), SetMinimalSize(72, 52), SetFill(1, 0), SetResize(1, 0), SetToolTip(STR_FORK_UM_DEALER_TOOLTIP),
+		EndContainer(),
+		NWidget(WWT_PANEL, Colours::Grey, WID_UM_DEALER_4), SetMinimalSize(72, 52), SetFill(1, 0), SetResize(1, 0), SetToolTip(STR_FORK_UM_DEALER_TOOLTIP),
 		EndContainer(),
 	EndContainer(),
 	NWidget(NWID_HORIZONTAL, NWidContainerFlag::EqualSize),

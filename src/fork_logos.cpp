@@ -37,6 +37,8 @@ static const ForkLogoSource _fork_logo_sources[] = {
 	{128, 91, _fork_logo_ttdmax_palette, _fork_logo_ttdmax_rle, sizeof(_fork_logo_ttdmax_rle)},
 	{128, 54, _fork_logo_tajcar_palette, _fork_logo_tajcar_rle, sizeof(_fork_logo_tajcar_rle)},
 	{128, 33, _fork_logo_limano_palette, _fork_logo_limano_rle, sizeof(_fork_logo_limano_rle)},
+	{128, 128, _fork_logo_seamar_palette, _fork_logo_seamar_rle, sizeof(_fork_logo_seamar_rle)},
+	{128, 128, _fork_logo_airix_palette, _fork_logo_airix_rle, sizeof(_fork_logo_airix_rle)},
 };
 
 static constexpr size_t FORK_LOGO_COUNT = static_cast<size_t>(ForkLogo::End);

@@ -18,6 +18,8 @@ enum class ForkLogo : uint8_t {
 	TtdMax, ///< Dealer of used trains.
 	Tajcar, ///< Dealer of used road vehicles.
 	Limano, ///< Dealer of used vehicles of every kind.
+	Seamar, ///< Dealer of used ships.
+	Airix, ///< Dealer of used aircraft.
 	End, ///< End marker.
 };
 

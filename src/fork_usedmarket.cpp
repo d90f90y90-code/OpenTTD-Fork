@@ -8,8 +8,8 @@
 /**
  * @file fork_usedmarket.cpp Market of used vehicles.
  *
- * Three dealers sell vehicles that have been in use for a while: TTD MAX sells trains, TAJCAR road vehicles
- * and LIMANO vehicles of every kind. Each month every dealer shows a few offers. The price depends on the age
+ * Five dealers sell vehicles that have been in use for a while: TTD MAX sells trains, TAJCAR road vehicles,
+ * SEAMAR ships, AIRIX aircraft and LIMANO vehicles of every kind. Each month every dealer shows a few offers. The price depends on the age
  * of the vehicle and on how old the model is, and every offer has a bit of luck in it: some are bargains and
  * some are a little too expensive. The offers follow from the date, so nothing but the number of vehicles
  * that were bought has to be saved.
@@ -35,8 +35,12 @@
 
 #include "safeguards.h"
 
-static constexpr uint8_t _dealer_vehicle_types[FORK_DEALER_COUNT] = {0b0001, 0b0010, 0b1111}; ///< Per dealer the vehicle types it sells, one bit per #VehicleType.
-static constexpr int _dealer_bias[FORK_DEALER_COUNT] = {-1, 0, 2}; ///< Per dealer a shift of the luck: TTD MAX is a bit cheaper and LIMANO a bit dearer.
+/* Dealers: 0 TTD MAX (trains), 1 TAJCAR (road vehicles), 2 LIMANO (every kind), 3 SEAMAR (ships), 4 AIRIX (aircraft). */
+static constexpr uint8_t _dealer_vehicle_types[FORK_DEALER_COUNT] = {0b0001, 0b0010, 0b1111, 0b0100, 0b1000}; ///< Per dealer the vehicle types it sells, one bit per #VehicleType.
+static constexpr int _dealer_bias[FORK_DEALER_COUNT] = {-1, 0, 2, 0, 1}; ///< Per dealer a shift of the luck: TTD MAX is a bit cheaper and LIMANO a bit dearer.
+static constexpr uint _dealer_offer_count[FORK_DEALER_COUNT] = {6, 6, 6, 3, 3}; ///< Number of offers per dealer. The specialists for ships and aircraft have fewer models to sell.
+static constexpr uint _dealer_first_slot[FORK_DEALER_COUNT] = {0, 6, 12, 18, 21}; ///< Place of the first offer of each dealer in the list of bought vehicles.
+static_assert(_dealer_first_slot[FORK_DEALER_COUNT - 1] + _dealer_offer_count[FORK_DEALER_COUNT - 1] == FORK_USED_SLOTS);
 
 static uint32_t Mix(uint32_t h)
 {
@@ -57,13 +61,13 @@ static uint32_t GetMonthIndex()
 /** @return Index in the list of bought vehicles for an offer. */
 static size_t GetSoldIndex(CompanyID company, uint dealer, uint slot)
 {
-	return static_cast<size_t>(company.base()) * FORK_USED_SLOTS + dealer * FORK_OFFERS_PER_DEALER + slot;
+	return static_cast<size_t>(company.base()) * FORK_USED_SLOTS + _dealer_first_slot[dealer] + slot;
 }
 
 /**
  * Make the offers of a dealer for a company. The offers are the same all month and depend only on the date,
  * the dealer and the models the company can build.
- * @param dealer Number of the dealer: 0 TTD MAX, 1 TAJCAR, 2 LIMANO.
+ * @param dealer Number of the dealer: 0 TTD MAX, 1 TAJCAR, 2 LIMANO, 3 SEAMAR, 4 AIRIX.
  * @param company Company that looks at the offers.
  * @return The offers; empty when the dealer has nothing to offer.
  */
@@ -85,7 +89,7 @@ std::vector<ForkUsedOffer> GetForkUsedOffers(uint dealer, CompanyID company)
 	if (candidates.empty()) return offers;
 
 	const uint32_t month = GetMonthIndex();
-	for (uint slot = 0; slot < FORK_OFFERS_PER_DEALER; slot++) {
+	for (uint slot = 0; slot < _dealer_offer_count[dealer]; slot++) {
 		const uint32_t h = Mix(Mix(month * 31 + dealer) * 131 + slot * 7919 + company.base());
 		const Engine *e = candidates[Mix(h) % candidates.size()];
 		const int model_age = e->age;

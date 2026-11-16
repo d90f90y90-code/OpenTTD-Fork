@@ -5,7 +5,7 @@
  * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <https://www.gnu.org/licenses/old-licenses/gpl-2.0>.
  */
 
-/** @file fork_usedmarket.h Market of used vehicles, run by three dealers. */
+/** @file fork_usedmarket.h Market of used vehicles, run by five dealers. */
 
 #ifndef FORK_USEDMARKET_H
 #define FORK_USEDMARKET_H

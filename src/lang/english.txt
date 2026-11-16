@@ -6131,6 +6131,8 @@ STR_FORK_UM_DEALER_TOOLTIP                                      :{BLACK}Show the
 STR_FORK_UM_DEALER_0                                            :{BLACK}TTD MAX: used trains and wagons
 STR_FORK_UM_DEALER_1                                            :{BLACK}TAJCAR: used cars, buses and trucks
 STR_FORK_UM_DEALER_2                                            :{BLACK}LIMANO: used vehicles of every kind
+STR_FORK_UM_DEALER_3                                            :{BLACK}SEAMAR: used ships
+STR_FORK_UM_DEALER_4                                            :{BLACK}AIRIX: used aircraft
 STR_FORK_UM_OFFERS_HINT                                         :{BLACK}Offers of this month. Tap an offer, then press Buy.
 STR_FORK_UM_NO_OFFERS                                           :{BLACK}This dealer has nothing to offer right now
 STR_FORK_UM_PICK_DEPOT                                          :{BLACK}Tap one of your depots to receive the vehicle...

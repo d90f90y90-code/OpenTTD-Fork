@@ -5052,6 +5052,8 @@ STR_FORK_UM_DEALER_TOOLTIP                                      :{BLACK}عرض �
 STR_FORK_UM_DEALER_0                                            :{BLACK}TTD MAX: قطارات وعربات مستعملة
 STR_FORK_UM_DEALER_1                                            :{BLACK}TAJCAR: سيارات وحافلات وشاحنات مستعملة
 STR_FORK_UM_DEALER_2                                            :{BLACK}LIMANO: مركبات مستعملة من كل الأنواع
+STR_FORK_UM_DEALER_3                                            :{BLACK}SEAMAR: سفن مستعملة
+STR_FORK_UM_DEALER_4                                            :{BLACK}AIRIX: طائرات مستعملة
 STR_FORK_UM_OFFERS_HINT                                         :{BLACK}عروض هذا الشهر. اضغط على عرض ثم اضغط شراء.
 STR_FORK_UM_NO_OFFERS                                           :{BLACK}لا توجد عروض عند هذه الشركة الآن
 STR_FORK_UM_PICK_DEPOT                                          :{BLACK}اضغط على أحد مستودعاتك لاستلام المركبة ...

@@ -97,9 +97,9 @@ static constexpr size_t FORK_LEDGER_SIZE = MAX_COMPANIES * FORK_LEDGER_CATEGORIE
 static constexpr uint32_t FORK_ECONOMY_DATA_VERSION = 1; ///< Version of the data layout inside the fork economy savegame chunks.
 
 /** Global state of the extended economy. Saved in the 'FKEC' chunk. */
-static constexpr size_t FORK_DEALER_COUNT = 3; ///< Number of dealers of used vehicles.
-static constexpr size_t FORK_OFFERS_PER_DEALER = 8; ///< Number of offers each dealer makes.
-static constexpr size_t FORK_USED_SLOTS = FORK_DEALER_COUNT * FORK_OFFERS_PER_DEALER; ///< Number of offers per company.
+static constexpr size_t FORK_DEALER_COUNT = 5; ///< Number of dealers of used vehicles: TTD MAX, TAJCAR, LIMANO, SEAMAR, AIRIX.
+static constexpr size_t FORK_OFFERS_PER_DEALER = 6; ///< The most offers one dealer makes.
+static constexpr size_t FORK_USED_SLOTS = 24; ///< Number of offers per company, all dealers together. Part of the savegame layout.
 
 struct ForkEconomyState {
 	uint32_t data_version = FORK_ECONOMY_DATA_VERSION; ///< Version of this data, for conversions after the layout changed.
