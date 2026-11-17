@@ -42,7 +42,7 @@ static constexpr uint _channel_reach_percent[FORK_CHANNEL_KINDS] = {60, 70, 50, 
 /** Make an amount of the start of the game worth what it is now, following inflation of construction costs. */
 static Money Scaled(Money base)
 {
-	return base * _price[Price::BuildStationRail] / 150;
+	return base * static_cast<int64_t>(_price[Price::BuildStationRail]) / 150;
 }
 
 /** @return Whether the town is big enough for channels. */
