@@ -287,6 +287,8 @@ enum class Commands : uint8_t {
 	SellForkFirmShare, ///< sell a part of a firm of a town
 	TakeOverForkFirm, ///< take over a firm of a town
 	BuyUsedVehicle, ///< buy a used vehicle from a dealer
+	BuildForkChannel, ///< build a television or radio channel
+	SetForkChannelPackage, ///< change the paid package of a channel
 
 	SetCompanyManagerFace, ///< set the manager's face of the company
 	SetCompanyColour, ///< set the colour of the company

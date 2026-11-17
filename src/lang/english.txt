@@ -6146,6 +6146,60 @@ STR_FORK_UM_BUY_TOOLTIP                                         :{BLACK}Buy the 
 STR_ERROR_FORK_UM_CAN_T_BUY                                     :{WHITE}Can't buy this used vehicle...
 STR_ERROR_FORK_UM_NO_OFFER                                      :{WHITE}This offer is no longer available
 STR_ERROR_FORK_UM_SOLD_OUT                                      :{WHITE}This vehicle has already been sold
+STR_FORK_MEDIA_BUTTON                                           :{BLACK}Channels
+STR_FORK_MEDIA_TOOLTIP                                          :{BLACK}Build and run television and radio channels in this town
+STR_FORK_MEDIA_CAPTION                                          :Channels: {TOWN}
+STR_FORK_MEDIA_HINT                                             :{BLACK}Tap a channel to build it, or to manage your own.{}Only one channel of each kind fits in a town.
+STR_FORK_MEDIA_TOO_SMALL                                        :{BLACK}Channels can only be built in big towns with at least {NUM} inhabitants. This town has {NUM}.
+STR_FORK_MEDIA_KIND_0                                           :{BLACK}Entertainment channel
+STR_FORK_MEDIA_KIND_1                                           :{BLACK}Radio station
+STR_FORK_MEDIA_KIND_2                                           :{BLACK}News channel
+STR_FORK_MEDIA_KIND_3                                           :{BLACK}Sport channel
+STR_FORK_MEDIA_DEFAULT_NAME_0                                   :{TOWN} Entertainment
+STR_FORK_MEDIA_DEFAULT_NAME_1                                   :{TOWN} Radio
+STR_FORK_MEDIA_DEFAULT_NAME_2                                   :{TOWN} News
+STR_FORK_MEDIA_DEFAULT_NAME_3                                   :{TOWN} Sport
+STR_FORK_MEDIA_ROW_AVAILABLE                                    :{BLACK}Free to build: costs {CURRENCY_LONG}
+STR_FORK_MEDIA_ROW_OTHER                                        :{BLACK}{RAW_STRING}, owned by {COMPANY}
+STR_FORK_MEDIA_ROW_BUILDING                                     :{BLACK}{RAW_STRING}: under construction ({NUM} of {NUM} months)
+STR_FORK_MEDIA_ROW_ON_AIR                                       :{BLACK}{RAW_STRING}: on air, audience {NUM}
+STR_FORK_CREATE_CAPTION                                         :Build: {STRING}
+STR_FORK_CREATE_COST                                            :{BLACK}Cost: {CURRENCY_LONG}   Building time: {NUM} months
+STR_FORK_CREATE_NAME                                            :{BLACK}Name: {RAW_STRING}
+STR_FORK_CREATE_NAME_BUTTON                                     :{BLACK}Name
+STR_FORK_CREATE_NAME_TOOLTIP                                    :{BLACK}Choose the name of the channel
+STR_FORK_CREATE_NAME_CAPTION                                    :Name of the channel
+STR_FORK_CREATE_FREE                                            :{BLACK}Free
+STR_FORK_CREATE_FREE_TOOLTIP                                    :{BLACK}Everybody can watch. Reaches more people, which makes the channel more popular. Reputation is not affected.
+STR_FORK_CREATE_PAID                                            :{BLACK}Paid package
+STR_FORK_CREATE_PAID_TOOLTIP                                    :{BLACK}The channel is encrypted. Viewers pay for a package, fewer people subscribe the dearer it is.
+STR_FORK_CREATE_PACKAGE_DOWN                                    :{BLACK}Package -
+STR_FORK_CREATE_PACKAGE_UP                                      :{BLACK}Package +
+STR_FORK_CREATE_PACKAGE_TOOLTIP                                 :{BLACK}Change the price of the package (1 to 800)
+STR_FORK_CREATE_CONFIRM                                         :{BLACK}Confirm and build
+STR_FORK_CREATE_CONFIRM_TOOLTIP                                 :{BLACK}Build the channel in this town
+STR_FORK_CREATE_CANCEL                                          :{BLACK}Cancel
+STR_FORK_CREATE_FREE_INFO                                       :{BLACK}Free channel: reaches more people and becomes more popular. Reputation is not affected. Income only from advertising.
+STR_FORK_CREATE_PAID_INFO                                       :{BLACK}Paid package: {CURRENCY_LONG}. Income from subscriptions and advertising. The higher the price, the fewer subscribers.
+STR_FORK_CHANNEL_CAPTION                                        :Channel: {RAW_STRING}
+STR_FORK_CHANNEL_TOWN                                           :{BLACK}{STRING} in {TOWN}
+STR_FORK_CHANNEL_STATUS_BUILDING                                :{BLACK}Under construction: {NUM} of {NUM} months
+STR_FORK_CHANNEL_STATUS_ON_AIR                                  :{BLACK}On air
+STR_FORK_CHANNEL_AUDIENCE                                       :{BLACK}Audience: {NUM}   Popularity: {NUM}%   Reputation: {NUM}%
+STR_FORK_CHANNEL_ACCESS_FREE                                    :{BLACK}Access: free for everybody
+STR_FORK_CHANNEL_ACCESS_PAID                                    :{BLACK}Access: paid package {CURRENCY_LONG}, {NUM} subscribers
+STR_FORK_CHANNEL_STAFF                                          :{BLACK}Staff efficiency: {NUM}% (every channel needs {NUM} staff in the town)
+STR_FORK_CHANNEL_INCOME                                         :{BLACK}Subscriptions: {CURRENCY_LONG}   Advertising: {CURRENCY_LONG} per month
+STR_FORK_CHANNEL_COSTS                                          :{BLACK}Running costs: {CURRENCY_LONG}   Result: {CURRENCY_LONG} per month
+STR_FORK_CHANNEL_VALUE                                          :{BLACK}Value of the building: {CURRENCY_LONG}
+STR_FORK_CHANNEL_PROGRAMS                                       :{BLACK}Programs (soon)
+STR_FORK_CHANNEL_SCHEDULE                                       :{BLACK}Schedule (soon)
+STR_FORK_CHANNEL_PROMOTION                                      :{BLACK}Promotion (soon)
+STR_FORK_CHANNEL_SOON_TOOLTIP                                   :{BLACK}This comes in the next update
+STR_ERROR_FORK_MEDIA_CAN_T_BUILD                                :{WHITE}Can't build a channel here...
+STR_ERROR_FORK_MEDIA_CAN_T_CHANGE                               :{WHITE}Can't change the package...
+STR_ERROR_FORK_MEDIA_TOWN_TOO_SMALL                             :{WHITE}Channels can only be built in big towns
+STR_ERROR_FORK_MEDIA_KIND_TAKEN                                 :{WHITE}This town already has a channel of this kind
 STR_ERROR_FORK_TOO_MANY_ASSETS                                  :{WHITE}There are too many assets in the game
 STR_FORK_CATEGORY_RENT                                          :Rent
 STR_FORK_CATEGORY_SALARIES                                      :Salaries

@@ -385,6 +385,24 @@ enum class WindowClass : uint16_t {
 	ForkUsedMarket,
 
 	/**
+	 * Fork channels of a town; %Window numbers:
+	 *   - #TownID = #ForkMediaWidgets
+	 */
+	ForkMedia,
+
+	/**
+	 * Fork set up of a new channel; %Window numbers:
+	 *   - #TownID * 4 + kind = #ForkChannelCreateWidgets
+	 */
+	ForkChannelCreate,
+
+	/**
+	 * Fork channel; %Window numbers:
+	 *   - asset number = #ForkChannelWidgets
+	 */
+	ForkChannel,
+
+	/**
 	 * Station list; %Window numbers:
 	 *   - #CompanyID = #StationListWidgets
 	 */

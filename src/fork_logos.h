@@ -21,7 +21,8 @@ enum class ForkLogo : uint8_t {
 	Seamar, ///< Dealer of used ships.
 	Airix, ///< Dealer of used aircraft.
 	Buildings, ///< First of the 24 building images: 12 headquarters, then 12 laboratories, each with 3 stages of construction.
-	End = Buildings + 24, ///< End marker.
+	ChannelBuildings = Buildings + 24, ///< First of the 12 channel building pictures: entertainment, radio, news and sport, each with 3 stages of construction.
+	End = ChannelBuildings + 12, ///< End marker.
 };
 
 void DrawForkLogo(ForkLogo logo, const Rect &r);

@@ -20,6 +20,7 @@
 #include "palette_func.h"
 
 #include "fork_buildings_data.h"
+#include "fork_channel_buildings_data.h"
 #include "fork_logos_data.h"
 
 #include "safeguards.h"
@@ -28,42 +29,55 @@
 struct ForkLogoSource {
 	int width; ///< Width of the image in pixels.
 	int height; ///< Height of the image in pixels.
+	int num_colors; ///< Number of colours in the palette; every higher index is transparent.
 	const uint8_t *palette; ///< 15 colours as RGB triplets; index 15 is transparent.
 	const uint8_t *rle; ///< Pairs of run length and colour index.
 	size_t rle_size; ///< Size of #rle in bytes.
 };
 
 static const ForkLogoSource _fork_logo_sources[] = {
-	{128, 97, _fork_logo_carmarket_palette, _fork_logo_carmarket_rle, sizeof(_fork_logo_carmarket_rle)},
-	{128, 91, _fork_logo_ttdmax_palette, _fork_logo_ttdmax_rle, sizeof(_fork_logo_ttdmax_rle)},
-	{128, 54, _fork_logo_tajcar_palette, _fork_logo_tajcar_rle, sizeof(_fork_logo_tajcar_rle)},
-	{128, 33, _fork_logo_limano_palette, _fork_logo_limano_rle, sizeof(_fork_logo_limano_rle)},
-	{128, 128, _fork_logo_seamar_palette, _fork_logo_seamar_rle, sizeof(_fork_logo_seamar_rle)},
-	{128, 128, _fork_logo_airix_palette, _fork_logo_airix_rle, sizeof(_fork_logo_airix_rle)},
-	{96, 96, _fork_building_hq0_0_palette, _fork_building_hq0_0_rle, sizeof(_fork_building_hq0_0_rle)},
-	{96, 96, _fork_building_hq0_1_palette, _fork_building_hq0_1_rle, sizeof(_fork_building_hq0_1_rle)},
-	{96, 96, _fork_building_hq0_2_palette, _fork_building_hq0_2_rle, sizeof(_fork_building_hq0_2_rle)},
-	{96, 96, _fork_building_hq1_0_palette, _fork_building_hq1_0_rle, sizeof(_fork_building_hq1_0_rle)},
-	{96, 96, _fork_building_hq1_1_palette, _fork_building_hq1_1_rle, sizeof(_fork_building_hq1_1_rle)},
-	{96, 96, _fork_building_hq1_2_palette, _fork_building_hq1_2_rle, sizeof(_fork_building_hq1_2_rle)},
-	{96, 96, _fork_building_hq2_0_palette, _fork_building_hq2_0_rle, sizeof(_fork_building_hq2_0_rle)},
-	{96, 96, _fork_building_hq2_1_palette, _fork_building_hq2_1_rle, sizeof(_fork_building_hq2_1_rle)},
-	{96, 96, _fork_building_hq2_2_palette, _fork_building_hq2_2_rle, sizeof(_fork_building_hq2_2_rle)},
-	{96, 96, _fork_building_hq3_0_palette, _fork_building_hq3_0_rle, sizeof(_fork_building_hq3_0_rle)},
-	{96, 96, _fork_building_hq3_1_palette, _fork_building_hq3_1_rle, sizeof(_fork_building_hq3_1_rle)},
-	{96, 96, _fork_building_hq3_2_palette, _fork_building_hq3_2_rle, sizeof(_fork_building_hq3_2_rle)},
-	{96, 96, _fork_building_lab0_0_palette, _fork_building_lab0_0_rle, sizeof(_fork_building_lab0_0_rle)},
-	{96, 96, _fork_building_lab0_1_palette, _fork_building_lab0_1_rle, sizeof(_fork_building_lab0_1_rle)},
-	{96, 96, _fork_building_lab0_2_palette, _fork_building_lab0_2_rle, sizeof(_fork_building_lab0_2_rle)},
-	{96, 96, _fork_building_lab1_0_palette, _fork_building_lab1_0_rle, sizeof(_fork_building_lab1_0_rle)},
-	{96, 96, _fork_building_lab1_1_palette, _fork_building_lab1_1_rle, sizeof(_fork_building_lab1_1_rle)},
-	{96, 96, _fork_building_lab1_2_palette, _fork_building_lab1_2_rle, sizeof(_fork_building_lab1_2_rle)},
-	{96, 96, _fork_building_lab2_0_palette, _fork_building_lab2_0_rle, sizeof(_fork_building_lab2_0_rle)},
-	{96, 96, _fork_building_lab2_1_palette, _fork_building_lab2_1_rle, sizeof(_fork_building_lab2_1_rle)},
-	{96, 96, _fork_building_lab2_2_palette, _fork_building_lab2_2_rle, sizeof(_fork_building_lab2_2_rle)},
-	{96, 96, _fork_building_lab3_0_palette, _fork_building_lab3_0_rle, sizeof(_fork_building_lab3_0_rle)},
-	{96, 96, _fork_building_lab3_1_palette, _fork_building_lab3_1_rle, sizeof(_fork_building_lab3_1_rle)},
-	{96, 96, _fork_building_lab3_2_palette, _fork_building_lab3_2_rle, sizeof(_fork_building_lab3_2_rle)},
+	{128, 97, 15, _fork_logo_carmarket_palette, _fork_logo_carmarket_rle, sizeof(_fork_logo_carmarket_rle)},
+	{128, 91, 15, _fork_logo_ttdmax_palette, _fork_logo_ttdmax_rle, sizeof(_fork_logo_ttdmax_rle)},
+	{128, 54, 15, _fork_logo_tajcar_palette, _fork_logo_tajcar_rle, sizeof(_fork_logo_tajcar_rle)},
+	{128, 33, 15, _fork_logo_limano_palette, _fork_logo_limano_rle, sizeof(_fork_logo_limano_rle)},
+	{128, 128, 15, _fork_logo_seamar_palette, _fork_logo_seamar_rle, sizeof(_fork_logo_seamar_rle)},
+	{128, 128, 15, _fork_logo_airix_palette, _fork_logo_airix_rle, sizeof(_fork_logo_airix_rle)},
+	{96, 96, 15, _fork_building_hq0_0_palette, _fork_building_hq0_0_rle, sizeof(_fork_building_hq0_0_rle)},
+	{96, 96, 15, _fork_building_hq0_1_palette, _fork_building_hq0_1_rle, sizeof(_fork_building_hq0_1_rle)},
+	{96, 96, 15, _fork_building_hq0_2_palette, _fork_building_hq0_2_rle, sizeof(_fork_building_hq0_2_rle)},
+	{96, 96, 15, _fork_building_hq1_0_palette, _fork_building_hq1_0_rle, sizeof(_fork_building_hq1_0_rle)},
+	{96, 96, 15, _fork_building_hq1_1_palette, _fork_building_hq1_1_rle, sizeof(_fork_building_hq1_1_rle)},
+	{96, 96, 15, _fork_building_hq1_2_palette, _fork_building_hq1_2_rle, sizeof(_fork_building_hq1_2_rle)},
+	{96, 96, 15, _fork_building_hq2_0_palette, _fork_building_hq2_0_rle, sizeof(_fork_building_hq2_0_rle)},
+	{96, 96, 15, _fork_building_hq2_1_palette, _fork_building_hq2_1_rle, sizeof(_fork_building_hq2_1_rle)},
+	{96, 96, 15, _fork_building_hq2_2_palette, _fork_building_hq2_2_rle, sizeof(_fork_building_hq2_2_rle)},
+	{96, 96, 15, _fork_building_hq3_0_palette, _fork_building_hq3_0_rle, sizeof(_fork_building_hq3_0_rle)},
+	{96, 96, 15, _fork_building_hq3_1_palette, _fork_building_hq3_1_rle, sizeof(_fork_building_hq3_1_rle)},
+	{96, 96, 15, _fork_building_hq3_2_palette, _fork_building_hq3_2_rle, sizeof(_fork_building_hq3_2_rle)},
+	{96, 96, 15, _fork_building_lab0_0_palette, _fork_building_lab0_0_rle, sizeof(_fork_building_lab0_0_rle)},
+	{96, 96, 15, _fork_building_lab0_1_palette, _fork_building_lab0_1_rle, sizeof(_fork_building_lab0_1_rle)},
+	{96, 96, 15, _fork_building_lab0_2_palette, _fork_building_lab0_2_rle, sizeof(_fork_building_lab0_2_rle)},
+	{96, 96, 15, _fork_building_lab1_0_palette, _fork_building_lab1_0_rle, sizeof(_fork_building_lab1_0_rle)},
+	{96, 96, 15, _fork_building_lab1_1_palette, _fork_building_lab1_1_rle, sizeof(_fork_building_lab1_1_rle)},
+	{96, 96, 15, _fork_building_lab1_2_palette, _fork_building_lab1_2_rle, sizeof(_fork_building_lab1_2_rle)},
+	{96, 96, 15, _fork_building_lab2_0_palette, _fork_building_lab2_0_rle, sizeof(_fork_building_lab2_0_rle)},
+	{96, 96, 15, _fork_building_lab2_1_palette, _fork_building_lab2_1_rle, sizeof(_fork_building_lab2_1_rle)},
+	{96, 96, 15, _fork_building_lab2_2_palette, _fork_building_lab2_2_rle, sizeof(_fork_building_lab2_2_rle)},
+	{96, 96, 15, _fork_building_lab3_0_palette, _fork_building_lab3_0_rle, sizeof(_fork_building_lab3_0_rle)},
+	{96, 96, 15, _fork_building_lab3_1_palette, _fork_building_lab3_1_rle, sizeof(_fork_building_lab3_1_rle)},
+	{96, 96, 15, _fork_building_lab3_2_palette, _fork_building_lab3_2_rle, sizeof(_fork_building_lab3_2_rle)},
+	{112, 112, 47, _fork_channelbuilding_entertainment_0_palette, _fork_channelbuilding_entertainment_0_rle, sizeof(_fork_channelbuilding_entertainment_0_rle)},
+	{112, 112, 47, _fork_channelbuilding_entertainment_1_palette, _fork_channelbuilding_entertainment_1_rle, sizeof(_fork_channelbuilding_entertainment_1_rle)},
+	{112, 112, 47, _fork_channelbuilding_entertainment_2_palette, _fork_channelbuilding_entertainment_2_rle, sizeof(_fork_channelbuilding_entertainment_2_rle)},
+	{112, 112, 47, _fork_channelbuilding_radio_0_palette, _fork_channelbuilding_radio_0_rle, sizeof(_fork_channelbuilding_radio_0_rle)},
+	{112, 112, 47, _fork_channelbuilding_radio_1_palette, _fork_channelbuilding_radio_1_rle, sizeof(_fork_channelbuilding_radio_1_rle)},
+	{112, 112, 47, _fork_channelbuilding_radio_2_palette, _fork_channelbuilding_radio_2_rle, sizeof(_fork_channelbuilding_radio_2_rle)},
+	{112, 112, 47, _fork_channelbuilding_news_0_palette, _fork_channelbuilding_news_0_rle, sizeof(_fork_channelbuilding_news_0_rle)},
+	{112, 112, 47, _fork_channelbuilding_news_1_palette, _fork_channelbuilding_news_1_rle, sizeof(_fork_channelbuilding_news_1_rle)},
+	{112, 112, 47, _fork_channelbuilding_news_2_palette, _fork_channelbuilding_news_2_rle, sizeof(_fork_channelbuilding_news_2_rle)},
+	{112, 112, 47, _fork_channelbuilding_sport_0_palette, _fork_channelbuilding_sport_0_rle, sizeof(_fork_channelbuilding_sport_0_rle)},
+	{112, 112, 47, _fork_channelbuilding_sport_1_palette, _fork_channelbuilding_sport_1_rle, sizeof(_fork_channelbuilding_sport_1_rle)},
+	{112, 112, 47, _fork_channelbuilding_sport_2_palette, _fork_channelbuilding_sport_2_rle, sizeof(_fork_channelbuilding_sport_2_rle)},
 };
 
 static constexpr size_t FORK_LOGO_COUNT = static_cast<size_t>(ForkLogo::End);
@@ -88,7 +102,7 @@ static const std::vector<uint8_t> &GetDecodedLogo(size_t id)
 	const ForkLogoSource &src = _fork_logo_sources[id];
 	decoded.reserve(static_cast<size_t>(src.width) * src.height);
 	for (size_t i = 0; i + 1 < src.rle_size; i += 2) decoded.insert(decoded.end(), src.rle[i], src.rle[i + 1]);
-	decoded.resize(static_cast<size_t>(src.width) * src.height, 15);
+	decoded.resize(static_cast<size_t>(src.width) * src.height, 255);
 	return decoded;
 }
 
@@ -145,7 +159,7 @@ static void RenderLogo(size_t id, int width, int height)
 				for (int sx = sx0; sx < sx1 && sx < src.width; sx++) {
 					const uint8_t v = decoded[static_cast<size_t>(sy) * src.width + sx];
 					total++;
-					if (v >= 15) continue;
+					if (v >= src.num_colors) continue;
 					opaque++;
 					sum_r += src.palette[v * 3];
 					sum_g += src.palette[v * 3 + 1];

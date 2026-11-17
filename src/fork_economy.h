@@ -139,6 +139,7 @@ struct ForkAsset : ForkAssetPool::PoolItem<&_fork_asset_pool> {
 	Money monthly_cost = 0; ///< Costs per month.
 	uint32_t age_months = 0; ///< Age of the asset.
 	std::array<int64_t, 4> data{}; ///< Free for the feature that owns this asset type.
+	std::string name; ///< Name given by the owner, for the assets that have one (channels).
 
 	/**
 	 * Construct an asset.

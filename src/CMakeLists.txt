@@ -238,7 +238,13 @@ add_files(
     fork_shop.cpp
     fork_shop_cmd.h
     fork_shop_gui.cpp
+    fork_buildings_data.h
+    fork_channel_buildings_data.h
     fork_logos.cpp
+    fork_media.cpp
+    fork_media.h
+    fork_media_cmd.h
+    fork_media_gui.cpp
     fork_logos.h
     fork_logos_data.h
     fork_customs.cpp

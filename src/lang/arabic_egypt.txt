@@ -5244,3 +5244,57 @@ STR_ERROR_FORK_STOCK_NOT_ENOUGH                                 :{WHITE}لا ت�
 STR_ERROR_FORK_STOCK_NOT_INDEPENDENT                            :{WHITE}هذه الشركة مملوكة لشركة أخرى بالفعل
 STR_ERROR_FORK_STOCK_FIRM_LIMIT                                 :{WHITE}لا يمكن للمستثمرين امتلاك أكثر من 50% من الشركة، وما فوق ذلك يحتاج تملكاً
 STR_ERROR_FORK_STOCK_NEED_HALF                                  :{WHITE}تحتاج إلى 50% من الشركة قبل أن تتملكها
+STR_FORK_MEDIA_BUTTON                                           :{BLACK}القنوات
+STR_FORK_MEDIA_TOOLTIP                                          :{BLACK}بناء وإدارة قنوات التلفزيون والإذاعة في هذه المدينة
+STR_FORK_MEDIA_CAPTION                                          :القنوات: {TOWN}
+STR_FORK_MEDIA_HINT                                             :{BLACK}اضغط على قناة لبنائها، أو لإدارة قناتك.{}تتسع المدينة لقناة واحدة من كل نوع.
+STR_FORK_MEDIA_TOO_SMALL                                        :{BLACK}لا تُبنى القنوات إلا في المدن الكبيرة (على الأقل {NUM} ساكن). عدد سكان هذه المدينة {NUM}.
+STR_FORK_MEDIA_KIND_0                                           :{BLACK}قناة ترفيهية
+STR_FORK_MEDIA_KIND_1                                           :{BLACK}محطة راديو
+STR_FORK_MEDIA_KIND_2                                           :{BLACK}قناة إخبارية
+STR_FORK_MEDIA_KIND_3                                           :{BLACK}قناة رياضية
+STR_FORK_MEDIA_DEFAULT_NAME_0                                   :ترفيه {TOWN}
+STR_FORK_MEDIA_DEFAULT_NAME_1                                   :إذاعة {TOWN}
+STR_FORK_MEDIA_DEFAULT_NAME_2                                   :أخبار {TOWN}
+STR_FORK_MEDIA_DEFAULT_NAME_3                                   :رياضة {TOWN}
+STR_FORK_MEDIA_ROW_AVAILABLE                                    :{BLACK}متاحة للبناء: التكلفة {CURRENCY_LONG}
+STR_FORK_MEDIA_ROW_OTHER                                        :{BLACK}{RAW_STRING}، تملكها {COMPANY}
+STR_FORK_MEDIA_ROW_BUILDING                                     :{BLACK}{RAW_STRING}: قيد البناء ({NUM} من {NUM} أشهر)
+STR_FORK_MEDIA_ROW_ON_AIR                                       :{BLACK}{RAW_STRING}: على الهواء، الجمهور {NUM}
+STR_FORK_CREATE_CAPTION                                         :بناء: {STRING}
+STR_FORK_CREATE_COST                                            :{BLACK}التكلفة: {CURRENCY_LONG}   مدة البناء: {NUM} أشهر
+STR_FORK_CREATE_NAME                                            :{BLACK}الاسم: {RAW_STRING}
+STR_FORK_CREATE_NAME_BUTTON                                     :{BLACK}الاسم
+STR_FORK_CREATE_NAME_TOOLTIP                                    :{BLACK}اختيار اسم القناة
+STR_FORK_CREATE_NAME_CAPTION                                    :اسم القناة
+STR_FORK_CREATE_FREE                                            :{BLACK}مجانية
+STR_FORK_CREATE_FREE_TOOLTIP                                    :{BLACK}يشاهدها الجميع. تصل لعدد أكبر فتزداد شعبيتها. السمعة لا تتأثر.
+STR_FORK_CREATE_PAID                                            :{BLACK}باقة مدفوعة
+STR_FORK_CREATE_PAID_TOOLTIP                                    :{BLACK}القناة مشفّرة. يدفع المشاهدون ثمن باقة، وكلما ارتفع السعر قلّ عدد المشتركين.
+STR_FORK_CREATE_PACKAGE_DOWN                                    :{BLACK}الباقة -
+STR_FORK_CREATE_PACKAGE_UP                                      :{BLACK}الباقة +
+STR_FORK_CREATE_PACKAGE_TOOLTIP                                 :{BLACK}تغيير سعر الباقة (من 1 إلى 800)
+STR_FORK_CREATE_CONFIRM                                         :{BLACK}تأكيد وبناء
+STR_FORK_CREATE_CONFIRM_TOOLTIP                                 :{BLACK}بناء القناة في هذه المدينة
+STR_FORK_CREATE_CANCEL                                          :{BLACK}إلغاء
+STR_FORK_CREATE_FREE_INFO                                       :{BLACK}قناة مجانية: تصل لعدد أكبر وتصبح أكثر شعبية. السمعة لا تتأثر. الدخل من الإعلانات فقط.
+STR_FORK_CREATE_PAID_INFO                                       :{BLACK}باقة مدفوعة: {CURRENCY_LONG}. الدخل من الاشتراكات والإعلانات. كلما ارتفع السعر قلّ المشتركون.
+STR_FORK_CHANNEL_CAPTION                                        :القناة: {RAW_STRING}
+STR_FORK_CHANNEL_TOWN                                           :{BLACK}{STRING} في {TOWN}
+STR_FORK_CHANNEL_STATUS_BUILDING                                :{BLACK}قيد البناء: {NUM} من {NUM} أشهر
+STR_FORK_CHANNEL_STATUS_ON_AIR                                  :{BLACK}على الهواء
+STR_FORK_CHANNEL_AUDIENCE                                       :{BLACK}الجمهور: {NUM}   الشعبية: {NUM}%   السمعة: {NUM}%
+STR_FORK_CHANNEL_ACCESS_FREE                                    :{BLACK}الوصول: مجاني للجميع
+STR_FORK_CHANNEL_ACCESS_PAID                                    :{BLACK}الوصول: باقة مدفوعة {CURRENCY_LONG}، {NUM} مشترك
+STR_FORK_CHANNEL_STAFF                                          :{BLACK}كفاءة الموظفين: {NUM}% (كل قناة تحتاج {NUM} موظفين في المدينة)
+STR_FORK_CHANNEL_INCOME                                          :{BLACK}الاشتراكات: {CURRENCY_LONG}   الإعلانات: {CURRENCY_LONG} شهرياً
+STR_FORK_CHANNEL_COSTS                                          :{BLACK}تكاليف التشغيل: {CURRENCY_LONG}   النتيجة: {CURRENCY_LONG} شهرياً
+STR_FORK_CHANNEL_VALUE                                          :{BLACK}قيمة المبنى: {CURRENCY_LONG}
+STR_FORK_CHANNEL_PROGRAMS                                       :{BLACK}البرامج (قريباً)
+STR_FORK_CHANNEL_SCHEDULE                                       :{BLACK}الجدولة (قريباً)
+STR_FORK_CHANNEL_PROMOTION                                      :{BLACK}الترويج (قريباً)
+STR_FORK_CHANNEL_SOON_TOOLTIP                                   :{BLACK}يأتي في التحديث القادم
+STR_ERROR_FORK_MEDIA_CAN_T_BUILD                                :{WHITE}لا يمكن بناء قناة هنا ...
+STR_ERROR_FORK_MEDIA_CAN_T_CHANGE                               :{WHITE}لا يمكن تغيير الباقة ...
+STR_ERROR_FORK_MEDIA_TOWN_TOO_SMALL                             :{WHITE}القنوات لا تُبنى إلا في المدن الكبيرة
+STR_ERROR_FORK_MEDIA_KIND_TAKEN                                 :{WHITE}في هذه المدينة قناة من هذا النوع بالفعل

@@ -18,6 +18,7 @@
 #include "fork_firm.h"
 #include "fork_stock.h"
 #include "fork_lease.h"
+#include "fork_media.h"
 #include "fork_usedmarket.h"
 #include "news_func.h"
 #include "strings_func.h"
@@ -47,6 +48,7 @@ void ResetForkEconomy()
 	RegisterForkRights();
 	RegisterForkLease();
 	RegisterForkStocks();
+	RegisterForkMedia();
 }
 
 /**

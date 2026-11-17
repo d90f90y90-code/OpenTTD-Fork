@@ -36,6 +36,7 @@
 #include "core/backup_type.hpp"
 #include "fork_economy.h"
 #include "fork_firm.h"
+#include "fork_media.h"
 #include "core/geometry_func.hpp"
 #include "core/string_consumer.hpp"
 #include "genworld.h"
@@ -544,6 +545,10 @@ public:
 			case WID_TV_FIRMS:
 				ShowForkFirmsWindow(this->window_number);
 				break;
+
+			case WID_TV_MEDIA:
+				ShowForkMediaWindow(this->window_number);
+				break;
 		}
 	}
 
@@ -669,6 +674,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_town_game_view_widge
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_STAFF), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_STAFF_BUTTON, STR_FORK_STAFF_TOOLTIP),
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_RIGHTS), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_RIGHTS_BUTTON, STR_FORK_RIGHTS_TOOLTIP),
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_FIRMS), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_FIRMS_BUTTON, STR_FORK_FIRMS_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_MEDIA), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_MEDIA_BUTTON, STR_FORK_MEDIA_TOOLTIP),
 	EndContainer(),
 };
 
