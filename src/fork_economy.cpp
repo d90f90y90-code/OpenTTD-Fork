@@ -16,6 +16,7 @@
 #include "core/random_func.hpp"
 #include "fork_economy.h"
 #include "fork_firm.h"
+#include "fork_stock.h"
 #include "fork_lease.h"
 #include "fork_usedmarket.h"
 #include "news_func.h"
@@ -45,6 +46,7 @@ void ResetForkEconomy()
 	RegisterForkLabor();
 	RegisterForkRights();
 	RegisterForkLease();
+	RegisterForkStocks();
 }
 
 /**
@@ -219,6 +221,7 @@ static void ForkEconomyMonthly()
 	ChargeForkMunicipalTaxes();
 	ForkUsedMarketMonthly();
 	ForkFirmsMonthly();
+	ForkStocksMonthly();
 
 	for (ForkAsset *a : ForkAsset::Iterate()) {
 		a->age_months++;

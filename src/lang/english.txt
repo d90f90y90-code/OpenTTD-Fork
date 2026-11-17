@@ -6335,3 +6335,50 @@ STR_ERROR_FORK_FIRM_TOWN_TOO_SMALL                              :{WHITE}The town
 STR_ERROR_FORK_FIRM_TOWN_FULL                                   :{WHITE}This town has no room for more companies
 STR_ERROR_FORK_FIRM_CAN_T_FOUND                                 :{WHITE}Can't found a company here...
 STR_ERROR_FORK_FIRM_CAN_T_CHANGE                                :{WHITE}Can't change this company...
+STR_FORK_STOCK_NAME_0                                           :Pears
+STR_FORK_STOCK_NAME_1                                           :WenDoor
+STR_FORK_STOCK_NAME_2                                           :Zookal
+STR_FORK_STOCK_NAME_3                                           :Inter Mains
+STR_FORK_STOCK_NAME_4                                           :Samsong
+STR_FORK_STOCK_NAME_5                                           :Sunny
+STR_FORK_STOCK_NAME_6                                           :Tezla
+STR_FORK_STOCK_NAME_7                                           :Amazoon
+STR_FORK_STOCK_NAME_8                                           :Netflux
+STR_FORK_STOCK_NAME_9                                           :Faceboot
+STR_FORK_STOCK_NAME_10                                          :Nikee
+STR_FORK_STOCK_NAME_11                                          :Cola-Koala
+STR_FORK_INVEST_BUTTON                                          :{BLACK}Investment
+STR_FORK_INVEST_TOOLTIP                                         :{BLACK}Invest in the stock exchange or in the companies of the towns
+STR_FORK_EXCHANGE_CAPTION                                       :Stock exchange
+STR_FORK_EXCHANGE_TAB_LISTED                                    :{BLACK}Stock exchange
+STR_FORK_EXCHANGE_TAB_LOCAL                                     :{BLACK}Local companies
+STR_FORK_EXCHANGE_TAB_TOOLTIP                                   :{BLACK}Choose what to invest in
+STR_FORK_EXCHANGE_BUTTON_TOOLTIP                                :{BLACK}Choose a company in the list first
+STR_FORK_EXCHANGE_HINT_LISTED                                   :{BLACK}Tap a company, then buy or sell shares. Prices follow the economy; dividends are paid every month
+STR_FORK_EXCHANGE_HINT_LOCAL                                    :{BLACK}Buy up to 50% of a local company. With 50% you can take it over for 25 times the price of 1%
+STR_FORK_STOCK_ROW1                                             :{BLACK}{STRING}   {CURRENCY_LONG}   {RAW_STRING}
+STR_FORK_STOCK_UP                                               :{GREEN}+{NUM}.{NUM}%
+STR_FORK_STOCK_DOWN                                             :{RED}-{NUM}.{NUM}%
+STR_FORK_STOCK_ROW2                                             :{BLACK}You hold {NUM} shares worth {CURRENCY_LONG}   Dividend: {NUM}.{NUM}% a year
+STR_FORK_STOCK_INFO1                                            :{BLACK}{STRING}: price of a share {CURRENCY_LONG}
+STR_FORK_STOCK_INFO2                                            :{BLACK}You hold {NUM} shares worth {CURRENCY_LONG}   Paid so far: {CURRENCY_LONG}
+STR_FORK_LOCAL_ROW1                                             :{BLACK}{RAW_STRING} ({TOWN}): {STRING}   Value: {CURRENCY_LONG}
+STR_FORK_LOCAL_ROW2                                             :{BLACK}Your stake: {NUM}%   Price of 1%: {CURRENCY_LONG}
+STR_FORK_LOCAL_INFO1                                            :{BLACK}{RAW_STRING}: 5% costs about {CURRENCY_LONG}   Profit last month: {CURRENCY_LONG}
+STR_FORK_LOCAL_INFO2                                            :{BLACK}Your stake: {NUM}%   All investors: {NUM}%   Takeover price: {CURRENCY_LONG}
+STR_FORK_STOCK_BUY_10                                           :{BLACK}Buy 10
+STR_FORK_STOCK_BUY_100                                          :{BLACK}Buy 100
+STR_FORK_STOCK_SELL_10                                          :{BLACK}Sell 10
+STR_FORK_STOCK_SELL_100                                         :{BLACK}Sell 100
+STR_FORK_LOCAL_BUY                                              :{BLACK}Buy 5%
+STR_FORK_LOCAL_SELL                                             :{BLACK}Sell 5%
+STR_FORK_LOCAL_TAKEOVER                                         :{BLACK}Take over
+STR_FORK_STOCK_NO_ACTION                                        :{BLACK}-
+STR_FORK_NEWS_TAKEOVER                                          :{BIG_FONT}{BLACK}{COMPANY} has taken over the company {RAW_STRING}
+STR_ERROR_FORK_STOCK_CAN_T_BUY                                  :{WHITE}Can't buy these shares...
+STR_ERROR_FORK_STOCK_CAN_T_SELL                                 :{WHITE}Can't sell these shares...
+STR_ERROR_FORK_STOCK_CAN_T_TAKEOVER                             :{WHITE}Can't take over this company...
+STR_ERROR_FORK_STOCK_NOT_ENOUGH                                 :{WHITE}You don't hold that many
+STR_ERROR_FORK_STOCK_NOT_INDEPENDENT                            :{WHITE}This company belongs to a company already
+STR_ERROR_FORK_STOCK_FIRM_LIMIT                                 :{WHITE}Investors can hold at most 50% of a company; more needs a takeover
+STR_ERROR_FORK_STOCK_NEED_HALF                                  :{WHITE}You need 50% of the company before you can take it over

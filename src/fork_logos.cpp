@@ -19,6 +19,7 @@
 #include "gfx_func.h"
 #include "palette_func.h"
 
+#include "fork_buildings_data.h"
 #include "fork_logos_data.h"
 
 #include "safeguards.h"
@@ -39,6 +40,30 @@ static const ForkLogoSource _fork_logo_sources[] = {
 	{128, 33, _fork_logo_limano_palette, _fork_logo_limano_rle, sizeof(_fork_logo_limano_rle)},
 	{128, 128, _fork_logo_seamar_palette, _fork_logo_seamar_rle, sizeof(_fork_logo_seamar_rle)},
 	{128, 128, _fork_logo_airix_palette, _fork_logo_airix_rle, sizeof(_fork_logo_airix_rle)},
+	{96, 96, _fork_building_hq0_0_palette, _fork_building_hq0_0_rle, sizeof(_fork_building_hq0_0_rle)},
+	{96, 96, _fork_building_hq0_1_palette, _fork_building_hq0_1_rle, sizeof(_fork_building_hq0_1_rle)},
+	{96, 96, _fork_building_hq0_2_palette, _fork_building_hq0_2_rle, sizeof(_fork_building_hq0_2_rle)},
+	{96, 96, _fork_building_hq1_0_palette, _fork_building_hq1_0_rle, sizeof(_fork_building_hq1_0_rle)},
+	{96, 96, _fork_building_hq1_1_palette, _fork_building_hq1_1_rle, sizeof(_fork_building_hq1_1_rle)},
+	{96, 96, _fork_building_hq1_2_palette, _fork_building_hq1_2_rle, sizeof(_fork_building_hq1_2_rle)},
+	{96, 96, _fork_building_hq2_0_palette, _fork_building_hq2_0_rle, sizeof(_fork_building_hq2_0_rle)},
+	{96, 96, _fork_building_hq2_1_palette, _fork_building_hq2_1_rle, sizeof(_fork_building_hq2_1_rle)},
+	{96, 96, _fork_building_hq2_2_palette, _fork_building_hq2_2_rle, sizeof(_fork_building_hq2_2_rle)},
+	{96, 96, _fork_building_hq3_0_palette, _fork_building_hq3_0_rle, sizeof(_fork_building_hq3_0_rle)},
+	{96, 96, _fork_building_hq3_1_palette, _fork_building_hq3_1_rle, sizeof(_fork_building_hq3_1_rle)},
+	{96, 96, _fork_building_hq3_2_palette, _fork_building_hq3_2_rle, sizeof(_fork_building_hq3_2_rle)},
+	{96, 96, _fork_building_lab0_0_palette, _fork_building_lab0_0_rle, sizeof(_fork_building_lab0_0_rle)},
+	{96, 96, _fork_building_lab0_1_palette, _fork_building_lab0_1_rle, sizeof(_fork_building_lab0_1_rle)},
+	{96, 96, _fork_building_lab0_2_palette, _fork_building_lab0_2_rle, sizeof(_fork_building_lab0_2_rle)},
+	{96, 96, _fork_building_lab1_0_palette, _fork_building_lab1_0_rle, sizeof(_fork_building_lab1_0_rle)},
+	{96, 96, _fork_building_lab1_1_palette, _fork_building_lab1_1_rle, sizeof(_fork_building_lab1_1_rle)},
+	{96, 96, _fork_building_lab1_2_palette, _fork_building_lab1_2_rle, sizeof(_fork_building_lab1_2_rle)},
+	{96, 96, _fork_building_lab2_0_palette, _fork_building_lab2_0_rle, sizeof(_fork_building_lab2_0_rle)},
+	{96, 96, _fork_building_lab2_1_palette, _fork_building_lab2_1_rle, sizeof(_fork_building_lab2_1_rle)},
+	{96, 96, _fork_building_lab2_2_palette, _fork_building_lab2_2_rle, sizeof(_fork_building_lab2_2_rle)},
+	{96, 96, _fork_building_lab3_0_palette, _fork_building_lab3_0_rle, sizeof(_fork_building_lab3_0_rle)},
+	{96, 96, _fork_building_lab3_1_palette, _fork_building_lab3_1_rle, sizeof(_fork_building_lab3_1_rle)},
+	{96, 96, _fork_building_lab3_2_palette, _fork_building_lab3_2_rle, sizeof(_fork_building_lab3_2_rle)},
 };
 
 static constexpr size_t FORK_LOGO_COUNT = static_cast<size_t>(ForkLogo::End);
@@ -132,6 +157,18 @@ static void RenderLogo(size_t id, int width, int height)
 			render.pixels[static_cast<size_t>(ty) * width + tx] = FindNearestPaletteIndex(sum_r / opaque, sum_g / opaque, sum_b / opaque);
 		}
 	}
+}
+
+/**
+ * Get the image of a building of a firm.
+ * @param laboratory True for the laboratory, false for the glass headquarters.
+ * @param design Which of the 4 designs.
+ * @param stage How far the construction is: 0 foundations, 1 under construction, 2 finished.
+ * @return The logo.
+ */
+ForkLogo GetForkBuildingLogo(bool laboratory, uint design, uint stage)
+{
+	return static_cast<ForkLogo>(static_cast<uint>(ForkLogo::Buildings) + (laboratory ? 12 : 0) + (design % 4) * 3 + std::min<uint>(stage, 2));
 }
 
 /**

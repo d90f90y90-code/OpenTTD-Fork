@@ -15,6 +15,8 @@
 #include "fork_economy.h"
 #include "fork_firm.h"
 #include "fork_firm_cmd.h"
+#include "fork_logos.h"
+#include "fork_stock.h"
 #include "gfx_func.h"
 #include "strings_func.h"
 #include "textbuf_gui.h"
@@ -42,6 +44,7 @@ enum ForkFirmsWidgets : WidgetID {
 	WID_FF_CAPTION, ///< Caption of the window.
 	WID_FF_LIST, ///< List of the firms.
 	WID_FF_CREATE, ///< Found a firm.
+	WID_FF_INVEST, ///< Open the stock exchange.
 };
 
 /** Window with the firms in one town. The window number is the town. */
@@ -109,6 +112,11 @@ struct ForkFirmsWindow : Window {
 			return;
 		}
 
+		if (widget == WID_FF_INVEST) {
+			ShowForkExchangeWindow();
+			return;
+		}
+
 		if (widget != WID_FF_LIST) return;
 
 		const NWidgetBase *nwid = this->GetWidget<NWidgetBase>(WID_FF_LIST);
@@ -133,6 +141,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_firms_widgets =
 	EndContainer(),
 	NWidget(NWID_HORIZONTAL),
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_FF_CREATE), SetMinimalSize(120, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_FIRMS_CREATE, STR_FORK_FIRMS_CREATE_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_FF_INVEST), SetMinimalSize(120, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_INVEST_BUTTON, STR_FORK_INVEST_TOOLTIP),
 		NWidget(WWT_RESIZEBOX, Colours::Brown),
 	EndContainer(),
 };
@@ -286,6 +295,8 @@ void ShowForkFirmCreateWindow(uint town)
 /** Widgets of the window for running a firm. */
 enum ForkFirmWidgets : WidgetID {
 	WID_FM_CAPTION, ///< Caption of the window.
+	WID_FM_HQ, ///< Picture of the headquarters.
+	WID_FM_LAB, ///< Picture of the laboratory.
 	WID_FM_INFO, ///< Panel with the texts.
 	WID_FM_RATE_DOWN, ///< Make less.
 	WID_FM_RATE_UP, ///< Make more.
@@ -344,7 +355,16 @@ struct ForkFirmWindow : Window {
 	void DrawWidget(const Rect &r, WidgetID widget) const override
 	{
 		const ForkFirm *f = this->GetFirm();
-		if (widget != WID_FM_INFO || f == nullptr) return;
+		if (f == nullptr) return;
+
+		/* The glass headquarters and the laboratory are built over the first months of the firm. */
+		if (widget == WID_FM_HQ || widget == WID_FM_LAB) {
+			const uint stage = f->age_months < 2 ? 0 : (f->age_months < 6 ? 1 : 2);
+			const bool lab = widget == WID_FM_LAB;
+			DrawForkLogo(GetForkBuildingLogo(lab, lab ? f->product : f->index.base(), stage), r.Shrink(WidgetDimensions::scaled.bevel));
+			return;
+		}
+		if (widget != WID_FM_INFO) return;
 
 		const Rect ir = r.Shrink(WidgetDimensions::scaled.frametext);
 		const int line = GetCharacterHeight(FontSize::Normal);
@@ -416,6 +436,12 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_firm_widgets = 
 		NWidget(WWT_CAPTION, Colours::Brown, WID_FM_CAPTION), SetToolTip(STR_TOOLTIP_WINDOW_TITLE_DRAG_THIS),
 		NWidget(WWT_SHADEBOX, Colours::Brown),
 		NWidget(WWT_STICKYBOX, Colours::Brown),
+	EndContainer(),
+	NWidget(NWID_HORIZONTAL, NWidContainerFlag::EqualSize),
+		NWidget(WWT_PANEL, Colours::Brown, WID_FM_HQ), SetMinimalSize(110, 110), SetFill(1, 0), SetResize(1, 0),
+		EndContainer(),
+		NWidget(WWT_PANEL, Colours::Brown, WID_FM_LAB), SetMinimalSize(110, 110), SetFill(1, 0), SetResize(1, 0),
+		EndContainer(),
 	EndContainer(),
 	NWidget(WWT_PANEL, Colours::Brown, WID_FM_INFO), SetResize(1, 1), SetFill(1, 1),
 	EndContainer(),

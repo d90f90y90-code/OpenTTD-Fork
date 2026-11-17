@@ -5197,3 +5197,50 @@ STR_ERROR_FORK_FIRM_TOWN_TOO_SMALL                              :{WHITE}المد
 STR_ERROR_FORK_FIRM_TOWN_FULL                                   :{WHITE}لا مكان لشركات أكثر في هذه المدينة
 STR_ERROR_FORK_FIRM_CAN_T_FOUND                                 :{WHITE}لا يمكن إنشاء شركة هنا ...
 STR_ERROR_FORK_FIRM_CAN_T_CHANGE                                :{WHITE}لا يمكن تغيير هذه الشركة ...
+STR_FORK_STOCK_NAME_0                                           :بيرز
+STR_FORK_STOCK_NAME_1                                           :ويندور
+STR_FORK_STOCK_NAME_2                                           :زوكال
+STR_FORK_STOCK_NAME_3                                           :إنتر مينز
+STR_FORK_STOCK_NAME_4                                           :سامسونق
+STR_FORK_STOCK_NAME_5                                           :سَني
+STR_FORK_STOCK_NAME_6                                           :تيزلا
+STR_FORK_STOCK_NAME_7                                           :أمازوون
+STR_FORK_STOCK_NAME_8                                           :نتفلَكس
+STR_FORK_STOCK_NAME_9                                           :فيسبوت
+STR_FORK_STOCK_NAME_10                                          :نيكي
+STR_FORK_STOCK_NAME_11                                          :كولا-كوالا
+STR_FORK_INVEST_BUTTON                                          :{BLACK}الاستثمار
+STR_FORK_INVEST_TOOLTIP                                         :{BLACK}الاستثمار في البورصة أو في شركات المدن
+STR_FORK_EXCHANGE_CAPTION                                       :البورصة
+STR_FORK_EXCHANGE_TAB_LISTED                                    :{BLACK}البورصة
+STR_FORK_EXCHANGE_TAB_LOCAL                                     :{BLACK}الشركات المحلية
+STR_FORK_EXCHANGE_TAB_TOOLTIP                                   :{BLACK}اختر مجال الاستثمار
+STR_FORK_EXCHANGE_BUTTON_TOOLTIP                                :{BLACK}اختر شركة من القائمة أولاً
+STR_FORK_EXCHANGE_HINT_LISTED                                   :{BLACK}اضغط على شركة ثم اشترِ أو بع أسهمها. الأسعار تتبع الاقتصاد وتُدفع الأرباح شهرياً
+STR_FORK_EXCHANGE_HINT_LOCAL                                    :{BLACK}اشترِ حتى 50% من شركة محلية. وعند 50% يمكنك تملكها بدفع 25 ضعف سعر 1%
+STR_FORK_STOCK_ROW1                                             :{BLACK}{STRING}   {CURRENCY_LONG}   {RAW_STRING}
+STR_FORK_STOCK_UP                                               :{GREEN}+{NUM}.{NUM}%
+STR_FORK_STOCK_DOWN                                             :{RED}-{NUM}.{NUM}%
+STR_FORK_STOCK_ROW2                                             :{BLACK}تملك {NUM} سهماً بقيمة {CURRENCY_LONG}   الأرباح: {NUM}.{NUM}% سنوياً
+STR_FORK_STOCK_INFO1                                            :{BLACK}{STRING}: سعر السهم {CURRENCY_LONG}
+STR_FORK_STOCK_INFO2                                            :{BLACK}تملك {NUM} سهماً بقيمة {CURRENCY_LONG}   المدفوع حتى الآن: {CURRENCY_LONG}
+STR_FORK_LOCAL_ROW1                                             :{BLACK}{RAW_STRING} ({TOWN}): {STRING}   القيمة: {CURRENCY_LONG}
+STR_FORK_LOCAL_ROW2                                             :{BLACK}حصتك: {NUM}%   سعر 1%: {CURRENCY_LONG}
+STR_FORK_LOCAL_INFO1                                            :{BLACK}{RAW_STRING}: 5% تكلّف نحو {CURRENCY_LONG}   ربح الشهر الماضي: {CURRENCY_LONG}
+STR_FORK_LOCAL_INFO2                                            :{BLACK}حصتك: {NUM}%   كل المستثمرين: {NUM}%   سعر التملك: {CURRENCY_LONG}
+STR_FORK_STOCK_BUY_10                                           :{BLACK}شراء 10
+STR_FORK_STOCK_BUY_100                                          :{BLACK}شراء 100
+STR_FORK_STOCK_SELL_10                                          :{BLACK}بيع 10
+STR_FORK_STOCK_SELL_100                                         :{BLACK}بيع 100
+STR_FORK_LOCAL_BUY                                              :{BLACK}شراء 5%
+STR_FORK_LOCAL_SELL                                             :{BLACK}بيع 5%
+STR_FORK_LOCAL_TAKEOVER                                         :{BLACK}تملّك
+STR_FORK_STOCK_NO_ACTION                                        :{BLACK}-
+STR_FORK_NEWS_TAKEOVER                                          :{BIG_FONT}{BLACK}استحوذت شركة {COMPANY} على شركة {RAW_STRING}
+STR_ERROR_FORK_STOCK_CAN_T_BUY                                  :{WHITE}لا يمكن شراء هذه الأسهم ...
+STR_ERROR_FORK_STOCK_CAN_T_SELL                                 :{WHITE}لا يمكن بيع هذه الأسهم ...
+STR_ERROR_FORK_STOCK_CAN_T_TAKEOVER                             :{WHITE}لا يمكن تملك هذه الشركة ...
+STR_ERROR_FORK_STOCK_NOT_ENOUGH                                 :{WHITE}لا تملك هذا القدر
+STR_ERROR_FORK_STOCK_NOT_INDEPENDENT                            :{WHITE}هذه الشركة مملوكة لشركة أخرى بالفعل
+STR_ERROR_FORK_STOCK_FIRM_LIMIT                                 :{WHITE}لا يمكن للمستثمرين امتلاك أكثر من 50% من الشركة، وما فوق ذلك يحتاج تملكاً
+STR_ERROR_FORK_STOCK_NEED_HALF                                  :{WHITE}تحتاج إلى 50% من الشركة قبل أن تتملكها

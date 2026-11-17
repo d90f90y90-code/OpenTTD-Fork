@@ -281,6 +281,11 @@ enum class Commands : uint8_t {
 	CreateForkFirm, ///< found a technology firm in a town
 	SetForkFirm, ///< change how a firm works: production, quality, price, discount
 	DumpForkFirmStock, ///< throw away the stock of a firm
+	BuyForkStock, ///< buy shares of a listed company
+	SellForkStock, ///< sell shares of a listed company
+	BuyForkFirmShare, ///< buy a part of a firm of a town
+	SellForkFirmShare, ///< sell a part of a firm of a town
+	TakeOverForkFirm, ///< take over a firm of a town
 	BuyUsedVehicle, ///< buy a used vehicle from a dealer
 
 	SetCompanyManagerFace, ///< set the manager's face of the company

@@ -15,6 +15,7 @@
 #include "cargo_type.h"
 #include "economy_type.h"
 #include "fork_firm.h"
+#include "fork_stock.h"
 #include "source_type.h"
 #include "station_type.h"
 #include "town_type.h"
@@ -110,6 +111,8 @@ struct ForkEconomyState {
 	int32_t market_index = 1000; ///< Strength of the market in permille; 1000 is neutral.
 	int32_t market_target = 1000; ///< Value the market index moves towards, set when a phase starts.
 	uint16_t market_months_left = 24; ///< Months until the market phase changes.
+	std::array<int64_t, FORK_LISTED_COUNT> stock_price{}; ///< Price of a share of every listed company; zero until the first month.
+	std::array<int64_t, FORK_LISTED_COUNT> stock_previous{}; ///< The prices of a month ago.
 	std::array<int16_t, FORK_PRODUCT_COUNT> firm_ref_price{}; ///< Market price of every firm product, in percent of the base price.
 	std::array<Money, FORK_LEDGER_SIZE> ledger_month{}; ///< Ledger amounts of the current month.
 	std::array<Money, FORK_LEDGER_SIZE> ledger_last{}; ///< Ledger amounts of the previous month.

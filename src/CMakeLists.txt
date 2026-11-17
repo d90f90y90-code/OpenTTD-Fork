@@ -216,6 +216,10 @@ add_files(
     fork_economy_gui.cpp
     fork_realestate.cpp
     fork_realestate_gui.cpp
+    fork_stock.cpp
+    fork_stock.h
+    fork_stock_cmd.h
+    fork_stock_gui.cpp
     fork_firm.cpp
     fork_firm.h
     fork_firm_cmd.h

@@ -24,6 +24,7 @@
 #include "../investment_cmd.h"
 #include "../fork_realestate_cmd.h"
 #include "../fork_firm_cmd.h"
+#include "../fork_stock_cmd.h"
 #include "../fork_labor_cmd.h"
 #include "../fork_lease_cmd.h"
 #include "../fork_rights_cmd.h"

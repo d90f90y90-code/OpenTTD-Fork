@@ -28,6 +28,8 @@ static const SaveLoad _fork_economy_desc[] = {
 	SaveLoad::Variable<VarFileType::U8>("market_phase", SLE_OBJECT_ADDRESS(ForkEconomyState, market_phase), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I32>("market_index", SLE_OBJECT_ADDRESS(ForkEconomyState, market_index), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I32>("market_target", SLE_OBJECT_ADDRESS(ForkEconomyState, market_target), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Array<VarFileType::I64, FORK_LISTED_COUNT>("stock_price", SLE_OBJECT_ADDRESS(ForkEconomyState, stock_price), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Array<VarFileType::I64, FORK_LISTED_COUNT>("stock_previous", SLE_OBJECT_ADDRESS(ForkEconomyState, stock_previous), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Array<VarFileType::I16, FORK_PRODUCT_COUNT>("firm_ref_price", SLE_OBJECT_ADDRESS(ForkEconomyState, firm_ref_price), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::U16>("market_months_left", SLE_OBJECT_ADDRESS(ForkEconomyState, market_months_left), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Array<VarFileType::I64, FORK_LEDGER_SIZE>("ledger_month", SLE_OBJECT_ADDRESS(ForkEconomyState, ledger_month), SaveLoadVersion::ForkEconomy),

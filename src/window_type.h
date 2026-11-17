@@ -373,6 +373,12 @@ enum class WindowClass : uint16_t {
 	ForkFirmCreate,
 
 	/**
+	 * Fork stock exchange; %Window numbers:
+	 *   - 0 = #ForkExchangeWidgets
+	 */
+	ForkExchange,
+
+	/**
 	 * Fork used vehicle market; %Window numbers:
 	 *   - 0 = #ForkUsedMarketWidgets
 	 */

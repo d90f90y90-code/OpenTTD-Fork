@@ -27,7 +27,7 @@ enum class ForkProduct : uint8_t {
 };
 
 static constexpr size_t FORK_PRODUCT_COUNT = static_cast<size_t>(ForkProduct::End);
-static constexpr uint FORK_FIRM_MIN_POPULATION = 2500; ///< A town needs this many inhabitants before a firm can be founded.
+static constexpr uint FORK_FIRM_MIN_POPULATION = 1500; ///< A town needs this many inhabitants before a firm can be founded.
 static constexpr uint FORK_FIRM_MAX_PER_TOWN = 4; ///< Never more firms than this in one town, all owners together.
 static constexpr uint FORK_FIRM_MAX_QUALITY = 5; ///< Highest quality level.
 

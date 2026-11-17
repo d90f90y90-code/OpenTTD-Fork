@@ -20,9 +20,11 @@ enum class ForkLogo : uint8_t {
 	Limano, ///< Dealer of used vehicles of every kind.
 	Seamar, ///< Dealer of used ships.
 	Airix, ///< Dealer of used aircraft.
-	End, ///< End marker.
+	Buildings, ///< First of the 24 building images: 12 headquarters, then 12 laboratories, each with 3 stages of construction.
+	End = Buildings + 24, ///< End marker.
 };
 
 void DrawForkLogo(ForkLogo logo, const Rect &r);
+ForkLogo GetForkBuildingLogo(bool laboratory, uint design, uint stage);
 
 #endif /* FORK_LOGOS_H */
