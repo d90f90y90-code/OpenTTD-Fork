@@ -15,6 +15,7 @@
 #include "economy_func.h"
 #include "core/random_func.hpp"
 #include "fork_economy.h"
+#include "fork_firm.h"
 #include "fork_lease.h"
 #include "fork_usedmarket.h"
 #include "news_func.h"
@@ -217,6 +218,7 @@ static void ForkEconomyMonthly()
 
 	ChargeForkMunicipalTaxes();
 	ForkUsedMarketMonthly();
+	ForkFirmsMonthly();
 
 	for (ForkAsset *a : ForkAsset::Iterate()) {
 		a->age_months++;

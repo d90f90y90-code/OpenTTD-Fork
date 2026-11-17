@@ -14,6 +14,7 @@
 #include "company_func.h"
 #include "economy_func.h"
 #include "fork_economy.h"
+#include "fork_firm.h"
 #include "fork_labor_cmd.h"
 #include "town.h"
 #include "window_func.h"
@@ -78,9 +79,10 @@ uint GetForkCompanyStaff(CompanyID company, TownID town)
  * @param shops Number of shops.
  * @return Number of staff needed.
  */
-uint GetForkRequiredStaff(uint houses, uint shops)
+uint GetForkRequiredStaff(uint houses, uint shops, uint firms)
 {
-	return (houses + FORK_HOUSES_PER_STAFF - 1) / FORK_HOUSES_PER_STAFF + (shops + FORK_SHOPS_PER_STAFF - 1) / FORK_SHOPS_PER_STAFF;
+	/* Every firm needs a manager of its own. */
+	return (houses + FORK_HOUSES_PER_STAFF - 1) / FORK_HOUSES_PER_STAFF + (shops + FORK_SHOPS_PER_STAFF - 1) / FORK_SHOPS_PER_STAFF + firms;
 }
 
 /**
@@ -92,9 +94,9 @@ uint GetForkRequiredStaff(uint houses, uint shops)
  * @param shops Number of shops to take into account.
  * @return Efficiency in percent.
  */
-uint GetForkStaffEfficiencyFor(CompanyID company, TownID town, uint houses, uint shops)
+uint GetForkStaffEfficiencyFor(CompanyID company, TownID town, uint houses, uint shops, uint firms)
 {
-	const uint required = GetForkRequiredStaff(houses, shops);
+	const uint required = GetForkRequiredStaff(houses, shops, firms);
 	if (required == 0) return 100;
 
 	const uint ratio = GetForkCompanyStaff(company, town) * 100 / required;
@@ -110,7 +112,7 @@ uint GetForkStaffEfficiencyFor(CompanyID company, TownID town, uint houses, uint
  */
 uint GetForkStaffEfficiency(CompanyID company, TownID town)
 {
-	return GetForkStaffEfficiencyFor(company, town, GetForkCompanyHouses(company, town), GetForkCompanyShops(company, town));
+	return GetForkStaffEfficiencyFor(company, town, GetForkCompanyHouses(company, town), GetForkCompanyShops(company, town), GetForkCompanyFirms(company, town));
 }
 
 /**

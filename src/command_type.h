@@ -278,6 +278,9 @@ enum class Commands : uint8_t {
 	SignForkLicense, ///< sign an annual license to transport cargo from a town
 	LeaseForkVehicle, ///< take a vehicle on installments or rent
 	RenewForkLease, ///< renew a rental contract that ended, or return the vehicle
+	CreateForkFirm, ///< found a technology firm in a town
+	SetForkFirm, ///< change how a firm works: production, quality, price, discount
+	DumpForkFirmStock, ///< throw away the stock of a firm
 	BuyUsedVehicle, ///< buy a used vehicle from a dealer
 
 	SetCompanyManagerFace, ///< set the manager's face of the company

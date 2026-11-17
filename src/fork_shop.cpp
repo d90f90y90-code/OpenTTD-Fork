@@ -14,6 +14,7 @@
 #include "company_func.h"
 #include "economy_func.h"
 #include "fork_economy.h"
+#include "fork_firm.h"
 #include "fork_shop_cmd.h"
 #include "town.h"
 #include "window_func.h"
@@ -171,7 +172,7 @@ ForkShopResult GetForkShopResult(const Town *t, CompanyID company, uint shops, u
 	const uint64_t share = own * 1000 / (others + own);
 
 	/* Shops with too little staff serve fewer customers. */
-	const uint efficiency = GetForkStaffEfficiencyFor(company, t->index, GetForkCompanyHouses(company, t->index), shops);
+	const uint efficiency = GetForkStaffEfficiencyFor(company, t->index, GetForkCompanyHouses(company, t->index), shops, GetForkCompanyFirms(company, t->index));
 	const Money volume = GetForkTownRetailSpending(t) * static_cast<int64_t>(share) / 1000 * efficiency / 100; // Sales at normal prices.
 	r.share_permille = static_cast<uint>(share);
 	r.sales = volume * price_percent / 100;

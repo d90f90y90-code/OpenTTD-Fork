@@ -14,6 +14,7 @@
 #include "core/pool_type.hpp"
 #include "cargo_type.h"
 #include "economy_type.h"
+#include "fork_firm.h"
 #include "source_type.h"
 #include "station_type.h"
 #include "town_type.h"
@@ -102,11 +103,14 @@ static constexpr size_t FORK_OFFERS_PER_DEALER = 6; ///< The most offers one dea
 static constexpr size_t FORK_USED_SLOTS = 24; ///< Number of offers per company, all dealers together. Part of the savegame layout.
 
 struct ForkEconomyState {
+	ForkEconomyState() { this->firm_ref_price.fill(100); }
+
 	uint32_t data_version = FORK_ECONOMY_DATA_VERSION; ///< Version of this data, for conversions after the layout changed.
 	uint8_t market_phase = 0; ///< Current phase of the economic cycle (0 = normal).
 	int32_t market_index = 1000; ///< Strength of the market in permille; 1000 is neutral.
 	int32_t market_target = 1000; ///< Value the market index moves towards, set when a phase starts.
 	uint16_t market_months_left = 24; ///< Months until the market phase changes.
+	std::array<int16_t, FORK_PRODUCT_COUNT> firm_ref_price{}; ///< Market price of every firm product, in percent of the base price.
 	std::array<Money, FORK_LEDGER_SIZE> ledger_month{}; ///< Ledger amounts of the current month.
 	std::array<Money, FORK_LEDGER_SIZE> ledger_last{}; ///< Ledger amounts of the previous month.
 	int32_t used_month = -1; ///< Month of the used vehicle offers that #used_sold is about.
@@ -192,8 +196,8 @@ void ShowForkShopsWindow(uint town);
 Money GetForkWage(const Town *t);
 uint GetForkStaffLimit(const Town *t);
 uint GetForkCompanyStaff(CompanyID company, TownID town);
-uint GetForkRequiredStaff(uint houses, uint shops);
-uint GetForkStaffEfficiencyFor(CompanyID company, TownID town, uint houses, uint shops);
+uint GetForkRequiredStaff(uint houses, uint shops, uint firms = 0);
+uint GetForkStaffEfficiencyFor(CompanyID company, TownID town, uint houses, uint shops, uint firms = 0);
 uint GetForkStaffEfficiency(CompanyID company, TownID town);
 void RegisterForkLabor();
 

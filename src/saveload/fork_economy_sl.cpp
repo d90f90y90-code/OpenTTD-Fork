@@ -14,6 +14,7 @@
 #include "compat/fork_economy_sl_compat.h"
 
 #include "../fork_economy.h"
+#include "../fork_firm.h"
 
 #include "../safeguards.h"
 
@@ -27,6 +28,7 @@ static const SaveLoad _fork_economy_desc[] = {
 	SaveLoad::Variable<VarFileType::U8>("market_phase", SLE_OBJECT_ADDRESS(ForkEconomyState, market_phase), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I32>("market_index", SLE_OBJECT_ADDRESS(ForkEconomyState, market_index), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I32>("market_target", SLE_OBJECT_ADDRESS(ForkEconomyState, market_target), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Array<VarFileType::I16, FORK_PRODUCT_COUNT>("firm_ref_price", SLE_OBJECT_ADDRESS(ForkEconomyState, firm_ref_price), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::U16>("market_months_left", SLE_OBJECT_ADDRESS(ForkEconomyState, market_months_left), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Array<VarFileType::I64, FORK_LEDGER_SIZE>("ledger_month", SLE_OBJECT_ADDRESS(ForkEconomyState, ledger_month), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Array<VarFileType::I64, FORK_LEDGER_SIZE>("ledger_last", SLE_OBJECT_ADDRESS(ForkEconomyState, ledger_last), SaveLoadVersion::ForkEconomy),
@@ -93,11 +95,58 @@ struct FKASChunkHandler : ChunkHandler {
 	}
 };
 
+static const SaveLoad _fork_firm_desc[] = {
+	SaveLoad::String("name", SLE_OBJECT_ADDRESS(ForkFirm, name), StringValidationSetting::ReplaceWithQuestionMark, SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U8>("owner", SLE_OBJECT_ADDRESS(ForkFirm, owner), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("town", SLE_OBJECT_ADDRESS(ForkFirm, town), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U8>("product", SLE_OBJECT_ADDRESS(ForkFirm, product), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U8>("quality", SLE_OBJECT_ADDRESS(ForkFirm, quality), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U8>("rate", SLE_OBJECT_ADDRESS(ForkFirm, rate), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U8>("price_percent", SLE_OBJECT_ADDRESS(ForkFirm, price_percent), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U8>("discount", SLE_OBJECT_ADDRESS(ForkFirm, discount), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::I8>("personality", SLE_OBJECT_ADDRESS(ForkFirm, personality), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("stock", SLE_OBJECT_ADDRESS(ForkFirm, stock), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("made_last", SLE_OBJECT_ADDRESS(ForkFirm, made_last), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("sold_last", SLE_OBJECT_ADDRESS(ForkFirm, sold_last), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("age_months", SLE_OBJECT_ADDRESS(ForkFirm, age_months), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::I64>("revenue_last", SLE_OBJECT_ADDRESS(ForkFirm, revenue_last), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::I64>("profit_last", SLE_OBJECT_ADDRESS(ForkFirm, profit_last), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::I64>("profit_average", SLE_OBJECT_ADDRESS(ForkFirm, profit_average), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::I64>("value", SLE_OBJECT_ADDRESS(ForkFirm, value), SaveLoadVersion::ForkEconomy),
+};
+
+struct FKFMChunkHandler : ChunkHandler {
+	FKFMChunkHandler() : ChunkHandler("FKFM", ChunkType::Table) {}
+
+	void Save() const override
+	{
+		SlTableHeader(_fork_firm_desc);
+
+		for (ForkFirm *f : ForkFirm::Iterate()) {
+			SlSetArrayIndex(f->index);
+			SlObject(f, _fork_firm_desc);
+		}
+	}
+
+	void Load() const override
+	{
+		const std::vector<SaveLoad> slt = SlCompatTableHeader(_fork_firm_desc, _fork_firm_sl_compat);
+
+		int index;
+		while ((index = SlIterateArray()) != -1) {
+			ForkFirm *f = ForkFirm::CreateAtIndex(ForkFirmID(index));
+			SlObject(f, slt);
+		}
+	}
+};
+
 static const FKECChunkHandler FKEC;
 static const FKASChunkHandler FKAS;
+static const FKFMChunkHandler FKFM;
 static const ChunkHandlerRef fork_economy_chunk_handlers[] = {
 	FKEC,
 	FKAS,
+	FKFM,
 };
 
 extern const ChunkHandlerTable _fork_economy_chunk_handlers(fork_economy_chunk_handlers);

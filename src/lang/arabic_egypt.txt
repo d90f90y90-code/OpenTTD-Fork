@@ -5132,3 +5132,68 @@ STR_ERROR_FORK_LEASE_CAN_T                                      :{WHITE}لا ي�
 STR_ERROR_FORK_LEASE_MONTHS                                     :{WHITE}مدة العقد غير مسموحة
 STR_ERROR_FORK_LEASE_NOT_PENDING                                :{WHITE}هذا العقد لا ينتظر قراراً
 STR_ERROR_FORK_LEASE_CAN_T_RENEW                                :{WHITE}لا يمكن تغيير هذا العقد ...
+STR_FORK_PRODUCT_DISHWASHER                                     :غسالات أطباق
+STR_FORK_PRODUCT_WASHING_MACHINE                                :غسالات ملابس
+STR_FORK_PRODUCT_LAWN_MOWER                                     :ماكينات عشب
+STR_FORK_PRODUCT_LAMPS                                          :مصابيح
+STR_FORK_PRODUCT_TELEVISION                                     :أجهزة تلفاز
+STR_FORK_PRODUCT_RADIO                                          :أجهزة راديو
+STR_FORK_QUALITY_1                                              :اقتصادية
+STR_FORK_QUALITY_2                                              :عادية
+STR_FORK_QUALITY_3                                              :جيدة
+STR_FORK_QUALITY_4                                              :ممتازة
+STR_FORK_QUALITY_5                                              :فاخرة
+STR_FORK_FIRMS_BUTTON                                           :{BLACK}الشركات
+STR_FORK_FIRMS_TOOLTIP                                          :{BLACK}عرض شركات هذه المدينة وإنشاء شركتك
+STR_FORK_FIRMS_CAPTION                                          :الشركات: {TOWN}
+STR_FORK_FIRMS_HINT                                             :{BLACK}اضغط على إحدى شركاتك لإدارتها. تُنشأ الشركات في مدن فيها {NUM} ساكن أو أكثر
+STR_FORK_FIRMS_TOO_SMALL                                        :{BLACK}هذه المدينة صغيرة على الشركات: تحتاج {NUM} ساكن
+STR_FORK_FIRMS_NONE                                             :{BLACK}لا توجد شركات في هذه المدينة بعد
+STR_FORK_FIRMS_ROW1                                             :{BLACK}{RAW_STRING}: {STRING}   {STRING}
+STR_FORK_FIRMS_OWN                                              :{GREEN}شركتك
+STR_FORK_FIRMS_INDEPENDENT                                      :{ORANGE}مستقلة
+STR_FORK_FIRMS_ROW2                                             :{BLACK}السعر: {CURRENCY_LONG}   الجودة: {NUM}/5   القيمة: {CURRENCY_LONG}
+STR_FORK_FIRMS_CREATE                                           :{BLACK}أنشئ شركة
+STR_FORK_FIRMS_CREATE_TOOLTIP                                   :{BLACK}إنشاء شركة تقنية في هذه المدينة
+STR_FORK_FIRM_CREATE_CAPTION                                    :إنشاء شركة: {TOWN}
+STR_FORK_FIRM_CREATE_SPECIALIZATION                             :{BLACK}التخصص: تقني (تقنيات المنزل)
+STR_FORK_FIRM_CREATE_COST                                       :{BLACK}كلفة التأسيس: {CURRENCY_LONG}
+STR_FORK_FIRM_CREATE_PRODUCT                                    :{BLACK}المنتج: {STRING}
+STR_FORK_FIRM_CREATE_HINT                                       :{BLACK}تحتاج الشركة إلى مدير (انظر الموظفون) وتبيع أكثر مع متاجرك في المدينة
+STR_FORK_FIRM_NAME_BUTTON                                       :{BLACK}الاسم: {RAW_STRING}
+STR_FORK_FIRM_NAME_TOOLTIP                                      :{BLACK}اضغط لاختيار اسم الشركة
+STR_FORK_FIRM_NAME_CAPTION                                      :اسم الشركة
+STR_FORK_FIRM_DEFAULT_NAME                                      :تقنية {TOWN}
+STR_FORK_FIRM_PRODUCT_TOOLTIP                                   :{BLACK}اختيار منتج الشركة
+STR_FORK_FIRM_FOUND                                             :{BLACK}تأسيس الشركة
+STR_FORK_FIRM_FOUND_TOOLTIP                                     :{BLACK}تأسيس الشركة بهذا الاسم والمنتج
+STR_FORK_FIRM_LINE_PRODUCT                                      :{BLACK}المنتج: {STRING} (تقني)   قيمة الشركة: {CURRENCY_LONG}
+STR_FORK_FIRM_LINE_QUALITY                                      :{BLACK}الجودة: {STRING} ({NUM}/5)   الإنتاج: {NUM}% من {NUM} وحدة شهرياً
+STR_FORK_FIRM_LINE_PRICE                                        :{BLACK}السعر: {CURRENCY_LONG} ({NUM}% من الأساس)   التخفيض: {NUM}%   يدفع الزبون: {CURRENCY_LONG}
+STR_FORK_FIRM_LINE_MARKET                                       :{BLACK}سعر السوق: {NUM}% من السعر الأساسي (تحدده كل الشركات معاً)
+STR_FORK_FIRM_LINE_STOCK                                        :{BLACK}في المخزن: {NUM} وحدة   المنتَج الشهر الماضي: {NUM}   المباع: {NUM}
+STR_FORK_FIRM_LINE_MONEY                                        :{BLACK}مبيعات الشهر الماضي: {CURRENCY_LONG}   الربح: {CURRENCY_LONG}
+STR_FORK_FIRM_COMPETITORS                                       :{BLACK}المنافسون بنفس المنتج:
+STR_FORK_FIRM_NO_COMPETITORS                                    :{BLACK}لا يوجد منافسون لهذا المنتج
+STR_FORK_FIRM_COMPETITOR_LINE                                   :{BLACK}{RAW_STRING}: {CURRENCY_LONG} للوحدة، الجودة {NUM}/5
+STR_FORK_FIRM_RATE_DOWN                                         :{BLACK}الإنتاج -10%
+STR_FORK_FIRM_RATE_UP                                           :{BLACK}الإنتاج +10%
+STR_FORK_FIRM_RATE_TOOLTIP                                      :{BLACK}إنتاج أقل أو أكثر شهرياً. الإنتاج الأكثر أغلى
+STR_FORK_FIRM_QUALITY_DOWN                                      :{BLACK}الجودة -
+STR_FORK_FIRM_QUALITY_UP                                        :{BLACK}الجودة +
+STR_FORK_FIRM_QUALITY_TOOLTIP                                   :{BLACK}الجودة الأعلى تجذب الزبائن لكنها أغلى في الإنتاج
+STR_FORK_FIRM_PRICE_DOWN                                        :{BLACK}السعر -5%
+STR_FORK_FIRM_PRICE_UP                                          :{BLACK}السعر +5%
+STR_FORK_FIRM_PRICE_TOOLTIP                                     :{BLACK}السعر المرتفع يقلل الزبائن والمنخفض يزيدهم
+STR_FORK_FIRM_DISCOUNT_DOWN                                     :{BLACK}التخفيض -5%
+STR_FORK_FIRM_DISCOUNT_UP                                       :{BLACK}التخفيض +5%
+STR_FORK_FIRM_DISCOUNT_TOOLTIP                                  :{BLACK}التخفيضات (حتى 50%) للتخلص من البضاعة الراكدة دون رميها
+STR_FORK_FIRM_DUMP                                              :{BLACK}رمي المخزون
+STR_FORK_FIRM_DUMP_TOOLTIP                                      :{BLACK}رمي كل ما في المخزن. تضيع كلفته
+STR_FORK_NEWS_FIRM_OWN                                          :{BIG_FONT}{BLACK}شركة {RAW_STRING} التابعة لشركة {COMPANY} أطلقت منتجاً جديداً: {STRING}
+STR_FORK_NEWS_FIRM_NPC                                          :{BIG_FONT}{BLACK}أطلقت شركة {RAW_STRING} في {TOWN} منتجاً جديداً: {STRING}
+STR_ERROR_FORK_FIRM_NAME                                        :{WHITE}الاسم فارغ أو طويل جداً
+STR_ERROR_FORK_FIRM_TOWN_TOO_SMALL                              :{WHITE}المدينة صغيرة جداً لإنشاء شركة
+STR_ERROR_FORK_FIRM_TOWN_FULL                                   :{WHITE}لا مكان لشركات أكثر في هذه المدينة
+STR_ERROR_FORK_FIRM_CAN_T_FOUND                                 :{WHITE}لا يمكن إنشاء شركة هنا ...
+STR_ERROR_FORK_FIRM_CAN_T_CHANGE                                :{WHITE}لا يمكن تغيير هذه الشركة ...

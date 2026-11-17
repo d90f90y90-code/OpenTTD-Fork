@@ -6270,3 +6270,68 @@ STR_ERROR_FORK_LEASE_CAN_T                                      :{WHITE}Can't ta
 STR_ERROR_FORK_LEASE_MONTHS                                     :{WHITE}The duration of the contract is not allowed
 STR_ERROR_FORK_LEASE_NOT_PENDING                                :{WHITE}This contract does not wait for a decision
 STR_ERROR_FORK_LEASE_CAN_T_RENEW                                :{WHITE}Can't change this contract...
+STR_FORK_PRODUCT_DISHWASHER                                     :Dishwashers
+STR_FORK_PRODUCT_WASHING_MACHINE                                :Washing machines
+STR_FORK_PRODUCT_LAWN_MOWER                                     :Lawn mowers
+STR_FORK_PRODUCT_LAMPS                                          :Lamps
+STR_FORK_PRODUCT_TELEVISION                                     :Television sets
+STR_FORK_PRODUCT_RADIO                                          :Radios
+STR_FORK_QUALITY_1                                              :Economy
+STR_FORK_QUALITY_2                                              :Standard
+STR_FORK_QUALITY_3                                              :Good
+STR_FORK_QUALITY_4                                              :Premium
+STR_FORK_QUALITY_5                                              :Luxury
+STR_FORK_FIRMS_BUTTON                                           :{BLACK}Companies
+STR_FORK_FIRMS_TOOLTIP                                          :{BLACK}See the companies of this town and found your own
+STR_FORK_FIRMS_CAPTION                                          :Companies: {TOWN}
+STR_FORK_FIRMS_HINT                                             :{BLACK}Tap one of your own companies to run it. Companies can be founded in towns with {NUM} or more inhabitants
+STR_FORK_FIRMS_TOO_SMALL                                        :{BLACK}This town is too small for companies: it needs {NUM} inhabitants
+STR_FORK_FIRMS_NONE                                             :{BLACK}There are no companies in this town yet
+STR_FORK_FIRMS_ROW1                                             :{BLACK}{RAW_STRING}: {STRING}   {STRING}
+STR_FORK_FIRMS_OWN                                              :{GREEN}Your company
+STR_FORK_FIRMS_INDEPENDENT                                      :{ORANGE}Independent
+STR_FORK_FIRMS_ROW2                                             :{BLACK}Price: {CURRENCY_LONG}   Quality: {NUM}/5   Value: {CURRENCY_LONG}
+STR_FORK_FIRMS_CREATE                                           :{BLACK}Found a company
+STR_FORK_FIRMS_CREATE_TOOLTIP                                   :{BLACK}Found a technology company in this town
+STR_FORK_FIRM_CREATE_CAPTION                                    :Found a company: {TOWN}
+STR_FORK_FIRM_CREATE_SPECIALIZATION                             :{BLACK}Specialization: Technology (home technologies)
+STR_FORK_FIRM_CREATE_COST                                       :{BLACK}Cost of founding: {CURRENCY_LONG}
+STR_FORK_FIRM_CREATE_PRODUCT                                    :{BLACK}Product: {STRING}
+STR_FORK_FIRM_CREATE_HINT                                       :{BLACK}The company needs a manager (see Staff) and sells more with your shops in the town
+STR_FORK_FIRM_NAME_BUTTON                                       :{BLACK}Name: {RAW_STRING}
+STR_FORK_FIRM_NAME_TOOLTIP                                      :{BLACK}Tap to choose the name of the company
+STR_FORK_FIRM_NAME_CAPTION                                      :Name of the company
+STR_FORK_FIRM_DEFAULT_NAME                                      :Tech {TOWN}
+STR_FORK_FIRM_PRODUCT_TOOLTIP                                   :{BLACK}Choose the product of the company
+STR_FORK_FIRM_FOUND                                             :{BLACK}Found the company
+STR_FORK_FIRM_FOUND_TOOLTIP                                     :{BLACK}Found the company with this name and product
+STR_FORK_FIRM_LINE_PRODUCT                                      :{BLACK}Product: {STRING} (Technology)   Value of the company: {CURRENCY_LONG}
+STR_FORK_FIRM_LINE_QUALITY                                      :{BLACK}Quality: {STRING} ({NUM}/5)   Production: {NUM}% of {NUM} units per month
+STR_FORK_FIRM_LINE_PRICE                                        :{BLACK}Price: {CURRENCY_LONG} ({NUM}% of the base)   Discount: {NUM}%   Customers pay: {CURRENCY_LONG}
+STR_FORK_FIRM_LINE_MARKET                                       :{BLACK}Market price: {NUM}% of the base price (set by all companies together)
+STR_FORK_FIRM_LINE_STOCK                                        :{BLACK}In stock: {NUM} units   Made last month: {NUM}   Sold: {NUM}
+STR_FORK_FIRM_LINE_MONEY                                        :{BLACK}Sales last month: {CURRENCY_LONG}   Profit: {CURRENCY_LONG}
+STR_FORK_FIRM_COMPETITORS                                       :{BLACK}Competitors with the same product:
+STR_FORK_FIRM_NO_COMPETITORS                                    :{BLACK}No competitors make this product
+STR_FORK_FIRM_COMPETITOR_LINE                                   :{BLACK}{RAW_STRING}: {CURRENCY_LONG} per unit, quality {NUM}/5
+STR_FORK_FIRM_RATE_DOWN                                         :{BLACK}Production -10%
+STR_FORK_FIRM_RATE_UP                                           :{BLACK}Production +10%
+STR_FORK_FIRM_RATE_TOOLTIP                                      :{BLACK}Make less or more per month. Making more costs more
+STR_FORK_FIRM_QUALITY_DOWN                                      :{BLACK}Quality -
+STR_FORK_FIRM_QUALITY_UP                                        :{BLACK}Quality +
+STR_FORK_FIRM_QUALITY_TOOLTIP                                   :{BLACK}Better quality attracts customers but costs more to make
+STR_FORK_FIRM_PRICE_DOWN                                        :{BLACK}Price -5%
+STR_FORK_FIRM_PRICE_UP                                          :{BLACK}Price +5%
+STR_FORK_FIRM_PRICE_TOOLTIP                                     :{BLACK}A high price means fewer customers, a low price more customers
+STR_FORK_FIRM_DISCOUNT_DOWN                                     :{BLACK}Discount -5%
+STR_FORK_FIRM_DISCOUNT_UP                                       :{BLACK}Discount +5%
+STR_FORK_FIRM_DISCOUNT_TOOLTIP                                  :{BLACK}A sale (up to 50%) gets rid of stock that does not sell, without throwing it away
+STR_FORK_FIRM_DUMP                                              :{BLACK}Throw away the stock
+STR_FORK_FIRM_DUMP_TOOLTIP                                      :{BLACK}Throw away everything in the warehouse. What was paid for it is lost
+STR_FORK_NEWS_FIRM_OWN                                          :{BIG_FONT}{BLACK}{RAW_STRING}, a subsidiary of {COMPANY}, has launched a new product: {STRING}
+STR_FORK_NEWS_FIRM_NPC                                          :{BIG_FONT}{BLACK}{RAW_STRING} has launched a new product in {TOWN}: {STRING}
+STR_ERROR_FORK_FIRM_NAME                                        :{WHITE}The name is empty or too long
+STR_ERROR_FORK_FIRM_TOWN_TOO_SMALL                              :{WHITE}The town is too small for a company
+STR_ERROR_FORK_FIRM_TOWN_FULL                                   :{WHITE}This town has no room for more companies
+STR_ERROR_FORK_FIRM_CAN_T_FOUND                                 :{WHITE}Can't found a company here...
+STR_ERROR_FORK_FIRM_CAN_T_CHANGE                                :{WHITE}Can't change this company...

@@ -13,6 +13,7 @@
 #include "company_base.h"
 #include "company_func.h"
 #include "fork_economy.h"
+#include "fork_firm.h"
 #include "fork_labor_cmd.h"
 #include "gfx_func.h"
 #include "strings_func.h"
@@ -73,7 +74,7 @@ struct ForkStaffWindow : Window {
 		const uint staff = GetForkCompanyStaff(_local_company, t->index);
 		const uint houses = GetForkCompanyHouses(_local_company, t->index);
 		const uint shops = GetForkCompanyShops(_local_company, t->index);
-		const uint required = GetForkRequiredStaff(houses, shops);
+		const uint required = GetForkRequiredStaff(houses, shops, GetForkCompanyFirms(_local_company, t->index));
 		const Money wage = GetForkWage(t);
 
 		const Rect ir = r.Shrink(WidgetDimensions::scaled.frametext);

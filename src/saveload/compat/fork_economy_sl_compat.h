@@ -18,6 +18,7 @@ const SaveLoadCompat _fork_economy_sl_compat[] = {
 	SLC_VAR("market_phase"),
 	SLC_VAR("market_index"),
 	SLC_VAR("market_target"),
+	SLC_VAR("firm_ref_price"),
 	SLC_VAR("market_months_left"),
 	SLC_VAR("ledger_month"),
 	SLC_VAR("ledger_last"),
@@ -35,6 +36,27 @@ const SaveLoadCompat _fork_asset_sl_compat[] = {
 	SLC_VAR("monthly_cost"),
 	SLC_VAR("age_months"),
 	SLC_VAR("data"),
+};
+
+/** Original field order for _fork_firm_desc. */
+const SaveLoadCompat _fork_firm_sl_compat[] = {
+	SLC_VAR("name"),
+	SLC_VAR("owner"),
+	SLC_VAR("town"),
+	SLC_VAR("product"),
+	SLC_VAR("quality"),
+	SLC_VAR("rate"),
+	SLC_VAR("price_percent"),
+	SLC_VAR("discount"),
+	SLC_VAR("personality"),
+	SLC_VAR("stock"),
+	SLC_VAR("made_last"),
+	SLC_VAR("sold_last"),
+	SLC_VAR("age_months"),
+	SLC_VAR("revenue_last"),
+	SLC_VAR("profit_last"),
+	SLC_VAR("profit_average"),
+	SLC_VAR("value"),
 };
 
 #endif /* SAVELOAD_COMPAT_FORK_ECONOMY_H */
