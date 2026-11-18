@@ -6502,3 +6502,8 @@ STR_ERROR_FORK_EDU_UNIVERSITY_ONLY                              :{WHITE}Only a u
 STR_ERROR_FORK_EDU_ALREADY_UPGRADED                             :{WHITE}This school was already enlarged
 STR_ERROR_FORK_EDU_FACULTY_OPEN                                 :{WHITE}This faculty is already open
 STR_ERROR_FORK_EDU_FACULTY_CLOSED                               :{WHITE}This faculty is not open
+STR_FORK_EDU_STATUS                                              :{BLACK}Building: {STRING}
+STR_FORK_EDU_STAGE_FOUNDATION                                   :foundations are being laid, no students yet
+STR_FORK_EDU_STAGE_FRAME                                        :under construction, no students yet
+STR_FORK_EDU_STAGE_OPEN                                         :finished and open
+STR_ERROR_FORK_EDU_NO_SPACE                                     :{WHITE}There is no free flat land (2x2 tiles) near the middle of this town

@@ -14,6 +14,7 @@
 #include "command_func.h"
 #include "company_base.h"
 #include "company_func.h"
+#include "fork_buildings.h"
 #include "fork_economy.h"
 #include "fork_education_cmd.h"
 #include "gfx_func.h"
@@ -48,7 +49,7 @@ enum ForkEducationWidgets : WidgetID {
 	WID_FED_FEE_UP_BIG, ///< Raise the fee by a lot.
 };
 
-static constexpr uint FED_HEADER_LINES = 8; ///< Text lines above the faculty list.
+static constexpr uint FED_HEADER_LINES = 9; ///< Text lines above the faculty list.
 
 /** Window to run private education in one town. The window number is the town. */
 struct ForkEducationWindow : Window {
@@ -120,6 +121,7 @@ struct ForkEducationWindow : Window {
 		const bool university = this->kind == ForkSchoolKind::University;
 
 		draw(GetString(STR_FORK_EDU_NAME_LINE, GetForkSchoolName(a), a->value, GetForkSchoolSellValue(a)));
+		draw(GetString(STR_FORK_EDU_STATUS, STR_FORK_EDU_STAGE_FOUNDATION + GetForkSchoolStage(a)));
 		draw(GetString(STR_FORK_EDU_SEATS, res.enrolled, res.capacity));
 		draw(GetString(STR_FORK_EDU_OPTIONS, university ? STR_FORK_EDU_NOT_APPLICABLE : (IsForkSchoolUpgraded(a) ? STR_FORK_EDU_YES : STR_FORK_EDU_NO), IsForkSchoolDoubleShift(a) ? STR_FORK_EDU_YES : STR_FORK_EDU_NO));
 		if (university) {

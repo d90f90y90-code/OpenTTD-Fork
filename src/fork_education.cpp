@@ -14,6 +14,7 @@
 #include "command_func.h"
 #include "company_base.h"
 #include "company_func.h"
+#include "fork_buildings.h"
 #include "fork_economy.h"
 #include "fork_education_cmd.h"
 #include "strings_func.h"
@@ -289,6 +290,13 @@ ForkSchoolResult GetForkSchoolResult(const Town *t, const ForkAsset *a)
 		r.popularity = popularity_count == 0 ? 0 : popularity_sum / popularity_count;
 	}
 
+	/* Nobody studies in a building that is still being built. */
+	if (GetForkSchoolStage(a) < 2) {
+		r.enrolled = 0;
+		r.fac_enrolled.fill(0);
+		income = 0;
+	}
+
 	/* Teaching costs depend on the number of students; the buildings cost upkeep. A double shift needs twice the teachers and staff,
 	 * so it doubles all running costs, and it takes twice the students (morning and afternoon shift). */
 	Money running = static_cast<Money>(r.enrolled) * spec.cost_per_seat / 12 + a->purchase_price * FORK_UPKEEP_PERMILLE / 1000;
@@ -351,6 +359,9 @@ CommandCost CmdBuildForkSchool(DoCommandFlags flags, TownID town_id, uint8_t kin
 	if (FindSchool(_current_company, town_id, k) != nullptr) return CommandCost(STR_ERROR_FORK_EDU_ALREADY_BUILT);
 	if (!ForkAsset::CanAllocateItem()) return CommandCost(STR_ERROR_FORK_TOO_MANY_ASSETS);
 
+	TileIndex origin;
+	if (!FindForkBuildingSite(t, origin)) return CommandCost(STR_ERROR_FORK_EDU_NO_SPACE);
+
 	CommandCost cost(ExpensesType::Other, spec.build_cost);
 
 	if (flags.Test(DoCommandFlag::Execute)) {
@@ -366,6 +377,7 @@ CommandCost CmdBuildForkSchool(DoCommandFlags flags, TownID town_id, uint8_t kin
 		a->data[3] = 0;
 		a->data2[0] = 0;
 		for (uint f = 0; f < FORK_FACULTIES; f++) SetFacultyFee(a, f, FORK_FACULTY_FEE_MIN + FORK_FACULTY_FEE_DEFAULT_INDEX * FORK_FACULTY_FEE_STEP);
+		PlaceForkSchoolBuilding(a, t, origin);
 		RefreshSchool(a, t);
 		SchoolsChanged();
 	}
@@ -389,6 +401,7 @@ CommandCost CmdSellForkSchool(DoCommandFlags flags, TownID town_id, uint8_t kind
 
 	CommandCost cost(ExpensesType::Other, -GetForkSchoolSellValue(a));
 	if (flags.Test(DoCommandFlag::Execute)) {
+		RemoveForkSchoolBuilding(a);
 		delete a;
 		SchoolsChanged();
 	}
@@ -519,6 +532,7 @@ static void ForkEducationMonthly(ForkAsset *a)
 
 	const ForkSchoolResult r = GetForkSchoolResult(t, a);
 	RefreshSchool(a, t);
+	RefreshForkSchoolBuilding(a);
 	ForkLedgerBook(a->owner, ForkLedgerCategory::Trade, r.income);
 	ForkLedgerBook(a->owner, ForkLedgerCategory::Tax, -r.tax);
 	ForkLedgerBook(a->owner, ForkLedgerCategory::Other, -r.running);

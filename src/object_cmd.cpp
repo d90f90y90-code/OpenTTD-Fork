@@ -44,6 +44,8 @@
 #include "table/strings.h"
 #include "table/object_land.h"
 
+#include "fork_buildings.h"
+
 #include "safeguards.h"
 
 ObjectPool _object_pool("Object");
@@ -451,6 +453,9 @@ static Foundation GetFoundation_Object(TileIndex tile, Slope tileh)
 /** @copydoc DrawTileProc */
 static void DrawTile_Object(TileInfo *ti)
 {
+	/* The buildings of the fork's economy look different from the object that is on the tile. */
+	if (DrawForkBuildingTile(ti)) return;
+
 	ObjectType type = GetObjectType(ti->tile);
 	const ObjectSpec *spec = ObjectSpec::Get(type);
 
@@ -522,6 +527,16 @@ static void ReallyClearObjectTile(Object *o)
 		MakeWaterKeepingClass(tile_cur, GetTileOwner(tile_cur));
 	}
 	delete o;
+}
+
+/**
+ * Remove an object from the map without any checks, for the buildings of the fork's economy.
+ * @param tile A tile of the object.
+ */
+void ForkClearObjectTile(TileIndex tile)
+{
+	if (!IsTileType(tile, TileType::Object)) return;
+	ReallyClearObjectTile(Object::GetByTile(tile));
 }
 
 std::vector<ClearedObjectArea> _cleared_object_areas;
@@ -667,6 +682,8 @@ static void AddProducedCargo_Object(TileIndex tile, CargoArray &produced)
 /** @copydoc GetTileDescProc */
 static void GetTileDesc_Object(TileIndex tile, TileDesc &td)
 {
+	if (GetForkBuildingTileDesc(tile, td)) return;
+
 	const ObjectSpec *spec = ObjectSpec::GetByTile(tile);
 	td.str = spec->name;
 	td.owner[0] = GetTileOwner(tile);
@@ -736,6 +753,7 @@ static void TileLoop_Object(TileIndex tile)
 /** @copydoc ClickTileProc */
 static bool ClickTile_Object(TileIndex tile)
 {
+	if (ClickForkBuildingTile(tile)) return true;
 	if (!IsObjectType(tile, OBJECT_HQ)) return false;
 
 	ShowCompany(GetTileOwner(tile));

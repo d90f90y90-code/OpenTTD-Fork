@@ -214,6 +214,9 @@ add_files(
     fork_economy.cpp
     fork_economy.h
     fork_economy_gui.cpp
+    fork_building_sprites.h
+    fork_buildings.cpp
+    fork_buildings.h
     fork_education.cpp
     fork_education_cmd.h
     fork_education_gui.cpp

@@ -5364,3 +5364,8 @@ STR_ERROR_FORK_EDU_UNIVERSITY_ONLY                              :{WHITE}الكل
 STR_ERROR_FORK_EDU_ALREADY_UPGRADED                             :{WHITE}تم توسيع هذه المدرسة سابقاً
 STR_ERROR_FORK_EDU_FACULTY_OPEN                                 :{WHITE}هذه الكلية مفتوحة أصلاً
 STR_ERROR_FORK_EDU_FACULTY_CLOSED                               :{WHITE}هذه الكلية غير مفتوحة
+STR_FORK_EDU_STATUS                                              :{BLACK}المبنى: {STRING}
+STR_FORK_EDU_STAGE_FOUNDATION                                   :يجري صب الأساس، لا طلاب بعد
+STR_FORK_EDU_STAGE_FRAME                                        :قيد الإنشاء، لا طلاب بعد
+STR_FORK_EDU_STAGE_OPEN                                         :مكتمل ومفتوح
+STR_ERROR_FORK_EDU_NO_SPACE                                     :{WHITE}لا توجد أرض مستوية خالية (2×2 بلاطة) قرب وسط هذه المدينة

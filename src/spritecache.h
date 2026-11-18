@@ -34,6 +34,18 @@ uint32_t GetSpriteLocalID(SpriteID sprite);
 uint GetSpriteCountForFile(const std::string &filename, SpriteID begin, SpriteID end);
 SpriteID GetMaxSpriteID();
 
+/** A sprite of the fork that is made from a picture in memory instead of being loaded from a file. */
+struct ForkMemorySprite {
+	uint16_t width = 0; ///< Width in pixels.
+	uint16_t height = 0; ///< Height in pixels.
+	int16_t x_offs = 0; ///< Where the left side of the sprite is, relative to the drawing position.
+	int16_t y_offs = 0; ///< Where the top of the sprite is, relative to the drawing position.
+	std::vector<uint32_t> pixels; ///< The picture, one 0xAARRGGBB value per pixel.
+};
+
+SpriteID AddForkMemorySprites(std::vector<ForkMemorySprite> &&sprites);
+bool ForkMemorySpritesIntact(SpriteID base, size_t count);
+
 
 inline const Sprite *GetSprite(SpriteID sprite, SpriteType type)
 {
