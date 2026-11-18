@@ -112,6 +112,8 @@ static const SaveLoad _fork_firm_desc[] = {
 	SaveLoad::Variable<VarFileType::U32>("made_last", SLE_OBJECT_ADDRESS(ForkFirm, made_last), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::U32>("sold_last", SLE_OBJECT_ADDRESS(ForkFirm, sold_last), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::U32>("age_months", SLE_OBJECT_ADDRESS(ForkFirm, age_months), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("hq_tile", SLE_OBJECT_ADDRESS(ForkFirm, hq_tile), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("lab_tile", SLE_OBJECT_ADDRESS(ForkFirm, lab_tile), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I64>("revenue_last", SLE_OBJECT_ADDRESS(ForkFirm, revenue_last), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I64>("profit_last", SLE_OBJECT_ADDRESS(ForkFirm, profit_last), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I64>("profit_average", SLE_OBJECT_ADDRESS(ForkFirm, profit_average), SaveLoadVersion::ForkEconomy),

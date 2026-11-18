@@ -295,8 +295,6 @@ void ShowForkFirmCreateWindow(uint town)
 /** Widgets of the window for running a firm. */
 enum ForkFirmWidgets : WidgetID {
 	WID_FM_CAPTION, ///< Caption of the window.
-	WID_FM_HQ, ///< Picture of the headquarters.
-	WID_FM_LAB, ///< Picture of the laboratory.
 	WID_FM_INFO, ///< Panel with the texts.
 	WID_FM_RATE_DOWN, ///< Make less.
 	WID_FM_RATE_UP, ///< Make more.
@@ -357,13 +355,6 @@ struct ForkFirmWindow : Window {
 		const ForkFirm *f = this->GetFirm();
 		if (f == nullptr) return;
 
-		/* The glass headquarters and the laboratory are built over the first months of the firm. */
-		if (widget == WID_FM_HQ || widget == WID_FM_LAB) {
-			const uint stage = f->age_months < 2 ? 0 : (f->age_months < 6 ? 1 : 2);
-			const bool lab = widget == WID_FM_LAB;
-			DrawForkLogo(GetForkBuildingLogo(lab, lab ? f->product : f->index.base(), stage), r.Shrink(WidgetDimensions::scaled.bevel));
-			return;
-		}
 		if (widget != WID_FM_INFO) return;
 
 		const Rect ir = r.Shrink(WidgetDimensions::scaled.frametext);
@@ -436,12 +427,6 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_firm_widgets = 
 		NWidget(WWT_CAPTION, Colours::Brown, WID_FM_CAPTION), SetToolTip(STR_TOOLTIP_WINDOW_TITLE_DRAG_THIS),
 		NWidget(WWT_SHADEBOX, Colours::Brown),
 		NWidget(WWT_STICKYBOX, Colours::Brown),
-	EndContainer(),
-	NWidget(NWID_HORIZONTAL, NWidContainerFlag::EqualSize),
-		NWidget(WWT_PANEL, Colours::Brown, WID_FM_HQ), SetMinimalSize(110, 110), SetFill(1, 0), SetResize(1, 0),
-		EndContainer(),
-		NWidget(WWT_PANEL, Colours::Brown, WID_FM_LAB), SetMinimalSize(110, 110), SetFill(1, 0), SetResize(1, 0),
-		EndContainer(),
 	EndContainer(),
 	NWidget(WWT_PANEL, Colours::Brown, WID_FM_INFO), SetResize(1, 1), SetFill(1, 1),
 	EndContainer(),

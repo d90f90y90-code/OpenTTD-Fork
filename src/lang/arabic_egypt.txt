@@ -5298,3 +5298,5 @@ STR_ERROR_FORK_MEDIA_CAN_T_BUILD                                :{WHITE}لا ي�
 STR_ERROR_FORK_MEDIA_CAN_T_CHANGE                               :{WHITE}لا يمكن تغيير الباقة ...
 STR_ERROR_FORK_MEDIA_TOWN_TOO_SMALL                             :{WHITE}القنوات لا تُبنى إلا في المدن الكبيرة
 STR_ERROR_FORK_MEDIA_KIND_TAKEN                                 :{WHITE}في هذه المدينة قناة من هذا النوع بالفعل
+STR_FORK_BUILDING_HQ                                            :المقر الزجاجي لشركة
+STR_FORK_BUILDING_LAB                                           :المختبر الأبيض لشركة

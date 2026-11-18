@@ -55,6 +55,8 @@ const SaveLoadCompat _fork_firm_sl_compat[] = {
 	SLC_VAR("made_last"),
 	SLC_VAR("sold_last"),
 	SLC_VAR("age_months"),
+	SLC_VAR("hq_tile"),
+	SLC_VAR("lab_tile"),
 	SLC_VAR("revenue_last"),
 	SLC_VAR("profit_last"),
 	SLC_VAR("profit_average"),

@@ -6436,3 +6436,5 @@ STR_ERROR_FORK_STOCK_NOT_ENOUGH                                 :{WHITE}You don'
 STR_ERROR_FORK_STOCK_NOT_INDEPENDENT                            :{WHITE}This company belongs to a company already
 STR_ERROR_FORK_STOCK_FIRM_LIMIT                                 :{WHITE}Investors can hold at most 50% of a company; more needs a takeover
 STR_ERROR_FORK_STOCK_NEED_HALF                                  :{WHITE}You need 50% of the company before you can take it over
+STR_FORK_BUILDING_HQ                                            :Glass headquarters of a company
+STR_FORK_BUILDING_LAB                                           :White laboratory of a company

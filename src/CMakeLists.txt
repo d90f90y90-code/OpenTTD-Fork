@@ -220,6 +220,8 @@ add_files(
     fork_stock.h
     fork_stock_cmd.h
     fork_stock_gui.cpp
+    fork_buildings.cpp
+    fork_buildings.h
     fork_firm.cpp
     fork_firm.h
     fork_firm_cmd.h
