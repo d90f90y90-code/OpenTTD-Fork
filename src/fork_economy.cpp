@@ -49,6 +49,7 @@ void ResetForkEconomy()
 	RegisterForkLease();
 	RegisterForkStocks();
 	RegisterForkMedia();
+	RegisterForkEducation();
 }
 
 /**

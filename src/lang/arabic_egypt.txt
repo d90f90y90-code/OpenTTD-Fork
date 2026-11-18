@@ -5298,3 +5298,69 @@ STR_ERROR_FORK_MEDIA_CAN_T_BUILD                                :{WHITE}لا ي�
 STR_ERROR_FORK_MEDIA_CAN_T_CHANGE                               :{WHITE}لا يمكن تغيير الباقة ...
 STR_ERROR_FORK_MEDIA_TOWN_TOO_SMALL                             :{WHITE}القنوات لا تُبنى إلا في المدن الكبيرة
 STR_ERROR_FORK_MEDIA_KIND_TAKEN                                 :{WHITE}في هذه المدينة قناة من هذا النوع بالفعل
+STR_FORK_EDU_BUTTON                                             :{BLACK}تدريس
+STR_FORK_EDU_TOOLTIP                                            :{BLACK}بناء وإدارة مدارس أهلية وجامعة في هذه المدينة
+STR_FORK_EDU_CAPTION                                            :تدريس: {TOWN}
+STR_FORK_EDU_TAB_PRIMARY                                        :{BLACK}ابتدائية
+STR_FORK_EDU_TAB_SECONDARY                                      :{BLACK}ثانوية
+STR_FORK_EDU_TAB_UNIVERSITY                                     :{BLACK}جامعة
+STR_FORK_EDU_TAB_TOOLTIP                                        :{BLACK}عرض هذا النوع من المؤسسات
+STR_FORK_EDU_BUILD                                              :{BLACK}بناء
+STR_FORK_EDU_BUILD_TOOLTIP                                      :{BLACK}بناء هذه المؤسسة في المدينة
+STR_FORK_EDU_SELL                                               :{BLACK}بيع
+STR_FORK_EDU_SELL_TOOLTIP                                       :{BLACK}بيع هذه المؤسسة، تحصل على 70% من قيمتها
+STR_FORK_EDU_RENAME                                             :{BLACK}تغيير الاسم
+STR_FORK_EDU_RENAME_TOOLTIP                                     :{BLACK}إعطاء المؤسسة اسماً
+STR_FORK_EDU_RENAME_CAPTION                                     :اسم المؤسسة
+STR_FORK_EDU_UPGRADE                                            :{BLACK}توسيع
+STR_FORK_EDU_UPGRADE_TOOLTIP                                    :{BLACK}توسيع المدرسة مرة واحدة لزيادة المقاعد، ويجدد المبنى أيضاً
+STR_FORK_EDU_SHIFT                                              :{BLACK}دوام مزدوج
+STR_FORK_EDU_SHIFT_TOOLTIP                                      :{BLACK}التدريس بدوامين: ضعف المقاعد لكن ضعف التكاليف التشغيلية
+STR_FORK_EDU_FACULTY                                            :{BLACK}فتح/إغلاق كلية
+STR_FORK_EDU_FACULTY_TOOLTIP                                    :{BLACK}فتح أو إغلاق الكلية المحددة (اضغط على كلية في القائمة لتحديدها)
+STR_FORK_EDU_FEE_DOWN_BIG                                       :{BLACK}القسط --
+STR_FORK_EDU_FEE_DOWN                                           :{BLACK}القسط -
+STR_FORK_EDU_FEE_UP                                             :{BLACK}القسط +
+STR_FORK_EDU_FEE_UP_BIG                                         :{BLACK}القسط ++
+STR_FORK_EDU_FEE_TOOLTIP                                        :{BLACK}تغيير القسط. القسط الغالي مقارنة بما تقدمه المؤسسة يبعد الناس عنها
+STR_FORK_EDU_NAME_PRIMARY                                       :مدرسة ابتدائية أهلية
+STR_FORK_EDU_NAME_SECONDARY                                     :مدرسة ثانوية أهلية
+STR_FORK_EDU_NAME_UNIVERSITY                                    :جامعة أهلية
+STR_FORK_EDU_YES                                                :نعم
+STR_FORK_EDU_NO                                                 :لا
+STR_FORK_EDU_NOT_APPLICABLE                                     :-
+STR_FORK_EDU_NO_INSTITUTION                                     :{BLACK}لا تملك مؤسسة من هذا النوع في هذه المدينة
+STR_FORK_EDU_BUILD_INFO                                         :{BLACK}تكلفة البناء: {CURRENCY_LONG}   تحتاج {NUM} ساكناً (في المدينة {NUM})
+STR_FORK_EDU_NAME_LINE                                          :{BLACK}{RAW_STRING}   القيمة: {CURRENCY_LONG}   سعر البيع: {CURRENCY_LONG}
+STR_FORK_EDU_SEATS                                              :{BLACK}الطلاب: {NUM} من {NUM} مقعداً
+STR_FORK_EDU_OPTIONS                                            :{BLACK}موسّعة: {STRING}   دوام مزدوج: {STRING}
+STR_FORK_EDU_FACULTIES                                          :{BLACK}الكليات المفتوحة: {NUM} من {NUM}   (اضغط على كلية لتحديدها)
+STR_FORK_EDU_FEE                                                :{BLACK}القسط للمقعد في السنة: {CURRENCY_LONG}   (الأعلى: {CURRENCY_LONG})
+STR_FORK_EDU_QUALITY                                            :{BLACK}الجودة: {NUM}%   الشعبية: {NUM}%
+STR_FORK_EDU_INCOME                                             :{BLACK}الأقساط: {CURRENCY_LONG} شهرياً   التكاليف التشغيلية: {CURRENCY_LONG} شهرياً
+STR_FORK_EDU_TAX                                                :{BLACK}ضريبة المدينة هذه السنة: {NUM}% من الأقساط = {CURRENCY_LONG} شهرياً
+STR_FORK_EDU_PROFIT                                             :{BLACK}الربح: {CURRENCY_LONG} شهرياً
+STR_FORK_EDU_FACULTY_OPEN_ROW                                   :{BLACK}{RAW_STRING} {STRING}   الرغبة {NUM}%   القسط {CURRENCY_LONG}   الطلاب {NUM}   الشعبية {NUM}%
+STR_FORK_EDU_FACULTY_CLOSED_ROW                                 :{SILVER}{RAW_STRING} {STRING}   الرغبة {NUM}%   تكلفة الفتح {CURRENCY_LONG}
+STR_FORK_FACULTY_MEDICINE                                       :كلية الطب
+STR_FORK_FACULTY_PHARMACY                                       :كلية الصيدلة
+STR_FORK_FACULTY_ENGINEERING                                    :كلية الهندسة
+STR_FORK_FACULTY_ENGINEERING_TECH                               :كلية التقنيات الهندسية
+STR_FORK_FACULTY_TEACHING_SCIENCES                              :كلية العلوم التدريسية
+STR_FORK_FACULTY_EDUCATION                                      :كلية التربية
+STR_FORK_FACULTY_ARTS                                           :كلية الآداب
+STR_FORK_FACULTY_LAW                                            :كلية القانون
+STR_FORK_FACULTY_BUSINESS                                       :كلية الإدارة والاقتصاد
+STR_FORK_FACULTY_VOCATIONAL                                     :كلية التعليم المهني
+STR_ERROR_FORK_EDU_CAN_T_BUILD                                  :{WHITE}لا يمكن بناء هذه المؤسسة هنا ...
+STR_ERROR_FORK_EDU_CAN_T_SELL                                   :{WHITE}لا يمكن بيع هذه المؤسسة ...
+STR_ERROR_FORK_EDU_CAN_T_CHANGE                                 :{WHITE}لا يمكن تنفيذ ذلك ...
+STR_ERROR_FORK_EDU_CAN_T_RENAME                                 :{WHITE}لا يمكن تغيير اسم هذه المؤسسة ...
+STR_ERROR_FORK_EDU_TOWN_TOO_SMALL                               :{WHITE}عدد سكان المدينة قليل جداً لهذه المؤسسة
+STR_ERROR_FORK_EDU_ALREADY_BUILT                                :{WHITE}تملك هذا النوع من المؤسسات في هذه المدينة أصلاً
+STR_ERROR_FORK_EDU_NONE                                         :{WHITE}لا تملك مؤسسة من هذا النوع في هذه المدينة
+STR_ERROR_FORK_EDU_FACULTY_ONLY                                 :{WHITE}الجامعة ليس لها قسط واحد ولا حجم واحد: افتح الكليات وحدد أقساطها
+STR_ERROR_FORK_EDU_UNIVERSITY_ONLY                              :{WHITE}الكليات للجامعة فقط
+STR_ERROR_FORK_EDU_ALREADY_UPGRADED                             :{WHITE}تم توسيع هذه المدرسة سابقاً
+STR_ERROR_FORK_EDU_FACULTY_OPEN                                 :{WHITE}هذه الكلية مفتوحة أصلاً
+STR_ERROR_FORK_EDU_FACULTY_CLOSED                               :{WHITE}هذه الكلية غير مفتوحة

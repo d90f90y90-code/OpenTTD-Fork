@@ -52,6 +52,7 @@ enum TownViewWidgets : WidgetID {
 	WID_TV_RIGHTS,         ///< Open the rights and licenses window of this town.
 	WID_TV_FIRMS,          ///< Open the companies window of this town.
 	WID_TV_MEDIA,          ///< Open the channels window of this town.
+	WID_TV_EDUCATION,      ///< Open the private education window of this town.
 };
 
 /** Widgets of the #FoundTownWindow class. */

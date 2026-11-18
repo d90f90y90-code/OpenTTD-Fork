@@ -6436,3 +6436,69 @@ STR_ERROR_FORK_STOCK_NOT_ENOUGH                                 :{WHITE}You don'
 STR_ERROR_FORK_STOCK_NOT_INDEPENDENT                            :{WHITE}This company belongs to a company already
 STR_ERROR_FORK_STOCK_FIRM_LIMIT                                 :{WHITE}Investors can hold at most 50% of a company; more needs a takeover
 STR_ERROR_FORK_STOCK_NEED_HALF                                  :{WHITE}You need 50% of the company before you can take it over
+STR_FORK_EDU_BUTTON                                             :{BLACK}Education
+STR_FORK_EDU_TOOLTIP                                            :{BLACK}Build and run private schools and a university in this town
+STR_FORK_EDU_CAPTION                                            :Education: {TOWN}
+STR_FORK_EDU_TAB_PRIMARY                                        :{BLACK}Primary school
+STR_FORK_EDU_TAB_SECONDARY                                      :{BLACK}Secondary school
+STR_FORK_EDU_TAB_UNIVERSITY                                     :{BLACK}University
+STR_FORK_EDU_TAB_TOOLTIP                                        :{BLACK}Show this kind of institution
+STR_FORK_EDU_BUILD                                              :{BLACK}Build
+STR_FORK_EDU_BUILD_TOOLTIP                                      :{BLACK}Build this institution in the town
+STR_FORK_EDU_SELL                                               :{BLACK}Sell
+STR_FORK_EDU_SELL_TOOLTIP                                       :{BLACK}Sell this institution; you get 70% of its value
+STR_FORK_EDU_RENAME                                             :{BLACK}Rename
+STR_FORK_EDU_RENAME_TOOLTIP                                     :{BLACK}Give this institution a name
+STR_FORK_EDU_RENAME_CAPTION                                     :Name of the institution
+STR_FORK_EDU_UPGRADE                                            :{BLACK}Enlarge
+STR_FORK_EDU_UPGRADE_TOOLTIP                                    :{BLACK}Enlarge the school once, for more seats. Also makes the buildings younger
+STR_FORK_EDU_SHIFT                                              :{BLACK}Double shift
+STR_FORK_EDU_SHIFT_TOOLTIP                                      :{BLACK}Teach in two shifts: twice the seats, but also twice the running costs
+STR_FORK_EDU_FACULTY                                            :{BLACK}Open/close faculty
+STR_FORK_EDU_FACULTY_TOOLTIP                                    :{BLACK}Open or close the selected faculty (click a faculty in the list to select it)
+STR_FORK_EDU_FEE_DOWN_BIG                                       :{BLACK}Fee --
+STR_FORK_EDU_FEE_DOWN                                           :{BLACK}Fee -
+STR_FORK_EDU_FEE_UP                                             :{BLACK}Fee +
+STR_FORK_EDU_FEE_UP_BIG                                         :{BLACK}Fee ++
+STR_FORK_EDU_FEE_TOOLTIP                                        :{BLACK}Change the fee. Too high a fee for what is offered makes people stay away
+STR_FORK_EDU_NAME_PRIMARY                                       :Private primary school
+STR_FORK_EDU_NAME_SECONDARY                                     :Private secondary school
+STR_FORK_EDU_NAME_UNIVERSITY                                    :Private university
+STR_FORK_EDU_YES                                                :yes
+STR_FORK_EDU_NO                                                 :no
+STR_FORK_EDU_NOT_APPLICABLE                                     :-
+STR_FORK_EDU_NO_INSTITUTION                                     :{BLACK}You have no institution of this kind in this town
+STR_FORK_EDU_BUILD_INFO                                         :{BLACK}Building cost: {CURRENCY_LONG}   Needs {NUM} inhabitants (the town has {NUM})
+STR_FORK_EDU_NAME_LINE                                          :{BLACK}{RAW_STRING}   Value: {CURRENCY_LONG}   Sells for: {CURRENCY_LONG}
+STR_FORK_EDU_SEATS                                              :{BLACK}Students: {NUM} of {NUM} seats
+STR_FORK_EDU_OPTIONS                                            :{BLACK}Enlarged: {STRING}   Double shift: {STRING}
+STR_FORK_EDU_FACULTIES                                          :{BLACK}Faculties open: {NUM} of {NUM}   (click a faculty to select it)
+STR_FORK_EDU_FEE                                                :{BLACK}Fee per seat and year: {CURRENCY_LONG}   (highest: {CURRENCY_LONG})
+STR_FORK_EDU_QUALITY                                            :{BLACK}Quality: {NUM}%   Popularity: {NUM}%
+STR_FORK_EDU_INCOME                                             :{BLACK}Tuition: {CURRENCY_LONG} per month   Running costs: {CURRENCY_LONG} per month
+STR_FORK_EDU_TAX                                                :{BLACK}Town tax this year: {NUM}% of the tuition = {CURRENCY_LONG} per month
+STR_FORK_EDU_PROFIT                                             :{BLACK}Profit: {CURRENCY_LONG} per month
+STR_FORK_EDU_FACULTY_OPEN_ROW                                   :{BLACK}{RAW_STRING} {STRING}   Interest {NUM}%   Tuition {CURRENCY_LONG}   Students {NUM}   Popularity {NUM}%
+STR_FORK_EDU_FACULTY_CLOSED_ROW                                 :{SILVER}{RAW_STRING} {STRING}   Interest {NUM}%   Opening costs {CURRENCY_LONG}
+STR_FORK_FACULTY_MEDICINE                                       :Medicine
+STR_FORK_FACULTY_PHARMACY                                       :Pharmacy
+STR_FORK_FACULTY_ENGINEERING                                    :Engineering
+STR_FORK_FACULTY_ENGINEERING_TECH                               :Engineering technologies
+STR_FORK_FACULTY_TEACHING_SCIENCES                              :Teaching sciences
+STR_FORK_FACULTY_EDUCATION                                      :Education
+STR_FORK_FACULTY_ARTS                                           :Arts
+STR_FORK_FACULTY_LAW                                            :Law
+STR_FORK_FACULTY_BUSINESS                                       :Management and economics
+STR_FORK_FACULTY_VOCATIONAL                                     :Vocational education
+STR_ERROR_FORK_EDU_CAN_T_BUILD                                  :{WHITE}Can't build this institution here...
+STR_ERROR_FORK_EDU_CAN_T_SELL                                   :{WHITE}Can't sell this institution...
+STR_ERROR_FORK_EDU_CAN_T_CHANGE                                 :{WHITE}Can't do that...
+STR_ERROR_FORK_EDU_CAN_T_RENAME                                 :{WHITE}Can't rename this institution...
+STR_ERROR_FORK_EDU_TOWN_TOO_SMALL                               :{WHITE}The town has too few inhabitants for this institution
+STR_ERROR_FORK_EDU_ALREADY_BUILT                                :{WHITE}You already own this kind of institution in this town
+STR_ERROR_FORK_EDU_NONE                                         :{WHITE}You have no institution of this kind in this town
+STR_ERROR_FORK_EDU_FACULTY_ONLY                                 :{WHITE}Universities don't have a single fee or size: open faculties and set their tuition
+STR_ERROR_FORK_EDU_UNIVERSITY_ONLY                              :{WHITE}Only a university has faculties
+STR_ERROR_FORK_EDU_ALREADY_UPGRADED                             :{WHITE}This school was already enlarged
+STR_ERROR_FORK_EDU_FACULTY_OPEN                                 :{WHITE}This faculty is already open
+STR_ERROR_FORK_EDU_FACULTY_CLOSED                               :{WHITE}This faculty is not open

@@ -289,6 +289,10 @@ enum class Commands : uint8_t {
 	BuyUsedVehicle, ///< buy a used vehicle from a dealer
 	BuildForkChannel, ///< build a television or radio channel
 	SetForkChannelPackage, ///< change the paid package of a channel
+	BuildForkSchool, ///< build a private school or university in a town
+	SellForkSchool, ///< sell a private school or university
+	ForkSchoolAction, ///< change settings of a school or university, enlarge it, open or close faculties
+	RenameForkSchool, ///< rename a private school or university
 
 	SetCompanyManagerFace, ///< set the manager's face of the company
 	SetCompanyColour, ///< set the colour of the company

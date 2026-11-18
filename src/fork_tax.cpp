@@ -63,6 +63,7 @@ void ChargeForkMunicipalTaxes()
 
 	for (const ForkAsset *a : ForkAsset::Iterate()) {
 		if (a->location_kind != static_cast<uint8_t>(ForkAssetLocation::Town) || !Company::IsValidID(a->owner) || a->value <= 0) continue;
+		if (a->type == static_cast<uint8_t>(ForkAssetType::Education)) continue; // Institutions pay a tax on their income instead.
 
 		const Town *t = Town::GetIfValid(static_cast<TownID>(a->location));
 		if (t == nullptr) continue;

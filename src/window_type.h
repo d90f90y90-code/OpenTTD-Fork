@@ -403,6 +403,12 @@ enum class WindowClass : uint16_t {
 	ForkChannel,
 
 	/**
+	 * Fork private education of a town; %Window numbers:
+	 *   - #TownID = #ForkEducationWidgets
+	 */
+	ForkEducation,
+
+	/**
 	 * Station list; %Window numbers:
 	 *   - #CompanyID = #StationListWidgets
 	 */
