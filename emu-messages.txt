@@ -1,0 +1,40 @@
+11-18 10:27:15.834   495   553 V BackupManagerService: [UserID:0] restoreAtInstall pkg=org.openttdfork.game token=1 restoreSet=0
+11-18 10:27:16.004  1921  1921 I MediaProvider: Invalidating LocalCallingIdentity cache for package org.openttdfork.game. Reason: package android.intent.action.PACKAGE_ADDED
+11-18 10:27:16.013  1670  1670 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package:org.openttdfork.game flg=0x4000010 (has extras) }
+11-18 10:27:16.021   697   697 D AvrcpMediaPlayerList: Name of package changed: org.openttdfork.game
+11-18 10:27:16.049  1201  2433 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:org.openttdfork.game flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+11-18 10:27:16.054  1201  2232 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:org.openttdfork.game flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+11-18 10:27:16.071  1408  2497 I ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:org.openttdfork.game flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+11-18 10:27:16.073  1408  2498 I FontsPackageChangeOp: Package org.openttdfork.game has no metadata
+11-18 10:27:16.106  1408  2497 I ChromeSync: [Persistence,AffiliationManager] One of affiliation or grouping data for android://tTOFmCQRW1V_F6oJYSvlat-R1Q8yOqNK1c4X_wdS5DXCiMrydKqNkn3sr-E0G_MmSrv_MVgy0sAQ7c8HDJ2_dg==@org.openttdfork.game/ was not found. Marking affiliation data as stale...
+11-18 10:27:16.135   495   495 I notification_cancel_all: [1000,495,org.openttdfork.game,0,0,0,5,NULL]
+11-18 10:27:16.482   495   553 I AppsFilter: interaction: PackageSetting{91a54c0 org.openttdfork.game/10167} -> PackageSetting{288c5f9 com.google.android.googlequicksearchbox/10123} BLOCKED
+11-18 10:27:16.482   495   553 I AppsFilter: interaction: PackageSetting{91a54c0 org.openttdfork.game/10167} -> PackageSetting{824593e com.google.android.apps.messaging/10146} BLOCKED
+11-18 10:27:16.482   495   553 I AppsFilter: interaction: PackageSetting{91a54c0 org.openttdfork.game/10167} -> PackageSetting{e9f139f com.android.camera2/10134} BLOCKED
+11-18 10:27:16.482   495   553 I AppsFilter: interaction: PackageSetting{91a54c0 org.openttdfork.game/10167} -> PackageSetting{daffcec com.google.android.gm/10133} BLOCKED
+11-18 10:27:16.482   495   553 I AppsFilter: interaction: PackageSetting{91a54c0 org.openttdfork.game/10167} -> PackageSetting{d86c8b5 com.google.android.apps.docs/10143} BLOCKED
+11-18 10:27:16.482   495   553 I AppsFilter: interaction: PackageSetting{91a54c0 org.openttdfork.game/10167} -> PackageSetting{ed463e4 com.google.android.calendar/10144} BLOCKED
+11-18 10:27:17.946  3736  3736 W Monkey  : args: [-p, org.openttdfork.game, -c, android.intent.category.LAUNCHER, 1]
+11-18 10:27:17.946  3736  3736 W Monkey  :  arg: "org.openttdfork.game"
+11-18 10:27:17.947  3736  3736 W Monkey  : data="org.openttdfork.game"
+11-18 10:27:18.012   495   833 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=org.openttdfork.game/.DiagnosticsActivity} from uid 2000
+11-18 10:27:18.090   495   833 I wm_create_activity: [0,16851573,9,org.openttdfork.game/.DiagnosticsActivity,android.intent.action.MAIN,NULL,NULL,270532608]
+11-18 10:27:18.226   495   537 I am_proc_start: [0,3804,10167,org.openttdfork.game,pre-top-activity,{org.openttdfork.game/org.openttdfork.game.DiagnosticsActivity}]
+11-18 10:27:18.226   495   537 I ActivityManager: Start proc 3804:org.openttdfork.game/u0a167 for pre-top-activity {org.openttdfork.game/org.openttdfork.game.DiagnosticsActivity}
+11-18 10:27:18.279   495  1865 I am_proc_bound: [0,3804,org.openttdfork.game]
+11-18 10:27:18.285   495  1865 I wm_restart_activity: [0,16851573,9,org.openttdfork.game/.DiagnosticsActivity]
+11-18 10:27:18.286   495  1865 I wm_set_resumed_activity: [0,org.openttdfork.game/.DiagnosticsActivity,minimalResumeActivityLocked]
+11-18 10:27:18.339   495  1759 I ActivityTaskManager: START u0 {cmp=org.openttdfork.game/.OpenTTDActivity} from uid 10167
+11-18 10:27:18.342   495  1759 I wm_create_activity: [0,86645740,10,org.openttdfork.game/.OpenTTDActivity,NULL,NULL,NULL,268435456]
+11-18 10:27:18.342   495  1759 I wm_pause_activity: [0,16851573,org.openttdfork.game/.DiagnosticsActivity,userLeaving=true]
+11-18 10:27:18.345   495   795 I wm_finish_activity: [0,16851573,9,org.openttdfork.game/.DiagnosticsActivity,app-request]
+11-18 10:27:18.345  3804  3804 I wm_on_create_called: [16851573,org.openttdfork.game.DiagnosticsActivity,performCreate]
+11-18 10:27:18.364   495  1759 I wm_add_to_stopping: [0,16851573,org.openttdfork.game/.DiagnosticsActivity,completeFinishing]
+11-18 10:27:18.389   495  1759 I wm_restart_activity: [0,86645740,10,org.openttdfork.game/.OpenTTDActivity]
+11-18 10:27:18.389   495  1759 I wm_set_resumed_activity: [0,org.openttdfork.game/.OpenTTDActivity,minimalResumeActivityLocked]
+11-18 10:27:18.390   495  1759 V WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{b697297 u0 Splash Screen org.openttdfork.game}, surfaceController Surface(name=Splash Screen org.openttdfork.game)/@0xc23d36b
+11-18 10:27:19.286  3804  3804 I wm_on_create_called: [86645740,org.openttdfork.game.OpenTTDActivity,performCreate]
+11-18 10:27:19.287  3804  3804 I wm_on_start_called: [86645740,org.openttdfork.game.OpenTTDActivity,handleStartActivity]
+11-18 10:27:19.287  3804  3804 I wm_on_resume_called: [86645740,org.openttdfork.game.OpenTTDActivity,RESUME_ACTIVITY]
+11-18 10:27:19.318  3804  3804 I wm_on_top_resumed_gained_called: [86645740,org.openttdfork.game.OpenTTDActivity,topStateChangedWhenResumed]
+11-18 10:27:19.501  3804  3838 V SDL     : Running main function SDL_main from library /data/app/~~Qlm0n1EdWDYE0qu2WPAUjw==/org.openttdfork.game-KR5CLq3DYj7ThT28LJrVAA==/lib/x86_64/libmain.so

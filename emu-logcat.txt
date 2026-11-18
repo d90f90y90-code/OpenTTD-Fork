@@ -1,0 +1,300 @@
+11-18 10:27:33.049   289   289 I Zygote  : Process 2933 exited due to signal 9 (Killed)
+11-18 10:27:33.059  1201  2289 E AsyncOperation: OperationException[Status{statusCode=Empty (package not registered?) or malformed snapshot token: , resolution=null}]
+11-18 10:27:33.060  1201  2289 E AsyncOperation: OperationException[Status{statusCode=Empty (package not registered?) or malformed snapshot token: , resolution=null}]
+11-18 10:27:33.088  1201  2442 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:33.131  1201  1201 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:33.406  1921  1955 W ModernMediaScanner: Failed to visit /data/data/com.android.providers.downloads/cache/hotword.data: java.nio.file.NoSuchFileException: /data/data/com.android.providers.downloads/cache/hotword.data
+11-18 10:27:33.479  1827  2213 W PhenotypeToGsaConfigs: Can't format flag AndroidGsaVelourJars__velour_crashtest_jar__name to integer.
+11-18 10:27:33.497  1201  3345 E AsyncOperation: OperationException[Status{statusCode=Empty (package not registered?) or malformed snapshot token: , resolution=null}]
+11-18 10:27:33.604  2120  4948 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:27:33.605  2120  4948 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:27:33.629  4654  4839 I FA      : To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+11-18 10:27:33.629  4654  4839 I FA      : To enable faster debug mode event logging run:
+11-18 10:27:33.629  4654  4839 I FA      :   adb shell setprop debug.firebase.analytics.app com.google.android.youtube
+11-18 10:27:33.648   916   951 D ModelWriter: java.lang.Exception
+11-18 10:27:33.744  1827  2214 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+11-18 10:27:33.795  1921  3042 W ModernMediaScanner: Failed to apply ContentProviderOperation(type=insert uri=content://media/internal/file values={instance_id=null, compilation=null, disc_number=0, duration=12956, is_ringtone=1, album_artist=null, resolution=null, orientation=null, artist=pdx, author=null, height=null, is_drm=0, is_audiobook=0, date_modified=1721854889, writer=null, composer=null, datetaken=null, mime_type=audio/ogg, is_notification=0, bitrate=96000, cd_track_number=0, xmp=[], year=null, _data=/product/media/audio/ringtones/URSAMINOR.ogg, _size=144112, album=Unknown, genre=Unknown, is_alarm=0, title=Ursa Minor, track=0, width=null, is_music=0, document_id=null, is_podcast=0, capture_framerate=null, num_tracks=1, original_document_id=null, media_type=2} exceptionAllowed)
+11-18 10:27:33.795  1921  3042 W ModernMediaScanner: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+11-18 10:27:34.547  4654  4991 W YouTube : abwi: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:27:34.547  4654  4991 W YouTube : Caused by: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:27:34.995  4955  5009 I FA      : To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+11-18 10:27:34.995  4955  5009 I FA      : To enable faster debug mode event logging run:
+11-18 10:27:34.995  4955  5009 I FA      :   adb shell setprop debug.firebase.analytics.app com.google.android.apps.maps
+11-18 10:27:35.003  1827  2213 W PhenotypeToGsaConfigs: Can't format flag AndroidGsaVelourJars__velour_crashtest_jar__name to integer.
+11-18 10:27:35.160   285   285 I Zygote  : Process 4164 exited due to signal 9 (Killed)
+11-18 10:27:35.172  5038  5063 W DynamiteModule: Local module descriptor class for com.google.android.gms.crash not found.
+11-18 10:27:35.173  5038  5063 I DynamiteModule: Considering local module com.google.android.gms.crash:0 and remote module com.google.android.gms.crash:215
+11-18 10:27:35.173  5038  5063 I DynamiteModule: Selected remote version of com.google.android.gms.crash, version >= 215
+11-18 10:27:35.173  5038  5063 V DynamiteModule: Dynamite loader version >= 2, using loadModule2NoCrashUtils
+11-18 10:27:35.222  1827  2203 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+11-18 10:27:35.234  5038  5063 I FirebaseCrashApiImpl: FirebaseCrashApiImpl created by ClassLoader ax[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/00000004/DynamiteModulesC.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/00000004/n/x86_64, /data/user_de/0/com.google.android.gms/app_chimera/m/00000004/n/arm64-v8a, /system/lib64, /system_ext/lib64]]]
+11-18 10:27:35.234  5038  5063 I FirebaseCrash: FirebaseCrash reporting loaded - esr@9a123c2
+11-18 10:27:35.248  5038  5064 W DynamiteModule: Local module descriptor class for com.google.android.gms.crash not found.
+11-18 10:27:35.266   285   285 I Zygote  : Process 4220 exited due to signal 9 (Killed)
+11-18 10:27:35.293  5038  5064 I FirebaseCrashApiImpl: FirebaseCrash reporting API initialized
+11-18 10:27:35.293  5038  5064 I FirebaseCrash: FirebaseCrash reporting initialized esr@9a123c2
+11-18 10:27:35.293  5038  5064 W FirebaseCrashAnalytics: Unable to log event, missing Google Analytics for Firebase library
+11-18 10:27:35.318  5071  5095 W DynamiteModule: Local module descriptor class for com.google.android.gms.crash not found.
+11-18 10:27:35.319  5071  5095 I DynamiteModule: Considering local module com.google.android.gms.crash:0 and remote module com.google.android.gms.crash:215
+11-18 10:27:35.319  5071  5095 I DynamiteModule: Selected remote version of com.google.android.gms.crash, version >= 215
+11-18 10:27:35.319  5071  5095 V DynamiteModule: Dynamite loader version >= 2, using loadModule2NoCrashUtils
+11-18 10:27:35.393   289   289 I Zygote  : Process 4353 exited due to signal 9 (Killed)
+11-18 10:27:35.437  5071  5095 I FirebaseCrashApiImpl: FirebaseCrashApiImpl created by ClassLoader ax[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/00000004/DynamiteModulesC.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/00000004/n/x86_64, /data/user_de/0/com.google.android.gms/app_chimera/m/00000004/n/arm64-v8a, /system/lib64, /system_ext/lib64]]]
+11-18 10:27:35.438  5071  5095 I FirebaseCrash: FirebaseCrash reporting loaded - cxy@9a123c2
+11-18 10:27:35.452  5071  5096 W DynamiteModule: Local module descriptor class for com.google.android.gms.crash not found.
+11-18 10:27:35.511  5071  5096 I FirebaseCrashApiImpl: FirebaseCrash reporting API initialized
+11-18 10:27:35.511  5071  5096 I FirebaseCrash: FirebaseCrash reporting initialized cxy@9a123c2
+11-18 10:27:35.511  5071  5096 W FirebaseCrashAnalytics: Unable to log event, missing Google Analytics for Firebase library
+11-18 10:27:35.586  1201  1583 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:35.674  1201  1201 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:35.852  5140  5140 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:27:35.852  5140  5140 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:27:36.045  5140  5180 E GEL_DELAYED_EVENT_DEBUG: Failed delayed event dispatch, no dispatchers.
+11-18 10:27:36.082  5140  5174 E AwarenessRouterSyncMgr: Exception while syncing fences
+11-18 10:27:36.082  5140  5174 E AwarenessRouterSyncMgr: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Account associated with identity was null
+11-18 10:27:36.082  5140  5174 E AwarenessRouterSyncMgr: Caused by: java.lang.IllegalStateException: Account associated with identity was null
+11-18 10:27:36.182  4654  4991 W YouTube : abwi: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:27:36.182  4654  4991 W YouTube : Caused by: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:27:36.262  1408  2230 W MDM     : java.lang.reflect.InvocationTargetException
+11-18 10:27:36.262  1408  2230 W MDM     : Caused by: java.lang.SecurityException: Neither user 10122 nor current process has android.permission.MANAGE_DEVICE_ADMINS.
+11-18 10:27:36.262  1408  2230 W MDM     : 	at android.os.Parcel.createExceptionOrNull(Parcel.java:2373)
+11-18 10:27:36.262  1408  2230 W MDM     : 	at android.os.Parcel.createException(Parcel.java:2357)
+11-18 10:27:36.262  1408  2230 W MDM     : 	at android.os.Parcel.readException(Parcel.java:2340)
+11-18 10:27:36.262  1408  2230 W MDM     : 	at android.os.Parcel.readException(Parcel.java:2282)
+11-18 10:27:36.262  1408  2230 W MDM     : Caused by: android.os.RemoteException: Remote stack trace:
+11-18 10:27:36.360   285   285 I Zygote  : Process 4380 exited due to signal 9 (Killed)
+11-18 10:27:36.547  1827  2201 D StrictMode: 	at android.os.Parcel.readExceptionCode(Parcel.java:2318)
+11-18 10:27:36.547  1827  2201 D StrictMode: 	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:139)
+11-18 10:27:36.768  2783  5249 I CarrierServices: [100] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:36.771  2783  2900 I CarrierServices: [69] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:36.863  1201  3277 I ChmraDebugLogger: [53] +vision.ocr:-1
+11-18 10:27:36.930  2783  4504 I CarrierServices: [99] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:36.973  1201  4813 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:37.163  1201  1201 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:37.203  1921  1955 W ModernMediaScanner: Failed to visit /data/data/com.android.providers.downloads/cache/params_expdate_c45e5b7.dat: java.nio.file.NoSuchFileException: /data/data/com.android.providers.downloads/cache/params_expdate_c45e5b7.dat
+11-18 10:27:37.303  1201  1201 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:37.420  5140  5170 I FA      : To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+11-18 10:27:37.420  5140  5170 I FA      : To enable faster debug mode event logging run:
+11-18 10:27:37.420  5140  5170 I FA      :   adb shell setprop debug.firebase.analytics.app com.google.android.apps.youtube.music
+11-18 10:27:37.737  1921  3678 W MediaProvider: java.io.IOException: Failed to update quota type for /storage/emulated/0/Android
+11-18 10:27:37.745  1921  3678 W MediaProvider: java.io.IOException: Failed to update quota type for /storage/emulated/0/Android/media
+11-18 10:27:37.767  1921  3042 W ModernMediaScanner: Failed to visit /system/media: java.nio.file.NoSuchFileException: /system/media
+11-18 10:27:37.776  1921  3042 W ModernMediaScanner: Failed to visit /oem/media: java.nio.file.NoSuchFileException: /oem/media
+11-18 10:27:37.935  1061  1061 D RILJ    : [0169]> SIGNAL_STRENGTH [PHONE0]
+11-18 10:27:37.952   443   443 D RIL     : onRequest: SIGNAL_STRENGTH
+11-18 10:27:37.965  1061  1275 E CellSignalStrengthLte: convertRssiAsuToDBm: invalid RSSI in ASU=90
+11-18 10:27:37.965  1061  1275 D RILJ    : [0169]< SIGNAL_STRENGTH SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 level=0,mLte=CellSignalStrengthLte: rssi=2147483647 rsrp=-100 rsrq=-10 rssnr=3 cqi=7 ta=200 level=2 parametersUseForLevel=1,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiSinr = 2147483647 ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 level = 0 parametersUseForLevel = 1 },primary=CellSignalStrengthLte} [PHONE0]
+11-18 10:27:38.078  1201  3345 W GLSUser : java.io.IOException: Invalid scope
+11-18 10:27:38.101  1201  2442 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:27:38.114  1201  3345 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:27:38.131  1201  2442 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:27:38.143  1201  3345 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:27:38.188  1201  3345 W GLSUser : [AppCertManager] IOException while requesting key: 
+11-18 10:27:38.188  1201  3345 W GLSUser : java.io.IOException: Invalid device key response.
+11-18 10:27:38.409   495   535 I am_pss  : [3804,10167,org.openttdfork.game,92265472,88711168,274432,181366784,0,2,2]
+11-18 10:27:38.709  4654  4839 W ConnectionTracker: Exception thrown while unbinding
+11-18 10:27:38.709  4654  4839 W ConnectionTracker: java.lang.IllegalArgumentException: Service not registered: tel@7384813
+11-18 10:27:39.481  5140  5333 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:27:39.481  5140  5333 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:27:39.766  2783  2900 I CarrierServices: [69] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:39.782  2783  5339 I CarrierServices: [102] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:39.788  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@69ae31e
+11-18 10:27:39.789  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@9bd36b8
+11-18 10:27:39.789  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@26b0664
+11-18 10:27:39.789  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@6e1dd82
+11-18 10:27:39.789  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@60424d0
+11-18 10:27:39.789  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@5544fce
+11-18 10:27:39.789  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@7cebdfc
+11-18 10:27:39.790  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@7699ada
+11-18 10:27:39.790  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@747bde8
+11-18 10:27:39.790  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@5568aa6
+11-18 10:27:39.807  4654  4991 W YouTube : abwi: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:27:39.807  4654  4991 W YouTube : Caused by: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:27:39.929  1201  3341 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:27:39.950  1827  2200 W PhenotypeToGsaConfigs: Can't format flag AndroidGsaVelourJars__velour_crashtest_jar__name to integer.
+11-18 10:27:39.989  2783  2900 I CarrierServices: [69] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:40.154  5343  5343 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:27:40.154  5343  5343 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:27:40.203  1827  2214 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+11-18 10:27:40.261  5343  5370 I GAv4    : Google Analytics 202.3.00 is starting up. To enable debug logging on a device run:
+11-18 10:27:40.261  5343  5370 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
+11-18 10:27:40.333  4955  5009 W ConnectionTracker: Exception thrown while unbinding
+11-18 10:27:40.333  4955  5009 W ConnectionTracker: java.lang.IllegalArgumentException: Service not registered: lm@9616b6c
+11-18 10:27:40.456  4473  5408 V DynamiteModule: Dynamite loader version >= 2, using loadModule2NoCrashUtils
+11-18 10:27:40.459  1201  3341 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:27:40.581  5140  5333 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:27:40.581  5140  5333 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:27:40.714  1827  2214 W PhenotypeToGsaConfigs: Can't format flag AndroidGsaVelourJars__velour_crashtest_jar__name to integer.
+11-18 10:27:40.810  1827  2203 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+11-18 10:27:40.975  3390  3390 W GrowthKit: java.lang.NullPointerException: Unable to get GrowthKit Component from host app: com.google.android.calendar
+11-18 10:27:40.976  3390  3390 W Notifications: java.lang.IllegalStateException: Unable to get ChimeComponent from host app. Did you mean for your application to extend GeneratedComponentManager or HasComponent or to use jcga.libraries.notifications.injection.Chime#set(ChimeComponent)?
+11-18 10:27:41.662  1201  1583 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:41.678  1201  1583 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:41.685  1201  1201 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:41.770  1827  2203 W PhenotypeToGsaConfigs: Can't format flag AndroidGsaVelourJars__velour_crashtest_jar__name to integer.
+11-18 10:27:41.807  2783  2900 I CarrierServices: [69] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:41.834  2783  4504 I CarrierServices: [99] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:41.836  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@69ae31e
+11-18 10:27:41.836  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@9bd36b8
+11-18 10:27:41.836  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@26b0664
+11-18 10:27:41.836  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@6e1dd82
+11-18 10:27:41.836  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@60424d0
+11-18 10:27:41.837  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@5544fce
+11-18 10:27:41.837  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@7cebdfc
+11-18 10:27:41.837  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@7699ada
+11-18 10:27:41.837  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@747bde8
+11-18 10:27:41.837  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@5568aa6
+11-18 10:27:41.913  2783  5452 I CarrierServices: [104] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:41.967  1827  2200 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+11-18 10:27:42.554  5140  5170 W ConnectionTracker: Exception thrown while unbinding
+11-18 10:27:42.554  5140  5170 W ConnectionTracker: java.lang.IllegalArgumentException: Service not registered: lbw@782d6d0
+11-18 10:27:42.634  1201  4035 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:42.663  1201  1201 I GCoreUlr: Unbound from all signal providers.
+11-18 10:27:43.003   285   285 I Zygote  : Process 4506 exited due to signal 9 (Killed)
+11-18 10:27:43.528  5140  5333 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:27:43.528  5140  5333 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:27:43.708  1201  3341 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:27:43.927  1201  5273 I PTCommittedOperation: Receive new configuration for com.google.android.gms.chimera_debug
+11-18 10:27:44.204  1201  3341 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:27:44.862  1827  2200 W PhenotypeToGsaConfigs: Can't format flag AndroidGsaVelourJars__velour_crashtest_jar__name to integer.
+11-18 10:27:44.988  1827  2213 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+11-18 10:27:45.038  2783  5452 I CarrierServices: [104] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:45.040  5038  5468 I FirebaseCrash: Sending crashes
+11-18 10:27:45.074  2783  5466 I CarrierServices: [106] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:45.076  2783  5458 I CarrierServices: [105] ekb.b: Checking if using CarrierServices.apk is possible. Enabled: true, isAtLeastM: true, runningInsideBugle: false
+11-18 10:27:45.078  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@69ae31e
+11-18 10:27:45.079  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@9bd36b8
+11-18 10:27:45.079  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@26b0664
+11-18 10:27:45.079  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@6e1dd82
+11-18 10:27:45.079  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@60424d0
+11-18 10:27:45.079  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@5544fce
+11-18 10:27:45.079  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@7cebdfc
+11-18 10:27:45.079  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@7699ada
+11-18 10:27:45.080  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@747bde8
+11-18 10:27:45.080  2901  2901 W RcsClientLib: java.lang.IllegalArgumentException: Service not registered: aeed@5568aa6
+11-18 10:27:45.162  5071  5470 I FirebaseCrash: Sending crashes
+11-18 10:27:45.192  1827  2214 W PhenotypeToGsaConfigs: Can't format flag AndroidGsaVelourJars__velour_crashtest_jar__name to integer.
+11-18 10:27:45.358  1827  2213 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+11-18 10:27:47.478  4654  4991 W YouTube : abwi: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:27:47.478  4654  4991 W YouTube : Caused by: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:27:48.869   285   285 I Zygote  : Process 4533 exited due to signal 9 (Killed)
+11-18 10:27:49.504  5140  5333 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:27:49.504  5140  5333 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:27:53.670   285   285 I Zygote  : Process 4632 exited due to signal 9 (Killed)
+11-18 10:27:54.057   285   285 I Zygote  : Process 4407 exited due to signal 9 (Killed)
+11-18 10:27:55.035   285   285 I Zygote  : Process 4908 exited due to signal 9 (Killed)
+11-18 10:27:55.569   285   285 I Zygote  : Process 3050 exited due to signal 9 (Killed)
+11-18 10:27:56.149  5484  5484 I dex2oat32: /apex/com.android.art/bin/dex2oat32 --input-vdex-fd=-1 --output-vdex-fd=9 --updatable-bcp-packages-file=/system/etc/updatable-bcp-packages.txt --resolve-startup-const-strings=true --max-image-block-size=524288 --compiler-filter=verify --classpath-dir=/apex/com.android.os.statsd/javalib --class-loader-context=PCL[];PCL[/system/framework/com.android.location.provider.jar:/system/framework/services.jar:/system/framework/ethernet-service.jar:/apex/com.android.permission/javalib/service-permission.jar:/apex/com.android.wifi/javalib/service-wifi.jar:/apex/com.android.ipsec/javalib/android.net.ipsec.ike.jar] --generate-mini-debug-info --compact-dex-level=none --compilation-reason=boot
+11-18 10:27:56.381   495  5482 I PackageDexOptimizer: Running dexopt (dexoptNeeded=1) on: /data/app/~~Qlm0n1EdWDYE0qu2WPAUjw==/org.openttdfork.game-KR5CLq3DYj7ThT28LJrVAA==/base.apk pkg=org.openttdfork.game isa=x86_64 dexoptFlags=boot_complete,debuggable,public,enable_hidden_api_checks targetFilter=verify oatDir=/data/app/~~Qlm0n1EdWDYE0qu2WPAUjw==/org.openttdfork.game-KR5CLq3DYj7ThT28LJrVAA==/oat classLoaderContext=PCL[]{}
+11-18 10:27:56.383   429   565 V installd: DexInv: --- BEGIN '/data/app/~~Qlm0n1EdWDYE0qu2WPAUjw==/org.openttdfork.game-KR5CLq3DYj7ThT28LJrVAA==/base.apk' ---
+11-18 10:27:56.396  5490  5490 I dex2oat32: /apex/com.android.art/bin/dex2oat32 --input-vdex-fd=-1 --output-vdex-fd=9 --updatable-bcp-packages-file=/system/etc/updatable-bcp-packages.txt --resolve-startup-const-strings=true --max-image-block-size=524288 --compiler-filter=verify --debuggable --classpath-dir=/data/app/~~Qlm0n1EdWDYE0qu2WPAUjw==/org.openttdfork.game-KR5CLq3DYj7ThT28LJrVAA== --class-loader-context=PCL[]{} --generate-mini-debug-info --compact-dex-level=none --compilation-reason=boot
+11-18 10:27:56.462   285   285 I Zygote  : Process 1503 exited due to signal 9 (Killed)
+11-18 10:27:56.482   429   565 V installd: DexInv: --- END '/data/app/~~Qlm0n1EdWDYE0qu2WPAUjw==/org.openttdfork.game-KR5CLq3DYj7ThT28LJrVAA==/base.apk' (success) ---
+11-18 10:27:56.565   495  5482 I BackgroundDexOptService: Pinning optimized code {android, org.openttdfork.game}
+11-18 10:27:56.576   495  5482 D IorapForwardingService: onPackagesUpdated: org.openttdfork.game
+11-18 10:27:57.088   285   285 I Zygote  : Process 5140 exited due to signal 9 (Killed)
+11-18 10:27:57.755   495   553 I AppsFilter: interaction: PackageSetting{91a54c0 org.openttdfork.game/10167} -> PackageSetting{daffcec com.google.android.gm/10133} BLOCKED
+11-18 10:27:57.967  1061  1061 D RILJ    : [0170]> SIGNAL_STRENGTH [PHONE0]
+11-18 10:27:57.969   443   443 D RIL     : onRequest: SIGNAL_STRENGTH
+11-18 10:27:57.972  1061  1275 E CellSignalStrengthLte: convertRssiAsuToDBm: invalid RSSI in ASU=90
+11-18 10:27:57.973  1061  1275 D RILJ    : [0170]< SIGNAL_STRENGTH SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 level=0,mLte=CellSignalStrengthLte: rssi=2147483647 rsrp=-100 rsrq=-10 rssnr=3 cqi=7 ta=200 level=2 parametersUseForLevel=1,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiSinr = 2147483647 ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 level = 0 parametersUseForLevel = 1 },primary=CellSignalStrengthLte} [PHONE0]
+11-18 10:28:00.438   289   289 I Zygote  : Process 4556 exited due to signal 9 (Killed)
+11-18 10:28:01.360  4654  4991 W YouTube : abwi: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:28:01.360  4654  4991 W YouTube : Caused by: java.util.concurrent.ExecutionException: aacl: Precondition check failed.
+11-18 10:28:03.063   285   285 I Zygote  : Process 4654 exited due to signal 9 (Killed)
+11-18 10:28:04.010  5545  5545 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:28:04.011  5545  5545 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:28:04.110  5545  5586 E GEL_DELAYED_EVENT_DEBUG: Failed delayed event dispatch, no dispatchers.
+11-18 10:28:04.121  5545  5592 E AwarenessRouterSyncMgr: Exception while syncing fences
+11-18 10:28:04.121  5545  5592 E AwarenessRouterSyncMgr: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Account associated with identity was null
+11-18 10:28:04.121  5545  5592 E AwarenessRouterSyncMgr: Caused by: java.lang.IllegalStateException: Account associated with identity was null
+11-18 10:28:04.225   285   285 I Zygote  : Process 4955 exited due to signal 9 (Killed)
+11-18 10:28:04.438  5545  5575 I FA      : To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+11-18 10:28:04.438  5545  5575 I FA      : To enable faster debug mode event logging run:
+11-18 10:28:04.438  5545  5575 I FA      :   adb shell setprop debug.firebase.analytics.app com.google.android.apps.youtube.music
+11-18 10:28:06.480   285   285 I Zygote  : Process 2120 exited due to signal 9 (Killed)
+11-18 10:28:07.776  5545  5691 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:07.776  5545  5691 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:09.516  5545  5575 W ConnectionTracker: Exception thrown while unbinding
+11-18 10:28:09.516  5545  5575 W ConnectionTracker: java.lang.IllegalArgumentException: Service not registered: lbw@f41fd30
+11-18 10:28:09.739  5545  5691 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:09.739  5545  5691 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:12.086  1201  5742 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:28:12.260  5545  5691 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:12.260  5545  5691 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:12.263  1201  5742 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:28:12.604  1201  5742 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:28:12.888   285   285 I Zygote  : Process 1292 exited due to signal 9 (Killed)
+11-18 10:28:13.108  1201  5742 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+11-18 10:28:17.058  1408  5280 I ChmraDebugLogger: [79] COMMIT_TIMEOUT
+11-18 10:28:17.066  1408  5280 I ChmraDebugLogger: [52] null
+11-18 10:28:17.370  5545  5691 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:17.370  5545  5691 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:17.977  1061  1061 D RILJ    : [0172]> SIGNAL_STRENGTH [PHONE0]
+11-18 10:28:17.977   443   443 D RIL     : onRequest: SIGNAL_STRENGTH
+11-18 10:28:17.978  1061  1275 E CellSignalStrengthLte: convertRssiAsuToDBm: invalid RSSI in ASU=90
+11-18 10:28:17.978  1061  1275 D RILJ    : [0172]< SIGNAL_STRENGTH SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 level=0,mLte=CellSignalStrengthLte: rssi=2147483647 rsrp=-100 rsrq=-10 rssnr=3 cqi=7 ta=200 level=2 parametersUseForLevel=1,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiSinr = 2147483647 ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 level = 0 parametersUseForLevel = 1 },primary=CellSignalStrengthLte} [PHONE0]
+11-18 10:28:28.212   285   285 I Zygote  : Process 2370 exited due to signal 9 (Killed)
+11-18 10:28:30.547  5545  5691 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:30.547  5545  5691 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:31.068   285   285 I Zygote  : Process 5038 exited due to signal 9 (Killed)
+11-18 10:28:37.980  1061  1061 D RILJ    : [0173]> SIGNAL_STRENGTH [PHONE0]
+11-18 10:28:37.980   443   443 D RIL     : onRequest: SIGNAL_STRENGTH
+11-18 10:28:37.981  1061  1275 E CellSignalStrengthLte: convertRssiAsuToDBm: invalid RSSI in ASU=90
+11-18 10:28:37.981  1061  1275 D RILJ    : [0173]< SIGNAL_STRENGTH SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 level=0,mLte=CellSignalStrengthLte: rssi=2147483647 rsrp=-100 rsrq=-10 rssnr=3 cqi=7 ta=200 level=2 parametersUseForLevel=1,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiSinr = 2147483647 ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 level = 0 parametersUseForLevel = 1 },primary=CellSignalStrengthLte} [PHONE0]
+11-18 10:28:41.103   285   285 I Zygote  : Process 4438 exited due to signal 9 (Killed)
+11-18 10:28:41.111   495  2114 W ActivityManager: android.os.DeadObjectException
+11-18 10:28:41.115  4473  5421 W GH.DelegateICarSupplier: java.lang.IllegalArgumentException: Service not registered: bdx@bdb4d37
+11-18 10:28:41.119   495   535 I am_pss  : [3804,10167,org.openttdfork.game,87152640,83980288,363520,161988608,0,2,2]
+11-18 10:28:44.328  1827  5775 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@b5e6c15} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.328  1827  5775 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.328  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@fad5ba0} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.328  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.329  1827  2295 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@c7af359} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.329  1827  2295 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.330  1827  2295 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@e66feb8} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.330  1827  2295 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.330  1827  5775 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@1c53ff6} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.330  1827  5775 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.331  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@be94e64} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.331  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.331  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@2fd6582} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.331  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.332  1827  5775 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@d1eecd0} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.332  1827  5775 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.333  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@ba057ce} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.333  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.334  1827  2295 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@9ce05fc} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.334  1827  2295 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.334  1827  2295 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@a6e22da} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.334  1827  2295 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.342  1827  5775 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@cd034e7} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.342  1827  5775 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.426  1827  5806 V DynamiteModule: Dynamite loader version >= 2, using loadModule2NoCrashUtils
+11-18 10:28:44.664  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@9e8851f} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.664  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.664  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@fed5635} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.664  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.666  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@99a543b} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.666  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.667  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@e2a20b1} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.667  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.668  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@ccff917} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.668  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.668  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@f8f16ed} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.668  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.668  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@5510fb3} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.668  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.668  1827  5773 E com.google.common.v.a.d: RuntimeException while executing runnable bq{com.google.android.libraries.mdi.download.i.ax@ad334e9} with executor MoreExecutors.directExecutor()
+11-18 10:28:44.668  1827  5773 E com.google.common.v.a.d: java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.s.b' on a null object reference
+11-18 10:28:44.679  5821  5845 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:28:44.684  5821  5845 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+11-18 10:28:45.204   495   553 I AppsFilter: interaction: PackageSetting{91a54c0 org.openttdfork.game/10167} -> PackageSetting{288c5f9 com.google.android.googlequicksearchbox/10123} BLOCKED
+11-18 10:28:45.433  1827  2212 D StrictMode: 	at android.os.Parcel.readExceptionCode(Parcel.java:2318)
+11-18 10:28:45.433  1827  2212 D StrictMode: 	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:139)
+11-18 10:28:48.835  5545  5691 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:48.835  5545  5691 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+11-18 10:28:57.983  1061  1061 D RILJ    : [0174]> SIGNAL_STRENGTH [PHONE0]
+11-18 10:28:57.985   443   443 D RIL     : onRequest: SIGNAL_STRENGTH
+11-18 10:28:57.986  1061  1275 E CellSignalStrengthLte: convertRssiAsuToDBm: invalid RSSI in ASU=90
+11-18 10:28:57.986  1061  1275 D RILJ    : [0174]< SIGNAL_STRENGTH SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 level=0,mLte=CellSignalStrengthLte: rssi=2147483647 rsrp=-100 rsrq=-10 rssnr=3 cqi=7 ta=200 level=2 parametersUseForLevel=1,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiSinr = 2147483647 ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 level = 0 parametersUseForLevel = 1 },primary=CellSignalStrengthLte} [PHONE0]

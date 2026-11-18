@@ -1,0 +1,80 @@
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_tto.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_tto.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_tto.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_tto.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_tto.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_tto.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_tto.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_tto.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM-TTO.CAT
+[2026-11-18 10:27:19] dbg: [misc:1] Adding original_tto ([1]) as base music set
+[2026-11-18 10:27:19] dbg: [misc:1] Checking /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm for base music set
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT00.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT02.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT06.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT03.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT12.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT08.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT13.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT14.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT10.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT04.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT01.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT05.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT15.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT11.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT16.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT09.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT18.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT19.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT21.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT17.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT20.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Loading base musicset details failed: /data/user/0/org.openttdfork.game/files/data/openttd/baseset/orig_win.obm
+[2026-11-18 10:27:19] dbg: [misc:1]   File is missing: GM_TT07.GM
+[2026-11-18 10:27:19] dbg: [misc:1] Adding original_windows ([1]) as base music set
+Low latency audio enabled
+[2026-11-18 10:27:19] dbg: [driver:1] Successfully probed sound driver 'sdl'
+[2026-11-18 10:27:19] dbg: [driver:1] Successfully probed music driver 'extmidi'
+[2026-11-18 10:27:19] dbg: [misc:1] Loading sound effects...
+[2026-11-18 10:27:20] dbg: [misc:1] Loading sound effects...
+[2026-11-18 10:27:20] dbg: [misc:0] Cryptographically-strong random generator unavailable; using fallback
+[2026-11-18 10:27:20] dbg: [driver:1] using thread for game-loop
+[2026-11-18 10:27:20] dbg: [driver:1] Switching blitter from '32bpp-anim' to '32bpp-sse2-anim'... 
+[2026-11-18 10:27:20] dbg: [driver:1] Successfully loaded blitter '32bpp-sse2-anim'
+[2026-11-18 10:27:20] dbg: [driver:1] Successfully switched to 32bpp-sse2-anim.
+[2026-11-18 10:27:20] dbg: [driver:1] SDL3: using mode 320x640
+[2026-11-18 10:27:20] dbg: [driver:1] SDL3: using mode 320x640
+[2026-11-18 10:27:20] dbg: [driver:1] SDL3: using mode 320x640
+[2026-11-18 10:27:20] dbg: [driver:1] extmidi: set volume not implemented
+[2026-11-18 10:27:20] dbg: [misc:1] Loading sound effects...
+[2026-11-18 10:27:20] dbg: [misc:1] Cryptographically-strong random generator unavailable; using fallback

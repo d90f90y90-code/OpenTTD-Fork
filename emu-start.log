@@ -1,0 +1,15 @@
+  bash arg: -p
+  bash arg: org.openttdfork.game
+  bash arg: -c
+  bash arg: android.intent.category.LAUNCHER
+  bash arg: 1
+args: [-p, org.openttdfork.game, -c, android.intent.category.LAUNCHER, 1]
+ arg: "-p"
+ arg: "org.openttdfork.game"
+ arg: "-c"
+ arg: "android.intent.category.LAUNCHER"
+ arg: "1"
+data="org.openttdfork.game"
+data="android.intent.category.LAUNCHER"
+Events injected: 1
+## Network stats: elapsed time=116ms (0ms mobile, 0ms wifi, 116ms not connected)
