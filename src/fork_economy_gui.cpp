@@ -59,9 +59,20 @@ struct ForkBusinessWindow : Window {
 		DrawString(ir.left, ir.right, y, GetString(STR_FORK_BUSINESS_ASSETS, GetForkAssetCount(_local_company)));
 		y += line;
 
+		/* The category strings are not contiguous in the language file, so use an explicit table. */
+		static constexpr StringID _category_names[FORK_LEDGER_CATEGORIES] = {
+			STR_FORK_CATEGORY_TAX,
+			STR_FORK_CATEGORY_RENT,
+			STR_FORK_CATEGORY_SALARIES,
+			STR_FORK_CATEGORY_DIVIDENDS,
+			STR_FORK_CATEGORY_ADVERTISING,
+			STR_FORK_CATEGORY_TRADE,
+			STR_FORK_CATEGORY_LEASING,
+			STR_FORK_CATEGORY_OTHER,
+		};
 		for (size_t i = 0; i < FORK_LEDGER_CATEGORIES; i++) {
 			Money amount = GetForkLedger(_local_company, static_cast<ForkLedgerCategory>(i), true);
-			DrawString(ir.left, ir.right, y, GetString(STR_FORK_LEDGER_ROW, STR_FORK_CATEGORY_TAX + i, amount));
+			DrawString(ir.left, ir.right, y, GetString(STR_FORK_LEDGER_ROW, _category_names[i], amount));
 			y += line;
 		}
 	}

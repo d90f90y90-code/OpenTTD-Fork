@@ -184,15 +184,18 @@ CommandCost CmdFireForkStaff(DoCommandFlags flags, TownID town_id, uint8_t count
 	CommandCost cost(ExpensesType::Other, GetForkWage(t) * (FORK_STAFF_SEVERANCE_MONTHS * count));
 
 	if (flags.Test(DoCommandFlag::Execute)) {
+		int64_t remaining = count;
 		for (ForkAsset *a : ForkAsset::Iterate()) {
+			if (remaining == 0) break;
 			if (!IsStaffOf(a, _current_company, town_id)) continue;
-			if (a->data[2] <= count) {
+			if (a->data[2] <= remaining) {
+				remaining -= a->data[2];
 				delete a;
 			} else {
-				a->data[2] -= count;
+				a->data[2] -= remaining;
 				a->monthly_cost = GetForkWage(t) * a->data[2];
+				remaining = 0;
 			}
-			break;
 		}
 		SetWindowClassesDirty(WindowClass::ForkStaff);
 		SetWindowClassesDirty(WindowClass::ForkRealEstate);

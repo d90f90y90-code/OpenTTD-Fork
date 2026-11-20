@@ -839,6 +839,24 @@ enum class WindowClass : uint16_t {
 	 */
 	Help,
 
+	/**
+	 * Fork company overview with the manager's face and the sale options; %Window numbers:
+	 *   - #CompanyID = #ForkCompanyWidgets
+	 */
+	ForkCompany,
+
+	/**
+	 * Fork product list and product editor; %Window numbers:
+	 *   - 0 = #ForkProductsWidgets
+	 */
+	ForkProducts,
+
+	/**
+	 * Fork product popularity statistics; %Window numbers:
+	 *   - 0 = #ForkProductStatsWidgets
+	 */
+	ForkProductStats,
+
 	Invalid = 0xFFFF, ///< Invalid window.
 };
 

@@ -15,6 +15,7 @@
 
 #include "../fork_economy.h"
 #include "../fork_firm.h"
+#include "../fork_products.h"
 
 #include "../safeguards.h"
 
@@ -113,6 +114,8 @@ static const SaveLoad _fork_firm_desc[] = {
 	SaveLoad::Variable<VarFileType::U32>("made_last", SLE_OBJECT_ADDRESS(ForkFirm, made_last), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::U32>("sold_last", SLE_OBJECT_ADDRESS(ForkFirm, sold_last), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::U32>("age_months", SLE_OBJECT_ADDRESS(ForkFirm, age_months), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("hq_tile", SLE_OBJECT_ADDRESS(ForkFirm, hq_tile), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("lab_tile", SLE_OBJECT_ADDRESS(ForkFirm, lab_tile), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I64>("revenue_last", SLE_OBJECT_ADDRESS(ForkFirm, revenue_last), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I64>("profit_last", SLE_OBJECT_ADDRESS(ForkFirm, profit_last), SaveLoadVersion::ForkEconomy),
 	SaveLoad::Variable<VarFileType::I64>("profit_average", SLE_OBJECT_ADDRESS(ForkFirm, profit_average), SaveLoadVersion::ForkEconomy),
@@ -144,13 +147,55 @@ struct FKFMChunkHandler : ChunkHandler {
 	}
 };
 
+static const SaveLoad _fork_product_desc[] = {
+	SaveLoad::Variable<VarFileType::U8>("owner", SLE_OBJECT_ADDRESS(ForkUserProduct, owner), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U16>("catalog_id", SLE_OBJECT_ADDRESS(ForkUserProduct, catalog_id), SaveLoadVersion::ForkEconomy),
+	SaveLoad::String("name", SLE_OBJECT_ADDRESS(ForkUserProduct, name), StringValidationSetting::ReplaceWithQuestionMark, SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("quantity", SLE_OBJECT_ADDRESS(ForkUserProduct, quantity), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("price", SLE_OBJECT_ADDRESS(ForkUserProduct, price), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U8>("quality", SLE_OBJECT_ADDRESS(ForkUserProduct, quality), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U8>("discount", SLE_OBJECT_ADDRESS(ForkUserProduct, discount), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U16>("popularity", SLE_OBJECT_ADDRESS(ForkUserProduct, popularity), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::U32>("age_months", SLE_OBJECT_ADDRESS(ForkUserProduct, age_months), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::I64>("income_last", SLE_OBJECT_ADDRESS(ForkUserProduct, income_last), SaveLoadVersion::ForkEconomy),
+	SaveLoad::Variable<VarFileType::I64>("cost_last", SLE_OBJECT_ADDRESS(ForkUserProduct, cost_last), SaveLoadVersion::ForkEconomy),
+};
+
+struct FKPRChunkHandler : ChunkHandler {
+	FKPRChunkHandler() : ChunkHandler("FKPR", ChunkType::Table) {}
+
+	void Save() const override
+	{
+		SlTableHeader(_fork_product_desc);
+
+		for (ForkUserProduct *p : ForkUserProduct::Iterate()) {
+			SlSetArrayIndex(p->index);
+			SlObject(p, _fork_product_desc);
+		}
+	}
+
+	void Load() const override
+	{
+		static const std::vector<SaveLoad> no_compat{};
+		const std::vector<SaveLoad> slt = SlCompatTableHeader(_fork_product_desc, no_compat);
+
+		int index;
+		while ((index = SlIterateArray()) != -1) {
+			ForkUserProduct *p = ForkUserProduct::CreateAtIndex(ForkUserProductID(index));
+			SlObject(p, slt);
+		}
+	}
+};
+
 static const FKECChunkHandler FKEC;
 static const FKASChunkHandler FKAS;
 static const FKFMChunkHandler FKFM;
+static const FKPRChunkHandler FKPR;
 static const ChunkHandlerRef fork_economy_chunk_handlers[] = {
 	FKEC,
 	FKAS,
 	FKFM,
+	FKPR,
 };
 
 extern const ChunkHandlerTable _fork_economy_chunk_handlers(fork_economy_chunk_handlers);

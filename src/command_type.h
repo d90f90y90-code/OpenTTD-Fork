@@ -409,6 +409,12 @@ enum class Commands : uint8_t {
 	UpdateLeagueTableElementScore, ///< update the score of a league table element
 	RemoveLeagueTableElement, ///< remove a league table element
 
+	/* Fork: appended at the end so that upstream command ids keep their values. */
+	CreateForkProduct, ///< create a user-defined product.
+	SetForkProduct, ///< change quantity, price, quality or discount of a product.
+	RenameForkProduct, ///< rename a user-defined product.
+	SellForkCompany, ///< sell the whole company at the new valuation.
+
 	End, ///< @important Must ALWAYS be on the end of this list!! (period)
 };
 

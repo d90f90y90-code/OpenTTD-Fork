@@ -217,9 +217,15 @@ add_files(
     fork_building_sprites.h
     fork_buildings.cpp
     fork_buildings.h
+    fork_building_sprites_data.h
     fork_education.cpp
     fork_education_cmd.h
     fork_education_gui.cpp
+    fork_products.cpp
+    fork_products.h
+    fork_products_cmd.h
+    fork_valuation.cpp
+    fork_valuation.h
     fork_realestate.cpp
     fork_realestate_gui.cpp
     fork_stock.cpp

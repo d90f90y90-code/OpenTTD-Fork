@@ -51,6 +51,8 @@ struct ForkFirm : ForkFirmPool::PoolItem<&_fork_firm_pool> {
 	uint32_t made_last = 0; ///< Units made last month.
 	uint32_t sold_last = 0; ///< Units sold last month.
 	uint32_t age_months = 0; ///< How long the firm exists.
+	uint32_t hq_tile = 0; ///< Northern tile of the 2x2 headquarters block on the map, 0 if it is not built.
+	uint32_t lab_tile = 0; ///< Northern tile of the 2x2 laboratory block on the map, 0 if it is not built.
 	Money revenue_last = 0; ///< What the sales brought last month.
 	Money profit_last = 0; ///< Profit of last month.
 	Money profit_average = 0; ///< Average profit per month, with recent months counting more.

@@ -28,6 +28,7 @@
 #include "fork_firm.h"
 #include "fork_stock.h"
 #include "fork_stock_cmd.h"
+#include "fork_valuation.h"
 #include "news_func.h"
 #include "strings_func.h"
 #include "town.h"
@@ -148,7 +149,7 @@ Money GetForkStockCost(CompanyID company, uint index)
  */
 Money GetForkFirmShareValue(const ForkFirm *f)
 {
-	return std::max<Money>(Money(1), f->value / 100);
+	return std::max<Money>(Money(1), GetForkFirmSaleValue(f, Town::GetIfValid(f->GetTown())) / 100);
 }
 
 /**

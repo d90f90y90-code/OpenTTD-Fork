@@ -6507,3 +6507,55 @@ STR_FORK_EDU_STAGE_FOUNDATION                                   :foundations are
 STR_FORK_EDU_STAGE_FRAME                                        :under construction, no students yet
 STR_FORK_EDU_STAGE_OPEN                                         :finished and open
 STR_ERROR_FORK_EDU_NO_SPACE                                     :{WHITE}There is no free flat land (2x2 tiles) near the middle of this town
+
+## Fork: products, company overview and statistics (added by the unified update).
+STR_FORK_COMPANY_CAPTION                                  :{BLACK}Company: {STRING}
+STR_FORK_COMPANY_INFO                                     :{BLACK}Staff: {NUM}   Expected yearly profit: {CURRENCY_LONG}   Current profit: {CURRENCY_LONG}
+STR_FORK_COMPANY_VALUE                                    :{BLACK}Company value: {CURRENCY_LONG}
+STR_FORK_COMPANY_SELL                                     :Sell company
+STR_FORK_COMPANY_SELL_TOOLTIP                             :Sell everything the company owns at the new market valuation
+STR_FORK_COMPANY_PRODUCTS                                 :Make / manage products
+STR_FORK_COMPANY_PRODUCTS_TOOLTIP                         :Create products and change their quantity, price and quality
+STR_FORK_COMPANY_STATS                                    :Statistics
+STR_FORK_COMPANY_STATS_TOOLTIP                            :Popularity of your products as a chart
+STR_FORK_PRODUCTS_CAPTION                                 :{BLACK}Company products
+STR_FORK_PRODUCTS_NEW                                     :Make a product
+STR_FORK_PRODUCTS_NEW_TOOLTIP                             :Choose a product from the industries available this year
+STR_FORK_PRODUCTS_ROW                                     :{BLACK}{STRING}   Quantity: {NUM}   Price: {CURRENCY_LONG}   Quality: {NUM}   Discount: {NUM}%   Popularity: {NUM}%
+STR_FORK_PRODUCTS_EMPTY                                   :{BLACK}No products yet. Press "Make a product" to start.
+STR_FORK_PRODUCTS_QTY_DOWN                                :Quantity -
+STR_FORK_PRODUCTS_QTY_UP                                  :Quantity +
+STR_FORK_PRODUCTS_PRICE_DOWN                              :Price -
+STR_FORK_PRODUCTS_PRICE_UP                                :Price +
+STR_FORK_PRODUCTS_QUALITY_DOWN                            :Quality -
+STR_FORK_PRODUCTS_QUALITY_UP                              :Quality +
+STR_FORK_PRODUCTS_DISCOUNT_DOWN                           :Discount -
+STR_FORK_PRODUCTS_DISCOUNT_UP                             :Discount +
+STR_FORK_PRODUCTS_RENAME                                  :Rename
+STR_FORK_PRODUCTS_SELL_SHARE                              :Sell share
+STR_FORK_PRODUCTS_SELL_SHARE_TOOLTIP                      :Sell part of your company for its market value
+STR_FORK_PRODUCT_CREATE_CAPTION                           :{BLACK}Make a new product
+STR_FORK_PRODUCT_CREATE_INDUSTRY                          :{BLACK}Industry: {STRING}
+STR_FORK_PRODUCT_CREATE_LIST                              :{BLACK}Product: {STRING}   Base price: {CURRENCY_LONG}
+STR_FORK_PRODUCT_CREATE_NAME                              :Product name
+STR_FORK_PRODUCT_CREATE_MAKE                              :Make product
+STR_FORK_PRODUCT_CREATE_LOCKED                            :{BLACK}Available in year {NUM}
+STR_FORK_INDUSTRY_HOUSEHOLD                               :Household appliances
+STR_FORK_INDUSTRY_LIFE_TECH                               :Consumer electronics
+STR_FORK_INDUSTRY_COMMUNICATIONS                          :Communications
+STR_FORK_INDUSTRY_BEVERAGES                               :Drinks
+STR_FORK_INDUSTRY_FOOD                                    :Food
+STR_FORK_INDUSTRY_CLOTHING                                :Clothes and fabrics
+STR_FORK_INDUSTRY_MEDICAL                                 :Medicine
+STR_FORK_INDUSTRY_GAMES                                   :Game development
+STR_FORK_INDUSTRY_APPS                                    :Software
+STR_FORK_INDUSTRY_BUILDING                                :Building materials
+STR_FORK_INDUSTRY_ENERGY                                  :Energy
+STR_FORK_STATS_CAPTION                                    :{BLACK}Product statistics
+STR_FORK_STATS_FILTER                                     :Filter
+STR_FORK_STATS_ALL                                        :All products
+STR_FORK_STATS_LABEL                                      :{BLACK}{STRING}   Popularity: {NUM}%   Income: {CURRENCY_LONG}
+STR_FORK_STATS_EMPTY                                      :{BLACK}Not enough data yet.
+STR_ERROR_FORK_PRODUCT_LOCKED                             :{WHITE}This product has not been invented yet...
+STR_ERROR_FORK_PRODUCT_NAME                               :{WHITE}Invalid product name...
+STR_FORK_PRODUCT_CREATE_SETTINGS                          :{BLACK}Quantity: {NUM}   Price: {CURRENCY_LONG}

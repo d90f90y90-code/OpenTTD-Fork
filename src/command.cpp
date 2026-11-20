@@ -38,6 +38,7 @@
 #include "fork_usedmarket_cmd.h"
 #include "fork_media_cmd.h"
 #include "fork_education_cmd.h"
+#include "fork_products_cmd.h"
 #include "engine_cmd.h"
 #include "goal_cmd.h"
 #include "group_cmd.h"

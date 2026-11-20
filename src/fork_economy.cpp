@@ -16,6 +16,7 @@
 #include "core/random_func.hpp"
 #include "fork_economy.h"
 #include "fork_firm.h"
+#include "fork_products.h"
 #include "fork_stock.h"
 #include "fork_lease.h"
 #include "fork_media.h"
@@ -194,6 +195,8 @@ static void UpdateMarketCycle()
  */
 void TransferForkAssets(Owner old_owner, Owner new_owner)
 {
+	TransferForkUserProducts(old_owner, new_owner);
+
 	for (ForkAsset *a : ForkAsset::Iterate()) {
 		if (a->owner != old_owner) continue;
 		if (Company::IsValidID(new_owner) && new_owner != old_owner) {
@@ -224,6 +227,7 @@ static void ForkEconomyMonthly()
 	ChargeForkMunicipalTaxes();
 	ForkUsedMarketMonthly();
 	ForkFirmsMonthly();
+	ForkProductsMonthly();
 	ForkStocksMonthly();
 
 	for (ForkAsset *a : ForkAsset::Iterate()) {

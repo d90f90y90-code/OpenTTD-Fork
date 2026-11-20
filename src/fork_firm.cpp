@@ -25,6 +25,7 @@
 #include "economy_func.h"
 #include "fork_economy.h"
 #include "fork_firm.h"
+#include "fork_buildings.h"
 #include "fork_firm_cmd.h"
 #include "news_func.h"
 #include "string_func.h"
@@ -96,10 +97,10 @@ Money GetForkProductCost(uint product, uint quality)
 	return std::max<Money>(Money(1), GetForkProductPrice(product) * FORK_PRODUCTION_COST_PERCENT / 100 * FORK_QUALITY_COST[quality - 1] / 100);
 }
 
-/** @return What it costs to found a firm. */
+/** @return What it costs to found a firm. Fixed at 10000 for every industry, as requested. */
 Money GetForkFirmFoundingCost()
 {
-	return Unit() * 250;
+	return Money(10000);
 }
 
 /**
@@ -180,6 +181,7 @@ static void SpawnFirmOfTown(const Town *t)
 	f->price_percent = static_cast<uint8_t>(std::clamp<int>(_fork_economy.firm_ref_price[f->product] + f->personality, 50, 200));
 	f->value = GetForkFirmFoundingCost() / 2;
 
+	PlaceForkFirmBuildings(f);
 	AddNewsItem(GetEncodedString(STR_FORK_NEWS_FIRM_NPC, f->name, t->index, STR_FORK_PRODUCT_DISHWASHER + f->product), NewsType::Economy, NewsStyle::Normal, {});
 }
 
@@ -291,6 +293,15 @@ void ForkFirmsMonthly()
 
 	for (uint p = 0; p < FORK_PRODUCT_COUNT; p++) RunProductMarket(p, total_population);
 
+	/* Firms that could not be given buildings yet, or whose eight object tiles are gone, try again every few months. */
+	for (ForkFirm *f : ForkFirm::Iterate()) {
+		if ((f->hq_tile != 0 || f->lab_tile != 0) && !AreForkFirmBuildingsPresent(f)) {
+			f->hq_tile = 0;
+			f->lab_tile = 0;
+		}
+		if (f->hq_tile == 0 && f->lab_tile == 0 && f->age_months % 3 == 0) PlaceForkFirmBuildings(f);
+	}
+
 	SetWindowClassesDirty(WindowClass::ForkFirms);
 	SetWindowClassesDirty(WindowClass::ForkFirm);
 }
@@ -327,6 +338,7 @@ CommandCost CmdCreateForkFirm(DoCommandFlags flags, TownID town_id, uint8_t prod
 		f->price_percent = static_cast<uint8_t>(std::clamp<int>(_fork_economy.firm_ref_price[product], 50, 200));
 		f->value = GetForkFirmFoundingCost() / 2;
 
+		PlaceForkFirmBuildings(f);
 		AddNewsItem(GetEncodedString(STR_FORK_NEWS_FIRM_OWN, f->name, _current_company, STR_FORK_PRODUCT_DISHWASHER + product), NewsType::Economy, NewsStyle::Normal, {});
 		SetWindowClassesDirty(WindowClass::ForkFirms);
 		InvalidateWindowData(WindowClass::ForkBusiness, 0);

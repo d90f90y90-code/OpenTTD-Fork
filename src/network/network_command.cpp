@@ -32,6 +32,7 @@
 #include "../fork_usedmarket_cmd.h"
 #include "../fork_media_cmd.h"
 #include "../fork_education_cmd.h"
+#include "../fork_products_cmd.h"
 #include "../engine_cmd.h"
 #include "../error_func.h"
 #include "../goal_cmd.h"

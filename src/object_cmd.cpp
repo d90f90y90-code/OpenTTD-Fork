@@ -454,7 +454,8 @@ static Foundation GetFoundation_Object(TileIndex tile, Slope tileh)
 static void DrawTile_Object(TileInfo *ti)
 {
 	/* The buildings of the fork's economy look different from the object that is on the tile. */
-	if (DrawForkBuildingTile(ti)) return;
+	if (DrawForkFirmBuildingTile(ti)) return;
+	if (DrawForkEducationBuildingTile(ti)) return;
 
 	ObjectType type = GetObjectType(ti->tile);
 	const ObjectSpec *spec = ObjectSpec::Get(type);
@@ -682,7 +683,8 @@ static void AddProducedCargo_Object(TileIndex tile, CargoArray &produced)
 /** @copydoc GetTileDescProc */
 static void GetTileDesc_Object(TileIndex tile, TileDesc &td)
 {
-	if (GetForkBuildingTileDesc(tile, td)) return;
+	if (GetForkFirmBuildingTileDesc(tile, td)) return;
+	if (GetForkEducationBuildingTileDesc(tile, td)) return;
 
 	const ObjectSpec *spec = ObjectSpec::GetByTile(tile);
 	td.str = spec->name;
@@ -753,7 +755,8 @@ static void TileLoop_Object(TileIndex tile)
 /** @copydoc ClickTileProc */
 static bool ClickTile_Object(TileIndex tile)
 {
-	if (ClickForkBuildingTile(tile)) return true;
+	if (ClickForkFirmBuildingTile(tile)) return true;
+	if (ClickForkEducationBuildingTile(tile)) return true;
 	if (!IsObjectType(tile, OBJECT_HQ)) return false;
 
 	ShowCompany(GetTileOwner(tile));
