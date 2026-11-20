@@ -211,6 +211,61 @@ add_files(
     gfx_type.h
     gfxinit.cpp
     gfxinit.h
+    fork_economy.cpp
+    fork_economy.h
+    fork_economy_gui.cpp
+    fork_building_sprites.h
+    fork_buildings.cpp
+    fork_buildings.h
+    fork_building_sprites_data.h
+    fork_education.cpp
+    fork_education_cmd.h
+    fork_education_gui.cpp
+    fork_products.cpp
+    fork_products.h
+    fork_products_cmd.h
+    fork_valuation.cpp
+    fork_valuation.h
+    fork_realestate.cpp
+    fork_realestate_gui.cpp
+    fork_stock.cpp
+    fork_stock.h
+    fork_stock_cmd.h
+    fork_stock_gui.cpp
+    fork_firm.cpp
+    fork_firm.h
+    fork_firm_cmd.h
+    fork_firm_gui.cpp
+    fork_labor.cpp
+    fork_lease.cpp
+    fork_lease.h
+    fork_lease_cmd.h
+    fork_lease_gui.cpp
+    fork_labor_cmd.h
+    fork_labor_gui.cpp
+    fork_quality.cpp
+    fork_realestate_cmd.h
+    fork_rights.cpp
+    fork_rights_cmd.h
+    fork_rights_gui.cpp
+    fork_shop.cpp
+    fork_shop_cmd.h
+    fork_shop_gui.cpp
+    fork_buildings_data.h
+    fork_channel_buildings_data.h
+    fork_logos.cpp
+    fork_media.cpp
+    fork_media.h
+    fork_media_cmd.h
+    fork_media_gui.cpp
+    fork_logos.h
+    fork_logos_data.h
+    fork_customs.cpp
+    fork_tax.cpp
+    fork_usedmarket.cpp
+    fork_usedmarket.h
+    fork_usedmarket_cmd.h
+    fork_usedmarket_gui.cpp
     goal.cpp
     goal_base.h
     goal_cmd.h

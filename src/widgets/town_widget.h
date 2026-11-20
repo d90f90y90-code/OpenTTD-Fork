@@ -46,6 +46,13 @@ enum TownViewWidgets : WidgetID {
 	WID_TV_EXPAND_ROADS, ///< Expand roads of this town (scenario editor only).
 	WID_TV_DELETE,         ///< Delete this town (scenario editor only).
 	WID_TV_GRAPH,
+	WID_TV_REAL_ESTATE,    ///< Open the real estate window of this town.
+	WID_TV_SHOPS,          ///< Open the shops window of this town.
+	WID_TV_STAFF,          ///< Open the staff window of this town.
+	WID_TV_RIGHTS,         ///< Open the rights and licenses window of this town.
+	WID_TV_FIRMS,          ///< Open the companies window of this town.
+	WID_TV_MEDIA,          ///< Open the channels window of this town.
+	WID_TV_EDUCATION,      ///< Open the private education window of this town.
 };
 
 /** Widgets of the #FoundTownWindow class. */

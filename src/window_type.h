@@ -313,6 +313,102 @@ enum class WindowClass : uint16_t {
 	StoryBook,
 
 	/**
+	 * Fork business overview; %Window numbers:
+	 *   - 0 = #ForkBusinessWidgets
+	 */
+	ForkBusiness,
+
+	/**
+	 * Fork real estate of a town; %Window numbers:
+	 *   - #TownID = #ForkRealEstateWidgets
+	 */
+	ForkRealEstate,
+
+	/**
+	 * Fork retail shops of a town; %Window numbers:
+	 *   - #TownID = #ForkShopsWidgets
+	 */
+	ForkShops,
+
+	/**
+	 * Fork staff of a town; %Window numbers:
+	 *   - #TownID = #ForkStaffWidgets
+	 */
+	ForkStaff,
+
+	/**
+	 * Fork rights of a town; %Window numbers:
+	 *   - #TownID = #ForkRightsWidgets
+	 */
+	ForkRights,
+
+	/**
+	 * Fork license terms; %Window numbers:
+	 *   - #TownID * 16 + category = #ForkLicenseWidgets
+	 */
+	ForkLicense,
+
+	/**
+	 * Fork rental contract renewal; %Window numbers:
+	 *   - #VehicleID = #ForkLeaseRenewWidgets
+	 */
+	ForkLeaseRenew,
+
+	/**
+	 * Fork firms of a town; %Window numbers:
+	 *   - #TownID = #ForkFirmsWidgets
+	 */
+	ForkFirms,
+
+	/**
+	 * Fork firm; %Window numbers:
+	 *   - #ForkFirmID = #ForkFirmWidgets
+	 */
+	ForkFirm,
+
+	/**
+	 * Fork founding of a firm; %Window numbers:
+	 *   - #TownID = #ForkFirmCreateWidgets
+	 */
+	ForkFirmCreate,
+
+	/**
+	 * Fork stock exchange; %Window numbers:
+	 *   - 0 = #ForkExchangeWidgets
+	 */
+	ForkExchange,
+
+	/**
+	 * Fork used vehicle market; %Window numbers:
+	 *   - 0 = #ForkUsedMarketWidgets
+	 */
+	ForkUsedMarket,
+
+	/**
+	 * Fork channels of a town; %Window numbers:
+	 *   - #TownID = #ForkMediaWidgets
+	 */
+	ForkMedia,
+
+	/**
+	 * Fork set up of a new channel; %Window numbers:
+	 *   - #TownID * 4 + kind = #ForkChannelCreateWidgets
+	 */
+	ForkChannelCreate,
+
+	/**
+	 * Fork channel; %Window numbers:
+	 *   - asset number = #ForkChannelWidgets
+	 */
+	ForkChannel,
+
+	/**
+	 * Fork private education of a town; %Window numbers:
+	 *   - #TownID = #ForkEducationWidgets
+	 */
+	ForkEducation,
+
+	/**
 	 * Station list; %Window numbers:
 	 *   - #CompanyID = #StationListWidgets
 	 */
@@ -742,6 +838,24 @@ enum class WindowClass : uint16_t {
 	 *   - 0 = #HelpWindowWidgets
 	 */
 	Help,
+
+	/**
+	 * Fork company overview with the manager's face and the sale options; %Window numbers:
+	 *   - #CompanyID = #ForkCompanyWidgets
+	 */
+	ForkCompany,
+
+	/**
+	 * Fork product list and product editor; %Window numbers:
+	 *   - 0 = #ForkProductsWidgets
+	 */
+	ForkProducts,
+
+	/**
+	 * Fork product popularity statistics; %Window numbers:
+	 *   - 0 = #ForkProductStatsWidgets
+	 */
+	ForkProductStats,
 
 	Invalid = 0xFFFF, ///< Invalid window.
 };

@@ -2284,8 +2284,8 @@ struct NetworkAskRelayWindow : public Window {
 	void FindWindowPlacementAndResize(int, int, bool) override
 	{
 		/* Position query window over the calling window, ensuring it's within screen bounds. */
-		this->left = Clamp(parent->left + (parent->width / 2) - (this->width / 2), 0, _screen.width - this->width);
-		this->top = Clamp(parent->top + (parent->height / 2) - (this->height / 2), 0, _screen.height - this->height);
+		this->left = Clamp(parent->left + (parent->width / 2) - (this->width / 2), 0, std::max(0, _screen.width - this->width));
+		this->top = Clamp(parent->top + (parent->height / 2) - (this->height / 2), 0, std::max(0, _screen.height - this->height));
 		this->SetDirty();
 	}
 
@@ -2384,8 +2384,8 @@ struct NetworkAskSurveyWindow : public Window {
 	void FindWindowPlacementAndResize(int, int, bool) override
 	{
 		/* Position query window over the calling window, ensuring it's within screen bounds. */
-		this->left = Clamp(parent->left + (parent->width / 2) - (this->width / 2), 0, _screen.width - this->width);
-		this->top = Clamp(parent->top + (parent->height / 2) - (this->height / 2), 0, _screen.height - this->height);
+		this->left = Clamp(parent->left + (parent->width / 2) - (this->width / 2), 0, std::max(0, _screen.width - this->width));
+		this->top = Clamp(parent->top + (parent->height / 2) - (this->height / 2), 0, std::max(0, _screen.height - this->height));
 		this->SetDirty();
 	}
 

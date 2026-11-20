@@ -34,6 +34,9 @@
 #include "window_func.h"
 #include "townname_func.h"
 #include "core/backup_type.hpp"
+#include "fork_economy.h"
+#include "fork_firm.h"
+#include "fork_media.h"
 #include "core/geometry_func.hpp"
 #include "core/string_consumer.hpp"
 #include "genworld.h"
@@ -396,6 +399,13 @@ public:
 		DrawString(tr, GetString(STR_TOWN_VIEW_POPULATION_HOUSES, this->town->cache.population, this->town->cache.num_houses));
 		tr.top += GetCharacterHeight(FontSize::Normal);
 
+		const uint tax_rate = GetForkTownTaxPermille(this->town);
+		DrawString(tr, GetString(STR_FORK_TOWN_TAX_RATE, tax_rate / 10, tax_rate % 10, tax_rate * 3 / 2 / 10, tax_rate * 3 / 2 % 10));
+		tr.top += GetCharacterHeight(FontSize::Normal);
+
+		DrawString(tr, GetString(STR_FORK_TOWN_CUSTOMS_RATE, GetForkCustomsRate(this->town)));
+		tr.top += GetCharacterHeight(FontSize::Normal);
+
 		StringID str_last_period = TimerGameEconomy::UsingWallclockUnits() ? STR_TOWN_VIEW_CARGO_LAST_MINUTE_MAX : STR_TOWN_VIEW_CARGO_LAST_MONTH_MAX;
 
 		for (auto tpe : {TownProductionEffect::Passengers, TownProductionEffect::Mail}) {
@@ -515,6 +525,34 @@ public:
 				ShowTownCargoGraph(this->window_number);
 				break;
 			}
+
+			case WID_TV_REAL_ESTATE:
+				ShowForkRealEstateWindow(this->window_number);
+				break;
+
+			case WID_TV_SHOPS:
+				ShowForkShopsWindow(this->window_number);
+				break;
+
+			case WID_TV_EDUCATION:
+				ShowForkEducationWindow(this->window_number);
+				break;
+
+			case WID_TV_STAFF:
+				ShowForkStaffWindow(this->window_number);
+				break;
+
+			case WID_TV_RIGHTS:
+				ShowForkRightsWindow(this->window_number);
+				break;
+
+			case WID_TV_FIRMS:
+				ShowForkFirmsWindow(this->window_number);
+				break;
+
+			case WID_TV_MEDIA:
+				ShowForkMediaWindow(this->window_number);
+				break;
 		}
 	}
 
@@ -534,7 +572,7 @@ public:
 	 */
 	uint GetDesiredInfoHeight(int width) const
 	{
-		uint aimed_height = static_cast<uint>(1 + CargoSpec::town_production_cargoes[TownProductionEffect::Passengers].size() + CargoSpec::town_production_cargoes[TownProductionEffect::Mail].size()) * GetCharacterHeight(FontSize::Normal);
+		uint aimed_height = static_cast<uint>(3 + CargoSpec::town_production_cargoes[TownProductionEffect::Passengers].size() + CargoSpec::town_production_cargoes[TownProductionEffect::Mail].size()) * GetCharacterHeight(FontSize::Normal);
 
 		bool first = true;
 		for (TownAcceptanceEffect i : EnumRange(TownAcceptanceEffect::End)) {
@@ -632,7 +670,16 @@ static constexpr std::initializer_list<NWidgetPart> _nested_town_game_view_widge
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_SHOW_AUTHORITY), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_TOWN_VIEW_LOCAL_AUTHORITY_BUTTON, STR_TOWN_VIEW_LOCAL_AUTHORITY_TOOLTIP),
 		NWidget(WWT_TEXTBTN, Colours::Brown, WID_TV_CATCHMENT), SetMinimalSize(40, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_BUTTON_CATCHMENT, STR_TOOLTIP_CATCHMENT),
 		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_GRAPH), SetFill(1, 0), SetResize(1, 0), SetStringTip(STR_TOWN_VIEW_CARGO_GRAPH, STR_TOWN_VIEW_CARGO_GRAPH_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_REAL_ESTATE), SetFill(1, 0), SetResize(1, 0), SetStringTip(STR_FORK_REAL_ESTATE_BUTTON, STR_FORK_REAL_ESTATE_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_SHOPS), SetFill(1, 0), SetResize(1, 0), SetStringTip(STR_FORK_SHOP_BUTTON, STR_FORK_SHOP_TOOLTIP),
 		NWidget(WWT_RESIZEBOX, Colours::Brown),
+	EndContainer(),
+	NWidget(NWID_HORIZONTAL, NWidContainerFlag::EqualSize),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_STAFF), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_STAFF_BUTTON, STR_FORK_STAFF_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_RIGHTS), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_RIGHTS_BUTTON, STR_FORK_RIGHTS_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_FIRMS), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_FIRMS_BUTTON, STR_FORK_FIRMS_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_MEDIA), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_MEDIA_BUTTON, STR_FORK_MEDIA_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, Colours::Brown, WID_TV_EDUCATION), SetMinimalSize(80, 12), SetFill(1, 1), SetResize(1, 0), SetStringTip(STR_FORK_EDU_BUTTON, STR_FORK_EDU_TOOLTIP),
 	EndContainer(),
 };
 

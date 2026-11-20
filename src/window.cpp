@@ -1536,7 +1536,7 @@ void Window::FindWindowPlacementAndResize(int def_width, int def_height, bool al
 			const Window *wt = FindWindowById(WindowClass::Statusbar, 0);
 			if (wt != nullptr) free_height -= wt->height;
 			wt = FindWindowById(WindowClass::MainToolbar, 0);
-			if (wt != nullptr) free_height -= wt->height;
+			if (wt != nullptr && !AreSideToolbarsActive()) free_height -= wt->height;
 
 			int enlarge_x = std::max(std::min(def_width  - this->width,  _screen.width - this->width),  0);
 			int enlarge_y = std::max(std::min(def_height - this->height, free_height   - this->height), 0);
@@ -1561,7 +1561,7 @@ void Window::FindWindowPlacementAndResize(int def_width, int def_height, bool al
 	if (nx + this->width > _screen.width) nx -= (nx + this->width - _screen.width);
 
 	const Window *wt = FindWindowById(WindowClass::MainToolbar, 0);
-	ny = std::max(ny, (wt == nullptr || this == wt || this->top == 0) ? 0 : wt->height);
+	ny = std::max(ny, (wt == nullptr || this == wt || this->top == 0 || AreSideToolbarsActive()) ? 0 : wt->height);
 	nx = std::max(nx, 0);
 
 	if (this->viewport != nullptr) {
@@ -1669,8 +1669,15 @@ static Point GetAutoPlacePosition(int width, int height)
 
 	/* First attempt, try top-left of the screen */
 	const Window *main_toolbar = FindWindowByClass(WindowClass::MainToolbar);
-	const int toolbar_y =  main_toolbar != nullptr ? main_toolbar->height : 0;
-	if (IsGoodAutoPlace1(rtl ? _screen.width - width : 0, toolbar_y, width, height, toolbar_y, pt)) return pt;
+	const bool side_toolbars = AreSideToolbarsActive();
+	const int toolbar_y = (main_toolbar != nullptr && !side_toolbars) ? main_toolbar->height : 0;
+	int left_margin = 0; // Space taken by the toolbar columns at the sides of the screen.
+	int right_margin = 0;
+	if (side_toolbars) {
+		if (const Window *wl = FindWindowById(WindowClass::MainToolbar, 1); wl != nullptr) left_margin = wl->width;
+		if (const Window *wr = FindWindowById(WindowClass::MainToolbar, 0); wr != nullptr) right_margin = wr->width;
+	}
+	if (IsGoodAutoPlace1(rtl ? _screen.width - width - right_margin : left_margin, toolbar_y, width, height, toolbar_y, pt)) return pt;
 
 	/* Second attempt, try around all existing windows.
 	 * The new window must be entirely on-screen, and not overlap with an existing window.
@@ -1733,6 +1740,11 @@ Point GetToolbarAlignedWindowPosition(int window_width)
 {
 	const Window *w = FindWindowById(WindowClass::MainToolbar, 0);
 	assert(w != nullptr);
+	if (AreSideToolbarsActive()) {
+		/* Open next to the right toolbar column. */
+		Point side_pt = { w->left - window_width, 0 };
+		return side_pt;
+	}
 	Point pt = { _current_text_dir == TD_RTL ? w->left : (w->left + w->width) - window_width, w->top + w->height };
 	return pt;
 }
@@ -2119,7 +2131,7 @@ static void EnsureVisibleCaption(Window *w, int nx, int ny)
 		ny = Clamp(ny, 0, _screen.height - min_visible);
 
 		/* Make sure the title bar isn't hidden behind the main tool bar or the status bar. */
-		PreventHiding(&nx, &ny, caption_rect, FindWindowById(WindowClass::MainToolbar, 0), w->left, PreventHideDirection::Down);
+		if (!AreSideToolbarsActive()) PreventHiding(&nx, &ny, caption_rect, FindWindowById(WindowClass::MainToolbar, 0), w->left, PreventHideDirection::Down);
 		PreventHiding(&nx, &ny, caption_rect, FindWindowById(WindowClass::Statusbar, 0), w->left, PreventHideDirection::Up);
 	}
 
@@ -2186,7 +2198,7 @@ void ResizeWindow(Window *w, int delta_x, int delta_y, bool clamp_to_screen, boo
 int GetMainViewTop()
 {
 	Window *w = FindWindowById(WindowClass::MainToolbar, 0);
-	return (w == nullptr) ? 0 : w->top + w->height;
+	return (w == nullptr || AreSideToolbarsActive()) ? 0 : w->top + w->height;
 }
 
 /**
@@ -3477,6 +3489,7 @@ void CloseConstructionWindows()
 void HideVitalWindows()
 {
 	CloseWindowById(WindowClass::MainToolbar, 0);
+	CloseWindowById(WindowClass::MainToolbar, 1); // Second toolbar column, if any.
 	CloseWindowById(WindowClass::Statusbar, 0);
 }
 
@@ -3502,6 +3515,7 @@ void ReInitAllWindows(bool zoom_changed)
 	/* When _gui_zoom has changed, we need to resize toolbar and statusbar first,
 	 * so EnsureVisibleCaption uses the updated size information. */
 	ReInitWindow(FindWindowById(WindowClass::MainToolbar, 0), zoom_changed);
+	if (Window *wl = FindWindowById(WindowClass::MainToolbar, 1); wl != nullptr) ReInitWindow(wl, zoom_changed);
 	ReInitWindow(FindWindowById(WindowClass::Statusbar, 0), zoom_changed);
 	for (Window *w : Window::Iterate()) {
 		if (w->window_class == WindowClass::MainToolbar || w->window_class == WindowClass::Statusbar) continue;
@@ -3549,6 +3563,21 @@ static int PositionWindow(Window *w, WindowClass clss, int setting)
 int PositionMainToolbar(Window *w)
 {
 	Debug(Facility::Misc, Severity::Debug1, "Repositioning Main Toolbar...");
+	if (AreSideToolbarsActive()) {
+		/* Right column is window 0, left column window 1. */
+		Window *right = FindWindowById(WindowClass::MainToolbar, 0);
+		Window *left = FindWindowById(WindowClass::MainToolbar, 1);
+		if (right != nullptr) {
+			right->left = _screen.width - right->width;
+			right->top = 0;
+		}
+		if (left != nullptr) {
+			left->left = 0;
+			left->top = 0;
+		}
+		MarkWholeScreenDirty();
+		return right != nullptr ? right->left : 0;
+	}
 	return PositionWindow(w, WindowClass::MainToolbar, _settings_client.gui.toolbar_pos);
 }
 
@@ -3613,7 +3642,7 @@ void RelocateAllWindows(int neww, int newh)
 
 	/* Reposition toolbar then status bar before other all windows. */
 	if (Window *wt = FindWindowById(WindowClass::MainToolbar, 0); wt != nullptr) {
-		ResizeWindow(wt, std::min<uint>(neww, _toolbar_width) - wt->width, 0, false);
+		if (!AreSideToolbarsActive()) ResizeWindow(wt, std::min<uint>(neww, _toolbar_width) - wt->width, 0, false);
 		wt->left = PositionMainToolbar(wt);
 	}
 

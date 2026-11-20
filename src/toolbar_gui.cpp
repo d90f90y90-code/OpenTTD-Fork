@@ -53,6 +53,10 @@
 #include "goal_gui.h"
 #include "story_base.h"
 #include "toolbar_gui.h"
+#include "fork_economy.h"
+#include "fork_logos.h"
+#include "fork_usedmarket.h"
+#include "zoom_func.h"
 #include "framerate_type.h"
 #include "screenshot_gui.h"
 #include "misc_cmd.h"
@@ -705,6 +709,12 @@ static CallBackFunction ToolbarGraphsClick(Window *w)
 
 static CallBackFunction ToolbarLeagueClick(Window *w)
 {
+	/* On the side toolbars this button opens the fork's business overview instead of the league table menu. */
+	if (AreSideToolbarsActive()) {
+		ShowForkBusinessWindow();
+		return CallBackFunction::None;
+	}
+
 	DropDownList list;
 
 	AddDropDownLeagueTableOptions(list);
@@ -1966,6 +1976,13 @@ class NWidgetScenarioToolbarContainer : public NWidgetToolbarContainer {
  * @param w The clicked window.
  * @return The callback function.
  */
+/** Open the used vehicle market. */
+static CallBackFunction ToolbarUsedMarketClick(Window *)
+{
+	ShowForkUsedMarketWindow();
+	return CallBackFunction::None;
+}
+
 using ToolbarButtonProc = CallBackFunction(Window *w);
 
 static ToolbarButtonProc * const _toolbar_button_procs[] = {
@@ -1999,26 +2016,45 @@ static ToolbarButtonProc * const _toolbar_button_procs[] = {
 	ToolbarMusicClick,
 	ToolbarNewspaperClick,
 	ToolbarHelpClick,
+	ToolbarUsedMarketClick,
 	ToolbarSwitchClick,
 };
 
 /** Main toolbar. */
 struct MainToolbarWindow : Window {
-	MainToolbarWindow(WindowDesc &desc) : Window(desc)
+	/** Whether this window is one of the two side columns (instead of the full width toolbar). */
+	bool is_side_column;
+
+	MainToolbarWindow(WindowDesc &desc, WindowNumber number = 0, bool is_side_column = false) : Window(desc), is_side_column(is_side_column)
 	{
-		this->InitNested(0);
+		this->InitNested(number);
 
 		_last_started_action = CallBackFunction::None;
 		this->flags.Reset(WindowFlag::WhiteBorder);
 		this->SetWidgetDisabledState(WID_TN_PAUSE, _networking && !_network_server); // if not server, disable pause button
 		this->SetWidgetDisabledState(WID_TN_FAST_FORWARD, _networking); // if networking, disable fast-forward button
 		PositionMainToolbar(this);
-		DoZoomInOutWindow(ZOOM_NONE, this);
+		if (this->HasZoomButtons()) DoZoomInOutWindow(ZOOM_NONE, this);
 	}
 
-	void FindWindowPlacementAndResize(int, int def_height, bool allow_resize) override
+	void DrawWidget(const Rect &r, WidgetID widget) const override
 	{
-		Window::FindWindowPlacementAndResize(_toolbar_width, def_height, allow_resize);
+		if (widget == WID_TN_USED_MARKET) DrawForkLogo(ForkLogo::CarMarket, r.Shrink(ScaleGUITrad(4)));
+	}
+
+	/** Whether this window contains the zoom and pause buttons; side columns only have some of the buttons. */
+	bool HasZoomButtons() const
+	{
+		return this->GetWidget<NWidgetCore>(WID_TN_ZOOM_IN) != nullptr && this->GetWidget<NWidgetCore>(WID_TN_ZOOM_OUT) != nullptr;
+	}
+
+	void FindWindowPlacementAndResize(int def_width, int def_height, bool allow_resize) override
+	{
+		if (this->is_side_column) {
+			Window::FindWindowPlacementAndResize(def_width, def_height, allow_resize);
+		} else {
+			Window::FindWindowPlacementAndResize(_toolbar_width, def_height, allow_resize);
+		}
 	}
 
 	void OnPaint() override
@@ -2119,12 +2155,13 @@ struct MainToolbarWindow : Window {
 
 	/** Refresh the state of pause / game-speed on a regular interval.*/
 	const IntervalTimer<TimerWindow> refresh_interval = {std::chrono::milliseconds(30), [this](auto) {
-		if (this->IsWidgetLowered(WID_TN_PAUSE) != _pause_mode.Any()) {
+		/* The side columns do not contain all buttons. */
+		if (this->GetWidget<NWidgetCore>(WID_TN_PAUSE) != nullptr && this->IsWidgetLowered(WID_TN_PAUSE) != _pause_mode.Any()) {
 			this->ToggleWidgetLoweredState(WID_TN_PAUSE);
 			this->SetWidgetDirty(WID_TN_PAUSE);
 		}
 
-		if (this->IsWidgetLowered(WID_TN_FAST_FORWARD) != (_game_speed != 100)) {
+		if (this->GetWidget<NWidgetCore>(WID_TN_FAST_FORWARD) != nullptr && this->IsWidgetLowered(WID_TN_FAST_FORWARD) != (_game_speed != 100)) {
 			this->ToggleWidgetLoweredState(WID_TN_FAST_FORWARD);
 			this->SetWidgetDirty(WID_TN_FAST_FORWARD);
 		}
@@ -2138,7 +2175,7 @@ struct MainToolbarWindow : Window {
 	void OnInvalidateData([[maybe_unused]] int data = 0, [[maybe_unused]] bool gui_scope = true) override
 	{
 		if (!gui_scope) return;
-		HandleZoomMessage(this, *GetMainWindow()->viewport, WID_TN_ZOOM_IN, WID_TN_ZOOM_OUT);
+		if (this->HasZoomButtons()) HandleZoomMessage(this, *GetMainWindow()->viewport, WID_TN_ZOOM_IN, WID_TN_ZOOM_OUT);
 	}
 
 	static inline HotkeyList hotkeys{"maintoolbar", {
@@ -2217,6 +2254,7 @@ static constexpr std::tuple<WidgetID, WidgetType, SpriteID> _toolbar_button_spri
 	{WID_TN_MUSIC_SOUND,  WWT_IMGBTN,     SPR_IMG_MUSIC},
 	{WID_TN_MESSAGES,     WWT_IMGBTN,     SPR_IMG_MESSAGES},
 	{WID_TN_HELP,         WWT_IMGBTN,     SPR_IMG_QUERY},
+	{WID_TN_USED_MARKET, WWT_PUSHBTN,    SPR_IMG_QUERY},
 	{WID_TN_SWITCH_BAR,   WWT_IMGBTN,     SPR_IMG_SWITCH_TOOLBAR},
 };
 
@@ -2263,6 +2301,131 @@ static std::unique_ptr<NWidgetBase> MakeMainToolbar()
 static constexpr std::initializer_list<NWidgetPart> _nested_toolbar_normal_widgets = {
 	NWidgetFunction(MakeMainToolbar),
 };
+
+/**
+ * Whether the toolbar is shown as two columns at the left and right screen edge.
+ * @return True iff the side columns are used, which is only the case for the Android port when playing (not in the editor).
+ */
+bool AreSideToolbarsActive()
+{
+#ifdef OPENTTD_SIDE_TOOLBARS
+	return _game_mode != GameMode::Editor;
+#else
+	return false;
+#endif
+}
+
+#ifdef OPENTTD_SIDE_TOOLBARS
+/** Container that stacks the toolbar buttons vertically, for use at the side of the screen. */
+class NWidgetSideToolbarContainer : public NWidgetVertical {
+public:
+	void SetupSmallestSize(Window *w) override
+	{
+		this->NWidgetVertical::SetupSmallestSize(w);
+
+		/* The status bar is shown between the two columns; keep it from getting too wide. */
+		_toolbar_width = static_cast<uint>(_screen.width) * 3 / 5;
+	}
+};
+
+/**
+ * Make a vertical column of toolbar buttons.
+ * @param buttons The widgets to put in the column, from top to bottom.
+ * @return The container with the buttons.
+ */
+template <size_t N>
+static std::unique_ptr<NWidgetBase> MakeSideToolbar(const WidgetID (&buttons)[N])
+{
+	/* Slightly larger than the normal buttons, so they are easier to hit with a finger. */
+	const Dimension image = GetToolbarMaximalImageSize();
+	const uint size = (std::max(image.width, image.height) + WidgetDimensions::scaled.imgbtn.Horizontal()) * 5 / 4;
+
+	auto column = std::make_unique<NWidgetSideToolbarContainer>();
+	for (WidgetID widget : buttons) {
+		for (const auto &[wid, tp, sprite] : _toolbar_button_sprites) {
+			if (wid != widget) continue;
+			StringID tooltip = STR_TOOLBAR_TOOLTIP_PAUSE_GAME + widget;
+			if (widget == WID_TN_LEAGUE) tooltip = STR_FORK_BUSINESS_TOOLTIP;
+			if (widget == WID_TN_USED_MARKET) tooltip = STR_FORK_UM_TOOLTIP;
+			auto leaf = std::make_unique<NWidgetLeaf>(tp, Colours::Grey, widget, WidgetData{.sprite = sprite}, tooltip);
+			leaf->SetMinimalSizeAbsolute(size, size);
+			column->Add(std::move(leaf));
+			break;
+		}
+	}
+	return column;
+}
+
+/** Left column: game options, saving, map, lists and statistics. */
+static std::unique_ptr<NWidgetBase> MakeLeftToolbar()
+{
+	static const WidgetID buttons[] = {
+		WID_TN_SETTINGS,
+		WID_TN_SAVE,
+		WID_TN_SMALL_MAP,
+		WID_TN_TOWNS,
+		WID_TN_SUBSIDIES,
+		WID_TN_STATIONS,
+		WID_TN_FINANCES,
+		WID_TN_COMPANIES,
+		WID_TN_LEAGUE, // Opens the business overview.
+		WID_TN_GRAPHS,
+		WID_TN_INDUSTRIES,
+		WID_TN_USED_MARKET, // Opens the used vehicle market.
+		WID_TN_MUSIC_SOUND,
+		WID_TN_MESSAGES,
+		WID_TN_HELP,
+	};
+	return MakeSideToolbar(buttons);
+}
+
+/** Right column: pause, zoom, vehicle lists and construction. */
+static std::unique_ptr<NWidgetBase> MakeRightToolbar()
+{
+	static const WidgetID buttons[] = {
+		WID_TN_PAUSE,
+		WID_TN_FAST_FORWARD,
+		WID_TN_ZOOM_IN,
+		WID_TN_ZOOM_OUT,
+		WID_TN_TRAINS,
+		WID_TN_ROADVEHS,
+		WID_TN_SHIPS,
+		WID_TN_AIRCRAFT,
+		WID_TN_RAILS,
+		WID_TN_ROADS,
+		WID_TN_WATER,
+		WID_TN_AIR,
+		WID_TN_LANDSCAPE,
+	};
+	return MakeSideToolbar(buttons);
+}
+
+static constexpr std::initializer_list<NWidgetPart> _nested_toolbar_left_widgets = {
+	NWidgetFunction(MakeLeftToolbar),
+};
+
+static constexpr std::initializer_list<NWidgetPart> _nested_toolbar_right_widgets = {
+	NWidgetFunction(MakeRightToolbar),
+};
+
+/** Window definition for the left toolbar column. */
+static WindowDesc _toolb_left_desc(
+	WindowPosition::Manual, {}, 0, 0,
+	WindowClass::MainToolbar, WindowClass::None,
+	{WindowDefaultFlag::NoFocus, WindowDefaultFlag::NoClose},
+	_nested_toolbar_left_widgets,
+	&MainToolbarWindow::hotkeys
+);
+
+/** Window definition for the right toolbar column. */
+static WindowDesc _toolb_right_desc(
+	WindowPosition::Manual, {}, 0, 0,
+	WindowClass::MainToolbar, WindowClass::None,
+	{WindowDefaultFlag::NoFocus, WindowDefaultFlag::NoClose},
+	_nested_toolbar_right_widgets,
+	&MainToolbarWindow::hotkeys
+);
+#endif /* OPENTTD_SIDE_TOOLBARS */
 
 /** Window definition for the normal (top) toolbar. */
 static WindowDesc _toolb_normal_desc(
@@ -2623,6 +2786,12 @@ void AllocateToolbar()
 	if (_game_mode == GameMode::Editor) {
 		new ScenarioEditorToolbarWindow(_toolb_scen_desc);
 	} else {
+#ifdef OPENTTD_SIDE_TOOLBARS
+		/* The right column is window 0, so everything that looks up 'the' main toolbar finds that one. */
+		new MainToolbarWindow(_toolb_right_desc, 0, true);
+		new MainToolbarWindow(_toolb_left_desc, 1, true);
+#else
 		new MainToolbarWindow(_toolb_normal_desc);
+#endif
 	}
 }

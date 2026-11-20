@@ -266,6 +266,33 @@ enum class Commands : uint8_t {
 	IndustrySetProduction, ///< change industry production
 	InvestInIndustry, ///< buy a stake in an industry
 	SellIndustryStake, ///< sell a stake in an industry
+	BuyForkHouses, ///< buy houses in a town
+	SellForkHouses, ///< sell houses in a town
+	SetForkRent, ///< change the rent asked for houses in a town
+	BuyForkShops, ///< open shops in a town
+	SellForkShops, ///< sell shops in a town
+	SetForkShopPrice, ///< change the prices of the shops in a town
+	HireForkStaff, ///< hire staff in a town
+	FireForkStaff, ///< fire staff in a town
+	BuyForkRight, ///< buy a right to transport cargo from a town
+	SignForkLicense, ///< sign an annual license to transport cargo from a town
+	LeaseForkVehicle, ///< take a vehicle on installments or rent
+	RenewForkLease, ///< renew a rental contract that ended, or return the vehicle
+	CreateForkFirm, ///< found a technology firm in a town
+	SetForkFirm, ///< change how a firm works: production, quality, price, discount
+	DumpForkFirmStock, ///< throw away the stock of a firm
+	BuyForkStock, ///< buy shares of a listed company
+	SellForkStock, ///< sell shares of a listed company
+	BuyForkFirmShare, ///< buy a part of a firm of a town
+	SellForkFirmShare, ///< sell a part of a firm of a town
+	TakeOverForkFirm, ///< take over a firm of a town
+	BuyUsedVehicle, ///< buy a used vehicle from a dealer
+	BuildForkChannel, ///< build a television or radio channel
+	SetForkChannelPackage, ///< change the paid package of a channel
+	BuildForkSchool, ///< build a private school or university in a town
+	SellForkSchool, ///< sell a private school or university
+	ForkSchoolAction, ///< change settings of a school or university, enlarge it, open or close faculties
+	RenameForkSchool, ///< rename a private school or university
 
 	SetCompanyManagerFace, ///< set the manager's face of the company
 	SetCompanyColour, ///< set the colour of the company
@@ -381,6 +408,12 @@ enum class Commands : uint8_t {
 	UpdateLeagueTableElementData, ///< update the data fields of a league table element
 	UpdateLeagueTableElementScore, ///< update the score of a league table element
 	RemoveLeagueTableElement, ///< remove a league table element
+
+	/* Fork: appended at the end so that upstream command ids keep their values. */
+	CreateForkProduct, ///< create a user-defined product.
+	SetForkProduct, ///< change quantity, price, quality or discount of a product.
+	RenameForkProduct, ///< rename a user-defined product.
+	SellForkCompany, ///< sell the whole company at the new valuation.
 
 	End, ///< @important Must ALWAYS be on the end of this list!! (period)
 };

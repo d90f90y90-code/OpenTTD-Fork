@@ -4973,3 +4973,1588 @@ STR_SHIP                                                        :{BLACK}{SHIP}
 
 STR_TOOLBAR_RAILTYPE_VELOCITY                                   :{STRING} ({VELOCITY})
 
+STR_ERROR_FORK_TOO_MANY_ASSETS                                  :{WHITE}عدد الأصول في اللعبة كبير جداً
+STR_FORK_TOWN_TAX_RATE                                          :{BLACK}الضريبة المحلية: {NUM}.{NUM}% (على العقارات: {NUM}.{NUM}% سنوياً)
+STR_FORK_REAL_ESTATE_BUTTON                                     :{BLACK}عقارات
+STR_FORK_REAL_ESTATE_TOOLTIP                                    :{BLACK}شراء وبيع البيوت في هذه المدينة وتحديد الإيجار
+STR_FORK_RE_CAPTION                                             :عقارات: {TOWN}
+STR_FORK_RE_BUY_1                                               :{BLACK}شراء بيت
+STR_FORK_RE_BUY_10                                              :{BLACK}شراء 10 بيوت
+STR_FORK_RE_SELL_1                                              :{BLACK}بيع بيت
+STR_FORK_RE_SELL_10                                             :{BLACK}بيع 10 بيوت
+STR_FORK_RE_BUY_TOOLTIP                                         :{BLACK}شراء بيوت في هذه المدينة. تُؤجَّر للسكان
+STR_FORK_RE_SELL_TOOLTIP                                        :{BLACK}بيع البيوت التي تملكها منذ أطول فترة
+STR_FORK_RE_RENT_DOWN                                           :{BLACK}الإيجار -10%
+STR_FORK_RE_RENT_UP                                             :{BLACK}الإيجار +10%
+STR_FORK_RE_RENT_DOWN_TOOLTIP                                   :{BLACK}تخفيض الإيجار: يرغب الناس أكثر في بيوتك، لكن ربح كل بيت أقل
+STR_FORK_RE_RENT_UP_TOOLTIP                                     :{BLACK}رفع الإيجار: ربح كل بيت أكبر، لكن يبقى مستأجرون أقل
+STR_FORK_RE_OWNED                                               :{BLACK}البيوت التي تملكها: {NUM} من {NUM}   القيمة: {CURRENCY_LONG}
+STR_FORK_RE_PRICE                                               :{BLACK}سعر البيت: {CURRENCY_LONG}   تبيع بـ: {CURRENCY_LONG}
+STR_FORK_RE_MARKET_UP                                           :{BLACK}سوق العقارات هذا الشهر: صعود {NUM}.{NUM}%
+STR_FORK_RE_MARKET_DOWN                                         :{BLACK}سوق العقارات هذا الشهر: هبوط {NUM}.{NUM}%
+STR_FORK_RE_MARKET_RENT                                         :{BLACK}إيجار السوق: {CURRENCY_LONG} للبيت شهرياً
+STR_FORK_RE_YOUR_RENT                                           :{BLACK}إيجارك: {NUM}% من إيجار السوق   الإشغال: {NUM}%
+STR_FORK_RE_INCOME                                              :{BLACK}دخل الإيجار: {CURRENCY_LONG} شهرياً   ضريبة العقارات: {CURRENCY_LONG} شهرياً
+STR_ERROR_FORK_CAN_T_BUY_HOUSES                                 :{WHITE}لا يمكن شراء بيوت هنا ...
+STR_ERROR_FORK_CAN_T_SELL_HOUSES                                :{WHITE}لا يمكن بيع بيوت هنا ...
+STR_ERROR_FORK_CAN_T_SET_RENT                                   :{WHITE}لا يمكن تغيير الإيجار هنا ...
+STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}المدينة صغيرة جداً، تُباع البيوت فقط في مدن فيها 100 ساكن على الأقل
+STR_ERROR_FORK_HOUSE_LIMIT                                      :{WHITE}لا يمكنك امتلاك بيوت هنا أكثر مما في المدينة
+STR_ERROR_FORK_NO_HOUSES                                        :{WHITE}لا تملك هذا العدد من البيوت في هذه المدينة
+STR_FORK_SHOP_BUTTON                                            :{BLACK}متاجر
+STR_FORK_SHOP_TOOLTIP                                           :{BLACK}فتح وبيع المتاجر في هذه المدينة وتحديد الأسعار
+STR_FORK_SHOP_CAPTION                                           :متاجر: {TOWN}
+STR_FORK_SHOP_BUY_1                                             :{BLACK}فتح متجر
+STR_FORK_SHOP_BUY_10                                            :{BLACK}فتح 10 متاجر
+STR_FORK_SHOP_SELL_1                                            :{BLACK}بيع متجر
+STR_FORK_SHOP_SELL_10                                           :{BLACK}بيع 10 متاجر
+STR_FORK_SHOP_BUY_TOOLTIP                                       :{BLACK}فتح متاجر في هذه المدينة. دخلها من إنفاق السكان
+STR_FORK_SHOP_SELL_TOOLTIP                                      :{BLACK}بيع متاجر في هذه المدينة
+STR_FORK_SHOP_PRICE_DOWN                                        :{BLACK}الأسعار -10%
+STR_FORK_SHOP_PRICE_UP                                          :{BLACK}الأسعار +10%
+STR_FORK_SHOP_PRICE_DOWN_TOOLTIP                                :{BLACK}تخفيض الأسعار: زبائن أكثر، لكن ربح أقل في كل عملية بيع
+STR_FORK_SHOP_PRICE_UP_TOOLTIP                                  :{BLACK}رفع الأسعار: ربح أكبر في كل عملية بيع، لكن يذهب الزبائن إلى المنافسين
+STR_FORK_SHOP_OWNED                                             :{BLACK}المتاجر التي تملكها: {NUM} من {NUM}   القيمة: {CURRENCY_LONG}
+STR_FORK_SHOP_PRICE                                             :{BLACK}سعر المتجر: {CURRENCY_LONG}   تبيع بـ: {CURRENCY_LONG}
+STR_FORK_SHOP_SPENDING                                          :{BLACK}ينفق السكان في المتاجر: {CURRENCY_LONG} شهرياً
+STR_FORK_SHOP_YOUR_PRICES                                       :{BLACK}أسعارك: {NUM}% من المعتاد   حصتك من السوق: {NUM}.{NUM}%
+STR_FORK_SHOP_SALES                                             :{BLACK}المبيعات: {CURRENCY_LONG} شهرياً   التكاليف: {CURRENCY_LONG} شهرياً
+STR_FORK_SHOP_PROFIT                                            :{BLACK}الربح: {CURRENCY_LONG} شهرياً   ضريبة العقارات: {CURRENCY_LONG} شهرياً
+STR_ERROR_FORK_CAN_T_BUY_SHOPS                                  :{WHITE}لا يمكن فتح متاجر هنا ...
+STR_ERROR_FORK_CAN_T_SELL_SHOPS                                 :{WHITE}لا يمكن بيع متاجر هنا ...
+STR_ERROR_FORK_CAN_T_SET_SHOP_PRICE                             :{WHITE}لا يمكن تغيير الأسعار هنا ...
+STR_ERROR_FORK_SHOP_TOWN_TOO_SMALL                              :{WHITE}المدينة صغيرة جداً، تُفتح المتاجر فقط في مدن فيها 300 ساكن على الأقل
+STR_ERROR_FORK_SHOP_LIMIT                                       :{WHITE}لا يمكنك امتلاك متاجر أكثر هنا: الحد نصف عدد بيوت المدينة، وبحد أقصى 40
+STR_ERROR_FORK_NO_SHOPS                                         :{WHITE}لا تملك هذا العدد من المتاجر في هذه المدينة
+STR_FORK_STAFF_BUTTON                                           :{BLACK}الموظفون
+STR_FORK_STAFF_TOOLTIP                                          :{BLACK}توظيف وفصل المديرين والإداريين في هذه المدينة
+STR_FORK_STAFF_CAPTION                                          :الموظفون: {TOWN}
+STR_FORK_STAFF_HIRE_1                                           :{BLACK}توظيف 1
+STR_FORK_STAFF_HIRE_5                                           :{BLACK}توظيف 5
+STR_FORK_STAFF_FIRE_1                                           :{BLACK}فصل 1
+STR_FORK_STAFF_FIRE_5                                           :{BLACK}فصل 5
+STR_FORK_STAFF_HIRE_TOOLTIP                                     :{BLACK}توظيف موظفين. التوظيف يكلّف راتبين شهريين عن كل شخص
+STR_FORK_STAFF_FIRE_TOOLTIP                                     :{BLACK}فصل موظفين. تعويض الفصل راتب شهري عن كل شخص
+STR_FORK_STAFF_EMPLOYED                                         :{BLACK}الموظفون لديك: {NUM} من {NUM}   المطلوب لأصولك: {NUM}
+STR_FORK_STAFF_WAGE                                             :{BLACK}راتب الشخص: {CURRENCY_LONG} شهرياً
+STR_FORK_STAFF_COSTS                                            :{BLACK}كلفة التوظيف: {CURRENCY_LONG} للشخص   تعويض الفصل: {CURRENCY_LONG} للشخص
+STR_FORK_STAFF_ASSETS                                           :{BLACK}أصولك هنا: {NUM} بيوت، {NUM} متاجر
+STR_FORK_STAFF_EFFICIENCY                                       :{BLACK}كفاءة أصولك هنا: {NUM}%
+STR_FORK_STAFF_SALARIES                                         :{BLACK}الرواتب: {CURRENCY_LONG} شهرياً
+STR_ERROR_FORK_CAN_T_HIRE                                       :{WHITE}لا يمكن توظيف موظفين هنا ...
+STR_ERROR_FORK_CAN_T_FIRE                                       :{WHITE}لا يمكن فصل موظفين هنا ...
+STR_ERROR_FORK_STAFF_TOWN_TOO_SMALL                             :{WHITE}المدينة صغيرة جداً، يُوظَّف الموظفون فقط في مدن فيها 100 ساكن على الأقل
+STR_ERROR_FORK_STAFF_LIMIT                                      :{WHITE}لا يمكنك توظيف موظفين أكثر هنا: عدد العمال في المدينة قليل
+STR_ERROR_FORK_NO_STAFF                                         :{WHITE}لا توظّف هذا العدد من الموظفين في هذه المدينة
+STR_FORK_UM_TOOLTIP                                             :{BLACK}سوق المركبات المستعملة: مركبات مستعملة من ثلاث شركات
+STR_FORK_UM_CAPTION                                             :سوق المركبات المستعملة
+STR_FORK_UM_DEALER_TOOLTIP                                      :{BLACK}عرض عروض هذه الشركة
+STR_FORK_UM_DEALER_0                                            :{BLACK}TTD MAX: قطارات وعربات مستعملة
+STR_FORK_UM_DEALER_1                                            :{BLACK}TAJCAR: سيارات وحافلات وشاحنات مستعملة
+STR_FORK_UM_DEALER_2                                            :{BLACK}LIMANO: مركبات مستعملة من كل الأنواع
+STR_FORK_UM_DEALER_3                                            :{BLACK}SEAMAR: سفن مستعملة
+STR_FORK_UM_DEALER_4                                            :{BLACK}AIRIX: طائرات مستعملة
+STR_FORK_UM_OFFERS_HINT                                         :{BLACK}عروض هذا الشهر. اضغط على عرض ثم اضغط شراء.
+STR_FORK_UM_NO_OFFERS                                           :{BLACK}لا توجد عروض عند هذه الشركة الآن
+STR_FORK_UM_PICK_DEPOT                                          :{BLACK}اضغط على أحد مستودعاتك لاستلام المركبة ...
+STR_FORK_UM_OFFER_LINE1                                         :{BLACK}{ENGINE}   عمرها {NUM} سنة و{NUM} شهر
+STR_FORK_UM_OFFER_FAIR                                          :{BLACK}   {NUM}% من سعر الجديدة: {CURRENCY_LONG} (الجديدة: {CURRENCY_LONG})   المتبقي: {NUM}
+STR_FORK_UM_OFFER_BARGAIN                                       :{GREEN}   صيدة! {NUM}% من سعر الجديدة: {CURRENCY_LONG} (الجديدة: {CURRENCY_LONG})   المتبقي: {NUM}
+STR_FORK_UM_OFFER_PRICEY                                        :{RED}   {NUM}% من سعر الجديدة: {CURRENCY_LONG} (الجديدة: {CURRENCY_LONG})   المتبقي: {NUM}
+STR_FORK_UM_OFFER_SOLD                                          :{SILVER}   نفدت
+STR_FORK_UM_BUY                                                 :{BLACK}شراء المحدد
+STR_FORK_UM_BUY_TOOLTIP                                         :{BLACK}شراء المركبة المحددة ثم الضغط على أحد مستودعاتك لاستلامها
+STR_ERROR_FORK_UM_CAN_T_BUY                                     :{WHITE}لا يمكن شراء هذه المركبة المستعملة ...
+STR_ERROR_FORK_UM_NO_OFFER                                      :{WHITE}هذا العرض لم يعد متاحاً
+STR_ERROR_FORK_UM_SOLD_OUT                                      :{WHITE}هذه المركبة بيعت بالفعل
+STR_FORK_TOWN_CUSTOMS_RATE                                      :{BLACK}جمارك البضائع الواصلة إلى هنا من مدن أخرى: {NUM}%
+STR_FORK_RIGHTS_BUTTON                                          :{BLACK}التراخيص
+STR_FORK_RIGHTS_TOOLTIP                                         :{BLACK}شراء حقوق أو توقيع تراخيص سنوية لنقل البضائع التي تخرج من هذه المدينة
+STR_FORK_RIGHTS_CAPTION                                         :التراخيص: {TOWN}
+STR_FORK_RIGHT_NAME_MINING                                      :حق التعدين: الفحم والحديد والنحاس
+STR_FORK_RIGHT_NAME_LOGGING                                     :حق قطع الأشجار ونقل الخشب
+STR_FORK_RIGHT_NAME_OIL                                         :حق استخراج ونقل النفط
+STR_FORK_RIGHT_NAME_WATER                                       :حق نقل المياه
+STR_FORK_RIGHT_NAME_FOODGOODS                                   :حق نقل الأغذية والبضائع
+STR_FORK_RIGHT_NAME_VALUABLES                                   :حق نقل المجوهرات والمقتنيات الثمينة
+STR_FORK_RIGHT_NAME_PEOPLEMAIL                                  :حق نقل الناس والبريد
+STR_FORK_RIGHT_LINE_NAME                                        :{BLACK}{STRING}
+STR_FORK_RIGHT_STATUS_OWNED                                     :{GREEN}تملك هذا الحق
+STR_FORK_RIGHT_STATUS_LICENSED                                  :{GREEN}مرخّص، متبقي {NUM} أشهر
+STR_FORK_RIGHT_STATUS_NONE                                      :{RED}غير مملوك
+STR_FORK_RIGHT_PRICE                                            :{BLACK}السعر: {CURRENCY_LONG}
+STR_FORK_RIGHT_LICENSE_LINE                                     :{BLACK}الترخيص السنوي: {CURRENCY_LONG} شهرياً
+STR_FORK_RIGHT_BUY                                              :شراء
+STR_FORK_RIGHT_LICENSE_BTN                                      :ترخيص سنوي
+STR_FORK_LICENSE_CAPTION                                        :الترخيص: {TOWN}
+STR_FORK_LICENSE_TYPE                                           :{BLACK}نوع الترخيص: {STRING}
+STR_FORK_LICENSE_RENT                                           :{BLACK}الإيجار الشهري: {CURRENCY_LONG}
+STR_FORK_LICENSE_DURATION                                       :{BLACK}المدة: {NUM} سنة، حتى 3 سنوات كحد أقصى
+STR_FORK_LICENSE_TOTAL                                          :{BLACK}مجموع الإيجار طوال المدة: {CURRENCY_LONG}
+STR_FORK_LICENSE_NOTE                                           :{BLACK}يُدفع الإيجار كل شهر، ولا يُدفع شيء عند التوقيع
+STR_FORK_LICENSE_YEAR_DOWN                                      :{BLACK}-1 سنة
+STR_FORK_LICENSE_YEAR_UP                                        :{BLACK}+1 سنة
+STR_FORK_LICENSE_YEAR_TOOLTIP                                   :{BLACK}تغيير مدة الترخيص قبل التوقيع (من 1 إلى 3 سنوات)
+STR_FORK_LICENSE_SIGN                                           :{BLACK}توقيع الاتفاق
+STR_FORK_LICENSE_SIGN_TOOLTIP                                   :{BLACK}توقيع الترخيص للمدة المختارة
+STR_FORK_NEWS_LICENSE_EXPIRED                                   :{BIG_FONT}{BLACK}انتهى ترخيصك ({STRING}) في {TOWN}
+STR_FORK_NEWS_CONFISCATED                                       :{BIG_FONT}{BLACK}تمت مصادرة {NUM} شحنة الشهر الماضي: ليس لديك حق أو ترخيص لتلك البضاعة. انظر زر التراخيص في نوافذ المدن
+STR_ERROR_FORK_CAN_T_BUY_RIGHT                                  :{WHITE}لا يمكن شراء هذا الحق ...
+STR_ERROR_FORK_CAN_T_SIGN_LICENSE                               :{WHITE}لا يمكن توقيع هذا الترخيص ...
+STR_ERROR_FORK_RIGHT_ALREADY_OWNED                              :{WHITE}أنت تملك هذا الحق بالفعل
+STR_ERROR_FORK_RIGHT_NOT_AVAILABLE                              :{WHITE}هذا الحق غير معروض للبيع في هذه المدينة
+STR_FORK_UM_MODE_USED                                           :{BLACK}المركبات المستعملة
+STR_FORK_UM_MODE_LEASE                                          :{BLACK}المركبات ذات القسط
+STR_FORK_UM_MODE_RENT                                           :{BLACK}المركبات المؤجرة
+STR_FORK_UM_MODE_TOOLTIP                                        :{BLACK}اختر طريقة الحصول على المركبة: شراء مستعملة، أو بالأقساط، أو بالإيجار
+STR_FORK_UM_LEASE_BUY                                           :{BLACK}شراء بالأقساط
+STR_FORK_UM_RENT_BUY                                            :{BLACK}استئجار المحدد
+STR_FORK_UM_MONTH_DOWN                                          :{BLACK}- شهر
+STR_FORK_UM_MONTH_UP                                            :{BLACK}+ شهر
+STR_FORK_UM_MONTH_TOOLTIP                                       :{BLACK}تغيير مدة العقد. كلما طالت المدة زادت الكلفة
+STR_FORK_UM_LEASE_HINT                                          :{BLACK}ادفع نحو 25% الآن والباقي أقساطاً (من 10 إلى 24 شهراً). بعد القسط الأخير تصبح المركبة ملكك. الأعطال عليك
+STR_FORK_UM_RENT_HINT                                           :{BLACK}بلا مقدم. تمديد العقد عن المعروض بزيادة في الإيجار. عند الانتهاء تجدد بإيجار أعلى أو تُسحب المركبة
+STR_FORK_UM_CONTRACTS                                           :{BLACK}عقودك: {NUM} بالأقساط، {NUM} مؤجرة   المدفوع شهرياً: {CURRENCY_LONG}
+STR_FORK_UM_LEASE_LINE                                          :{BLACK}المقدم: {CURRENCY_LONG}   القسط: {CURRENCY_LONG} لمدة {NUM} شهراً   الفائدة: {NUM}%   المجموع: {CURRENCY_LONG}
+STR_FORK_UM_RENT_LINE                                           :{BLACK}الإيجار: {CURRENCY_LONG} شهرياً لمدة {NUM} شهراً (المعروض: {NUM})   زيادة التمديد: {NUM}%
+STR_FORK_LEASE_RENEW_CAPTION                                    :انتهى عقد الإيجار
+STR_FORK_LEASE_RENEW_TEXT                                       :{BLACK}انتهى عقد إيجار {ENGINE}
+STR_FORK_LEASE_RENEW_OFFER                                      :{BLACK}التجديد لمدة {NUM} شهراً بإيجار {CURRENCY_LONG} شهرياً
+STR_FORK_LEASE_RENEW_OLD                                        :{BLACK}كان الإيجار {CURRENCY_LONG} شهرياً؛ والتجديد أغلى بنسبة 40%
+STR_FORK_LEASE_RENEW_HINT                                       :{BLACK}إن لم تقرر خلال هذا الشهر تُسحب المركبة
+STR_FORK_LEASE_RENEW_BTN                                        :{BLACK}تجديد
+STR_FORK_LEASE_RENEW_BTN_TOOLTIP                                :{BLACK}تجديد العقد بإيجار أعلى
+STR_FORK_LEASE_RETURN_BTN                                       :{BLACK}إرجاع المركبة
+STR_FORK_LEASE_RETURN_BTN_TOOLTIP                               :{BLACK}تذهب المركبة إلى المرآب وتُسحب
+STR_FORK_NEWS_LEASE_OWNED                                       :{BIG_FONT}{BLACK}دُفع آخر قسط لـ {ENGINE}: صارت المركبة ملكك
+STR_FORK_NEWS_LEASE_RETURNED                                    :{BIG_FONT}{BLACK}سُحبت المركبة المؤجرة {ENGINE}
+STR_ERROR_FORK_LEASE_CAN_T                                      :{WHITE}لا يمكن التعاقد على هذه المركبة ...
+STR_ERROR_FORK_LEASE_MONTHS                                     :{WHITE}مدة العقد غير مسموحة
+STR_ERROR_FORK_LEASE_NOT_PENDING                                :{WHITE}هذا العقد لا ينتظر قراراً
+STR_ERROR_FORK_LEASE_CAN_T_RENEW                                :{WHITE}لا يمكن تغيير هذا العقد ...
+STR_FORK_PRODUCT_DISHWASHER                                     :غسالات أطباق
+STR_FORK_PRODUCT_WASHING_MACHINE                                :غسالات ملابس
+STR_FORK_PRODUCT_LAWN_MOWER                                     :ماكينات عشب
+STR_FORK_PRODUCT_LAMPS                                          :مصابيح
+STR_FORK_PRODUCT_TELEVISION                                     :أجهزة تلفاز
+STR_FORK_PRODUCT_RADIO                                          :أجهزة راديو
+STR_FORK_QUALITY_1                                              :اقتصادية
+STR_FORK_QUALITY_2                                              :عادية
+STR_FORK_QUALITY_3                                              :جيدة
+STR_FORK_QUALITY_4                                              :ممتازة
+STR_FORK_QUALITY_5                                              :فاخرة
+STR_FORK_FIRMS_BUTTON                                           :{BLACK}الشركات
+STR_FORK_FIRMS_TOOLTIP                                          :{BLACK}عرض شركات هذه المدينة وإنشاء شركتك
+STR_FORK_FIRMS_CAPTION                                          :الشركات: {TOWN}
+STR_FORK_FIRMS_HINT                                             :{BLACK}اضغط على إحدى شركاتك لإدارتها. تُنشأ الشركات في مدن فيها {NUM} ساكن أو أكثر
+STR_FORK_FIRMS_TOO_SMALL                                        :{BLACK}هذه المدينة صغيرة على الشركات: تحتاج {NUM} ساكن
+STR_FORK_FIRMS_NONE                                             :{BLACK}لا توجد شركات في هذه المدينة بعد
+STR_FORK_FIRMS_ROW1                                             :{BLACK}{RAW_STRING}: {STRING}   {STRING}
+STR_FORK_FIRMS_OWN                                              :{GREEN}شركتك
+STR_FORK_FIRMS_INDEPENDENT                                      :{ORANGE}مستقلة
+STR_FORK_FIRMS_ROW2                                             :{BLACK}السعر: {CURRENCY_LONG}   الجودة: {NUM}/5   القيمة: {CURRENCY_LONG}
+STR_FORK_FIRMS_CREATE                                           :{BLACK}أنشئ شركة
+STR_FORK_FIRMS_CREATE_TOOLTIP                                   :{BLACK}إنشاء شركة تقنية في هذه المدينة
+STR_FORK_FIRM_CREATE_CAPTION                                    :إنشاء شركة: {TOWN}
+STR_FORK_FIRM_CREATE_SPECIALIZATION                             :{BLACK}التخصص: تقني (تقنيات المنزل)
+STR_FORK_FIRM_CREATE_COST                                       :{BLACK}كلفة التأسيس: {CURRENCY_LONG}
+STR_FORK_FIRM_CREATE_PRODUCT                                    :{BLACK}المنتج: {STRING}
+STR_FORK_FIRM_CREATE_HINT                                       :{BLACK}تحتاج الشركة إلى مدير (انظر الموظفون) وتبيع أكثر مع متاجرك في المدينة
+STR_FORK_FIRM_NAME_BUTTON                                       :{BLACK}الاسم: {RAW_STRING}
+STR_FORK_FIRM_NAME_TOOLTIP                                      :{BLACK}اضغط لاختيار اسم الشركة
+STR_FORK_FIRM_NAME_CAPTION                                      :اسم الشركة
+STR_FORK_FIRM_DEFAULT_NAME                                      :تقنية {TOWN}
+STR_FORK_FIRM_PRODUCT_TOOLTIP                                   :{BLACK}اختيار منتج الشركة
+STR_FORK_FIRM_FOUND                                             :{BLACK}تأسيس الشركة
+STR_FORK_FIRM_FOUND_TOOLTIP                                     :{BLACK}تأسيس الشركة بهذا الاسم والمنتج
+STR_FORK_FIRM_LINE_PRODUCT                                      :{BLACK}المنتج: {STRING} (تقني)   قيمة الشركة: {CURRENCY_LONG}
+STR_FORK_FIRM_LINE_QUALITY                                      :{BLACK}الجودة: {STRING} ({NUM}/5)   الإنتاج: {NUM}% من {NUM} وحدة شهرياً
+STR_FORK_FIRM_LINE_PRICE                                        :{BLACK}السعر: {CURRENCY_LONG} ({NUM}% من الأساس)   التخفيض: {NUM}%   يدفع الزبون: {CURRENCY_LONG}
+STR_FORK_FIRM_LINE_MARKET                                       :{BLACK}سعر السوق: {NUM}% من السعر الأساسي (تحدده كل الشركات معاً)
+STR_FORK_FIRM_LINE_STOCK                                        :{BLACK}في المخزن: {NUM} وحدة   المنتَج الشهر الماضي: {NUM}   المباع: {NUM}
+STR_FORK_FIRM_LINE_MONEY                                        :{BLACK}مبيعات الشهر الماضي: {CURRENCY_LONG}   الربح: {CURRENCY_LONG}
+STR_FORK_FIRM_COMPETITORS                                       :{BLACK}المنافسون بنفس المنتج:
+STR_FORK_FIRM_NO_COMPETITORS                                    :{BLACK}لا يوجد منافسون لهذا المنتج
+STR_FORK_FIRM_COMPETITOR_LINE                                   :{BLACK}{RAW_STRING}: {CURRENCY_LONG} للوحدة، الجودة {NUM}/5
+STR_FORK_FIRM_RATE_DOWN                                         :{BLACK}الإنتاج -10%
+STR_FORK_FIRM_RATE_UP                                           :{BLACK}الإنتاج +10%
+STR_FORK_FIRM_RATE_TOOLTIP                                      :{BLACK}إنتاج أقل أو أكثر شهرياً. الإنتاج الأكثر أغلى
+STR_FORK_FIRM_QUALITY_DOWN                                      :{BLACK}الجودة -
+STR_FORK_FIRM_QUALITY_UP                                        :{BLACK}الجودة +
+STR_FORK_FIRM_QUALITY_TOOLTIP                                   :{BLACK}الجودة الأعلى تجذب الزبائن لكنها أغلى في الإنتاج
+STR_FORK_FIRM_PRICE_DOWN                                        :{BLACK}السعر -5%
+STR_FORK_FIRM_PRICE_UP                                          :{BLACK}السعر +5%
+STR_FORK_FIRM_PRICE_TOOLTIP                                     :{BLACK}السعر المرتفع يقلل الزبائن والمنخفض يزيدهم
+STR_FORK_FIRM_DISCOUNT_DOWN                                     :{BLACK}التخفيض -5%
+STR_FORK_FIRM_DISCOUNT_UP                                       :{BLACK}التخفيض +5%
+STR_FORK_FIRM_DISCOUNT_TOOLTIP                                  :{BLACK}التخفيضات (حتى 50%) للتخلص من البضاعة الراكدة دون رميها
+STR_FORK_FIRM_DUMP                                              :{BLACK}رمي المخزون
+STR_FORK_FIRM_DUMP_TOOLTIP                                      :{BLACK}رمي كل ما في المخزن. تضيع كلفته
+STR_FORK_NEWS_FIRM_OWN                                          :{BIG_FONT}{BLACK}شركة {RAW_STRING} التابعة لشركة {COMPANY} أطلقت منتجاً جديداً: {STRING}
+STR_FORK_NEWS_FIRM_NPC                                          :{BIG_FONT}{BLACK}أطلقت شركة {RAW_STRING} في {TOWN} منتجاً جديداً: {STRING}
+STR_ERROR_FORK_FIRM_NAME                                        :{WHITE}الاسم فارغ أو طويل جداً
+STR_ERROR_FORK_FIRM_TOWN_TOO_SMALL                              :{WHITE}المدينة صغيرة جداً لإنشاء شركة
+STR_ERROR_FORK_FIRM_TOWN_FULL                                   :{WHITE}لا مكان لشركات أكثر في هذه المدينة
+STR_ERROR_FORK_FIRM_CAN_T_FOUND                                 :{WHITE}لا يمكن إنشاء شركة هنا ...
+STR_ERROR_FORK_FIRM_CAN_T_CHANGE                                :{WHITE}لا يمكن تغيير هذه الشركة ...
+STR_FORK_STOCK_NAME_0                                           :بيرز
+STR_FORK_STOCK_NAME_1                                           :ويندور
+STR_FORK_STOCK_NAME_2                                           :زوكال
+STR_FORK_STOCK_NAME_3                                           :إنتر مينز
+STR_FORK_STOCK_NAME_4                                           :سامسونق
+STR_FORK_STOCK_NAME_5                                           :سَني
+STR_FORK_STOCK_NAME_6                                           :تيزلا
+STR_FORK_STOCK_NAME_7                                           :أمازوون
+STR_FORK_STOCK_NAME_8                                           :نتفلَكس
+STR_FORK_STOCK_NAME_9                                           :فيسبوت
+STR_FORK_STOCK_NAME_10                                          :نيكي
+STR_FORK_STOCK_NAME_11                                          :كولا-كوالا
+STR_FORK_INVEST_BUTTON                                          :{BLACK}الاستثمار
+STR_FORK_INVEST_TOOLTIP                                         :{BLACK}الاستثمار في البورصة أو في شركات المدن
+STR_FORK_EXCHANGE_CAPTION                                       :البورصة
+STR_FORK_EXCHANGE_TAB_LISTED                                    :{BLACK}البورصة
+STR_FORK_EXCHANGE_TAB_LOCAL                                     :{BLACK}الشركات المحلية
+STR_FORK_EXCHANGE_TAB_TOOLTIP                                   :{BLACK}اختر مجال الاستثمار
+STR_FORK_EXCHANGE_BUTTON_TOOLTIP                                :{BLACK}اختر شركة من القائمة أولاً
+STR_FORK_EXCHANGE_HINT_LISTED                                   :{BLACK}اضغط على شركة ثم اشترِ أو بع أسهمها. الأسعار تتبع الاقتصاد وتُدفع الأرباح شهرياً
+STR_FORK_EXCHANGE_HINT_LOCAL                                    :{BLACK}اشترِ حتى 50% من شركة محلية. وعند 50% يمكنك تملكها بدفع 25 ضعف سعر 1%
+STR_FORK_STOCK_ROW1                                             :{BLACK}{STRING}   {CURRENCY_LONG}   {RAW_STRING}
+STR_FORK_STOCK_UP                                               :{GREEN}+{NUM}.{NUM}%
+STR_FORK_STOCK_DOWN                                             :{RED}-{NUM}.{NUM}%
+STR_FORK_STOCK_ROW2                                             :{BLACK}تملك {NUM} سهماً بقيمة {CURRENCY_LONG}   الأرباح: {NUM}.{NUM}% سنوياً
+STR_FORK_STOCK_INFO1                                            :{BLACK}{STRING}: سعر السهم {CURRENCY_LONG}
+STR_FORK_STOCK_INFO2                                            :{BLACK}تملك {NUM} سهماً بقيمة {CURRENCY_LONG}   المدفوع حتى الآن: {CURRENCY_LONG}
+STR_FORK_LOCAL_ROW1                                             :{BLACK}{RAW_STRING} ({TOWN}): {STRING}   القيمة: {CURRENCY_LONG}
+STR_FORK_LOCAL_ROW2                                             :{BLACK}حصتك: {NUM}%   سعر 1%: {CURRENCY_LONG}
+STR_FORK_LOCAL_INFO1                                            :{BLACK}{RAW_STRING}: 5% تكلّف نحو {CURRENCY_LONG}   ربح الشهر الماضي: {CURRENCY_LONG}
+STR_FORK_LOCAL_INFO2                                            :{BLACK}حصتك: {NUM}%   كل المستثمرين: {NUM}%   سعر التملك: {CURRENCY_LONG}
+STR_FORK_STOCK_BUY_10                                           :{BLACK}شراء 10
+STR_FORK_STOCK_BUY_100                                          :{BLACK}شراء 100
+STR_FORK_STOCK_SELL_10                                          :{BLACK}بيع 10
+STR_FORK_STOCK_SELL_100                                         :{BLACK}بيع 100
+STR_FORK_LOCAL_BUY                                              :{BLACK}شراء 5%
+STR_FORK_LOCAL_SELL                                             :{BLACK}بيع 5%
+STR_FORK_LOCAL_TAKEOVER                                         :{BLACK}تملّك
+STR_FORK_STOCK_NO_ACTION                                        :{BLACK}-
+STR_FORK_NEWS_TAKEOVER                                          :{BIG_FONT}{BLACK}استحوذت شركة {COMPANY} على شركة {RAW_STRING}
+STR_ERROR_FORK_STOCK_CAN_T_BUY                                  :{WHITE}لا يمكن شراء هذه الأسهم ...
+STR_ERROR_FORK_STOCK_CAN_T_SELL                                 :{WHITE}لا يمكن بيع هذه الأسهم ...
+STR_ERROR_FORK_STOCK_CAN_T_TAKEOVER                             :{WHITE}لا يمكن تملك هذه الشركة ...
+STR_ERROR_FORK_STOCK_NOT_ENOUGH                                 :{WHITE}لا تملك هذا القدر
+STR_ERROR_FORK_STOCK_NOT_INDEPENDENT                            :{WHITE}هذه الشركة مملوكة لشركة أخرى بالفعل
+STR_ERROR_FORK_STOCK_FIRM_LIMIT                                 :{WHITE}لا يمكن للمستثمرين امتلاك أكثر من 50% من الشركة، وما فوق ذلك يحتاج تملكاً
+STR_ERROR_FORK_STOCK_NEED_HALF                                  :{WHITE}تحتاج إلى 50% من الشركة قبل أن تتملكها
+STR_FORK_MEDIA_BUTTON                                           :{BLACK}القنوات
+STR_FORK_MEDIA_TOOLTIP                                          :{BLACK}بناء وإدارة قنوات التلفزيون والإذاعة في هذه المدينة
+STR_FORK_MEDIA_CAPTION                                          :القنوات: {TOWN}
+STR_FORK_MEDIA_HINT                                             :{BLACK}اضغط على قناة لبنائها، أو لإدارة قناتك.{}تتسع المدينة لقناة واحدة من كل نوع.
+STR_FORK_MEDIA_TOO_SMALL                                        :{BLACK}لا تُبنى القنوات إلا في المدن الكبيرة (على الأقل {NUM} ساكن). عدد سكان هذه المدينة {NUM}.
+STR_FORK_MEDIA_KIND_0                                           :{BLACK}قناة ترفيهية
+STR_FORK_MEDIA_KIND_1                                           :{BLACK}محطة راديو
+STR_FORK_MEDIA_KIND_2                                           :{BLACK}قناة إخبارية
+STR_FORK_MEDIA_KIND_3                                           :{BLACK}قناة رياضية
+STR_FORK_MEDIA_DEFAULT_NAME_0                                   :ترفيه {TOWN}
+STR_FORK_MEDIA_DEFAULT_NAME_1                                   :إذاعة {TOWN}
+STR_FORK_MEDIA_DEFAULT_NAME_2                                   :أخبار {TOWN}
+STR_FORK_MEDIA_DEFAULT_NAME_3                                   :رياضة {TOWN}
+STR_FORK_MEDIA_ROW_AVAILABLE                                    :{BLACK}متاحة للبناء: التكلفة {CURRENCY_LONG}
+STR_FORK_MEDIA_ROW_OTHER                                        :{BLACK}{RAW_STRING}، تملكها {COMPANY}
+STR_FORK_MEDIA_ROW_BUILDING                                     :{BLACK}{RAW_STRING}: قيد البناء ({NUM} من {NUM} أشهر)
+STR_FORK_MEDIA_ROW_ON_AIR                                       :{BLACK}{RAW_STRING}: على الهواء، الجمهور {NUM}
+STR_FORK_CREATE_CAPTION                                         :بناء: {STRING}
+STR_FORK_CREATE_COST                                            :{BLACK}التكلفة: {CURRENCY_LONG}   مدة البناء: {NUM} أشهر
+STR_FORK_CREATE_NAME                                            :{BLACK}الاسم: {RAW_STRING}
+STR_FORK_CREATE_NAME_BUTTON                                     :{BLACK}الاسم
+STR_FORK_CREATE_NAME_TOOLTIP                                    :{BLACK}اختيار اسم القناة
+STR_FORK_CREATE_NAME_CAPTION                                    :اسم القناة
+STR_FORK_CREATE_FREE                                            :{BLACK}مجانية
+STR_FORK_CREATE_FREE_TOOLTIP                                    :{BLACK}يشاهدها الجميع. تصل لعدد أكبر فتزداد شعبيتها. السمعة لا تتأثر.
+STR_FORK_CREATE_PAID                                            :{BLACK}باقة مدفوعة
+STR_FORK_CREATE_PAID_TOOLTIP                                    :{BLACK}القناة مشفّرة. يدفع المشاهدون ثمن باقة، وكلما ارتفع السعر قلّ عدد المشتركين.
+STR_FORK_CREATE_PACKAGE_DOWN                                    :{BLACK}الباقة -
+STR_FORK_CREATE_PACKAGE_UP                                      :{BLACK}الباقة +
+STR_FORK_CREATE_PACKAGE_TOOLTIP                                 :{BLACK}تغيير سعر الباقة (من 1 إلى 800)
+STR_FORK_CREATE_CONFIRM                                         :{BLACK}تأكيد وبناء
+STR_FORK_CREATE_CONFIRM_TOOLTIP                                 :{BLACK}بناء القناة في هذه المدينة
+STR_FORK_CREATE_CANCEL                                          :{BLACK}إلغاء
+STR_FORK_CREATE_FREE_INFO                                       :{BLACK}قناة مجانية: تصل لعدد أكبر وتصبح أكثر شعبية. السمعة لا تتأثر. الدخل من الإعلانات فقط.
+STR_FORK_CREATE_PAID_INFO                                       :{BLACK}باقة مدفوعة: {CURRENCY_LONG}. الدخل من الاشتراكات والإعلانات. كلما ارتفع السعر قلّ المشتركون.
+STR_FORK_CHANNEL_CAPTION                                        :القناة: {RAW_STRING}
+STR_FORK_CHANNEL_TOWN                                           :{BLACK}{STRING} في {TOWN}
+STR_FORK_CHANNEL_STATUS_BUILDING                                :{BLACK}قيد البناء: {NUM} من {NUM} أشهر
+STR_FORK_CHANNEL_STATUS_ON_AIR                                  :{BLACK}على الهواء
+STR_FORK_CHANNEL_AUDIENCE                                       :{BLACK}الجمهور: {NUM}   الشعبية: {NUM}%   السمعة: {NUM}%
+STR_FORK_CHANNEL_ACCESS_FREE                                    :{BLACK}الوصول: مجاني للجميع
+STR_FORK_CHANNEL_ACCESS_PAID                                    :{BLACK}الوصول: باقة مدفوعة {CURRENCY_LONG}، {NUM} مشترك
+STR_FORK_CHANNEL_STAFF                                          :{BLACK}كفاءة الموظفين: {NUM}% (كل قناة تحتاج {NUM} موظفين في المدينة)
+STR_FORK_CHANNEL_INCOME                                          :{BLACK}الاشتراكات: {CURRENCY_LONG}   الإعلانات: {CURRENCY_LONG} شهرياً
+STR_FORK_CHANNEL_COSTS                                          :{BLACK}تكاليف التشغيل: {CURRENCY_LONG}   النتيجة: {CURRENCY_LONG} شهرياً
+STR_FORK_CHANNEL_VALUE                                          :{BLACK}قيمة المبنى: {CURRENCY_LONG}
+STR_FORK_CHANNEL_PROGRAMS                                       :{BLACK}البرامج (قريباً)
+STR_FORK_CHANNEL_SCHEDULE                                       :{BLACK}الجدولة (قريباً)
+STR_FORK_CHANNEL_PROMOTION                                      :{BLACK}الترويج (قريباً)
+STR_FORK_CHANNEL_SOON_TOOLTIP                                   :{BLACK}يأتي في التحديث القادم
+STR_ERROR_FORK_MEDIA_CAN_T_BUILD                                :{WHITE}لا يمكن بناء قناة هنا ...
+STR_ERROR_FORK_MEDIA_CAN_T_CHANGE                               :{WHITE}لا يمكن تغيير الباقة ...
+STR_ERROR_FORK_MEDIA_TOWN_TOO_SMALL                             :{WHITE}القنوات لا تُبنى إلا في المدن الكبيرة
+STR_ERROR_FORK_MEDIA_KIND_TAKEN                                 :{WHITE}في هذه المدينة قناة من هذا النوع بالفعل
+STR_FORK_EDU_BUTTON                                             :{BLACK}تدريس
+STR_FORK_EDU_TOOLTIP                                            :{BLACK}بناء وإدارة مدارس أهلية وجامعة في هذه المدينة
+STR_FORK_EDU_CAPTION                                            :تدريس: {TOWN}
+STR_FORK_EDU_TAB_PRIMARY                                        :{BLACK}ابتدائية
+STR_FORK_EDU_TAB_SECONDARY                                      :{BLACK}ثانوية
+STR_FORK_EDU_TAB_UNIVERSITY                                     :{BLACK}جامعة
+STR_FORK_EDU_TAB_TOOLTIP                                        :{BLACK}عرض هذا النوع من المؤسسات
+STR_FORK_EDU_BUILD                                              :{BLACK}بناء
+STR_FORK_EDU_BUILD_TOOLTIP                                      :{BLACK}بناء هذه المؤسسة في المدينة
+STR_FORK_EDU_SELL                                               :{BLACK}بيع
+STR_FORK_EDU_SELL_TOOLTIP                                       :{BLACK}بيع هذه المؤسسة، تحصل على 70% من قيمتها
+STR_FORK_EDU_RENAME                                             :{BLACK}تغيير الاسم
+STR_FORK_EDU_RENAME_TOOLTIP                                     :{BLACK}إعطاء المؤسسة اسماً
+STR_FORK_EDU_RENAME_CAPTION                                     :اسم المؤسسة
+STR_FORK_EDU_UPGRADE                                            :{BLACK}توسيع
+STR_FORK_EDU_UPGRADE_TOOLTIP                                    :{BLACK}توسيع المدرسة مرة واحدة لزيادة المقاعد، ويجدد المبنى أيضاً
+STR_FORK_EDU_SHIFT                                              :{BLACK}دوام مزدوج
+STR_FORK_EDU_SHIFT_TOOLTIP                                      :{BLACK}التدريس بدوامين: ضعف المقاعد لكن ضعف التكاليف التشغيلية
+STR_FORK_EDU_FACULTY                                            :{BLACK}فتح/إغلاق كلية
+STR_FORK_EDU_FACULTY_TOOLTIP                                    :{BLACK}فتح أو إغلاق الكلية المحددة (اضغط على كلية في القائمة لتحديدها)
+STR_FORK_EDU_FEE_DOWN_BIG                                       :{BLACK}القسط --
+STR_FORK_EDU_FEE_DOWN                                           :{BLACK}القسط -
+STR_FORK_EDU_FEE_UP                                             :{BLACK}القسط +
+STR_FORK_EDU_FEE_UP_BIG                                         :{BLACK}القسط ++
+STR_FORK_EDU_FEE_TOOLTIP                                        :{BLACK}تغيير القسط. القسط الغالي مقارنة بما تقدمه المؤسسة يبعد الناس عنها
+STR_FORK_EDU_NAME_PRIMARY                                       :مدرسة ابتدائية أهلية
+STR_FORK_EDU_NAME_SECONDARY                                     :مدرسة ثانوية أهلية
+STR_FORK_EDU_NAME_UNIVERSITY                                    :جامعة أهلية
+STR_FORK_EDU_YES                                                :نعم
+STR_FORK_EDU_NO                                                 :لا
+STR_FORK_EDU_NOT_APPLICABLE                                     :-
+STR_FORK_EDU_NO_INSTITUTION                                     :{BLACK}لا تملك مؤسسة من هذا النوع في هذه المدينة
+STR_FORK_EDU_BUILD_INFO                                         :{BLACK}تكلفة البناء: {CURRENCY_LONG}   تحتاج {NUM} ساكناً (في المدينة {NUM})
+STR_FORK_EDU_NAME_LINE                                          :{BLACK}{RAW_STRING}   القيمة: {CURRENCY_LONG}   سعر البيع: {CURRENCY_LONG}
+STR_FORK_EDU_SEATS                                              :{BLACK}الطلاب: {NUM} من {NUM} مقعداً
+STR_FORK_EDU_OPTIONS                                            :{BLACK}موسّعة: {STRING}   دوام مزدوج: {STRING}
+STR_FORK_EDU_FACULTIES                                          :{BLACK}الكليات المفتوحة: {NUM} من {NUM}   (اضغط على كلية لتحديدها)
+STR_FORK_EDU_FEE                                                :{BLACK}القسط للمقعد في السنة: {CURRENCY_LONG}   (الأعلى: {CURRENCY_LONG})
+STR_FORK_EDU_QUALITY                                            :{BLACK}الجودة: {NUM}%   الشعبية: {NUM}%
+STR_FORK_EDU_INCOME                                             :{BLACK}الأقساط: {CURRENCY_LONG} شهرياً   التكاليف التشغيلية: {CURRENCY_LONG} شهرياً
+STR_FORK_EDU_TAX                                                :{BLACK}ضريبة المدينة هذه السنة: {NUM}% من الأقساط = {CURRENCY_LONG} شهرياً
+STR_FORK_EDU_PROFIT                                             :{BLACK}الربح: {CURRENCY_LONG} شهرياً
+STR_FORK_EDU_FACULTY_OPEN_ROW                                   :{BLACK}{RAW_STRING} {STRING}   الرغبة {NUM}%   القسط {CURRENCY_LONG}   الطلاب {NUM}   الشعبية {NUM}%
+STR_FORK_EDU_FACULTY_CLOSED_ROW                                 :{SILVER}{RAW_STRING} {STRING}   الرغبة {NUM}%   تكلفة الفتح {CURRENCY_LONG}
+STR_FORK_FACULTY_MEDICINE                                       :كلية الطب
+STR_FORK_FACULTY_PHARMACY                                       :كلية الصيدلة
+STR_FORK_FACULTY_ENGINEERING                                    :كلية الهندسة
+STR_FORK_FACULTY_ENGINEERING_TECH                               :كلية التقنيات الهندسية
+STR_FORK_FACULTY_TEACHING_SCIENCES                              :كلية العلوم التدريسية
+STR_FORK_FACULTY_EDUCATION                                      :كلية التربية
+STR_FORK_FACULTY_ARTS                                           :كلية الآداب
+STR_FORK_FACULTY_LAW                                            :كلية القانون
+STR_FORK_FACULTY_BUSINESS                                       :كلية الإدارة والاقتصاد
+STR_FORK_FACULTY_VOCATIONAL                                     :كلية التعليم المهني
+STR_ERROR_FORK_EDU_CAN_T_BUILD                                  :{WHITE}لا يمكن بناء هذه المؤسسة هنا ...
+STR_ERROR_FORK_EDU_CAN_T_SELL                                   :{WHITE}لا يمكن بيع هذه المؤسسة ...
+STR_ERROR_FORK_EDU_CAN_T_CHANGE                                 :{WHITE}لا يمكن تنفيذ ذلك ...
+STR_ERROR_FORK_EDU_CAN_T_RENAME                                 :{WHITE}لا يمكن تغيير اسم هذه المؤسسة ...
+STR_ERROR_FORK_EDU_TOWN_TOO_SMALL                               :{WHITE}عدد سكان المدينة قليل جداً لهذه المؤسسة
+STR_ERROR_FORK_EDU_ALREADY_BUILT                                :{WHITE}تملك هذا النوع من المؤسسات في هذه المدينة أصلاً
+STR_ERROR_FORK_EDU_NONE                                         :{WHITE}لا تملك مؤسسة من هذا النوع في هذه المدينة
+STR_ERROR_FORK_EDU_FACULTY_ONLY                                 :{WHITE}الجامعة ليس لها قسط واحد ولا حجم واحد: افتح الكليات وحدد أقساطها
+STR_ERROR_FORK_EDU_UNIVERSITY_ONLY                              :{WHITE}الكليات للجامعة فقط
+STR_ERROR_FORK_EDU_ALREADY_UPGRADED                             :{WHITE}تم توسيع هذه المدرسة سابقاً
+STR_ERROR_FORK_EDU_FACULTY_OPEN                                 :{WHITE}هذه الكلية مفتوحة أصلاً
+STR_ERROR_FORK_EDU_FACULTY_CLOSED                               :{WHITE}هذه الكلية غير مفتوحة
+STR_FORK_EDU_STATUS                                              :{BLACK}المبنى: {STRING}
+STR_FORK_EDU_STAGE_FOUNDATION                                   :يجري صب الأساس، لا طلاب بعد
+STR_FORK_EDU_STAGE_FRAME                                        :قيد الإنشاء، لا طلاب بعد
+STR_FORK_EDU_STAGE_OPEN                                         :مكتمل ومفتوح
+STR_ERROR_FORK_EDU_NO_SPACE                                     :{WHITE}لا توجد أرض مستوية خالية (2×2 بلاطة) قرب وسط هذه المدينة
+STR_COLOUR_RANDOM                                           :عشوائي
+STR_COLOUR_SECONDARY_SECONDARY_PINK                         :وردي
+STR_COLOUR_SECONDARY_YELLOW                                 :أصفر
+STR_COLOUR_SECONDARY_WHITE                                  :أبيض
+STR_UNITS_VELOCITY_GAMEUNITS_DAY                            :{DECIMAL}{NBSP} بلاط/يوم
+STR_UNITS_VELOCITY_GAMEUNITS_SEC                            :{DECIMAL}{NBSP} بلاط/ثانية
+STR_UNITS_VELOCITY_KNOTS                                    :{DECIMAL}{NBSP} عقدة
+STR_UNITS_POWER_METRIC_TO_WEIGHT_METRIC                     :{DECIMAL}{NBSP} حصان/طن
+STR_UNITS_HEIGHT_GAMEUNITS                                  :{DECIMAL}{NBSP} مستوى{P "" s}
+STR_UNITS_DAYS                                              :{COMMA}{NBSP} يوم{P "" s}
+STR_UNITS_SECONDS                                           :{COMMA}{NBSP} ثانية{P "" s}
+STR_UNITS_TICKS                                             :{COMMA}{NBSP} نبضة{P "" s}
+STR_UNITS_MONTHS                                            :{NUM}{NBSP} شهر{P "" s}
+STR_UNITS_MINUTES                                           :{NUM}{NBSP} دقيقة{P "" s}
+STR_UNITS_YEARS                                             :{NUM}{NBSP} سنة{P "" s}
+STR_UNITS_PERIODS                                           :{NUM}{NBSP} فترة{P "" s}
+STR_LIST_SEPARATOR                                          :،{SPACE}
+STR_TRUNCATION_ELLIPSIS                                     :...
+STR_BUTTON_MOVE                                             :{BLACK}نقل
+STR_SORT_BY_PROFIT_LAST_PERIOD                              :الربح الفترة الماضية
+STR_SORT_BY_PROFIT_THIS_PERIOD                              :الربح هذه الفترة
+STR_SORT_BY_WAITING_AVAILABLE                               :البضائع المنتظرة متوفرة
+STR_SORT_BY_RATING                                          :تصنيف
+STR_SORT_BY_NUM_VEHICLES                                    :عدد المركبات
+STR_SORT_BY_TOTAL_PROFIT_LAST_YEAR                          :إجمالي الربح العام الماضي
+STR_SORT_BY_TOTAL_PROFIT_LAST_PERIOD                        :إجمالي الربح الفترة الماضية
+STR_SORT_BY_TOTAL_PROFIT_THIS_YEAR                          :إجمالي الربح هذا العام
+STR_SORT_BY_TOTAL_PROFIT_THIS_PERIOD                        :إجمالي الربح هذه الفترة
+STR_SORT_BY_AVERAGE_PROFIT_LAST_YEAR                        :متوسط الربح العام الماضي
+STR_SORT_BY_AVERAGE_PROFIT_LAST_PERIOD                      :متوسط الربح الفترة الماضية
+STR_SORT_BY_AVERAGE_PROFIT_THIS_YEAR                        :متوسط الربح هذا العام
+STR_SORT_BY_AVERAGE_PROFIT_THIS_PERIOD                      :متوسط الربح هذه الفترة
+STR_GOTO_ORDER_VIEW_TOOLTIP                                 :{BLACK}افتح عرض الطلب
+STR_SCENEDIT_TOWN_MENU_BUILD_TOWN                           :توليد المدن
+STR_SCENEDIT_TOWN_MENU_PACE_HOUSE                           :مكان المنازل
+STR_SETTINGS_MENU_GAMESCRIPT_SETTINGS                       :إعدادات البرنامج النصي للعبة
+STR_SETTINGS_MENU_SANDBOX_OPTIONS                           :خيارات وضع الحماية
+STR_SETTINGS_MENU_STATION_NAMES_TRAIN                       :محطات القطار
+STR_SETTINGS_MENU_STATION_NAMES_LORRY                       :محطات الشاحنات
+STR_SETTINGS_MENU_STATION_NAMES_BUS                         :محطات الحافلات
+STR_SETTINGS_MENU_STATION_NAMES_SHIP                        :أرصفة السفن
+STR_SETTINGS_MENU_STATION_NAMES_PLANE                       :المطارات
+STR_SETTINGS_MENU_STATION_NAMES_GHOST                       :شبح
+STR_LANDSCAPING_MENU_PLACE_OBJECT                           :مكان الكائن
+STR_ABOUT_MENU_ENTER_SCREENSAVER_MODE                       :تبديل وضع شاشة التوقف
+STR_GRAPH_LAST_24_MINUTES_TIME_LABEL                        :{TINY_FONT}{BLACK}آخر 24 دقيقة
+STR_GRAPH_LAST_72_MINUTES_TIME_LABEL                        :{TINY_FONT}{BLACK}آخر 72 دقيقة
+STR_GRAPH_LAST_288_MINUTES_TIME_LABEL                       :{TINY_FONT}{BLACK}آخر 288 دقيقة
+STR_GRAPH_LAST_24_MONTHS                                    :{TINY_FONT}{BLACK}سنتين (شهريًا)
+STR_GRAPH_LAST_24_QUARTERS                                  :{TINY_FONT}{BLACK}6 سنوات (ربع سنوي)
+STR_GRAPH_LAST_24_YEARS                                     :{TINY_FONT}{BLACK}24 سنة (سنويًا)
+STR_GRAPH_SELECT_SCALE                                      :تغيير المقياس الأفقي للرسم البياني
+STR_GRAPH_CARGO_PAYMENT_RATES_DAYS                          :{TINY_FONT}{BLACK}أيام في العبور
+STR_GRAPH_CARGO_PAYMENT_RATES_SECONDS                       :{TINY_FONT}{BLACK}ثانية في العبور
+STR_GRAPH_INDUSTRY_CAPTION                                  :{WHITE}{INDUSTRY} - تاريخ الشحن
+STR_GRAPH_INDUSTRY_RANGE_PRODUCED                           :أنتجت
+STR_GRAPH_INDUSTRY_RANGE_PRODUCED_TOOLTIP                   :تبديل الرسم البياني للبضائع التي تنتجها هذه الصناعة
+STR_GRAPH_INDUSTRY_RANGE_TRANSPORTED                        :منقول
+STR_GRAPH_INDUSTRY_RANGE_TRANSPORTED_TOOLTIP                :تبديل الرسم البياني للبضائع المنقولة من هذه الصناعة
+STR_GRAPH_INDUSTRY_RANGE_DELIVERED                          :تم التوصيل
+STR_GRAPH_INDUSTRY_RANGE_DELIVERED_TOOLTIP                  :تبديل الرسم البياني للبضائع المسلمة إلى هذه الصناعة
+STR_GRAPH_INDUSTRY_RANGE_WAITING                            :منتظر
+STR_GRAPH_INDUSTRY_RANGE_WAITING_TOOLTIP                    :تبديل الرسم البياني للبضائع المنتظرة في هذه الصناعة
+STR_GRAPH_TOWN_CARGO_CAPTION                                :{WHITE}{TOWN} - تاريخ الشحن
+STR_GRAPH_TOWN_RANGE_PRODUCED                               :أنتجت
+STR_GRAPH_TOWN_RANGE_PRODUCED_TOOLTIP                       :تبديل الرسم البياني للبضائع التي تنتجها هذه المدينة
+STR_GRAPH_TOWN_RANGE_TRANSPORTED                            :منقول
+STR_GRAPH_TOWN_RANGE_TRANSPORTED_TOOLTIP                    :تبديل الرسم البياني للبضائع المنقولة من هذه المدينة
+STR_GRAPH_TOWN_RANGE_DELIVERED                              :تم التوصيل
+STR_GRAPH_TOWN_RANGE_DELIVERED_TOOLTIP                      :تبديل الرسم البياني للبضائع تسليمها إلى هذه المدينة
+STR_COMPANY_LEAGUE_COMPANY_RANK                             :{YELLOW}#{NUM}
+STR_PERFORMANCE_DETAIL_VEHICLES_TOOLTIP_YEARS               :{BLACK}عدد المركبات التي حققت أرباحا العام الماضي. وهذا يشمل مركبات الطرق والقطارات والسفن والطائرات
+STR_PERFORMANCE_DETAIL_VEHICLES_TOOLTIP_PERIODS             :{BLACK}عدد المركبات التي حققت ربحا الفترة الماضية. وهذا يشمل مركبات الطرق والقطارات والسفن والطائرات
+STR_PERFORMANCE_DETAIL_MIN_PROFIT_TOOLTIP_YEARS             :{BLACK}ربح السيارة ذات الدخل الأقل (يؤخذ في الاعتبار فقط المركبات الأقدم من عامين)
+STR_PERFORMANCE_DETAIL_MIN_PROFIT_TOOLTIP_PERIODS           :{BLACK}ربح السيارة ذات الدخل الأقل (يؤخذ في الاعتبار فقط المركبات الأقدم من فترتين)
+STR_MUSIC_TITLE_NOMUSIC                                     :{TINY_FONT}{DKGREEN}لا توجد موسيقى متاحة
+STR_PLAYLIST_MUSIC_SELECTION_SETNAME                        :{WHITE}برنامج الموسيقى- '{RAW_STRING}'
+STR_PLAYLIST_CHANGE_SET                                     :{BLACK}مجموعة التغيير
+STR_PLAYLIST_TOOLTIP_CHANGE_SET                             :{BLACK}قم بتغيير اختيار الموسيقى إلى مجموعة أخرى مثبتة
+STR_HIGHSCORE_TOP_COMPANIES                                 :{BIG_FONT}{BLACK}أفضل الشركات
+STR_SMALLMAP_TYPE_ROUTEMAP                                  :تدفق البضائع
+STR_SMALLMAP_TOOLTIP_SHOW_LINK_STATS_ON_MAP                 :{BLACK}عرض تدفق البضائع على الخريطة
+STR_SMALLMAP_TOOLTIP_CARGO_SELECTION                        :{BLACK}انقر على البضائع لتبديل عرض ممتلكاتها. يؤدي الضغط على Ctrl+Click إلى تعطيل جميع الشحنات باستثناء الشحنة المحددة. Ctrl+انقر عليها مرة أخرى لتمكين كافة الشحنات
+STR_SMALLMAP_LEGENDA_RAINFOREST                             :{TINY_FONT}{BLACK}الغابات المطيرة
+STR_SMALLMAP_SHOW_INDUSTRY_NAMES                            :{BLACK}إظهار أسماء الصناعات
+STR_SMALLMAP_TOOLTIP_SHOW_INDUSTRY_NAMES                    :{BLACK}تبديل عرض أسماء الصناعات
+STR_STATUSBAR_PAUSED_LINK_GRAPH                             :{ORANGE}* * متوقف مؤقتًا (في انتظار تحديث الرسم البياني للارتباط) * *
+STR_STATUSBAR_SPECTATOR                                     :{WHITE}(المتفرج)
+STR_STATUSBAR_INFINITE_MONEY                                :{WHITE}(المال اللانهائي)
+STR_NEWS_NEW_TOWN_UNSPONSORED                               :{BLACK}{BIG_FONT}تم بناء مدينة جديدة تسمى {TOWN}!
+STR_NEWS_VEHICLE_UNPROFITABLE_YEAR                          :{WHITE}{VEHICLE}أرباح العام الماضي كانت {CURRENCY_LONG}
+STR_NEWS_VEHICLE_UNPROFITABLE_PERIOD                        :{WHITE}{VEHICLE}أرباح الفترة الماضية كانت {CURRENCY_LONG}
+STR_NEWS_SHOW_VEHICLE_GROUP_TOOLTIP                         :{BLACK}افتح نافذة المجموعة التي تركز على مجموعة المركبة
+STR_NEWS_STATION_NO_LONGER_ACCEPTS_CARGO_LIST               :{WHITE}{STATION} لم يعد يقبل: {CARGO_LIST}
+STR_NEWS_STATION_NOW_ACCEPTS_CARGO_LIST                     :{WHITE}{STATION} يقبل الآن: {CARGO_LIST}
+STR_NEWS_SERVICE_SUBSIDY_OFFERED                            :{BIG_FONT}{BLACK}دعم الخدمة المقدم:{}{}أول {STRING} من {STRING1} إلى {STRING1} سوف يجذب دعم {UNITS_YEARS_OR_MINUTES} من السلطة المحلية!
+STR_NEWS_SERVICE_SUBSIDY_AWARDED_HALF                       :{BIG_FONT}{BLACK}تم منح إعانة الخدمة إلى {RAW_STRING}!{}{}{STRING} من {STRING1} إلى {STRING1} سيدفعون 50% إضافية مقابل {UNITS_YEARS_OR_MINUTES}القادم!
+STR_NEWS_SERVICE_SUBSIDY_AWARDED_DOUBLE                     :{BIG_FONT}{BLACK}تم منح إعانة الخدمة إلى {RAW_STRING}!{}{}{STRING} من {STRING1} إلى {STRING1} سيدفع أسعارًا مضاعفة لـ {UNITS_YEARS_OR_MINUTES}التالي!
+STR_NEWS_SERVICE_SUBSIDY_AWARDED_TRIPLE                     :{BIG_FONT}{BLACK}تم منح إعانة الخدمة إلى {RAW_STRING}!{}{}{STRING} من {STRING1} إلى {STRING1} سيدفعون أسعارًا ثلاثية مقابل {UNITS_YEARS_OR_MINUTES}القادم!
+STR_NEWS_SERVICE_SUBSIDY_AWARDED_QUADRUPLE                  :{BIG_FONT}{BLACK}تم منح إعانة الخدمة إلى {RAW_STRING}!{}{}{STRING} من {STRING1} إلى {STRING1} سيدفعون أسعارًا أربعة أضعاف مقابل {UNITS_YEARS_OR_MINUTES}التالي!
+STR_NEWS_ROAD_REBUILDING_MONTHS                             :{BIG_FONT}{BLACK}فوضى مرورية في {TOWN}!{}{}برنامج إعادة بناء الطرق الممول من {RAW_STRING} يجلب 6 أشهر من البؤس لسائقي السيارات!
+STR_NEWS_ROAD_REBUILDING_MINUTES                            :{BIG_FONT}{BLACK}فوضى مرورية في {TOWN}!{}{}برنامج إعادة بناء الطرق الممول من {RAW_STRING} يجلب 6 دقائق من البؤس لسائقي السيارات!
+STR_NEWS_EXCLUSIVE_RIGHTS_DESCRIPTION_MONTHS                :{BIG_FONT}{BLACK}السلطة المحلية في {TOWN} توقع عقدًا مع {RAW_STRING} لمدة 12 شهرًا لحقوق النقل الحصرية!
+STR_NEWS_EXCLUSIVE_RIGHTS_DESCRIPTION_MINUTES               :{BIG_FONT}{BLACK}السلطة المحلية في {TOWN} توقع عقدًا مع {RAW_STRING} للحصول على حقوق النقل الحصرية لمدة 12 دقيقة!
+STR_GAME_OPTIONS_TAB_GENERAL                                :عام
+STR_GAME_OPTIONS_TAB_GENERAL_TOOLTIP                        :اختر الإعدادات العامة
+STR_GAME_OPTIONS_TAB_GRAPHICS                               :الرسومات
+STR_GAME_OPTIONS_TAB_GRAPHICS_TOOLTIP                       :اختر إعدادات الرسومات
+STR_GAME_OPTIONS_TAB_SOUND                                  :صوت
+STR_GAME_OPTIONS_TAB_SOUND_TOOLTIP                          :اختر إعدادات الصوت والموسيقى
+STR_GAME_OPTIONS_TAB_SOCIAL                                 :اجتماعي
+STR_GAME_OPTIONS_TAB_SOCIAL_TOOLTIP                         :اختر إعدادات التكامل الاجتماعي
+STR_GAME_OPTIONS_TAB_ADVANCED                               :متقدم
+STR_GAME_OPTIONS_TAB_ADVANCED_TOOLTIP                       :تغيير الإعدادات المتقدمة
+STR_GAME_OPTIONS_VOLUME                                     :مقدار
+STR_GAME_OPTIONS_SFX_VOLUME                                 :المؤثرات الصوتية
+STR_GAME_OPTIONS_MUSIC_VOLUME                               :موسيقى
+STR_GAME_OPTIONS_SETTING                                    :{STRING}: {ORANGE}{STRING}
+STR_GAME_OPTIONS_VOLUME_MARK                                :{NUM}%
+STR_GAME_OPTIONS_CURRENCY_PTE                               :الاسكودو البرتغالي
+STR_GAME_OPTIONS_CURRENCY_UAH                               :الهريفنيا الأوكرانية
+STR_GAME_OPTIONS_CURRENCY_VND                               :دونغ الفيتنامية
+STR_GAME_OPTIONS_RESOLUTION_ITEM                            :{NUM}×{NUM}
+STR_GAME_OPTIONS_VIDEO_DRIVER_INFO                          :السائق الحالي: {RAW_STRING}
+STR_GAME_OPTIONS_INTERFACE                                  :واجهة
+STR_GAME_OPTIONS_GUI_SCALE_FRAME                            :حجم الواجهة
+STR_GAME_OPTIONS_GUI_SCALE_BEVELS                           :مقياس المشطوف
+STR_GAME_OPTIONS_GUI_SCALE_BEVELS_TOOLTIP                   :قم بالتشغيل لقياس الحواف حسب حجم الواجهة
+STR_GAME_OPTIONS_GUI_FONT_SPRITE                            :استخدم خط العفريت التقليدي
+STR_GAME_OPTIONS_GUI_FONT_SPRITE_TOOLTIP                    :قم بالتشغيل إذا كنت تفضل استخدام الخط المتحرك التقليدي ذي الحجم الثابت
+STR_GAME_OPTIONS_GUI_FONT_AA                                :الخطوط المضادة للاسم المستعار
+STR_GAME_OPTIONS_GUI_FONT_AA_TOOLTIP                        :قم بتشغيل الخطوط القابلة لتغيير حجمها المضادة للاسم المستعار
+STR_GAME_OPTIONS_GUI_SCALE_MARK                             :{DECIMAL}س
+STR_GAME_OPTIONS_PARTICIPATE_SURVEY_FRAME                   :المسح الآلي
+STR_GAME_OPTIONS_PARTICIPATE_SURVEY                         :المشاركة في المسح الآلي
+STR_GAME_OPTIONS_PARTICIPATE_SURVEY_TOOLTIP                 :عند التمكين، سيرسل OpenTTD استبيانًا عند مغادرة اللعبة
+STR_GAME_OPTIONS_PARTICIPATE_SURVEY_LINK                    :حول المسح والخصوصية
+STR_GAME_OPTIONS_PARTICIPATE_SURVEY_LINK_TOOLTIP            :يؤدي هذا إلى فتح متصفح يحتوي على مزيد من المعلومات حول الاستطلاع الآلي
+STR_GAME_OPTIONS_PARTICIPATE_SURVEY_PREVIEW                 :معاينة نتيجة الاستطلاع
+STR_GAME_OPTIONS_PARTICIPATE_SURVEY_PREVIEW_TOOLTIP         :عرض نتيجة الاستطلاع للعبة الجاري تشغيلها
+STR_GAME_OPTIONS_DISPLAY                                    :العرض
+STR_GAME_OPTIONS_ONLINE_CONTENT                             :احصل على المحتوى
+STR_GAME_OPTIONS_ONLINE_CONTENT_TOOLTIP                     :تحقق من وجود محتوى جديد ومحدث للتنزيل
+STR_GAME_OPTIONS_SOCIAL_PLUGIN_TITLE                        :{RAW_STRING} ({RAW_STRING})
+STR_GAME_OPTIONS_SOCIAL_PLUGIN_STATE_RUNNING                :{GREEN}تشغيل
+STR_GAME_OPTIONS_SOCIAL_PLUGIN_STATE_UNLOADED               :{RED}تم تفريغ
+STR_GAME_OPTIONS_SOCIAL_PLUGIN_STATE_UNSUPPORTED_API        :{RED}نسخة غير مدعومة
+STR_BASESET_STATUS                                          :{RAW_STRING} {RED}(ملف{NUM} مفقود/تالف{P "" s})
+STR_CURRENCY_SEPARATOR                                      :{LTBLUE}فاصل: {ORANGE}{RAW_STRING}
+STR_CURRENCY_SET_CUSTOM_CURRENCY_SEPARATOR_TOOLTIP          :{BLACK}قم بتعيين الفاصل لعملتك
+STR_TERRAIN_TYPE_CUSTOM_VALUE                               :الارتفاع المخصص ({NUM})
+STR_CONFIG_SETTING_VALUE                                    :{ORANGE}{STRING1}
+STR_CONFIG_SETTING_DEFAULT_VALUE                            :{LTBLUE}القيمة الافتراضية: {ORANGE}{STRING1}
+STR_CONFIG_SETTING_TYPE                                     :{LTBLUE}نوع الإعداد: {ORANGE}{STRING}
+STR_CONFIG_SETTING_TYPE_CLIENT                              :إعداد العميل (لا يتم تخزينه في الحفظ، ويؤثر على جميع الألعاب)
+STR_CONFIG_SETTING_TYPE_GAME_MENU                           :إعداد اللعبة (مخزن في الحفظ، ويؤثر على الألعاب الجديدة فقط)
+STR_CONFIG_SETTING_TYPE_GAME_INGAME                         :إعداد اللعبة (مخزن في الحفظ، يؤثر على اللعبة الحالية فقط)
+STR_CONFIG_SETTING_TYPE_COMPANY_MENU                        :إعداد الشركة (مخزن في الحفظ، ويؤثر على الألعاب الجديدة فقط)
+STR_CONFIG_SETTING_TYPE_COMPANY_INGAME                      :إعداد الشركة (مخزن في الحفظ، ويؤثر على الشركة الحالية فقط)
+STR_CONFIG_SETTING_RESET_ALL_CONFIRMATION_DIALOG_TEXT       :{WHITE}سيؤدي هذا الإجراء إلى إعادة تعيين كافة إعدادات اللعبة إلى قيمها الافتراضية.{}هل أنت متأكد من رغبتك في المتابعة؟
+STR_CONFIG_SETTING_RESTRICT_DROPDOWN_HELPTEXT               :يقيد القائمة أدناه باستخدام عوامل التصفية المحددة مسبقًا
+STR_CONFIG_SETTING_RESTRICT_ADVANCED                        :متقدم (إظهار معظم الإعدادات)
+STR_CONFIG_SETTING_RESTRICT_ALL                             :خبير (عرض كافة الإعدادات، بما في ذلك الإعدادات الغريبة)
+STR_CONFIG_SETTING_RESTRICT_CHANGED_AGAINST_DEFAULT         :إعدادات ذات قيمة مختلفة عن القيمة الافتراضية
+STR_CONFIG_SETTING_RESTRICT_CHANGED_AGAINST_NEW             :إعدادات ذات قيمة مختلفة عن إعدادات اللعبة الجديدة
+STR_CONFIG_SETTING_CATEGORY_HIDES                           :عرض جميع نتائج البحث عن طريق ضبط{}{PUSH_COLOUR}{SILVER}الفئة {POP_COLOUR}على {WHITE}{STRING}
+STR_CONFIG_SETTING_TYPE_HIDES                               :عرض جميع نتائج البحث عن طريق ضبط{}{PUSH_COLOUR}{SILVER}اكتب {POP_COLOUR}إلى {WHITE}جميع أنواع الإعدادات
+STR_CONFIG_SETTING_SECONDS_VALUE                            :{COMMA}{NBSP}{P 0 "" s}الثانية
+STR_CONFIG_SETTING_INFINITE_MONEY                           :المال اللانهائي: {STRING2}
+STR_CONFIG_SETTING_INFINITE_MONEY_HELPTEXT                  :السماح بالإنفاق غير المحدود وتعطيل إفلاس الشركات
+STR_CONFIG_SETTING_MAXIMUM_INITIAL_LOAN                     :الحد الأقصى للقرض الأولي: {STRING2}
+STR_CONFIG_SETTING_MAXIMUM_INITIAL_LOAN_HELPTEXT            :الحد الأقصى للمبلغ الذي يمكن للشركة إقراضه (دون أخذ التضخم في الاعتبار). إذا تم التعيين على "بدون قرض"، فلن تتوفر أموال ما لم يتم توفيرها بواسطة برنامج نصي للعبة أو إعداد "أموال لا نهائية".
+STR_CONFIG_SETTING_MAXIMUM_INITIAL_LOAN_VALUE               :{CURRENCY_LONG}
+STR_CONFIG_SETTING_MAXIMUM_INITIAL_LOAN_DISABLED            :لا قرض
+STR_CONFIG_SETTING_INTEREST_RATE                            :سعر الفائدة: {STRING2}
+STR_CONFIG_SETTING_RUNNING_COSTS                            :تكاليف التشغيل: {STRING2}
+STR_CONFIG_SETTING_RUNNING_COSTS_LOW                        :قليل
+STR_CONFIG_SETTING_RUNNING_COSTS_MEDIUM                     :واسطة
+STR_CONFIG_SETTING_RUNNING_COSTS_HIGH                       :عالي
+STR_CONFIG_SETTING_VEHICLE_BREAKDOWNS_HELPTEXT              :التحكم في عدد المرات التي قد تتعطل فيها المركبات التي لا تخضع للصيانة الكافية
+STR_CONFIG_SETTING_SUBSIDY_MULTIPLIER                       :مضاعف الدعم: {STRING2}
+STR_CONFIG_SETTING_SUBSIDY_DURATION                         :مدة الدعم: {STRING2}
+STR_CONFIG_SETTING_SUBSIDY_DURATION_HELPTEXT                :تحديد عدد السنوات التي تمنح فيها الإعانة
+STR_CONFIG_SETTING_SUBSIDY_DURATION_HELPTEXT_PERIODS        :تحديد عدد الفترات التي يمنح عنها الدعم
+STR_CONFIG_SETTING_SUBSIDY_DURATION_VALUE                   :{UNITS_YEARS_OR_PERIODS}
+STR_CONFIG_SETTING_SUBSIDY_DURATION_DISABLED                :لا الإعانات
+STR_CONFIG_SETTING_CONSTRUCTION_COSTS_LOW                   :قليل
+STR_CONFIG_SETTING_CONSTRUCTION_COSTS_MEDIUM                :واسطة
+STR_CONFIG_SETTING_CONSTRUCTION_COSTS_HIGH                  :عالي
+STR_CONFIG_SETTING_RECESSIONS_HELPTEXT                      :إذا تم تمكينه، فقد يحدث الركود بشكل دوري. خلال فترة الركود، يكون الإنتاج بأكمله أقل بشكل ملحوظ (يعود إلى المستوى السابق عندما ينتهي الركود)
+STR_CONFIG_SETTING_TRAIN_FLIP_REVERSE                       :السماح للقطارات بالانقلاب عند الرجوع للخلف: {STRING2}
+STR_CONFIG_SETTING_TRAIN_FLIP_REVERSE_HELPTEXT              :اختر المكان الذي قد تنقلب فيه القطارات لعكس الاتجاه. مع "الكل" قد تنقلب القطارات في أي مكان. مع "نهاية الخط فقط"، لن تنقلب القطارات في المحطات إذا كان المسار للأمام ممكنًا. مع "لا شيء" لا يمكن للقطارات أن تنقلب وستتحرك للخلف إذا لزم الأمر، ولكن بسرعة منخفضة إذا كانت السيارة الخلفية تفتقر إلى كابينة القيادة
+STR_CONFIG_SETTING_TRAIN_FLIP_REVERSE_ALL                   :الجميع
+STR_CONFIG_SETTING_TRAIN_FLIP_REVERSE_END_OF_LINE_ONLY      :نهاية السطر فقط
+STR_CONFIG_SETTING_TRAIN_FLIP_REVERSE_NONE                  :لا أحد
+STR_CONFIG_SETTING_DISASTERS_HELPTEXT                       :قم بتبديل الكوارث التي قد تؤدي في بعض الأحيان إلى حظر أو تدمير المركبات أو البنية التحتية
+STR_CONFIG_SETTING_CITY_APPROVAL_HELPTEXT                   :اختر مدى تأثير الضوضاء والأضرار البيئية التي تلحقها الشركات على تصنيف مدينتها وإجراءات البناء الإضافية في المدينة
+STR_CONFIG_SETTING_MAP_HEIGHT_LIMIT_VALUE                   :{NUM}
+STR_CONFIG_SETTING_MAP_HEIGHT_LIMIT_AUTO                    :(آلي)
+STR_CONFIG_SETTING_AUTOSLOPE_HELPTEXT                       :السماح بالمناظر الطبيعية أسفل المباني والمسارات دون إزالتها
+STR_CONFIG_SETTING_CATCHMENT_HELPTEXT                       :تحتوي على مناطق مستجمعات ذات أحجام مختلفة لأنواع مختلفة من المحطات والمطارات
+STR_CONFIG_SETTING_SERVE_NEUTRAL_INDUSTRIES                 :يمكن لمحطات الشركة أن تخدم الصناعات ذات المحطات المحايدة المرفقة: {STRING2}
+STR_CONFIG_SETTING_SERVE_NEUTRAL_INDUSTRIES_HELPTEXT        :عند تمكينها، يمكن أيضًا خدمة الصناعات ذات المحطات الملحقة (مثل منصات النفط) من خلال المحطات المملوكة للشركة المبنية في مكان قريب. عند تعطيلها، لا يجوز خدمة هذه الصناعات إلا من خلال المحطات الملحقة بها. ولن تتمكن أي محطات قريبة للشركة من خدمتهم، ولن تخدم المحطة الملحقة أي شيء آخر غير الصناعة
+STR_CONFIG_SETTING_EXTRADYNAMITE_HELPTEXT                   :تسهيل إزالة البنية التحتية والمباني المملوكة للمدينة
+STR_CONFIG_SETTING_TRAIN_LENGTH                             :الحد الأقصى لطول القطارات: {STRING2}
+STR_CONFIG_SETTING_TRAIN_LENGTH_HELPTEXT                    :تعيين الحد الأقصى لطول القطارات
+STR_CONFIG_SETTING_TILE_LENGTH                              :{COMMA}بلاط {P 0 "" s}
+STR_CONFIG_SETTING_TRAIN_ACCELERATION_MODEL_HELPTEXT        :حدد النموذج الفيزيائي لتسريع القطار. النموذج "الأصلي" يعاقب المنحدرات بالتساوي لجميع المركبات. النموذج "الواقعي" يعاقب المنحدرات والمنحنيات اعتمادًا على الخصائص المختلفة للتكوين، مثل الطول وجهد الجر
+STR_CONFIG_SETTING_ROAD_VEHICLE_ACCELERATION_MODEL_HELPTEXT :حدد النموذج الفيزيائي لتسريع المركبات على الطرق. النموذج "الأصلي" يعاقب المنحدرات بالتساوي لجميع المركبات. النموذج "الواقعي" يعاقب المنحدرات اعتمادًا على الخصائص المختلفة للمحرك، على سبيل المثال "جهد الجر"
+STR_CONFIG_SETTING_TRAIN_SLOPE_STEEPNESS                    :انحدار المنحدر للقطارات: {STRING2}
+STR_CONFIG_SETTING_TRAIN_SLOPE_STEEPNESS_HELPTEXT           :انحدار البلاط المائل للقطار. القيم الأعلى تجعل تسلق التل أكثر صعوبة
+STR_CONFIG_SETTING_PERCENTAGE                               :{COMMA}%
+STR_CONFIG_SETTING_ROAD_VEHICLE_SLOPE_STEEPNESS             :انحدار المنحدر لمركبات الطرق: {STRING2}
+STR_CONFIG_SETTING_ROAD_VEHICLE_SLOPE_STEEPNESS_HELPTEXT    :انحدار البلاط المائل لمركبة الطريق. القيم الأعلى تجعل تسلق التل أكثر صعوبة
+STR_CONFIG_SETTING_FORBID_90_DEG_HELPTEXT                   :تحدث المنعطفات بزاوية 90 درجة عندما يتبع المسار الأفقي مباشرة قطعة مسار رأسية على البلاط المجاور، مما يجعل القطار يدور بمقدار 90 درجة عند اجتياز حافة البلاط بدلاً من 45 درجة المعتادة لمجموعات المسارات الأخرى
+STR_CONFIG_SETTING_DISTANT_JOIN_STATIONS_HELPTEXT           :السماح بإضافة أجزاء إلى المحطة دون لمس الأجزاء الموجودة مباشرة، وذلك من خلال الضغط على Ctrl+Click أثناء وضع الأجزاء الجديدة
+STR_CONFIG_SETTING_MAX_BRIDGE_LENGTH_HELPTEXT               :الحد الأقصى لطول بناء الجسور
+STR_CONFIG_SETTING_MAX_BRIDGE_HEIGHT                        :الحد الأقصى لارتفاع الجسر: {STRING2}
+STR_CONFIG_SETTING_MAX_TUNNEL_LENGTH                        :الحد الأقصى لطول النفق: {STRING2}
+STR_CONFIG_SETTING_RAW_INDUSTRY_CONSTRUCTION_METHOD_HELPTEXT:طريقة تمويل الصناعة الأولية. "لا شيء" تعني أنه من غير الممكن تمويل أي منها، و"التنقيب" يعني أن التمويل ممكن، ولكن البناء يحدث في مكان عشوائي على الخريطة وقد يفشل أيضًا، "مثل الصناعات الأخرى" تعني أنه يمكن إنشاء الصناعات الخام من قبل شركات مثل الصناعات التحويلية في أي وضع تريده.
+STR_CONFIG_SETTING_INDUSTRY_PLATFORM_HELPTEXT               :مقدار المساحة المسطحة حول الصناعة. وهذا يضمن بقاء المساحة الفارغة متاحة حول الصناعة لبناء المسارات، وما إلى ذلك
+STR_CONFIG_SETTING_MULTIPINDTOWN_HELPTEXT                   :عادة، لا تريد المدينة أكثر من صناعة واحدة من كل نوع. مع هذا الإعداد، سيسمح للعديد من الصناعات من نفس النوع في نفس المدينة
+STR_CONFIG_SETTING_SIGNALSIDE                               :إظهار الإشارات: {STRING2}
+STR_CONFIG_SETTING_SIGNALSIDE_HELPTEXT                      :اختر على أي جانب من المسار لوضع الإشارات
+STR_CONFIG_SETTING_SIGNALSIDE_LEFT                          :على اليسار
+STR_CONFIG_SETTING_SIGNALSIDE_RIGHT                         :على اليمين
+STR_CONFIG_SETTING_SHOWFINANCES_PERIOD                      :إظهار نافذة المالية في نهاية الفترة: {STRING2}
+STR_CONFIG_SETTING_SHOWFINANCES_HELPTEXT                    :في حالة تمكينه، تظهر نافذة الشؤون المالية في نهاية كل عام للسماح بالفحص السهل للوضع المالي للشركة
+STR_CONFIG_SETTING_SHOWFINANCES_HELPTEXT_PERIOD             :في حالة تمكينه، تظهر نافذة الشؤون المالية في نهاية كل فترة للسماح بالفحص السهل للوضع المالي للشركة
+STR_CONFIG_SETTING_NONSTOP_BY_DEFAULT_HELPTEXT              :عادة، تتوقف السيارة عند كل محطة تمر بها. من خلال تمكين هذا الإعداد، سيتم القيادة عبر جميع المحطات في الطريق إلى وجهتها النهائية دون توقف. لاحظ أن هذا الإعداد يحدد فقط القيمة الافتراضية للطلبات الجديدة. ومع ذلك، يمكن تعيين الأوامر الفردية بشكل صريح لأي من السلوكين
+STR_CONFIG_SETTING_STOP_LOCATION_HELPTEXT                   :المكان الذي سيتوقف فيه القطار عند الرصيف افتراضيًا. "النهاية القريبة" تعني بالقرب من نقطة الدخول، و"الوسط" تعني في منتصف المنصة، و"النهاية البعيدة" تعني بعيدًا عن نقطة الدخول. لاحظ أن هذا الإعداد يحدد فقط القيمة الافتراضية للطلبات الجديدة. يمكن تحديد موقع التوقف للأوامر الفردية من خلال النقر على نص الطلب
+STR_CONFIG_SETTING_AUTOSCROLL_HELPTEXT                      :عند التمكين، ستبدأ إطارات العرض في التمرير عندما يكون الماوس بالقرب من حافة النافذة
+STR_CONFIG_SETTING_AUTOSCROLL_MAIN_VIEWPORT_FULLSCREEN      :منفذ العرض الرئيسي، ملء الشاشة فقط
+STR_CONFIG_SETTING_AUTOSCROLL_MAIN_VIEWPORT                 :منفذ العرض الرئيسي
+STR_CONFIG_SETTING_AUTOSCROLL_EVERY_VIEWPORT                :كل منفذ عرض
+STR_CONFIG_SETTING_BRIBE_HELPTEXT                           :السماح للشركات بمحاولة رشوة سلطة المدينة المحلية. إذا لاحظ المفتش الرشوة، فلن تتمكن الشركة من العمل في المدينة لمدة ستة أشهر
+STR_CONFIG_SETTING_BRIBE_HELPTEXT_MINUTES                   :السماح للشركات بمحاولة رشوة سلطة المدينة المحلية. إذا لاحظ المفتش الرشوة، فلن تتمكن الشركة من التصرف في المدينة لمدة ست دقائق
+STR_CONFIG_SETTING_ALLOW_EXCLUSIVE_HELPTEXT                 :إذا اشترت شركة حقوق النقل الحصرية لمدينة ما، فلن تتلقى محطات المنافسين (الركاب والبضائع) أي بضائع لمدة اثني عشر شهرًا
+STR_CONFIG_SETTING_ALLOW_EXCLUSIVE_HELPTEXT_MINUTES         :إذا اشترت شركة حقوق النقل الحصرية لمدينة ما، فلن تتلقى محطات المنافسين (الركاب والبضائع) أي بضائع لمدة اثنتي عشرة دقيقة
+STR_CONFIG_SETTING_ALLOW_FUND_ROAD_HELPTEXT                 :السماح للشركات بإعطاء الأموال للمدن لإعادة بناء الطرق لتخريب الخدمات القائمة على الطرق في المدينة
+STR_CONFIG_SETTING_FREIGHT_TRAINS_HELPTEXT                  :ضبط تأثير حمل البضائع في القطارات. القيمة الأعلى تجعل نقل البضائع أكثر صعوبة بالنسبة للقطارات، خاصة على التلال
+STR_CONFIG_SETTING_PLANE_SPEED_HELPTEXT                     :ضبط السرعة النسبية للطائرات مقارنة بأنواع المركبات الأخرى، لتقليل مقدار دخل النقل بالطائرات
+STR_CONFIG_SETTING_CROSSING_WITH_COMPETITOR                 :السماح بوجود تقاطعات مستوية مع الطرق أو السكك الحديدية المملوكة للمنافسين: {STRING2}
+STR_CONFIG_SETTING_CROSSING_WITH_COMPETITOR_HELPTEXT        :السماح ببناء معابر مستوية على الطرق أو السكك الحديدية المملوكة للمنافسين
+STR_CONFIG_SETTING_STOP_ON_TOWN_ROAD_HELPTEXT               :السماح بإنشاء محطات توقف على الطرق المملوكة للمدن
+STR_CONFIG_SETTING_INFRASTRUCTURE_MAINTENANCE_HELPTEXT      :عند تمكينها، تتسبب البنية التحتية في تكاليف الصيانة. وتنمو التكلفة بشكل متناسب مع حجم الشبكة، مما يؤثر على الشركات الكبرى أكثر من الشركات الصغيرة
+STR_CONFIG_SETTING_COMPANY_STARTING_COLOUR_SECONDARY        :اللون الثانوي للشركة البادئة: {STRING2}
+STR_CONFIG_SETTING_COMPANY_STARTING_COLOUR_SECONDARY_HELPTEXT:اختر لونًا ثانويًا للبدء للشركة، في حالة استخدام NewGRF الذي يتيح ذلك
+STR_CONFIG_SETTING_NEVER_EXPIRE_AIRPORTS_HELPTEXT           :يؤدي تمكين هذا الإعداد إلى جعل كل نوع من أنواع المطارات متاحًا إلى الأبد بعد تقديمه
+STR_CONFIG_SETTING_WARN_LOST_VEHICLE_HELPTEXT               :قم بتشغيل رسائل حول المركبات غير القادرة على العثور على المسار إلى وجهتها المطلوبة
+STR_CONFIG_SETTING_ORDER_REVIEW_HELPTEXT                    :عند التمكين، يتم فحص طلبات المركبات بشكل دوري، ويتم الإبلاغ عن بعض المشكلات الواضحة برسالة إخبارية عند اكتشافها
+STR_CONFIG_SETTING_WARN_INCOME_LESS_HELPTEXT_PERIOD         :عند التمكين، يتم إرسال رسالة إخبارية عندما لا تحقق السيارة أي ربح خلال فترة معينة
+STR_CONFIG_SETTING_WARN_OLD_VEHICLE                         :تحذير إذا أصبحت السيارة قديمة: {STRING2}
+STR_CONFIG_SETTING_WARN_OLD_VEHICLE_HELPTEXT                :عند التمكين، يتم إرسال رسالة إخبارية عندما تصبح السيارة قديمة
+STR_CONFIG_SETTING_NEVER_EXPIRE_VEHICLES_HELPTEXT           :عند تمكينها، تظل جميع طرازات المركبات متاحة إلى الأبد بعد طرحها
+STR_CONFIG_SETTING_MINUTES_PER_YEAR                         :الدقائق في السنة: {STRING2}
+STR_CONFIG_SETTING_MINUTES_PER_YEAR_HELPTEXT                :اختر عدد الدقائق في السنة التقويمية. الافتراضي هو 12 دقيقة. اضبط على 0 لإيقاف تغيير وقت التقويم. تؤدي زيادة طول السنة التقويمية إلى إبطاء إدخال المركبات والمنازل والبنية التحتية الأخرى. لا يؤثر على سرعة السيارة أو المحاكاة الاقتصادية، باستثناء التضخم. يتوفر هذا الإعداد فقط عند استخدام ضبط الوقت على ساعة الحائط
+STR_CONFIG_SETTING_MINUTES_PER_YEAR_VALUE                   :{NUM}
+STR_CONFIG_SETTING_MINUTES_PER_YEAR_FROZEN                  :0 (تم تجميد وقت التقويم)
+STR_CONFIG_SETTING_TOWN_CARGO_SCALE                         :نطاق إنتاج البضائع في المدينة: {STRING2}
+STR_CONFIG_SETTING_TOWN_CARGO_SCALE_HELPTEXT                :قم بقياس إنتاج البضائع في المدن بهذه النسبة
+STR_CONFIG_SETTING_INDUSTRY_CARGO_SCALE                     :إنتاج البضائع الصناعية على نطاق واسع: {STRING2}
+STR_CONFIG_SETTING_INDUSTRY_CARGO_SCALE_HELPTEXT            :توسيع نطاق إنتاج البضائع من الصناعات بهذه النسبة
+STR_CONFIG_SETTING_CARGO_SCALE_VALUE                        :{NUM}%
+STR_CONFIG_SETTING_CARGO_AGING_RATE                         :معدل تقادم دفع البضائع على نطاق واسع: {STRING2}
+STR_CONFIG_SETTING_CARGO_AGING_RATE_HELPTEXT                :اضبط مدى سرعة انخفاض قيمة البضائع المحملة على السيارة بمرور الوقت
+STR_CONFIG_SETTING_CARGO_AGING_RATE_VALUE                   :{NUM}%
+STR_CONFIG_SETTING_CARGO_AGING_RATE_ZERO                    :لا الاضمحلال
+STR_CONFIG_SETTING_AUTORENEW_MONTHS                         :التجديد التلقائي عندما تكون السيارة هي الحد الأقصى لعمر {STRING2}
+STR_CONFIG_SETTING_AUTORENEW_MONTHS_HELPTEXT                :العمر النسبي الذي ينبغي فيه النظر في تجديد السيارة تلقائيًا
+STR_CONFIG_SETTING_AUTORENEW_MONTHS_VALUE_BEFORE            :{COMMA} الشهر{P 0 "" s} من قبل
+STR_CONFIG_SETTING_AUTORENEW_MONTHS_VALUE_AFTER             :{COMMA} شهر{P 0 "" s} بعد
+STR_CONFIG_SETTING_AUTORENEW_MONEY_HELPTEXT                 :الحد الأدنى من المبلغ المالي الذي يجب أن يبقى في البنك قبل التفكير في تجديد المركبات تلقائيًا
+STR_CONFIG_SETTING_ERRMSG_DURATION                          :مدة رسالة الخطأ: {STRING2}
+STR_CONFIG_SETTING_ERRMSG_DURATION_HELPTEXT                 :مدة عرض رسائل الخطأ في نافذة حمراء. لاحظ أن بعض رسائل الخطأ (الحرجة) لا يتم إغلاقها تلقائيًا بعد هذا الوقت، ولكن يجب إغلاقها يدويًا
+STR_CONFIG_SETTING_HOVER_DELAY                              :عرض تلميحات الأدوات: {STRING2}
+STR_CONFIG_SETTING_HOVER_DELAY_HELPTEXT                     :تأخير قبل عرض تلميحات الأدوات عند تحريك الماوس فوق بعض عناصر الواجهة. وبدلاً من ذلك، يتم ربط تلميحات الأدوات بزر الفأرة الأيمن عند تعيين هذه القيمة على 0
+STR_CONFIG_SETTING_HOVER_DELAY_VALUE                        :قم بالتحويم لمدة {COMMA} ملي ثانية{P 0 "" s}
+STR_CONFIG_SETTING_HOVER_DELAY_DISABLED                     :انقر بزر الماوس الأيمن
+STR_CONFIG_SETTING_GRAPH_LINE_THICKNESS_HELPTEXT            :عرض الخط في الرسوم البيانية. يكون الخط الرفيع أكثر دقة للقراءة، والخط السميك يكون أسهل في الرؤية والألوان أسهل في التمييز
+STR_CONFIG_SETTING_SHOW_NEWGRF_NAME                         :أظهر اسم NewGRF في نافذة بناء السيارة: {STRING2}
+STR_CONFIG_SETTING_SHOW_CARGO_IN_LISTS                      :أظهر الشحنات التي يمكن للمركبات حملها في نوافذ القائمة: {STRING2}
+STR_CONFIG_SETTING_SHOW_CARGO_IN_LISTS_HELPTEXT             :في حالة تمكينه، ستظهر حمولة السيارة القابلة للنقل فوقها في قوائم المركبات
+STR_CONFIG_SETTING_LANDSCAPE_HELPTEXT                       :تحدد المناظر الطبيعية سيناريوهات اللعب الأساسية مع الشحنات المختلفة ومتطلبات نمو المدينة. بالرغم من ذلك، تسمح NewGRF ونصوص الألعاب بتحكم أفضل
+STR_CONFIG_SETTING_SPAWN_PRIMARY_INDUSTRY_ONLY              :توليد الصناعات الأولية فقط: {STRING2}
+STR_CONFIG_SETTING_SPAWN_PRIMARY_INDUSTRY_ONLY_HELPTEXT     :في حالة التمكين، يتم إنشاء الصناعات الأساسية فقط أثناء إنشاء الخرائط واللعب.
+STR_CONFIG_SETTING_OIL_REF_EDGE_DISTANCE                    :المسافة القصوى من الحافة للصناعات النفطية: {STRING2}
+STR_CONFIG_SETTING_OIL_REF_EDGE_DISTANCE_HELPTEXT           :الحد الأقصى للمسافة التي يمكن بناءها من مصافي النفط ومنصات النفط الحدودية على الخريطة. على خرائط الجزر، يضمن ذلك وجودها بالقرب من الساحل. في الخرائط التي يزيد حجمها عن 256 مربعًا، يتم رفع هذه القيمة
+STR_CONFIG_SETTING_SNOW_COVERAGE                            :التغطية الثلجية: {STRING2}
+STR_CONFIG_SETTING_SNOW_COVERAGE_HELPTEXT                   :اختر الكمية التقريبية للثلوج على المناظر الطبيعية في المنطقة الواقعة تحت القطب الشمالي. يؤثر الثلج أيضًا على توليد الصناعة ومتطلبات نمو المدن. يتم استخدامه فقط أثناء إنشاء الخريطة. مستوى سطح البحر وبلاط الساحل لا يوجد به ثلج أبدًا
+STR_CONFIG_SETTING_DESERT_COVERAGE                          :التغطية الصحراوية: {STRING2}
+STR_CONFIG_SETTING_DESERT_COVERAGE_HELPTEXT                 :اختر المقدار التقريبي للصحراء على المناظر الطبيعية الاستوائية. تؤثر الصحراء أيضًا على توليد الصناعة ومتطلبات نمو المدن. يتم استخدامه فقط أثناء إنشاء الخريطة
+STR_CONFIG_SETTING_AVERAGE_HEIGHT                           :متوسط الارتفاع: {STRING2}
+STR_CONFIG_SETTING_AVERAGE_HEIGHT_HELPTEXT                  :اختر متوسط ارتفاع الأرض. يستخدم الإعداد "تلقائي" الإعداد الافتراضي استنادًا إلى المناخ المحدد: "الأراضي المنخفضة" للمناطق شبه الاستوائية، و"العادي" للمناطق المعتدلة وأراضي الألعاب، و"الهضاب" لشبه القطب الشمالي.
+STR_CONFIG_SETTING_AVERAGE_HEIGHT_AUTO                      :تلقائي
+STR_CONFIG_SETTING_AVERAGE_HEIGHT_LOWLANDS                  :الأراضي المنخفضة
+STR_CONFIG_SETTING_AVERAGE_HEIGHT_NORMAL                    :طبيعي
+STR_CONFIG_SETTING_AVERAGE_HEIGHT_PLATEAUS                  :الهضاب
+STR_CONFIG_SETTING_HEIGHTMAP_ROTATION_TOOLTIP               :اختر الطريقة التي يتم بها تدوير صورة خريطة الارتفاع لتناسب عالم اللعبة
+STR_CONFIG_SETTING_STATION_SPREAD                           :الحد الأقصى لانتشار المحطة: {STRING2}
+STR_CONFIG_SETTING_STATION_SPREAD_HELPTEXT                  :أقصى مساحة يمكن أن تنتشر عليها أجزاء المحطة الواحدة. لاحظ أن القيم العالية ستؤدي إلى إبطاء اللعبة
+STR_CONFIG_SETTING_SERVICEATHELIPAD_HELPTEXT                :خدمة طائرات الهليكوبتر بعد كل هبوط، حتى لو لم يكن هناك مستودع في المطار
+STR_CONFIG_SETTING_LINK_TERRAFORM_TOOLBAR_HELPTEXT          :عند فتح شريط أدوات البناء لنوع النقل، افتح أيضًا شريط الأدوات لإعادة التأهيل
+STR_CONFIG_SETTING_LINKGRAPH_COLOURS                        :ألوان تراكب تدفق البضائع: {STRING2}
+STR_CONFIG_SETTING_LINKGRAPH_COLOURS_HELPTEXT               :قم بتعيين نظام الألوان المستخدم لتراكب تدفق البضائع
+STR_CONFIG_SETTING_LINKGRAPH_COLOURS_GREEN_TO_RED           :الأخضر إلى الأحمر (الأصلي)
+STR_CONFIG_SETTING_LINKGRAPH_COLOURS_GREEN_TO_BLUE          :الأخضر إلى الأزرق
+STR_CONFIG_SETTING_LINKGRAPH_COLOURS_GREYSCALE              :تدرج الرمادي
+STR_CONFIG_SETTING_SCROLLMODE                               :سلوك التمرير في منفذ العرض: {STRING2}
+STR_CONFIG_SETTING_SCROLLMODE_HELPTEXT                      :السلوك عند التمرير على الخريطة. لا تعمل خيارات "قفل موضع الماوس" على جميع الأنظمة، مثل الإصدارات المستندة إلى الويب وشاشات اللمس ونظام Linux مع Wayland وغيرها
+STR_CONFIG_SETTING_SCROLLMODE_DEFAULT                       :قم بتحريك إطار العرض باستخدام RMB، مع قفل موضع الماوس
+STR_CONFIG_SETTING_SCROLLMODE_RMB_LOCKED                    :قم بتحريك الخريطة باستخدام الرنمينبي (RMB)، مع قفل موضع الماوس
+STR_CONFIG_SETTING_SCROLLMODE_RMB                           :نقل الخريطة مع يوان
+STR_CONFIG_SETTING_SCROLLMODE_LMB                           :نقل الخريطة باستخدام LMB
+STR_CONFIG_SETTING_SMOOTH_SCROLLING_HELPTEXT                :التحكم في كيفية تمرير العرض الرئيسي إلى موضع محدد عند النقر على الخريطة الصغيرة أو عند إصدار أمر للتمرير إلى كائن محدد على الخريطة. إذا تم تمكينه، فسيتم تمرير إطار العرض بسلاسة، وإذا تم تعطيله فإنه ينتقل مباشرة إلى النقطة المستهدفة
+STR_CONFIG_SETTING_TOOLBAR_DROPDOWN_AUTOSELECT              :سلوك اختيار قائمة شريط الأدوات التقليدي: {STRING2}
+STR_CONFIG_SETTING_TOOLBAR_DROPDOWN_AUTOSELECT_HELPTEXT     :اختر سلوك التحديد لقوائم شريط الأدوات. في حالة إيقاف التشغيل، ستظل قوائم شريط الأدوات مفتوحة حتى يتم التحديد. إذا كانت قيد التشغيل، فسيتم تنشيط قوائم شريط الأدوات عند تحرير زر الماوس.
+STR_CONFIG_SETTING_MEASURE_TOOLTIP_HELPTEXT                 :عرض مسافات البلاط وفروق الارتفاع عند السحب أثناء عمليات البناء
+STR_CONFIG_SETTING_LIVERIES_HELPTEXT                        :التحكم في استخدام الصبغات الخاصة بنوع المركبة (على عكس ما هو محدد بالشركة)
+STR_CONFIG_SETTING_PREFER_TEAMCHAT_HELPTEXT                 :تبديل ربط محادثة الشركة الداخلية والمحادثة العامة إلى <ENTER> أو <Ctrl+ENTER>
+STR_CONFIG_SETTING_SCROLLWHEEL_MULTIPLIER_HELPTEXT          :التحكم في حساسية التمرير بعجلة الماوس
+STR_CONFIG_SETTING_SCROLLWHEEL_SCROLLING_HELPTEXT           :تمكين التمرير باستخدام عجلات الماوس ثنائية الأبعاد
+STR_CONFIG_SETTING_OSK_ACTIVATION_HELPTEXT                  :حدد الطريقة لفتح لوحة المفاتيح على الشاشة لإدخال النص في مربعات التحرير فقط باستخدام جهاز التأشير. هذا مخصص للأجهزة الصغيرة التي لا تحتوي على لوحة مفاتيح فعلية
+STR_CONFIG_SETTING_OSK_ACTIVATION_SINGLE_CLICK              :نقرة واحدة (فورا)
+STR_CONFIG_SETTING_USE_RELAY_SERVICE                        :استخدام خدمة التتابع: {STRING2}
+STR_CONFIG_SETTING_USE_RELAY_SERVICE_HELPTEXT               :إذا فشل إنشاء اتصال بالخادم، فيمكن للمرء استخدام خدمة الترحيل لإنشاء اتصال. "أبدًا" لا يسمح بذلك، "اسأل" سيسأل أولاً، "السماح" سيسمح بذلك دون أن يطلب
+STR_CONFIG_SETTING_USE_RELAY_SERVICE_NEVER                  :أبداً
+STR_CONFIG_SETTING_USE_RELAY_SERVICE_ASK                    :بسأل
+STR_CONFIG_SETTING_RIGHT_MOUSE_BTN_EMU_HELPTEXT             :حدد الطريقة لمحاكاة نقرات زر الفأرة الأيمن
+STR_CONFIG_SETTING_RIGHT_MOUSE_WND_CLOSE                    :إغلاق النافذة عند النقر بزر الماوس الأيمن: {STRING2}
+STR_CONFIG_SETTING_RIGHT_MOUSE_WND_CLOSE_NO                 :لا
+STR_CONFIG_SETTING_RIGHT_MOUSE_WND_CLOSE_YES                :نعم
+STR_CONFIG_SETTING_RIGHT_MOUSE_WND_CLOSE_YES_EXCEPT_STICKY  :نعم، باستثناء لزجة
+STR_CONFIG_SETTING_DATE_FORMAT_IN_SAVE_NAMES_HELPTEXT       :تنسيق التاريخ في حفظ أسماء ملفات اللعبة
+STR_CONFIG_SETTING_PAUSE_ON_NEW_GAME_HELPTEXT               :عند التمكين، ستتوقف اللعبة تلقائيًا عند بدء لعبة جديدة، مما يسمح بدراسة الخريطة عن كثب
+STR_CONFIG_SETTING_COMMAND_PAUSE_LEVEL_HELPTEXT             :حدد الإجراءات التي يمكن القيام بها أثناء إيقاف اللعبة مؤقتًا
+STR_CONFIG_SETTING_ADVANCED_VEHICLE_LISTS_HELPTEXT          :تمكين استخدام قوائم المركبات المتقدمة لتجميع المركبات
+STR_CONFIG_SETTING_TIMETABLE_MODE                           :الوحدات الزمنية للجداول الزمنية: {STRING2}
+STR_CONFIG_SETTING_TIMETABLE_MODE_DAYS                      :أيام
+STR_CONFIG_SETTING_TIMETABLE_MODE_SECONDS                   :ثواني
+STR_CONFIG_SETTING_TIMETABLE_MODE_TICKS                     :القراد
+STR_CONFIG_SETTING_TIMETABLE_SHOW_ARRIVAL_DEPARTURE_HELPTEXT:عرض أوقات الوصول والمغادرة المتوقعة في الجداول الزمنية
+STR_CONFIG_SETTING_QUICKGOTO_HELPTEXT                       :حدد مسبقًا "مؤشر الانتقال" عند فتح نافذة الأوامر
+STR_CONFIG_SETTING_DEFAULT_RAIL_ROAD_TYPE                   :النوع الافتراضي للسكك الحديدية والطرق والترام (بعد تحميل اللعبة/اللعبة الجديدة): {STRING2}
+STR_CONFIG_SETTING_DEFAULT_RAIL_ROAD_TYPE_HELPTEXT          :نوع السكك الحديدية والطرق والترام لتحديده بعد بدء اللعبة أو تحميلها. "أول متاح" يحدد أقدم نوع من المسارات، و"آخر متاح" يحدد أحدث نوع من المسارات، و"الأكثر استخدامًا" يحدد النوع الأكثر استخدامًا حاليًا
+STR_CONFIG_SETTING_DEFAULT_RAIL_ROAD_TYPE_FIRST             :متاح أولا
+STR_CONFIG_SETTING_DEFAULT_RAIL_ROAD_TYPE_LAST              :آخر متاح
+STR_CONFIG_SETTING_DEFAULT_RAIL_ROAD_TYPE_MOST_USED         :الأكثر استخداما
+STR_CONFIG_SETTING_SHOW_TRACK_RESERVATION_HELPTEXT          :امنح المسارات المحجوزة لونًا مختلفًا للمساعدة في حل مشكلات القطارات التي ترفض دخول الكتل المستندة إلى المسار
+STR_CONFIG_SETTING_PERSISTENT_BUILDINGTOOLS_HELPTEXT        :إبقاء أدوات البناء للجسور والأنفاق وغيرها مفتوحة بعد الاستخدام
+STR_CONFIG_SETTING_AUTO_REMOVE_SIGNALS                      :إزالة الإشارات تلقائيًا أثناء بناء السكك الحديدية: {STRING2}
+STR_CONFIG_SETTING_AUTO_REMOVE_SIGNALS_HELPTEXT             :قم بإزالة الإشارات تلقائيًا أثناء إنشاء السكك الحديدية إذا كانت الإشارات في الطريق. لاحظ أن هذا قد يؤدي إلى حوادث القطارات
+STR_CONFIG_SETTING_FAST_FORWARD_SPEED_LIMIT                 :الحد الأقصى لسرعة التقديم السريع: {STRING2}
+STR_CONFIG_SETTING_FAST_FORWARD_SPEED_LIMIT_HELPTEXT        :تحديد مدى سرعة سير اللعبة عند تمكين التقديم السريع. 0 = لا يوجد حد (بالسرعة التي يسمح بها جهاز الكمبيوتر الخاص بك). القيم الأقل من 100% تؤدي إلى إبطاء اللعبة. يعتمد الحد الأعلى على مواصفات جهاز الكمبيوتر الخاص بك ويمكن أن يختلف حسب اللعبة
+STR_CONFIG_SETTING_FAST_FORWARD_SPEED_LIMIT_ZERO            :لا يوجد حد (بأسرع ما يسمح به جهاز الكمبيوتر الخاص بك)
+STR_CONFIG_SETTING_SOUND_NEW_PERIOD                         :نهاية الفترة: {STRING2}
+STR_CONFIG_SETTING_SOUND_NEW_PERIOD_HELPTEXT                :تشغيل صوت في نهاية الفترة يلخص أداء الشركة خلال الفترة مقارنة بالفترة السابقة
+STR_CONFIG_SETTING_MAX_ROAD_VEHICLES_HELPTEXT               :الحد الأقصى لعدد مركبات الطرق التي يمكن أن تمتلكها الشركة
+STR_CONFIG_SETTING_MAX_SHIPS_HELPTEXT                       :الحد الأقصى لعدد السفن التي يمكن أن تمتلكها الشركة
+STR_CONFIG_SETTING_AI_BUILDS_ROAD_VEHICLES_HELPTEXT         :يؤدي تمكين هذا الإعداد إلى جعل بناء مركبات الطريق أمرًا مستحيلًا بالنسبة لمشغل الكمبيوتر
+STR_CONFIG_SETTING_AI_BUILDS_AIRCRAFT_HELPTEXT              :يؤدي تمكين هذا الإعداد إلى جعل بناء الطائرات أمرًا مستحيلًا بالنسبة لمشغل الكمبيوتر
+STR_CONFIG_SETTING_AI_BUILDS_SHIPS_HELPTEXT                 :يؤدي تمكين هذا الإعداد إلى جعل بناء السفن أمرًا مستحيلًا بالنسبة لمشغل الكمبيوتر
+STR_CONFIG_SETTING_SCRIPT_MAX_OPCODES_HELPTEXT              :الحد الأقصى لعدد خطوات الحساب التي يمكن أن يتخذها البرنامج النصي في دورة واحدة
+STR_CONFIG_SETTING_SCRIPT_MAX_MEMORY                        :الحد الأقصى لاستخدام الذاكرة لكل برنامج نصي: {STRING2}
+STR_CONFIG_SETTING_SCRIPT_MAX_MEMORY_HELPTEXT               :مقدار الذاكرة التي قد يستهلكها برنامج نصي واحد قبل أن يتم إنهاؤه بالقوة. قد يلزم زيادة هذا بالنسبة للخرائط الكبيرة
+STR_CONFIG_SETTING_SERVINT_ISPERCENT_HELPTEXT               :عند التمكين، تحاول المركبات إجراء الخدمة عندما تنخفض موثوقيتها بنسبة مئوية معينة من الحد الأقصى للموثوقية.{}{}على سبيل المثال، إذا كان الحد الأقصى لموثوقية المركبة هو 90% وكان الفاصل الزمني للخدمة 20%، فستحاول المركبة إجراء الخدمة عندما تصل إلى 72% من الموثوقية
+STR_CONFIG_SETTING_SERVINT_TRAINS                           :الفاصل الزمني الافتراضي للخدمة للقطارات: {STRING2}
+STR_CONFIG_SETTING_SERVINT_TRAINS_HELPTEXT                  :قم بتعيين الفاصل الزمني للخدمة الافتراضية لمركبات السكك الحديدية الجديدة، إذا لم يتم تعيين فاصل زمني واضح للخدمة للمركبة
+STR_CONFIG_SETTING_SERVINT_ROAD_VEHICLES                    :الفاصل الزمني الافتراضي للخدمة لمركبات الطرق: {STRING2}
+STR_CONFIG_SETTING_SERVINT_ROAD_VEHICLES_HELPTEXT           :قم بتعيين الفاصل الزمني للخدمة الافتراضية لمركبات الطريق الجديدة، إذا لم يتم تعيين فاصل زمني واضح للخدمة للمركبة
+STR_CONFIG_SETTING_SERVINT_AIRCRAFT_HELPTEXT                :قم بتعيين الفاصل الزمني للخدمة الافتراضية للطائرات الجديدة، إذا لم يتم تعيين فاصل زمني واضح للخدمة للمركبة
+STR_CONFIG_SETTING_SERVINT_SHIPS_HELPTEXT                   :قم بتعيين الفاصل الزمني للخدمة الافتراضية للسفن الجديدة، إذا لم يتم تعيين فاصل زمني واضح للخدمة للمركبة
+STR_CONFIG_SETTING_SERVINT_VALUE_DAYS                       :{COMMA}{NBSP}يوم{P 0 "" s}
+STR_CONFIG_SETTING_SERVINT_VALUE_MINUTES                    :{COMMA}{NBSP}دقيقة{P 0 "" s}
+STR_CONFIG_SETTING_SERVINT_VALUE_PERCENTAGE                 :{COMMA}{NBSP}%
+STR_CONFIG_SETTING_NOSERVICE_HELPTEXT                       :عند تمكينه، لا تتم صيانة المركبات إذا لم تتعطل
+STR_CONFIG_SETTING_STATION_LENGTH_LOADING_PENALTY           :تحميل عقوبة السرعة للقطارات الأطول من المحطة: {STRING2}
+STR_CONFIG_SETTING_STATION_LENGTH_LOADING_PENALTY_HELPTEXT  :عند التمكين، يتم تحميل القطارات الطويلة جدًا بالنسبة للمحطة بشكل أبطأ من القطار الذي يناسب المحطة. لا يؤثر هذا الإعداد على تحديد المسار
+STR_CONFIG_SETTING_WAGONSPEEDLIMITS_HELPTEXT                :عند التمكين، استخدم أيضًا حدود سرعة العربات لتحديد السرعة القصوى للقطار
+STR_CONFIG_SETTING_AIRCRAFT_RANGE                           :تمكين أقصى مدى للطائرة: {STRING2}
+STR_CONFIG_SETTING_AIRCRAFT_RANGE_HELPTEXT                  :عند التمكين، ستكون NewGRFs قادرة على الحد الأقصى لنطاق الطائرات
+STR_CONFIG_SETTING_DISABLE_ELRAILS_HELPTEXT                 :يؤدي تمكين هذا الإعداد إلى تعطيل متطلبات كهربة المسارات لتشغيل المحركات الكهربائية عليها
+STR_CONFIG_SETTING_NEWS_ARRIVAL_FIRST_VEHICLE_OTHER_HELPTEXT:عرض صحيفة عند وصول المركبة الأولى إلى محطة منافس جديد
+STR_CONFIG_SETTING_NEWS_ACCIDENTS_DISASTERS_HELPTEXT        :عرض صحيفة عند وقوع حوادث أو كوارث
+STR_CONFIG_SETTING_NEWS_ACCIDENT_OTHER                      :حوادث مركبات المنافس: {STRING2}
+STR_CONFIG_SETTING_NEWS_ACCIDENT_OTHER_HELPTEXT             :عرض صحيفة عن المركبات المحطمة للمنافسين
+STR_CONFIG_SETTING_NEWS_COMPANY_INFORMATION_HELPTEXT        :قم بعرض صحيفة عندما تبدأ شركة جديدة، أو عندما تكون الشركات معرضة لخطر الإفلاس
+STR_CONFIG_SETTING_NEWS_INDUSTRY_CLOSE_COMPANY              :إغلاق الصناعات التي تخدمها الشركة: {STRING2}
+STR_CONFIG_SETTING_NEWS_INDUSTRY_CLOSE_COMPANY_HELPTEXT     :عرض صحيفة عند إغلاق الصناعات التي تخدمها الشركة
+STR_CONFIG_SETTING_NEWS_INDUSTRY_CLOSE_OTHER                :إغلاق الصناعات التي يخدمها المنافس (المنافسون): {STRING2}
+STR_CONFIG_SETTING_NEWS_INDUSTRY_CLOSE_OTHER_HELPTEXT       :عرض إحدى الصحف عند إغلاق الصناعات التي يخدمها المنافسون
+STR_CONFIG_SETTING_NEWS_INDUSTRY_CLOSE_UNSERVED             :إغلاق الصناعات التي لا يخدمها أحد: {STRING2}
+STR_CONFIG_SETTING_NEWS_INDUSTRY_CLOSE_UNSERVED_HELPTEXT    :عرض صحيفة عندما يتم إغلاق الصناعات التي لا يخدمها أي شخص
+STR_CONFIG_SETTING_NEWS_ECONOMY_CHANGES_HELPTEXT            :عرض صحيفة عن التغيرات العالمية في الاقتصاد
+STR_CONFIG_SETTING_NEWS_INDUSTRY_CHANGES_COMPANY_HELPTEXT   :عرض صحيفة عندما يتغير مستوى إنتاج الصناعات التي تخدمها الشركة
+STR_CONFIG_SETTING_NEWS_INDUSTRY_CHANGES_OTHER_HELPTEXT     :عرض صحيفة عندما يتغير مستوى إنتاج الصناعات التي يخدمها المنافسون
+STR_CONFIG_SETTING_ENDING_YEAR                              :سجل نهاية العام: {STRING2}
+STR_CONFIG_SETTING_ENDING_YEAR_HELPTEXT                     :في العام الذي تنتهي فيه اللعبة لأغراض التسجيل. وفي نهاية هذا العام، يتم تسجيل نتيجة الشركة ويتم عرض شاشة النتيجة العالية، ولكن يمكن للاعبين مواصلة اللعب بعد ذلك.{}إذا كان ذلك قبل سنة البدء، فلن يتم عرض شاشة النقاط العالية مطلقًا
+STR_CONFIG_SETTING_ECONOMY_TYPE                             :نوع الاقتصاد: {STRING2}
+STR_CONFIG_SETTING_ECONOMY_TYPE_HELPTEXT                    :يؤدي الاقتصاد السلس إلى تغييرات الإنتاج في كثير من الأحيان، وبخطوات أصغر. الاقتصاد المتجمد يوقف تغييرات الإنتاج وإغلاق الصناعة. قد لا يكون لهذا الإعداد أي تأثير إذا تم توفير أنواع الصناعة بواسطة NewGRF.{}{}قد يبدو أن إنتاج الصناعة شهريًا يختلف إذا كان الاقتصاد متجمدًا، لأن الإنتاج يتم تشغيله على فترات زمنية محددة لا تتوافق تمامًا مع الأشهر
+STR_CONFIG_SETTING_ECONOMY_TYPE_HELPTEXT_PERIOD             :يؤدي الاقتصاد السلس إلى تغييرات الإنتاج في كثير من الأحيان، وبخطوات أصغر. الاقتصاد المتجمد يوقف تغييرات الإنتاج وإغلاق الصناعة. قد لا يكون لهذا الإعداد أي تأثير إذا تم توفير أنواع الصناعة بواسطة NewGRF.{}{}قد يبدو أن إنتاج الصناعة في الدقيقة يختلف إذا كان الاقتصاد متجمدًا، لأن الإنتاج يتم تشغيله على فترات زمنية محددة لا تتوافق تمامًا مع الدقائق
+STR_CONFIG_SETTING_ECONOMY_TYPE_ORIGINAL                    :إبداعي
+STR_CONFIG_SETTING_ECONOMY_TYPE_SMOOTH                      :سلس
+STR_CONFIG_SETTING_FEEDER_PAYMENT_SHARE                     :النسبة المئوية لربح الساق الذي سيتم دفعه في أنظمة التغذية: {STRING2}
+STR_CONFIG_SETTING_FEEDER_PAYMENT_SHARE_HELPTEXT            :نسبة الدخل الممنوحة للأرجل الوسيطة في أنظمة التغذية، مما يمنح مزيدًا من التحكم في الدخل
+STR_CONFIG_SETTING_DRAG_SIGNALS_DENSITY_HELPTEXT            :ضبط المسافة التي سيتم بناء الإشارات عندها على المسار حتى العائق التالي (الإشارة، التقاطع)، في حالة سحب الإشارات
+STR_CONFIG_SETTING_DRAG_SIGNALS_DENSITY_VALUE               :{COMMA}بلاط {P 0 "" s}
+STR_CONFIG_SETTING_DRAG_SIGNALS_FIXED_DISTANCE              :عند السحب، حافظ على مسافة ثابتة بين الإشارات: {STRING2}
+STR_CONFIG_SETTING_DRAG_SIGNALS_FIXED_DISTANCE_HELPTEXT     :حدد سلوك وضع الإشارة عند الضغط على Ctrl + إشارات السحب. في حالة تعطيله، يتم وضع الإشارات حول الأنفاق أو الجسور لتجنب الامتدادات الطويلة بدون إشارات. في حالة التمكين، يتم وضع الإشارات كل عدد n من المربعات، مما يجعل محاذاة الإشارات في المسارات المتوازية أسهل
+STR_CONFIG_SETTING_SEMAPHORE_BUILD_BEFORE_DATE_HELPTEXT     :اضبط العام الذي سيتم فيه استخدام الإشارات الكهربائية للمسارات. قبل هذا العام، سيتم استخدام الإشارات غير الكهربائية (التي لها نفس الوظيفة تمامًا، ولكن بشكل مختلف).
+STR_CONFIG_SETTING_CYCLE_SIGNAL_GROUP                       :المجموعة الحالية فقط
+STR_CONFIG_SETTING_SIGNAL_GUI_MODE                          :إظهار أنواع الإشارة: {STRING2}
+STR_CONFIG_SETTING_SIGNAL_GUI_MODE_HELPTEXT                 :اختر أنواع الإشارات التي تظهر في شريط أدوات الإشارة
+STR_CONFIG_SETTING_SIGNAL_GUI_MODE_ALL_CYCLE_PATH           :جميع الإشارات
+STR_CONFIG_SETTING_TOWN_LAYOUT_HELPTEXT                     :تخطيط شبكة الطرق في المدن
+STR_CONFIG_SETTING_ALLOW_TOWN_ROADS_HELPTEXT                :السماح للمدن ببناء الطرق لتحقيق النمو. تعطيل لمنع سلطات المدينة من بناء الطرق بنفسها
+STR_CONFIG_SETTING_NOISE_LEVEL_HELPTEXT                     :السماح للمدن بمنع بناء المطارات بناءً على مستوى قبول الضوضاء، والذي يعتمد على عدد سكان المدينة وحجم المطار والمسافة. إذا تم تعطيل هذا الإعداد، تسمح المدن بمطارين فقط ما لم يتم ضبط موقف السلطة المحلية على "مسموح"
+STR_CONFIG_SETTING_TOWN_FOUNDING_HELPTEXT                   :يتيح تمكين هذا الإعداد للاعبين العثور على مدن جديدة في اللعبة
+STR_CONFIG_SETTING_HOUSE_PLACER                             :وضع منازل فردية: {STRING2}
+STR_CONFIG_SETTING_HOUSE_PLACER_HELPTEXT                    :يتيح تمكين هذا الإعداد للاعبين وضع منازل المدينة يدويًا
+STR_CONFIG_SETTING_HOUSE_PLACER_FORBIDDEN                   :مُحرَّم
+STR_CONFIG_SETTING_HOUSE_PLACER_ALLOWED                     :مسموح
+STR_CONFIG_SETTING_HOUSE_PLACER_FULLY_CONSTRUCTED           :مسموح به، مبني بالكامل
+STR_CONFIG_SETTING_TOWN_CARGOGENMODE_HELPTEXT               :ما هي كمية البضائع التي تنتجها المنازل في المدن، بالنسبة إلى إجمالي عدد سكان المدينة.{}النمو التربيعي: المدينة التي يبلغ حجمها ضعف الحجم تولد أربعة أضعاف عدد الركاب.{}النمو الخطي: المدينة التي يبلغ حجمها ضعف الحجم تولد ضعف عدد الركاب
+STR_CONFIG_SETTING_EXTRA_TREE_PLACEMENT_HELPTEXT            :التحكم في المظهر العشوائي للأشجار أثناء اللعبة. وقد يؤثر ذلك على الصناعات التي تعتمد على نمو الأشجار، مثل مصانع الخشب
+STR_CONFIG_SETTING_EXTRA_TREE_PLACEMENT_NO_SPREAD           :تنمو ولكن لا تنتشر {RED}(مطحنة الخشب تكسر)
+STR_CONFIG_SETTING_EXTRA_TREE_PLACEMENT_SPREAD_ALL          :تنمو وتنتشر في كل مكان
+STR_CONFIG_SETTING_EXTRA_TREE_PLACEMENT_NO_GROWTH_NO_SPREAD :لا تنمو، لا تنتشر {RED}(مطحنة الخشب تكسر)
+STR_CONFIG_SETTING_TOOLBAR_POS_HELPTEXT                     :الوضع الأفقي لشريط الأدوات الرئيسي في أعلى الشاشة
+STR_CONFIG_SETTING_STATUSBAR_POS_HELPTEXT                   :الوضع الأفقي لشريط الحالة في أسفل الشاشة
+STR_CONFIG_SETTING_SNAP_RADIUS_HELPTEXT                     :تتم محاذاة المسافة بين النوافذ قبل نقل النافذة تلقائيًا إلى النوافذ القريبة
+STR_CONFIG_SETTING_SNAP_RADIUS_VALUE                        :{COMMA} بكسل{P 0 "" s}
+STR_CONFIG_SETTING_SOFT_LIMIT_VALUE                         :{COMMA}
+STR_CONFIG_SETTING_ZOOM_MIN_HELPTEXT                        :الحد الأقصى لمستوى التكبير لإطارات العرض. لاحظ أن تمكين مستويات التكبير الأعلى يزيد من متطلبات الذاكرة
+STR_CONFIG_SETTING_ZOOM_MAX_HELPTEXT                        :الحد الأقصى لمستوى التصغير لإطارات العرض. قد تتسبب مستويات التصغير الأعلى في حدوث تأخير عند استخدامها
+STR_CONFIG_SETTING_TOWN_GROWTH_HELPTEXT                     :سرعة نمو المدينة
+STR_CONFIG_SETTING_LARGER_TOWNS                             :نسبة المدن التي ستصبح مدنًا: {STRING2}
+STR_CONFIG_SETTING_LARGER_TOWNS_DISABLED                    :لا أحد
+STR_CONFIG_SETTING_CITY_SIZE_MULTIPLIER_HELPTEXT            :متوسط حجم المدن مقارنة بالمدن العادية في بداية اللعبة
+STR_CONFIG_SETTING_TOWN_MIN_DISTANCE                        :الحد الأدنى للمسافة بين المدن: {STRING2}
+STR_CONFIG_SETTING_TOWN_MIN_DISTANCE_HELPTEXT               :قم بتعيين الحد الأدنى للمسافة بين المدن لإنشاء الخرائط والتأسيس العشوائي
+STR_CONFIG_SETTING_LINKGRAPH_RECALC_INTERVAL                :تحديث الرسم البياني للتوزيع كل {STRING2}
+STR_CONFIG_SETTING_LINKGRAPH_RECALC_INTERVAL_HELPTEXT       :الوقت بين عمليات إعادة الحساب اللاحقة للرسم البياني للارتباط. تقوم كل عملية إعادة حساب بحساب الخطط الخاصة بمكون واحد من الرسم البياني. وهذا يعني أن القيمة X لهذا الإعداد لا تعني أنه سيتم تحديث الرسم البياني بالكامل كل X ثانية. فقط بعض المكونات سوف. كلما قمت بتعيينه بشكل أقصر، سيكون من الضروري حساب المزيد من وقت وحدة المعالجة المركزية. كلما قمت بضبطه لفترة أطول، كلما استغرق الأمر وقتًا أطول حتى يبدأ توزيع البضائع على طرق جديدة
+STR_CONFIG_SETTING_LINKGRAPH_RECALC_TIME                    :خذ {STRING2} لإعادة حساب الرسم البياني للتوزيع
+STR_CONFIG_SETTING_LINKGRAPH_RECALC_TIME_HELPTEXT           :الوقت المستغرق لكل عملية إعادة حساب لمكون الرسم البياني للارتباط. عند بدء عملية إعادة الحساب، يتم إنشاء مؤشر ترابط يُسمح بتشغيله لهذا العدد من الثواني. كلما قمت بتعيين هذا أقصر، زاد احتمال عدم انتهاء الخيط عندما يفترض ذلك. ثم تتوقف اللعبة حتى يتم ("تأخر"). كلما قمت بتعيينه لفترة أطول، كلما استغرق تحديث التوزيع وقتًا أطول عندما تتغير المسارات
+STR_CONFIG_SETTING_DISTRIBUTION_PAX_HELPTEXT                :"متماثل" يعني أن نفس عدد الركاب تقريبًا سينتقلون من المحطة "أ" إلى المحطة "ب" كما من "ب" إلى "أ". ويعني "غير المتماثل" أن أعدادًا عشوائية من الركاب يمكن أن تذهب في أي من الاتجاهين. تعني كلمة "يدويًا" أنه لن يتم التوزيع التلقائي للركاب
+STR_CONFIG_SETTING_DISTRIBUTION_MAIL                        :وضع التوزيع للبريد: {STRING2}
+STR_CONFIG_SETTING_DISTRIBUTION_MAIL_HELPTEXT               :"متماثل" يعني أنه سيتم إرسال نفس كمية البريد تقريبًا من المحطة "أ" إلى المحطة "ب" كما هو الحال من "ب" إلى "أ". ويعني "غير المتماثل" أنه يمكن إرسال كميات عشوائية من البريد في أي من الاتجاهين. تعني كلمة "يدوي" أنه لن يتم التوزيع التلقائي للبريد
+STR_CONFIG_SETTING_DISTRIBUTION_ARMOURED                    :وضع التوزيع لفئة البضائع المدرعة: {STRING2}
+STR_CONFIG_SETTING_DISTRIBUTION_ARMOURED_HELPTEXT           :تحتوي فئة الشحن المدرعة على أشياء ثمينة في المناخ المعتدل، أو الماس في المناخ شبه الاستوائي، أو الذهب في المناخ شبه القطبي. NewGRFs قد تغير ذلك. "متماثل" يعني أنه سيتم إرسال نفس الكمية تقريبًا من تلك البضائع من المحطة "أ" إلى المحطة "ب" كما من "ب" إلى "أ". ويعني "غير المتماثل" أنه يمكن إرسال كميات عشوائية من تلك البضائع في أي من الاتجاهين. تعني كلمة "يدويًا" أنه لن يتم التوزيع التلقائي لتلك الشحنة. يوصى بضبط هذا على الوضع غير المتماثل أو اليدوي عند اللعب في المناطق شبه القطبية أو شبه الاستوائية، حيث تتلقى البنوك البضائع فقط في هذه المناخات. بالنسبة للمناخ المعتدل، يمكنك أيضًا اختيار التماثل حيث ستقوم البنوك بإرسال الأشياء الثمينة إلى البنك الأصلي
+STR_CONFIG_SETTING_DISTRIBUTION_DEFAULT                     :وضع التوزيع لفئات الشحن الأخرى: {STRING2}
+STR_CONFIG_SETTING_DISTRIBUTION_DEFAULT_HELPTEXT            :"غير متماثل" يعني أنه يمكن إرسال كميات عشوائية من البضائع في أي من الاتجاهين. تعني كلمة "يدويًا" أنه لن يتم التوزيع التلقائي لتلك الشحنات
+STR_CONFIG_SETTING_DISTRIBUTION_MANUAL                      :يدوي
+STR_CONFIG_SETTING_DISTRIBUTION_ASYMMETRIC                  :غير متماثل
+STR_CONFIG_SETTING_DISTRIBUTION_SYMMETRIC                   :متماثل
+STR_CONFIG_SETTING_LINKGRAPH_ACCURACY                       :دقة التوزيع: {STRING2}
+STR_CONFIG_SETTING_DEMAND_DISTANCE                          :تأثير المسافة على المتطلبات: {STRING2}
+STR_CONFIG_SETTING_DEMAND_DISTANCE_HELPTEXT                 :إذا قمت بتعيين هذا على قيمة أعلى من 0، فإن المسافة بين المحطة الأصلية A لبعض البضائع والوجهة المحتملة B سيكون لها تأثير على كمية البضائع المرسلة من A إلى B. كلما ابتعد B عن A، سيتم إرسال حمولة أقل. كلما قمت بضبطه على مستوى أعلى، سيتم إرسال كمية أقل من البضائع إلى المحطات البعيدة وسيتم إرسال المزيد من البضائع إلى المحطات القريبة
+STR_CONFIG_SETTING_DEMAND_SIZE                              :كمية البضائع المرتجعة للوضع المتماثل: {STRING2}
+STR_CONFIG_SETTING_SHORT_PATH_SATURATION_HELPTEXT           :في كثير من الأحيان هناك مسارات متعددة بين محطتين معينتين. سوف يقوم Cargodist بتشبع المسار الأقصر أولاً، ثم يستخدم المسار الثاني الأقصر حتى يتم تشبعه وهكذا. يتم تحديد التشبع من خلال تقدير السعة والاستخدام المخطط له. بمجرد إشباع جميع المسارات، إذا كان لا يزال هناك طلب متبقي، فسوف يزيد التحميل على جميع المسارات، ويفضل المسارات ذات السعة العالية. في معظم الأحيان، لن تقوم الخوارزمية بتقدير السعة بدقة. يتيح لك هذا الإعداد تحديد النسبة المئوية التي يجب أن يتم بها تشبع المسار الأقصر في التمريرة الأولى قبل اختيار المسار الأطول التالي. اضبطها على أقل من 100% لتجنب ازدحام المحطات في حالة المبالغة في تقدير السعة
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VELOCITY_NAUTICAL     :وحدات السرعة (بحري): {STRING2}
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VELOCITY_HELPTEXT     :عندما تظهر السرعة في واجهة المستخدم، قم بإظهارها في الوحدات المحددة
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VELOCITY_GAMEUNITS_DAYS:وحدات اللعبة (البلاط / اليوم)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VELOCITY_GAMEUNITS_SECS:وحدات اللعبة (البلاط/ثانية)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VELOCITY_KNOTS        :عقدة
+STR_CONFIG_SETTING_LOCALISATION_UNITS_POWER_HELPTEXT        :عندما يتم عرض قوة السيارة في واجهة المستخدم، قم بإظهارها في الوحدات المحددة
+STR_CONFIG_SETTING_LOCALISATION_UNITS_POWER_IMPERIAL        :الامبراطوري (حصان)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_POWER_METRIC          :متري (حصان)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_POWER_SI              :سي (كيلوواط)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_WEIGHT                :وحدات الأوزان: {STRING2}
+STR_CONFIG_SETTING_LOCALISATION_UNITS_WEIGHT_HELPTEXT       :عندما يظهر الوزن في واجهة المستخدم، قم بإظهاره بالوحدات المحددة
+STR_CONFIG_SETTING_LOCALISATION_UNITS_WEIGHT_IMPERIAL       :إمبريال (طن قصير / طن)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_WEIGHT_SI             :سي (كجم)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VOLUME                :وحدات التخزين: {STRING2}
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VOLUME_HELPTEXT       :كلما تم عرض وحدة تخزين في واجهة المستخدم، قم بإظهارها في الوحدات المحددة
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VOLUME_IMPERIAL       :الإمبراطوري (غال)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VOLUME_METRIC         :متري (ل)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_VOLUME_SI             :سي (م³)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_FORCE_HELPTEXT        :عندما يتم عرض جهد الجر (المعروف أيضًا باسم قوة الجر) في واجهة المستخدم، قم بإظهاره في الوحدات المحددة
+STR_CONFIG_SETTING_LOCALISATION_UNITS_FORCE_SI              :سي (كيلو نيوتن)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_HEIGHT                :وحدات المرتفعات: {STRING2}
+STR_CONFIG_SETTING_LOCALISATION_UNITS_HEIGHT_HELPTEXT       :كلما تم عرض الارتفاع في واجهة المستخدم، قم بإظهاره في الوحدات المحددة
+STR_CONFIG_SETTING_LOCALISATION_UNITS_HEIGHT_SI             :سي (م)
+STR_CONFIG_SETTING_LOCALISATION_UNITS_HEIGHT_GAMEUNITS      :وحدات اللعبة (المستويات)
+STR_CONFIG_SETTING_LOCALISATION                             :التعريب
+STR_CONFIG_SETTING_VEHICLES_ORDERS                          :طلبات
+STR_CONFIG_SETTING_ENVIRONMENT_TIME                         :وقت
+STR_CONFIG_SETTING_ENVIRONMENT_TREES                        :الأشجار
+STR_CONFIG_SETTING_REVERSE_AT_SIGNALS_HELPTEXT              :السماح للقطارات بالعودة إلى الخلف عند الإشارة، إذا انتظرت هناك لفترة طويلة
+STR_CONFIG_ERROR_INVALID_SAVEGAME_COMPRESSION_ALGORITHM     :تنسيق savegame '{RAW_STRING}' غير متوفر. العودة إلى "{RAW_STRING}"
+STR_CONFIG_ERROR_INVALID_BASE_GRAPHICS_NOT_FOUND            :تجاهل مجموعة الرسومات الأساسية '{RAW_STRING}': غير موجود
+STR_CONFIG_ERROR_INVALID_BASE_SOUNDS_NOT_FOUND              :تجاهل مجموعة الأصوات الأساسية '{RAW_STRING}': غير موجود
+STR_CONFIG_ERROR_INVALID_BASE_MUSIC_NOT_FOUND               :تجاهل مجموعة الموسيقى الأساسية '{RAW_STRING}': غير موجود
+STR_VIDEO_DRIVER_ERROR                                      :خطأ في إعدادات الفيديو...
+STR_VIDEO_DRIVER_ERROR_HARDWARE_ACCELERATION_CRASH          :تعطل برنامج تشغيل GPU اللعبة. تم تعطيل تسريع الأجهزة
+STR_INTRO_CAPTION                                           :{WHITE}OpenTTD
+STR_INTRO_VERSION                                           :أوبن تي تي دي {REV}
+STR_INTRO_HELP                                              :{BLACK}المساعدة والأدلة
+STR_INTRO_TOOLTIP_HELP                                      :{BLACK}احصل على إمكانية الوصول إلى الوثائق والموارد عبر الإنترنت
+STR_INTRO_BASESET                                           :{BLACK}مجموعة الرسومات الأساسية المحددة حاليًا تفتقد {NUM} sprite{P "" s}. يرجى التحقق من وجود تحديثات للمجموعة الأساسية.
+STR_HELP_WINDOW_CAPTION                                     :{WHITE}المساعدة والأدلة
+STR_HELP_WINDOW_WEBSITES                                    :{BLACK}مواقع
+STR_HELP_WINDOW_DOCUMENTS                                   :{BLACK}وثائق
+STR_HELP_WINDOW_README                                      :{BLACK}التمهيدي
+STR_HELP_WINDOW_CHANGELOG                                   :{BLACK}سجل التغيير
+STR_HELP_WINDOW_KNOWN_BUGS                                  :{BLACK}الأخطاء المعروفة
+STR_HELP_WINDOW_LICENSE                                     :{BLACK}رخصة
+STR_HELP_WINDOW_FONTS                                       :{BLACK}الخطوط
+STR_HELP_WINDOW_MAIN_WEBSITE                                :{BLACK}OpenTTD
+STR_HELP_WINDOW_MANUAL_WIKI                                 :{BLACK}دليل/ ويكي
+STR_HELP_WINDOW_BUGTRACKER                                  :{BLACK}الإبلاغ عن خطأ
+STR_HELP_WINDOW_COMMUNITY                                   :{BLACK}مجتمع
+STR_CHEAT_EDIT_MAX_HL                                       :{LTBLUE}قم بتحرير الحد الأقصى لارتفاع الخريطة: {ORANGE}{NUM}
+STR_CHEAT_STATION_RATING                                    :{LTBLUE}تقييمات محطة الإصلاح تصل إلى 100%: {ORANGE}{STRING}
+STR_LIVERY_CAPTION                                          :{WHITE}{COMPANY} - نظام الألوان
+STR_LIVERY_TRAIN_GROUP_TOOLTIP                              :{BLACK}عرض ألوان مجموعات القطارات
+STR_LIVERY_ROAD_VEHICLE_GROUP_TOOLTIP                       :{BLACK}إظهار ألوان مجموعات مركبات الطريق
+STR_LIVERY_SHIP_GROUP_TOOLTIP                               :{BLACK}إظهار ألوان مجموعات السفن
+STR_LIVERY_AIRCRAFT_GROUP_TOOLTIP                           :{BLACK}إظهار ألوان مجموعات الطائرات
+STR_LIVERY_TRAIN_GROUP_EMPTY                                :لم يتم إعداد أي مجموعات قطار
+STR_LIVERY_ROAD_VEHICLE_GROUP_EMPTY                         :لم يتم إعداد أي مجموعات من مركبات الطرق
+STR_LIVERY_SHIP_GROUP_EMPTY                                 :لم يتم إعداد أي مجموعات سفن
+STR_LIVERY_AIRCRAFT_GROUP_EMPTY                             :لم يتم إنشاء أي مجموعات طائرات
+STR_FACE_SETTING_TOGGLE                                     :{STRING} {ORANGE}{STRING}
+STR_FACE_SETTING_NUMERIC                                    :{STRING} {ORANGE}{NUM} / {NUM}
+STR_FACE_STYLE                                              :أسلوب:
+STR_NETWORK_SERVER_LIST_PLAY_TIME_SHORT                     :{BLACK}{NUM}ح {NUM}م
+STR_NETWORK_SERVER_LIST_PLAY_TIME_CAPTION                   :{BLACK}وقت اللعب
+STR_NETWORK_SERVER_LIST_PLAY_TIME_CAPTION_TOOLTIP           :{BLACK}وقت اللعب بينما لم يتم إيقاف لعبة{}مؤقتًا
+STR_NETWORK_SERVER_LIST_INVITE_CODE                         :{SILVER}رمز الدعوة: {WHITE}{RAW_STRING}
+STR_NETWORK_SERVER_LIST_PLAY_TIME                           :{SILVER}وقت التشغيل: {WHITE}{NUM}h {NUM}م
+STR_NETWORK_SERVER_LIST_GAMESCRIPT                          :{SILVER}سيناريو اللعبة: {WHITE}{RAW_STRING} (v{NUM})
+STR_NETWORK_SERVER_LIST_SERVER_BANNED                       :{SILVER}قام خادمبحظرك
+STR_NETWORK_SERVER_LIST_SEARCH_SERVER_INTERNET              :{BLACK}البحث في الإنترنت
+STR_NETWORK_SERVER_LIST_SEARCH_SERVER_INTERNET_TOOLTIP      :{BLACK}البحث في الإنترنت عن الخوادم العامة
+STR_NETWORK_SERVER_LIST_SEARCH_SERVER_LAN                   :{BLACK}بحث الشبكة المحلية
+STR_NETWORK_SERVER_LIST_SEARCH_SERVER_LAN_TOOLTIP           :{BLACK}البحث في الشبكة المحلية عن الخوادم
+STR_NETWORK_START_SERVER_VISIBILITY_LABEL                   :{BLACK}رؤية:
+STR_NETWORK_CLIENT_LIST_SERVER                              :{BLACK}خادم
+STR_NETWORK_CLIENT_LIST_SERVER_NAME_TOOLTIP                 :{BLACK}اسم السيرفر الذي تلعب عليه
+STR_NETWORK_CLIENT_LIST_SERVER_NAME_EDIT_TOOLTIP            :{BLACK}قم بتحرير اسم الخادم الخاص بك
+STR_NETWORK_CLIENT_LIST_SERVER_NAME_QUERY_CAPTION           :اسم الخادم
+STR_NETWORK_CLIENT_LIST_SERVER_VISIBILITY                   :{BLACK}رؤية
+STR_NETWORK_CLIENT_LIST_SERVER_VISIBILITY_TOOLTIP           :{BLACK}ما إذا كان بإمكان الأشخاص الآخرين رؤية خادمك في القائمة العامة
+STR_NETWORK_CLIENT_LIST_SERVER_INVITE_CODE                  :{BLACK}رمز الدعوة
+STR_NETWORK_CLIENT_LIST_SERVER_INVITE_CODE_TOOLTIP          :{BLACK}رمز الدعوة الذي يمكن للاعبين الآخرين استخدامه للانضمام إلى هذا الخادم
+STR_NETWORK_CLIENT_LIST_SERVER_CONNECTION_TYPE              :{BLACK}نوع الاتصال
+STR_NETWORK_CLIENT_LIST_PLAYER                              :{BLACK}مشغل
+STR_NETWORK_CLIENT_LIST_PLAYER_NAME_TOOLTIP                 :{BLACK}اسم اللاعب الخاص بك
+STR_NETWORK_CLIENT_LIST_PLAYER_NAME_EDIT_TOOLTIP            :{BLACK}قم بتحرير اسم اللاعب الخاص بك
+STR_NETWORK_CLIENT_LIST_PLAYER_NAME_QUERY_CAPTION           :اسم اللاعب الخاص بك
+STR_NETWORK_CLIENT_LIST_JOIN_TOOLTIP                        :{BLACK}انضم إلى هذه الشركة
+STR_NETWORK_CLIENT_LIST_COMPANY_AUTHORIZE_TOOLTIP           :{BLACK}قم بتفويض هذا العميل للانضمام إلى شركتك
+STR_NETWORK_CLIENT_LIST_CHAT_CLIENT_TOOLTIP                 :{BLACK}أرسل رسالة لهذا اللاعب
+STR_NETWORK_CLIENT_LIST_CHAT_COMPANY_TOOLTIP                :{BLACK}أرسل رسالة إلى جميع اللاعبين في هذه الشركة
+STR_NETWORK_CLIENT_LIST_CHAT_SPECTATOR_TOOLTIP              :{BLACK}أرسل رسالة إلى جميع المتفرجين
+STR_NETWORK_CLIENT_LIST_NEW_COMPANY_TOOLTIP                 :{BLACK}قم بإنشاء شركة جديدة والانضمام إليها
+STR_NETWORK_CLIENT_LIST_PLAYER_ICON_SELF_TOOLTIP            :{BLACK}هذا أنت
+STR_NETWORK_CLIENT_LIST_PLAYER_ICON_HOST_TOOLTIP            :{BLACK}هذا هو مضيف اللعبة
+STR_NETWORK_CLIENT_LIST_CLIENT_COMPANY_COUNT                :{BLACK}{NUM} العميل{P "" s} - {NUM}/{NUM} الشركة{P y ies}
+STR_NETWORK_CLIENT_LIST_CLIENT_COMPANY_COUNT_TOOLTIP        :{BLACK}عدد العملاء المتصلين حاليًا وعدد الشركات والحد الأقصى لعدد الشركات المسموح به من قبل مسؤول الخادم
+STR_NETWORK_CLIENT_LIST_SERVER_CONNECTION_TYPE_UNKNOWN      :{BLACK}محلي
+STR_NETWORK_CLIENT_LIST_SERVER_CONNECTION_TYPE_ISOLATED     :{RED}لا يمكن للاعبين عن بعد الاتصال
+STR_NETWORK_CLIENT_LIST_SERVER_CONNECTION_TYPE_STUN         :{BLACK}خلف NAT
+STR_NETWORK_CLIENT_LIST_SERVER_CONNECTION_TYPE_TURN         :{BLACK}عبر التتابع
+STR_NETWORK_CLIENT_LIST_ADMIN_COMPANY_ALLOW_ANY             :السماح لأي عميل
+STR_NETWORK_CLIENT_LIST_ADMIN_COMPANY_ALLOW_LISTED          :السماح للعملاء المدرجين فقط
+STR_NETWORK_CLIENT_LIST_ASK_CAPTION                         :{WHITE}الإجراء الإداري
+STR_NETWORK_ASK_RELAY_CAPTION                               :{WHITE}هل تستخدم التتابع؟
+STR_NETWORK_ASK_RELAY_TEXT                                  :{YELLOW}فشل في إنشاء اتصال بينك وبين الخادم '{RAW_STRING}'.{}هل ترغب في ترحيل هذه الجلسة عبر '{RAW_STRING}'؟
+STR_NETWORK_ASK_RELAY_YES_ONCE                              :{BLACK}نعم، هذه المرة
+STR_NETWORK_ASK_RELAY_YES_ALWAYS                            :{BLACK}نعم، لا تسأل مرة أخرى
+STR_NETWORK_ASK_SURVEY_CAPTION                              :المشاركة في المسح الآلي؟
+STR_NETWORK_ASK_SURVEY_TEXT                                 :هل ترغب في المشاركة في الاستبيان الآلي؟ سوف يقوم{}OpenTTD بإرسال استطلاع عند مغادرة اللعبة.{}يمكنك تغيير هذا في أي وقت ضمن "خيارات اللعبة".
+STR_NETWORK_ASK_SURVEY_PREVIEW                              :معاينة نتيجة الاستطلاع
+STR_NETWORK_ASK_SURVEY_LINK                                 :حول المسح والخصوصية
+STR_NETWORK_ASK_SURVEY_NO                                   :لا
+STR_NETWORK_ASK_SURVEY_YES                                  :نعم
+STR_NETWORK_ERROR_BAD_SERVER_NAME                           :لم يتم تعيين اسم الخادم الخاص بك. يمكن تعيين الاسم في الجزء العلوي من نافذة اللعب الجماعي
+STR_NETWORK_ERROR_NOT_ON_ALLOW_LIST                         :أنت لست ضمن قائمة العملاء المسموح لهم
+STR_NETWORK_ERROR_TIMEOUT_PASSWORD                          :لقد استغرقت وقتًا طويلاً لإدخال كلمة المرور
+STR_NETWORK_ERROR_TIMEOUT_COMPUTER                          :جهاز الكمبيوتر الخاص بك بطيء جدًا بحيث لا يمكنه متابعة الخادم
+STR_NETWORK_ERROR_TIMEOUT_MAP                               :استغرق جهاز الكمبيوتر الخاص بك وقتًا طويلاً لتنزيل الخريطة
+STR_NETWORK_ERROR_TIMEOUT_JOIN                              :استغرق جهاز الكمبيوتر الخاص بك وقتًا طويلاً للانضمام إلى الخادم
+STR_NETWORK_ERROR_CLIENT_NOT_ON_ALLOW_LIST                  :ليس في قائمة السماح
+STR_NETWORK_ERROR_CLIENT_NO_AUTHENTICATION_METHOD_AVAILABLE :لا تتوفر أي من طرق المصادقة المطلوبة
+STR_NETWORK_ERROR_CLIENT_TIMEOUT_PASSWORD                   :لم يتلق أي كلمة مرور في الوقت المناسب
+STR_NETWORK_ERROR_CLIENT_TIMEOUT_COMPUTER                   :مهلة عامة
+STR_NETWORK_ERROR_CLIENT_TIMEOUT_MAP                        :استغرق تنزيل الخريطة وقتًا طويلاً
+STR_NETWORK_ERROR_CLIENT_TIMEOUT_JOIN                       :استغرقت معالجة الخريطة وقتًا طويلاً
+STR_NETWORK_ERROR_CLIENT_INVALID_CLIENT_NAME                :اسم العميل غير صالح
+STR_NETWORK_SERVER_MESSAGE_GAME_REASON_GAME_SCRIPT          :سيناريو اللعبة
+STR_NETWORK_SERVER_MESSAGE_GAME_REASON_LINK_GRAPH           :في انتظار تحديث الرسم البياني الارتباط
+STR_NETWORK_MESSAGE_CLIENT_COMPANY_JOIN                     :*** انضم {RAW_STRING} إلى {RAW_STRING}
+STR_NETWORK_MESSAGE_KICKED                                  :*** تم طرد {RAW_STRING}. السبب: ({RAW_STRING})
+STR_NETWORK_ERROR_COORDINATOR_REUSE_OF_INVITE_CODE          :قام خادم آخر بنفس رمز الدعوة بتسجيل نفسه. التبديل إلى نوع اللعبة "المحلية".
+STR_NETWORK_ERROR_COORDINATOR_ISOLATED                      :الخادم الخاص بك لا يسمح بالاتصالات عن بعد
+STR_NETWORK_ERROR_COORDINATOR_ISOLATED_DETAIL               :لن يتمكن اللاعبون الآخرون من الاتصال بخادمك
+STR_CONTENT_SEARCH_EXTERNAL_DISCLAIMER_CAPTION              :{WHITE}أنت تغادر OpenTTD!
+STR_CONTENT_TYPE_GAME_SCRIPT                                :لعبة السيناريو
+STR_CONTENT_TYPE_GS_LIBRARY                                 :مكتبة جي اس
+STR_MISSING_GRAPHICS_ERROR_TITLE                            :{WHITE}فشل تنزيل
+STR_MISSING_GRAPHICS_ERROR                                  :{BLACK}فشل تنزيل الرسومات.{}برجاء تنزيل الرسومات يدويًا.
+STR_TRANSPARENT_TEXT_TOOLTIP                                :{BLACK}تبديل الشفافية للتحميل ونص التكلفة/الدخل. Ctrl+انقر للقفل
+STR_STATION_BUILD_INFRASTRUCTURE_COST_YEAR                  :{BLACK}تكلفة صيانة: {GOLD}{CURRENCY_SHORT}/ سنة
+STR_STATION_BUILD_INFRASTRUCTURE_COST_PERIOD                :{BLACK}تكلفة صيانة: {GOLD}{CURRENCY_SHORT}/ الفترة
+STR_TOOLBAR_DISABLED_NO_VEHICLE_AVAILABLE                   :{BLACK}معطل لأنه لا توجد مركبات متاحة حاليًا لهذه البنية التحتية
+STR_PICKER_MODE_ALL                                         :الجميع
+STR_PICKER_MODE_ALL_TOOLTIP                                 :تبديل إظهار العناصر من جميع الفئات
+STR_PICKER_MODE_USED                                        :مستخدم
+STR_PICKER_MODE_USED_TOOLTIP                                :تبديل إظهار العناصر الموجودة فقط
+STR_PICKER_MODE_SAVED                                       :أنقذ
+STR_PICKER_MODE_SAVED_TOOLTIP                               :تبديل إظهار العناصر المحفوظة فقط
+STR_PICKER_PREVIEW_SHRINK                                   :-
+STR_PICKER_PREVIEW_SHRINK_TOOLTIP                           :تقليل ارتفاع صور المعاينة. Ctrl+Click للتقليل إلى الحد الأدنى
+STR_PICKER_PREVIEW_EXPAND                                   :+
+STR_PICKER_PREVIEW_EXPAND_TOOLTIP                           :زيادة ارتفاع صور المعاينة. Ctrl+Click للزيادة إلى الحد الأقصى
+STR_PICKER_DEFAULT_COLLECTION                               :المجموعة الافتراضية
+STR_PICKER_SELECT_COLLECTION_TOOLTIP                        :حدد مجموعة
+STR_PICKER_COLLECTION_ADD                                   :يضيف
+STR_PICKER_COLLECTION_ADD_TOOLTIP                           :إنشاء مجموعة جديدة
+STR_PICKER_COLLECTION_RENAME                                :إعادة تسمية
+STR_PICKER_COLLECTION_RENAME_TOOLTIP                        :إعادة تسمية مجموعة
+STR_PICKER_COLLECTION_DELETE                                :يمسح
+STR_PICKER_COLLECTION_DELETE_TOOLTIP                        :حذف مجموعة
+STR_PICKER_COLLECTION_RENAME_QUERY                          :إعادة تسمية هذه المجموعة
+STR_PICKER_COLLECTION_DELETE_QUERY                          :حذف المجموعة
+STR_PICKER_COLLECTION_DELETE_QUERY_TEXT                     :{YELLOW}هل أنت متأكد أنك تريد حذف هذه المجموعة؟
+STR_PICKER_COLLECTION_DELETE_QUERY_DISABLED_TEXT            :{YELLOW}هل أنت متأكد أنك تريد حذف هذه المجموعة؟ هناك عناصر من NewGRFs المعطلة فيه!
+STR_PICKER_STATION_CLASS_TOOLTIP                            :حدد فئة المحطة لعرضها. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_STATION_TYPE_TOOLTIP                             :حدد نوع المحطة المراد بنائها. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_STATION_COLLECTION_TOOLTIP                       :حدد مجموعة من المحطات لعرضها
+STR_PICKER_WAYPOINT_CLASS_TOOLTIP                           :حدد فئة إحداثية لعرضها. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_WAYPOINT_TYPE_TOOLTIP                            :حدد نقطة الطريق للبناء. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_WAYPOINT_COLLECTION_TOOLTIP                      :حدد مجموعة من الإحداثيات لعرضها
+STR_PICKER_ROADSTOP_BUS_CLASS_TOOLTIP                       :حدد فئة محطة الحافلات لعرضها. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_ROADSTOP_BUS_TYPE_TOOLTIP                        :حدد نوع محطة الحافلات للبناء. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_ROADSTOP_BUS_COLLECTION_TOOLTIP                  :حدد مجموعة من محطات الحافلات لعرضها
+STR_PICKER_ROADSTOP_TRUCK_CLASS_TOOLTIP                     :حدد فئة محطة الشاحنة لعرضها. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_ROADSTOP_TRUCK_TYPE_TOOLTIP                      :حدد نوع محطة الشاحنة للبناء. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_ROADSTOP_TRUCK_COLLECTION_TOOLTIP                :حدد مجموعة من محطات الشاحنات لعرضها
+STR_PICKER_OBJECT_CLASS_TOOLTIP                             :حدد فئة الكائن لعرضه. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_OBJECT_TYPE_TOOLTIP                              :حدد نوع الكائن المراد إنشاؤه. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة. Ctrl+Click+Drag لتحديد المنطقة قطريًا. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_PICKER_OBJECT_COLLECTION_TOOLTIP                        :حدد مجموعة من الكائنات لعرضها
+STR_PICKER_HOUSE_CLASS_TOOLTIP                              :حدد منطقة المدينة لعرضها. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_HOUSE_TYPE_TOOLTIP                               :اختر نوع المنزل الذي تريد بناءه. Ctrl+Click لإضافة أو إزالة العناصر المحفوظة
+STR_PICKER_HOUSE_COLLECTION_TOOLTIP                         :حدد مجموعة من المنازل لعرضها
+STR_HOUSE_PICKER_CARGO_PRODUCED                             :{BLACK}البضائع المنتجة: {GOLD}{CARGO_LIST}
+STR_HOUSE_PICKER_PROTECT                                    :منع الترقيات
+STR_HOUSE_PICKER_REPLACE                                    :استبدال الموجودة
+STR_HOUSE_PICKER_REPLACE_TOOLTIP                            :اختر ما إذا كنت تريد إزالة منزل موجود تلقائيًا على البلاط الذي يوجد به هذا المنزل
+STR_STATION_CLASS_DFLT_STATION                              :المحطة الافتراضية
+STR_STATION_CLASS_DFLT_ROADSTOP                             :توقف الطريق الافتراضي
+STR_STATION_CLASS_WAYP_WAYPOINT                             :نقطة الطريق الافتراضية
+STR_SELECT_BRIDGE_INFO_NAME_COST                            :{GOLD}{STRING}،{} {WHITE}{CURRENCY_LONG}
+STR_ROAD_TOOLBAR_TOOLTIP_CONVERT_ROAD_TO_WAYPOINT           :{BLACK}بناء نقطة الطريق على الطريق. Ctrl+Click لتحديد نقطة طريق أخرى للانضمام. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_ROAD_TOOLBAR_TOOLTIP_CONVERT_TRAM_TO_WAYPOINT           :{BLACK}بناء نقطة الطريق على الترام. Ctrl+Click لتحديد نقطة طريق أخرى للانضمام. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_TREES_MODE_NORMAL_BUTTON                                :{BLACK}عادي
+STR_TREES_MODE_FOREST_SM_BUTTON                             :{BLACK}بستان
+STR_TREES_MODE_FOREST_SM_TOOLTIP                            :{BLACK}زراعة الغابات الصغيرة عن طريق سحبها فوق المناظر الطبيعية
+STR_TREES_MODE_FOREST_LG_TOOLTIP                            :{BLACK}قم بزراعة غابات كبيرة عن طريق السحب فوق المناظر الطبيعية
+STR_TERRAFORM_TOOLTIP_PLACE_ROUGH_AREAS_ON_LANDSCAPE        :{BLACK}ضع المناطق الخشنة على المناظر الطبيعية.{}Ctrl+Click لإزالة المناطق الخشنة
+STR_TERRAFORM_TOOLTIP_LOWER_A_CORNER_OF_LAND                :{BLACK}قم بخفض زاوية أو مساحة من الأرض. إذا كان الحجم 1x1، فانقر فوق + اسحب لخفض الزاوية المحددة الأولى وتسوية المنطقة المحددة إلى ارتفاع الزاوية الجديد. Ctrl+Click+Drag لتحديد المنطقة قطريًا. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_TERRAFORM_TOOLTIP_RAISE_A_CORNER_OF_LAND                :{BLACK}ارفع زاوية أو مساحة من الأرض. إذا كان الحجم 1x1، فانقر فوق + اسحب لرفع الزاوية المحددة الأولى وتسوية المنطقة المحددة إلى ارتفاع الزاوية الجديد. Ctrl+Click+Drag لتحديد المنطقة قطريًا. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_FOUND_TOWN_LOAD_FROM_FILE                               :{BLACK}تحميل من الملف
+STR_FOUND_TOWN_LOAD_FROM_FILE_TOOLTIP                       :{BLACK}استيراد بيانات المدينة من ملف JSON
+STR_FOUND_TOWN_EXPAND_ALL_TOWNS                             :{BLACK}قم بتوسيع جميع المدن
+STR_FOUND_TOWN_EXPAND_ALL_TOWNS_TOOLTIP                     :{BLACK}اجعل جميع المدن تنمو قليلاً
+STR_FOUND_TOWN_EXPAND_MODE                                  :{YELLOW}توسعة مدينة:
+STR_FOUND_TOWN_EXPAND_BUILDINGS                             :المباني
+STR_FOUND_TOWN_EXPAND_BUILDINGS_TOOLTIP                     :زيادة مباني المدن
+STR_FOUND_TOWN_EXPAND_ROADS                                 :الطرق
+STR_FOUND_TOWN_EXPAND_ROADS_TOOLTIP                         :زيادة طرق المدن
+STR_INDUSTRY_CARGOES_SOURCES                                :مصادر
+STR_INDUSTRY_CARGOES_DESTINATIONS                           :الوجهات
+STR_INDUSTRY_CARGOES_ACCEPTS_PRODUCES_TOOLTIP               :{STRING}{}يقبل: {CARGO_LIST}{}ينتج: {CARGO_LIST}
+STR_LAND_AREA_INFORMATION_LANDINFO_COORDS                   :{BLACK}إحداثيات: {LTBLUE}{NUM} × {NUM} × {NUM}
+STR_LAND_AREA_INFORMATION_LANDINFO_INDEX                    :{BLACK}فهرس البلاط: {LTBLUE}{NUM} ({HEX})
+STR_LANG_AREA_INFORMATION_RAIL_TYPE                         :{BLACK}نوع السكك الحديدية: {LTBLUE}{STRING}
+STR_LANG_AREA_INFORMATION_TRAM_SPEED_LIMIT                  :{BLACK}الحد الأقصى لسرعة الترام: {LTBLUE}{VELOCITY}
+STR_LAND_AREA_INFORMATION_TOWN_CAN_UPGRADE                  :{BLACK}يمكن ترقية مدينة: {LTBLUE}نعم
+STR_LAND_AREA_INFORMATION_TOWN_CANNOT_UPGRADE               :{BLACK}يمكن ترقية مدينة: {LTBLUE}رقم
+STR_LAI_CLEAR_DESCRIPTION_SNOWY_ROCKS                       :الصخور المغطاة بالثلوج
+STR_LAI_CLEAR_DESCRIPTION_SNOWY_ROUGH_LAND                  :الأراضي الوعرة المغطاة بالثلوج
+STR_LAI_CLEAR_DESCRIPTION_SNOWY_GRASS                       :العشب المغطى بالثلوج
+STR_LAI_WATER_DESCRIPTION_WATER_ROCKS                       :الصخور
+STR_LAI_WATER_DESCRIPTION_COAST_ROCKS                       :الساحل أو ضفة النهر مع الصخور
+STR_FRAMERATE_RATE_GAMELOOP                                 :{BLACK}معدل المحاكاة: {STRING2}
+STR_FRAMERATE_RATE_GAMELOOP_TOOLTIP                         :{BLACK}عدد حركات اللعبة التي تمت محاكاتها في الثانية
+STR_FRAMERATE_RATE_BLITTER                                  :{BLACK}معدل إطارات الرسومات: {STRING2}
+STR_FRAMERATE_RATE_BLITTER_TOOLTIP                          :{BLACK}عدد إطارات الفيديو المعروضة في الثانية
+STR_FRAMERATE_SPEED_FACTOR                                  :{BLACK}عامل سرعة اللعبة الحالية: {DECIMAL}x
+STR_FRAMERATE_SPEED_FACTOR_TOOLTIP                          :{BLACK}مدى سرعة تشغيل اللعبة حاليًا، مقارنة بالسرعة المتوقعة بمعدل المحاكاة العادي
+STR_FRAMERATE_MEMORYUSE                                     :{WHITE}ذاكرة
+STR_FRAMERATE_MS_WARN                                       :{YELLOW}{DECIMAL} مللي
+STR_FRAMERATE_GRAPH_MILLISECONDS                            :{TINY_FONT}{COMMA} مللي
+STR_FRAMERATE_GL_ROADVEHS                                   :{BLACK}علامات مركبات الطريق:
+STR_FRAMERATE_GL_SHIPS                                      :{BLACK} علامات السفينة:
+STR_FRAMERATE_VIDEO                                         :{BLACK}إخراج الفيديو:
+STR_FRAMERATE_SOUND                                         :{BLACK}خلط الصوت:
+STR_FRAMETIME_CAPTION_GL_ECONOMY                            :التعامل مع البضائع
+STR_FRAMETIME_CAPTION_GL_ROADVEHS                           :القراد مركبة الطريق
+STR_FRAMETIME_CAPTION_GL_SHIPS                              :القراد السفينة
+STR_FRAMETIME_CAPTION_GL_AIRCRAFT                           :القراد الطائرات
+STR_FRAMETIME_CAPTION_GL_LANDSCAPE                          :القراد العالم
+STR_FRAMETIME_CAPTION_DRAWING                               :تقديم الرسومات
+STR_FRAMETIME_CAPTION_DRAWING_VIEWPORTS                     :عرض إطار العرض العالمي
+STR_FRAMETIME_CAPTION_VIDEO                                 :إخراج الفيديو
+STR_FRAMETIME_CAPTION_ALLSCRIPTS                            :إجمالي البرامج النصية GS/AI
+STR_FRAMETIME_CAPTION_AI                                    :منظمة العفو الدولية {NUM} {RAW_STRING}
+STR_SAVELOAD_LOAD_TOWN_DATA                                 :{WHITE}تحميل بيانات المدينة
+STR_SAVELOAD_LOAD_TOWN_DATA_TOOLTIP                         :{BLACK}قم بتحميل بيانات المدينة المحددة
+STR_SAVELOAD_NEW_DIRECTORY_BUTTON                           :{BLACK}مجلد جديد
+STR_SAVELOAD_NEW_DIRECTORY_TOOLTIP                          :{BLACK}قم بإنشاء مجلد جديد في الموقع الحالي
+STR_SAVELOAD_NEW_DIRECTORY_QUERY_CAPTION                    :{WHITE}أدخل اسمًا للمجلد الجديد
+STR_SAVELOAD_FILTER_TITLE                                   :{BLACK}مرشح:
+STR_SAVELOAD_OVERWRITE_WARNING                              :{YELLOW}هل أنت متأكد أنك تريد الكتابة فوق الملف الموجود؟
+STR_SAVELOAD_DELETE_TITLE                                   :{WHITE}حذف الملف
+STR_SAVELOAD_DELETE_WARNING                                 :{YELLOW}هل أنت متأكد أنك تريد حذف الملف؟
+STR_SAVELOAD_PARENT_DIRECTORY                               :{RAW_STRING} (الدليل الأصلي)
+STR_MAPGEN_NUMBER_OF_TOWNS_TOOLTIP                          :{BLACK}حدد كثافة المدن، أو رقمًا مخصصًا
+STR_MAPGEN_DATE_TOOLTIP                                     :{BLACK}حدد تاريخ البدء
+STR_MAPGEN_NUMBER_OF_INDUSTRIES_TOOLTIP                     :{BLACK}حدد كثافة الصناعات، أو رقم مخصص
+STR_MAPGEN_SNOW_COVERAGE_UP_TOOLTIP                         :{BLACK}زيادة تغطية الثلوج بنسبة عشرة بالمائة
+STR_MAPGEN_DESERT_COVERAGE_UP_TOOLTIP                       :{BLACK}زيادة التغطية الصحراوية بنسبة عشرة بالمائة
+STR_MAPGEN_AVERAGE_HEIGHT                                   :{BLACK}متوسط الارتفاع:
+STR_MAPGEN_SEA_LEVEL_TOOLTIP                                :{BLACK}حدد مستوى سطح البحر
+STR_MAPGEN_GENERATE_TOOLTIP                                 :{BLACK}أنشئ العالم والعب OpenTTD!
+STR_MAPGEN_NEWGRF_SETTINGS                                  :{BLACK}إعداداتNewGRF
+STR_MAPGEN_NEWGRF_SETTINGS_TOOLTIP                          :{BLACK}افتح إعدادات NewGRF
+STR_MAPGEN_AI_SETTINGS                                      :{BLACK}إعداداتللذكاء الاصطناعي
+STR_MAPGEN_AI_SETTINGS_TOOLTIP                              :{BLACK}افتح إعدادات الذكاء الاصطناعي
+STR_MAPGEN_GS_SETTINGS                                      :{BLACK}إعدادات البرنامج النصي للعبة
+STR_MAPGEN_GS_SETTINGS_TOOLTIP                              :{BLACK}افتح إعدادات البرنامج النصي للعبة
+STR_MAPGEN_BORDER_TYPE_TOOLTIP                              :{BLACK}اختر حدود عالم اللعبة
+STR_MAPGEN_NORTHWEST_TOOLTIP                                :قم بتبديل حافة الماء أو الحافة الحرة على حافة الخريطة الشمالية الغربية
+STR_MAPGEN_NORTHEAST_TOOLTIP                                :قم بتبديل حافة الماء أو الحافة الحرة على حافة الخريطة الشمالية الشرقية
+STR_MAPGEN_SOUTHEAST_TOOLTIP                                :قم بتبديل حافة الماء أو الحافة الحرة على حافة الخريطة الجنوبية الشرقية
+STR_MAPGEN_SOUTHWEST_TOOLTIP                                :قم بتبديل حافة الماء أو الحافة الحرة على حافة الخريطة الجنوبية الغربية
+STR_MAPGEN_BORDER_INFINITE_WATER                            :المياه اللانهائية
+STR_MAPGEN_TERRAIN_TYPE_QUERY_CAPT                          :{WHITE}ارتفاع الذروة المستهدف
+STR_MAPGEN_SNOW_COVERAGE_QUERY_CAPT                         :{WHITE}تغطية الثلوج (%)
+STR_MAPGEN_DESERT_COVERAGE_QUERY_CAPT                       :{WHITE}التغطية الصحراوية (%)
+STR_SE_MAPGEN_FLAT_WORLD_HEIGHT_TOOLTIP                     :{BLACK}اختر ارتفاع الأرض عن سطح البحر
+STR_GENERATION_LANDSCAPE_GENERATION                         :{BLACK}توليد المناظر الطبيعية
+STR_GENERATION_TOWN_GENERATION                              :{BLACK}جيل المدينة
+STR_GENERATION_LAND_INDUSTRY_GENERATION                     :{BLACK}توليد صناعة الأرض
+STR_GENERATION_WATER_INDUSTRY_GENERATION                    :{BLACK}توليد صناعة المياه
+STR_GENERATION_PREPARING_SCRIPT                             :{BLACK}تشغيل البرنامج النصي
+STR_TOWN_DATA_ERROR_LOAD_FAILED                             :فشل تحميل بيانات المدينة
+STR_TOWN_DATA_ERROR_JSON_FORMATTED_INCORRECTLY              :تنسيق ملف JSON غير صحيح
+STR_TOWN_DATA_ERROR_TOWN_FORMATTED_INCORRECTLY              :{RAW_STRING}تم تنسيق بيانات بشكل غير صحيح
+STR_TOWN_DATA_ERROR_BAD_COORDINATE                          :{RAW_STRING}تم تنسيق إحداثيات بشكل غير صحيح، يجب أن تكون من 0 إلى 1 كنسبة من إجمالي بُعد خريطة الارتفاع
+STR_TOWN_DATA_ERROR_FAILED_TO_FOUND_TOWN                    :تعذر العثور على موقع صالح للعثور على مدينة {NUM} {P "" s}. تم إنشاء علامة {P "a " ""}{P "" s} في الموقع المقصود{P "" s} بدلاً من ذلك
+STR_NEWGRF_SETTINGS_SHOW_PARAMETERS                         :{BLACK}إظهار المعلمات
+STR_NEWGRF_SETTINGS_PARAMETER_NONE                          :لا أحد
+STR_BASEGRF_PARAMETERS_CAPTION                              :{WHITE}تغيير معلمات الرسومات الأساسية
+STR_NEWGRF_INSPECT_CAPTION_OBJECT_AT_ROAD_TYPE              :نوع الطريق
+STR_SPRITE_ALIGNER_CAPTION_NO_ACTION                        :{WHITE}كائن محاذاة: ({RAW_STRING}:{NUM})
+STR_SPRITE_ALIGNER_CAPTION_ACTIONA                          :{WHITE}كائن المحاذاة: الإجراء 0xA، {COMMA} ({RAW_STRING}:{NUM})
+STR_SPRITE_ALIGNER_CAPTION_ACTION5                          :{WHITE}كائن المحاذاة: الإجراء 0x5، النوع {HEX}، {COMMA} ({RAW_STRING}:{NUM})
+STR_SPRITE_ALIGNER_SPRITE                                   :{RAW_STRING}:{NUM}
+STR_SPRITE_ALIGNER_CENTRE_OFFSET                            :{BLACK}إزاحة متمركزة
+STR_SPRITE_ALIGNER_CENTRE_SPRITE                            :{BLACK}سبرايت في المنتصف
+STR_SPRITE_ALIGNER_RESET_BUTTON                             :{BLACK}إعادة تعيين نسبي
+STR_SPRITE_ALIGNER_RESET_TOOLTIP                            :{BLACK}إعادة تعيين الإزاحات النسبية الحالية
+STR_SPRITE_ALIGNER_OFFSETS_ABS                              :{BLACK}إزاحة X: {NUM}، إزاحة Y: {NUM} (مطلق)
+STR_NEWGRF_ERROR_POPUP                                      :لقد أرجع NewGRF "{RAW_STRING}" خطأ: {}{STRING5}
+STR_NEWGRF_ERROR_UNEXPECTED_SPRITE                          :كائن غير متوقع (كائن {3:NUM})
+STR_NEWGRF_ERROR_UNKNOWN_PROPERTY                           :إجراء غير معروف 0 الخاصية {4:HEX} (الكائن {3:NUM})
+STR_NEWGRF_ERROR_INVALID_ID                                 :محاولة استخدام معرف غير صالح (الكائن {3:NUM})
+STR_NEWGRF_ERROR_MULTIPLE_ACTION_8                          :يحتوي على إدخالات Action 8 متعددة (sprite {3:NUM})
+STR_NEWGRF_ERROR_READ_BOUNDS                                :قراءة النهاية الماضية للكائن الزائف (الكائن {3:NUM})
+STR_NEWGRF_ERROR_GRM_FAILED                                 :موارد NewGRF المطلوبة غير متوفرة (sprite {3:NUM})
+STR_NEWGRF_ERROR_INVALID_SPRITE_LAYOUT                      :تنسيق تخطيط الكائنات غير صالح/غير معروف (الكائن {3:NUM})
+STR_NEWGRF_ERROR_LIST_PROPERTY_TOO_LONG                     :هناك عدد كبير جدًا من العناصر في قائمة قيم الخاصية (sprite {3:NUM}، الخاصية {4:HEX})
+STR_NEWGRF_ERROR_INDPROD_CALLBACK                           :رد اتصال إنتاج الصناعة غير صالح (الكائن {3:NUM}، "{2:RAW_STRING}")
+STR_NEWGRF_BUGGY_INVALID_CARGO_PRODUCTION_CALLBACK          :قام '{1:STRING}' بإرجاع نوع حمولة غير صالح في رد اتصال الإنتاج عند {2:HEX}
+STR_EDIT_SIGN_LOCATION_TOOLTIP                              :{BLACK}قم بتوسيط المنظر الرئيسي في موقع اللافتة. Ctrl+Click لفتح إطار عرض جديد في موقع الإشارة
+STR_EDIT_SIGN_TEXT_COLOUR_TOOLTIP                           :{BLACK}لون نص الإشارة
+STR_TOWN_DIRECTORY_CAPTION                                  :{WHITE}مدن({COMMA} من {COMMA})
+STR_TOWN_DIRECTORY_CITY                                     :{ORANGE}{TOWN}{BLACK} ({COMMA}) {YELLOW}{CITY_ICON}
+STR_TOWN_VIEW_CARGO_LAST_MINUTE_MAX                         :{BLACK}{CARGO_LIST} اللحظة الأخيرة: {ORANGE}{COMMA}{BLACK} الحد الأقصى: {ORANGE}{COMMA}
+STR_TOWN_VIEW_TOWN_GROWS_EVERY                              :{BLACK}تنمو مدينةفي كل {ORANGE}{UNITS_DAYS_OR_SECONDS}
+STR_TOWN_VIEW_TOWN_GROWS_EVERY_FUNDED                       :{BLACK}مدينةتنمو كل {ORANGE}{UNITS_DAYS_OR_SECONDS} (ممولة)
+STR_TOWN_VIEW_CARGO_GRAPH                                   :الرسم البياني للشحن
+STR_TOWN_VIEW_CARGO_GRAPH_TOOLTIP                           :عرض الرسم البياني لتاريخ البضائع في المدينة
+STR_TOWN_VIEW_EXPAND_BUILDINGS_BUTTON                       :{BLACK}توسيع المباني
+STR_TOWN_VIEW_EXPAND_BUILDINGS_TOOLTIP                      :{BLACK}زيادة مباني المدينة
+STR_TOWN_VIEW_EXPAND_ROADS_BUTTON                           :{BLACK}توسيع الطرق
+STR_TOWN_VIEW_EXPAND_ROADS_TOOLTIP                          :{BLACK}زيادة طرق المدينة
+STR_LOCAL_AUTHORITY_ACTION_TOOLTIP_ROAD_RECONSTRUCTION_MONTHS:{PUSH_COLOUR}{YELLOW}تمويل إعادة بناء شبكة الطرق الحضرية. يتسبب{}في تعطيل حركة المرور على الطرق لمدة تصل إلى 6 أشهر.{}{POP_COLOUR}التكلفة: {CURRENCY_LONG}
+STR_LOCAL_AUTHORITY_ACTION_TOOLTIP_ROAD_RECONSTRUCTION_MINUTES:{PUSH_COLOUR}{YELLOW}تمويل إعادة بناء شبكة الطرق الحضرية. يتسبب{}في تعطيل حركة المرور على الطريق لمدة تصل إلى 6 دقائق.{}{POP_COLOUR}التكلفة: {CURRENCY_LONG}
+STR_LOCAL_AUTHORITY_ACTION_TOOLTIP_EXCLUSIVE_TRANSPORT_MONTHS:{PUSH_COLOUR}{YELLOW}قم بشراء حقوق النقل الحصرية في المدينة لمدة 12 شهرًا. لن تسمح سلطة مدينة{}للركاب والبضائع باستخدام محطات منافسيك. سوف تؤدي الرشوة الناجحة من أحد المنافسين إلى إلغاء هذا العقد.{}{POP_COLOUR}التكلفة: {CURRENCY_LONG}
+STR_LOCAL_AUTHORITY_ACTION_TOOLTIP_EXCLUSIVE_TRANSPORT_MINUTES:{PUSH_COLOUR}{YELLOW}قم بشراء حقوق النقل الحصرية في المدينة لمدة 12 دقيقة. لن تسمح سلطة مدينة{}للركاب والبضائع باستخدام محطات منافسيك. سوف تؤدي الرشوة الناجحة من أحد المنافسين إلى إلغاء هذا العقد.{}{POP_COLOUR}التكلفة: {CURRENCY_LONG}
+STR_GOALS_SPECTATOR_CAPTION                                 :{WHITE}الأهداف العالمية
+STR_GOALS_GLOBAL_BUTTON                                     :{BLACK}العالمية
+STR_GOALS_GLOBAL_BUTTON_HELPTEXT                            :{BLACK}عرض الأهداف العالمية
+STR_GOALS_COMPANY_BUTTON                                    :{BLACK}شركة
+STR_GOALS_COMPANY_BUTTON_HELPTEXT                           :{BLACK}عرض أهداف الشركة
+STR_GOALS_NONE                                              :{ORANGE}- لا يوجد -
+STR_GOALS_PROGRESS_COMPLETE                                 :{GREEN}{RAW_STRING}
+STR_GOALS_TOOLTIP_CLICK_ON_SERVICE_TO_CENTER                :{BLACK}انقر على الهدف لتوسيط العرض الرئيسي على الصناعة/المدينة/البلاط. Ctrl+Click لفتح إطار عرض جديد على موقع الصناعة/المدينة/البلاط
+STR_SUBSIDIES_OFFERED_FROM_TO                               :{ORANGE}{STRING} من {STRING1} إلى {STRING1}{YELLOW} ({STRING1})
+STR_SUBSIDIES_SUBSIDISED_FROM_TO                            :{ORANGE}{STRING} من {STRING1} إلى {STRING1}{YELLOW} ({COMPANY}{YELLOW}، {STRING1})
+STR_SUBSIDIES_OFFERED_EXPIRY_DATE                           :بواسطة {DATE_SHORT}
+STR_SUBSIDIES_OFFERED_EXPIRY_TIME                           :ضمن {UNITS_MONTHS_OR_MINUTES}
+STR_SUBSIDIES_SUBSIDISED_EXPIRY_DATE                        :حتى {DATE_SHORT}
+STR_SUBSIDIES_SUBSIDISED_EXPIRY_TIME                        :{UNITS_MONTHS_OR_MINUTES}باقي
+STR_STORY_BOOK_SPECTATOR                                    :كتاب القصة العالمية
+STR_STORY_BOOK_SEL_PAGE_TOOLTIP                             :{BLACK}انتقل إلى صفحة معينة عن طريق تحديدها في هذه القائمة المنسدلة
+STR_STORY_BOOK_NEXT_PAGE_TOOLTIP                            :{BLACK}انتقل إلى الصفحة التالية
+STR_STORY_BOOK_INVALID_GOAL_REF                             :{RED}مرجع الهدف غير صالح
+STR_STATION_LIST_CARGO_FILTER_ALL_AND_NO_RATING             :جميع أنواع البضائع ولا يوجد تصنيف
+STR_STATION_LIST_CARGO_FILTER_MULTIPLE                      :أنواع البضائع المتعددة
+STR_STATION_LIST_CARGO_FILTER_NO_CARGO_TYPES                :لا توجد أنواع البضائع
+STR_STATION_LIST_CARGO_FILTER_ONLY_NO_RATING                :فقط لا يوجد تصنيف البضائع
+STR_STATION_LIST_CARGO_FILTER_SELECT_ALL                    :حدد الكل ولا يوجد تقييم
+STR_STATION_LIST_CARGO_FILTER_NO_RATING                     :لا يوجد تصنيف البضائع
+STR_STATION_LIST_CARGO_FILTER_EXPAND                        :عرض المزيد...
+STR_STATION_VIEW_RESERVED                                   :{YELLOW}({CARGO_SHORT} محجوز للتحميل)
+STR_STATION_VIEW_SUPPLY_RATINGS_TITLE_MONTH                 :{BLACK}العرض شهريًا والتقييم المحلي:
+STR_STATION_VIEW_SUPPLY_RATINGS_TITLE_MINUTE                :{BLACK}العرض في الدقيقة والتقييم المحلي:
+STR_STATION_VIEW_CARGO_SUPPLY_RATING                        :{WHITE}{STRING}: {YELLOW}{COMMA} / {STRING} ({COMMA}%)
+STR_STATION_VIEW_WAITING_STATION                            :المحطة: الإنتظار
+STR_STATION_VIEW_PLANNED_STATION                            :المحطة: مخططة
+STR_STATION_VIEW_FROM_ANY                                   :{RED}{CARGO_SHORT} من محطة غير معروفة
+STR_STATION_VIEW_VIA_ANY                                    :{RED}{CARGO_SHORT} عبر أي محطة
+STR_STATION_VIEW_FROM_HERE                                  :{GREEN}{CARGO_SHORT} من هذه المحطة
+STR_STATION_VIEW_VIA_HERE                                   :{GREEN}{CARGO_SHORT} التوقف عند هذه المحطة
+STR_STATION_VIEW_TO_HERE                                    :{GREEN}{CARGO_SHORT} إلى هذه المحطة
+STR_STATION_VIEW_GROUP_S_V_D                                :المصدر عبر الوجهة
+STR_STATION_VIEW_GROUP_S_D_V                                :المصدر-الوجهة-عبر
+STR_STATION_VIEW_GROUP_V_D_S                                :عبر الوجهة المصدر
+STR_STATION_VIEW_GROUP_D_S_V                                :الوجهة-المصدر-عبر
+STR_STATION_VIEW_GROUP_D_V_S                                :الوجهة عبر المصدر
+STR_STATION_VIEW_EDIT_TOOLTIP                               :{BLACK}إعادة تسمية المحطة أو نقل الإشارة
+STR_STATION_VIEW_EDIT_STATION_SIGN                          :{WHITE}تعديل علامة المحطة
+STR_STATION_VIEW_CLOSE_AIRPORT_TOOLTIP                      :{BLACK}منع الطائرات من الهبوط في هذا المطار
+STR_WAYPOINT_VIEW_EDIT_TOOLTIP                              :{BLACK}إعادة تسمية نقطة الطريق أو علامة النقل
+STR_WAYPOINT_VIEW_EDIT_WAYPOINT_SIGN                        :{WHITE}تحرير علامة إحداثية
+STR_FINANCES_YEAR_CAPTION                                   :{WHITE}سنة
+STR_FINANCES_PERIOD_CAPTION                                 :{WHITE}فترة
+STR_FINANCES_CAPITAL_EXPENSES_TITLE                         :{WHITE}النفقات الرأسمالية
+STR_FINANCES_SECTION_INFRASTRUCTURE                         :{GOLD}البنية التحتية
+STR_FINANCES_SECTION_TRAIN_REVENUE                          :{GOLD}القطارات
+STR_FINANCES_SECTION_ROAD_VEHICLE_REVENUE                   :{GOLD}مركبات الطرق
+STR_FINANCES_SECTION_AIRCRAFT_REVENUE                       :{GOLD}طائرات
+STR_FINANCES_SECTION_SHIP_REVENUE                           :{GOLD}سفن
+STR_FINANCES_TOTAL_CAPTION                                  :{WHITE}إجمالي
+STR_FINANCES_ZERO_INCOME                                    :{CURRENCY_LONG}
+STR_FINANCES_PROFIT                                         :{WHITE}الربح
+STR_FINANCES_OWN_FUNDS_TITLE                                :{WHITE}الأموال الخاصة
+STR_FINANCES_BANK_BALANCE                                   :{WHITE}{CURRENCY_LONG}
+STR_COMPANY_VIEW_INAUGURATED_TITLE_WALLCLOCK                :{GOLD}تم افتتاح: {WHITE}{NUM} (الفترة {NUM})
+STR_COMPANY_VIEW_HOSTILE_TAKEOVER_BUTTON                    :{BLACK}استيلاء عدائي
+STR_COMPANY_VIEW_HOSTILE_TAKEOVER_TOOLTIP                   :{BLACK}قم بعملية استحواذ عدائية على هذه الشركة
+STR_BUY_COMPANY_HOSTILE_TAKEOVER                            :{WHITE}في عملية استحواذ عدائية على {COMPANY}، ستشتري جميع الأصول، وتسدد جميع القروض، وتدفع أرباحًا بقيمة عامين.{}{}يقدر المجموع بـ {CURRENCY_LONG}.{}{}هل تريد مواصلة هذا الاستحواذ العدائي؟
+STR_COMPANY_INFRASTRUCTURE_VIEW_TOTAL_YEAR                  :{WHITE}{CURRENCY_LONG}/ سنة
+STR_COMPANY_INFRASTRUCTURE_VIEW_TOTAL_PERIOD                :{WHITE}{CURRENCY_LONG}/الفترة
+STR_INDUSTRY_DIRECTORY_CAPTION                              :{WHITE}صناعات({COMMA} من {COMMA})
+STR_INDUSTRY_DIRECTORY_ITEM_INFO                            :{BLACK}{CARGO_LONG}{RAW_STRING}{YELLOW} (نسبة نقل{COMMA})
+STR_INDUSTRY_DIRECTORY_ITEM_PROD2                           :{ORANGE}{INDUSTRY} {BLACK}{STRING4}، {STRING4}
+STR_INDUSTRY_DIRECTORY_ITEM_PROD3                           :{ORANGE}{INDUSTRY} {BLACK}{STRING4}، {STRING4}، {STRING4}
+STR_INDUSTRY_DIRECTORY_ACCEPTED_CARGO_FILTER                :{BLACK}البضائع المقبولة: {SILVER}{STRING}
+STR_INDUSTRY_DIRECTORY_PRODUCED_CARGO_FILTER                :{BLACK}البضائع المنتجة: {SILVER}{STRING}
+STR_INDUSTRY_VIEW_PRODUCTION_LAST_MINUTE_TITLE              :{BLACK}الإنتاج في اللحظة الأخيرة:
+STR_INDUSTRY_VIEW_CARGO_GRAPH                               :{BLACK}الرسم البياني للشحن
+STR_INDUSTRY_VIEW_CARGO_GRAPH_TOOLTIP                       :{BLACK}يعرض الرسم البياني لتاريخ البضائع الصناعية
+STR_INDUSTRY_VIEW_INDUSTRY_ANNOUNCED_CLOSURE                :{YELLOW}أعلنت الصناعة عن إغلاق وشيك!
+STR_INDUSTRY_VIEW_ACCEPT_CARGO_SUFFIX                       :{YELLOW}{0:STRING}{BLACK}{3:RAW_STRING}
+STR_INDUSTRY_VIEW_ACCEPT_CARGO_AMOUNT_SUFFIX                :{YELLOW}{0:STRING}{BLACK}: {1:CARGO_SHORT} في انتظار{3:RAW_STRING}
+STR_INDUSTRY_VIEW_ACCEPT_CARGO_NOSUFFIX                     :{YELLOW}{0:STRING}
+STR_INDUSTRY_VIEW_ACCEPT_CARGO_AMOUNT_NOSUFFIX              :{YELLOW}{0:STRING}{BLACK}: {1:CARGO_SHORT} في انتظار
+STR_VEHICLE_LIST_CREATE_GROUP                               :إنشاء مجموعة
+STR_VEHICLE_LIST_PROFIT_THIS_PERIOD_LAST_PERIOD             :{TINY_FONT}{BLACK}الربح هذه الفترة: {CURRENCY_LONG} (الفترة الماضية: {CURRENCY_LONG})
+STR_VEHICLE_LIST_CARGO                                      :[{CARGO_LIST}]
+STR_VEHICLE_LIST_NAME_AND_CARGO                             :{STRING1} {STRING1}
+STR_GROUP_COUNT_WITH_SUBGROUP                               :{TINY_FONT}{COMMA} (+{COMMA})
+STR_GROUP_LIVERY_TOOLTIP                                    :{BLACK}تغيير شكل المجموعة المحددة
+STR_GROUP_PROFIT_THIS_PERIOD                                :الربح هذه الفترة:
+STR_GROUP_PROFIT_LAST_PERIOD                                :ربح الفترة الماضية:
+STR_GROUP_OCCUPANCY_VALUE                                   :{NUM}%
+STR_PURCHASE_INFO_COST_REFIT_WEIGHT                         :{BLACK}تكلفة: {GOLD}{CURRENCY_LONG}{BLACK} (تكلفة التجديد: {GOLD}{CURRENCY_LONG}{BLACK}) الوزن: {GOLD}{WEIGHT_SHORT}
+STR_PURCHASE_INFO_RUNNINGCOST_YEAR                          :{BLACK}تكلفة التشغيل: {GOLD}{CURRENCY_LONG}/ سنة
+STR_PURCHASE_INFO_RUNNINGCOST_PERIOD                        :{BLACK}تكلفة تشغيل: {GOLD}{CURRENCY_LONG}/الفترة
+STR_PURCHASE_INFO_AIRCRAFT_RANGE                            :{BLACK}نطاق: بلاط {GOLD}{COMMA}
+STR_PURCHASE_INFO_RAILTYPES                                 :{BLACK}أنواع السكك الحديدية: {GOLD}{RAW_STRING}
+STR_PURCHASE_SORT_DETAILS_COST                              :{CURRENCY_LONG}
+STR_PURCHASE_SORT_DETAILS_SPEED                             :{VELOCITY}
+STR_PURCHASE_SORT_DETAILS_POWER                             :{POWER}
+STR_PURCHASE_SORT_DETAILS_MAX_TE                            :{FORCE}
+STR_PURCHASE_SORT_DETAILS_INTRO_DATE                        :{NUM}
+STR_PURCHASE_SORT_DETAILS_RUNNINGCOST_YEAR                  :{CURRENCY_LONG}/ سنة
+STR_PURCHASE_SORT_DETAILS_RUNNINGCOST_PERIOD                :{CURRENCY_LONG}/الفترة
+STR_PURCHASE_SORT_DETAILS_RELIABILITY                       :{COMMA}%
+STR_PURCHASE_SORT_DETAILS_POWER_VS_RUNNING_COST             :{DECIMAL}
+STR_PURCHASE_SORT_DETAILS_AIRCRAFT_RANGE                    :{COMMA}بلاط
+STR_PURCHASE_SORT_DETAILS_CAPACITY                          :{COMMA}
+STR_CARGO_TYPE_FILTER_ALL                                   :جميع أنواع البضائع
+STR_CARGO_TYPE_FILTER_FREIGHT                               :الشحن
+STR_BUY_VEHICLE_AIRCRAFT_BUY_REFIT_VEHICLE_BUTTON           :{BLACK}شراء الطائرات وتجديدها
+STR_BUY_VEHICLE_TRAIN_BUY_REFIT_VEHICLE_TOOLTIP             :{BLACK}قم بشراء وإعادة تجهيز مركبة القطار المميزة. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_BUY_VEHICLE_ROAD_VEHICLE_BUY_REFIT_VEHICLE_TOOLTIP      :{BLACK}قم بشراء وإعادة تجهيز مركبة الطريق المميزة. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_BUY_VEHICLE_SHIP_BUY_REFIT_VEHICLE_TOOLTIP              :{BLACK}قم بشراء السفينة المميزة وتجديدها. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_BUY_VEHICLE_AIRCRAFT_BUY_REFIT_VEHICLE_TOOLTIP          :{BLACK}قم بشراء وتجديد الطائرات المميزة. اضغط أيضًا على Shift لإظهار تقدير التكلفة فقط
+STR_BUY_VEHICLE_TRAIN_HIDE_SHOW_TOGGLE_TOOLTIP              :{BLACK}تبديل إخفاء/عرض نوع مركبة القطار
+STR_BUY_VEHICLE_ROAD_VEHICLE_HIDE_SHOW_TOGGLE_TOOLTIP       :{BLACK}تبديل إخفاء/عرض نوع مركبة الطريق
+STR_BUY_VEHICLE_SHIP_HIDE_SHOW_TOGGLE_TOOLTIP               :{BLACK}تبديل إخفاء/عرض نوع السفينة
+STR_ENGINE_PREVIEW_CAPTION_COUNT                            :{WHITE}رسالة من الشركة المصنعة للمركبة ({COMMA} من {COMMA})
+STR_ENGINE_PREVIEW_PREVIOUS                                 :سابق
+STR_ENGINE_PREVIEW_PREVIOUS_TOOLTIP                         :انقر للانتقال إلى السيارة الجديدة السابقة
+STR_ENGINE_PREVIEW_NEXT                                     :التالي
+STR_ENGINE_PREVIEW_NEXT_TOOLTIP                             :انقر للانتقال إلى السيارة الجديدة التالية
+STR_ENGINE_PREVIEW_ENGINE_LIST                              :{COMMA}: {ENGINE}
+STR_ENGINE_PREVIEW_ENGINE_LIST_TOOLTIP                      :انقر للانتقال إلى مركبة جديدة
+STR_ENGINE_PREVIEW_ELRAIL_LOCOMOTIVE                        :قاطرة السكك الحديدية المكهربة
+STR_ENGINE_PREVIEW_COST_WEIGHT                              :التكلفة: {CURRENCY_LONG} الوزن: {WEIGHT_SHORT}
+STR_ENGINE_PREVIEW_COST_MAX_SPEED                           :التكلفة: {CURRENCY_LONG} ماكس. السرعة: {VELOCITY}
+STR_ENGINE_PREVIEW_SPEED_POWER                              :السرعة: {VELOCITY} الطاقة: {POWER}
+STR_ENGINE_PREVIEW_SPEED_POWER_MAX_TE                       :السرعة: {VELOCITY} الطاقة: {POWER} ماكس. تي: {FORCE}
+STR_ENGINE_PREVIEW_TYPE                                     :نوع الطائرة: {STRING}
+STR_ENGINE_PREVIEW_TYPE_RANGE                               :نوع الطائرة: {STRING} المدى: بلاط {COMMA}
+STR_ENGINE_PREVIEW_RUNCOST_YEAR                             :تكلفة التشغيل: {CURRENCY_LONG}/ سنة
+STR_ENGINE_PREVIEW_RUNCOST_PERIOD                           :تكلفة التشغيل: {CURRENCY_LONG}/الفترة
+STR_ENGINE_PREVIEW_CAPACITY                                 :السعة: {CARGO_LONG}
+STR_ENGINE_PREVIEW_CAPACITY_2                               :القدرة: {CARGO_LONG}، {CARGO_LONG}
+STR_ENGINE_PREVIEW_RAILTYPES                                :أنواع السكك الحديدية: {RAW_STRING}
+STR_REPLACE_VEHICLE_VEHICLES_IN_USE                         :{YELLOW}المركبات المستخدمة
+STR_REPLACE_VEHICLE_VEHICLES_IN_USE_TOOLTIP                 :{BLACK}عموديحتوي على المركبات التي تمتلكها
+STR_REPLACE_VEHICLE_AVAILABLE_VEHICLES                      :{YELLOW}المركبات المتوفرة
+STR_REPLACE_VEHICLE_AVAILABLE_VEHICLES_TOOLTIP              :{BLACK}عمودمع المركبات المتاحة للاستبدال
+STR_REPLACE_VEHICLES_WHEN_OLD                               :استبدال المركبات القديمة فقط
+STR_REPLACE_REPLACING_WHEN_OLD                              :{ENGINE} عند التقدم في السن
+STR_REPLACE_ALL_RAILTYPE                                    :جميع مركبات السكك الحديدية
+STR_REPLACE_ALL_ROADTYPE                                    :جميع المركبات على الطرق
+STR_REPLACE_ROADTYPE_TOOLTIP                                :{BLACK}اختر نوع الطريق الذي تريد استبدال محركاته
+STR_REPLACE_ROAD_VEHICLES                                   :مركبات الطرق
+STR_VEHICLE_VIEW_TRAIN_CENTER_TOOLTIP                       :{BLACK}منظر مركزي رئيسي لموقع القطار. انقر نقرًا مزدوجًا لمتابعة القطار في العرض الرئيسي. Ctrl+Click لفتح إطار عرض جديد لموقع القطار
+STR_VEHICLE_VIEW_SHIP_CENTER_TOOLTIP                        :{BLACK}منظر مركزي رئيسي لموقع السفينة. انقر نقرًا مزدوجًا لمتابعة السفينة في العرض الرئيسي. Ctrl+Click لفتح إطار عرض جديد لموقع السفينة
+STR_VEHICLE_VIEW_AIRCRAFT_CENTER_TOOLTIP                    :{BLACK}منظر مركزي رئيسي لموقع الطائرة. انقر نقرًا مزدوجًا لمتابعة الطائرة في العرض الرئيسي. Ctrl+Click لفتح إطار عرض جديد لموقع الطائرة
+STR_VEHICLE_VIEW_ORDER_LOCATION_TOOLTIP                     :{BLACK}منظر مركزي رئيسي لوجهة الطلب. Ctrl+Click لفتح إطار عرض جديد في موقع وجهة الطلب
+STR_VEHICLE_VIEW_ROAD_VEHICLE_STATUS_START_STOP_TOOLTIP     :{BLACK}الإجراء الحالي للمركبة - انقر لإيقاف/بدء تشغيل السيارة
+STR_VEHICLE_VIEW_SHIP_STATE_STATUS_STOP_TOOLTIP             :{BLACK}إجراء السفينة الحالي - انقر لإيقاف/بدء الشحن
+STR_VEHICLE_VIEW_AIRCRAFT_STATUS_START_STOP_TOOLTIP         :{BLACK}الإجراء الحالي للطائرة - انقر لإيقاف/بدء تشغيل الطائرة
+STR_VEHICLE_STATUS_WAITING_UNBUNCHING                       :{LTBLUE}في انتظار فك الحزمة
+STR_VEHICLE_STATUS_HEADING_FOR_DEPOT_UNBUNCH_VEL            :{LTBLUE}{1:VELOCITY} - التفكيك والخدمة في {0:DEPOT}
+STR_VEHICLE_STATUS_CANNOT_REACH_STATION_VEL                 :{LTBLUE}{1:VELOCITY} - لا يمكن الوصول إلى {0:STATION}
+STR_VEHICLE_STATUS_CANNOT_REACH_WAYPOINT_VEL                :{LTBLUE}{1:VELOCITY} - لا يمكن الوصول إلى {0:WAYPOINT}
+STR_VEHICLE_STATUS_CANNOT_REACH_DEPOT_SERVICE_VEL           :{LTBLUE}{1:VELOCITY} - لا يمكن الوصول إلى {0:DEPOT}
+STR_VEHICLE_INFO_AGE_RUNNING_COST_PERIOD                    :{BLACK}العمر: {LTBLUE}{STRING2}{BLACK} تكلفة التشغيل: {LTBLUE}{CURRENCY_LONG}/الفترة
+STR_VEHICLE_INFO_MAX_SPEED_TYPE                             :{BLACK}ماكس. السرعة: {LTBLUE}{VELOCITY} {BLACK}نوع الطائرة: {LTBLUE}{STRING}
+STR_VEHICLE_INFO_MAX_SPEED_TYPE_RANGE                       :{BLACK}ماكس. السرعة: {LTBLUE}{VELOCITY} {BLACK}نوع الطائرة: {LTBLUE}{STRING} {BLACK}النطاق: {LTBLUE}{COMMA}
+STR_VEHICLE_INFO_PROFIT_THIS_YEAR_LAST_YEAR_MIN_PERFORMANCE :{BLACK}الربح هذا العام: {LTBLUE}{CURRENCY_LONG} (العام الماضي: {CURRENCY_LONG}) {BLACK}الحد الأدنى. الأداء: {LTBLUE}{POWER_TO_WEIGHT}
+STR_VEHICLE_INFO_PROFIT_THIS_PERIOD_LAST_PERIOD             :{BLACK}ربح هذه الفترة: {LTBLUE}{CURRENCY_LONG} (الفترة الماضية: {CURRENCY_LONG})
+STR_VEHICLE_INFO_PROFIT_THIS_PERIOD_LAST_PERIOD_MIN_PERFORMANCE:{BLACK}الربح هذه الفترة: {LTBLUE}{CURRENCY_LONG} (الفترة الماضية: {CURRENCY_LONG}) {BLACK}الحد الأدنى. الأداء: {LTBLUE}{POWER_TO_WEIGHT}
+STR_VEHICLE_INFO_RELIABILITY_BREAKDOWNS                     :{BLACK}موثوقية: {LTBLUE}{COMMA}% (الحد الأقصى: {COMMA}%) {BLACK}الأعطال منذ آخر خدمة: {LTBLUE}{COMMA}
+STR_VEHICLE_DETAILS_SERVICING_INTERVAL_DAYS                 :{BLACK}الفاصل الزمني للخدمة: {LTBLUE}{COMMA}{NBSP}أيام{BLACK} {STRING1}
+STR_VEHICLE_DETAILS_SERVICING_INTERVAL_MINUTES              :{BLACK}الفاصل الزمني للخدمة: {LTBLUE}{COMMA}{NBSP}دقيقة{P "" s}{BLACK} {STRING1}
+STR_VEHICLE_DETAILS_SERVICING_INTERVAL_PERCENT              :{BLACK}الفاصل الزمني للخدمة: {LTBLUE}{COMMA}%{BLACK} {STRING1}
+STR_VEHICLE_DETAILS_LAST_SERVICE_DATE                       :آخر خدمة: {LTBLUE}{DATE_LONG}
+STR_VEHICLE_DETAILS_LAST_SERVICE_MINUTES_AGO                :آخر خدمة: {LTBLUE}{NUM} قبل دقيقة من{P "" s}
+STR_VEHICLE_DETAILS_INCREASE_SERVICING_INTERVAL_TOOLTIP_DAYS:{BLACK}قم بزيادة الفاصل الزمني للخدمة بمقدار 10 أيام. Ctrl+Click لزيادة الفاصل الزمني للخدمة بمقدار 5 أيام
+STR_VEHICLE_DETAILS_INCREASE_SERVICING_INTERVAL_TOOLTIP_MINUTES:{BLACK}قم بزيادة الفاصل الزمني للصيانة بمقدار 5 دقائق. Ctrl+Click لزيادة الفاصل الزمني للخدمة بمقدار دقيقة واحدة
+STR_VEHICLE_DETAILS_INCREASE_SERVICING_INTERVAL_TOOLTIP_PERCENT:{BLACK}زيادة الفاصل الزمني للخدمة بنسبة 10 بالمائة. Ctrl+Click لزيادة الفاصل الزمني للخدمة بنسبة 5 بالمائة
+STR_VEHICLE_DETAILS_DECREASE_SERVICING_INTERVAL_TOOLTIP_DAYS:{BLACK}تقليل الفاصل الزمني للخدمة بمقدار 10 أيام. Ctrl+Click لتقليل الفاصل الزمني للخدمة بمقدار 5 أيام
+STR_VEHICLE_DETAILS_DECREASE_SERVICING_INTERVAL_TOOLTIP_MINUTES:{BLACK}قم بتقليل الفاصل الزمني للصيانة بمقدار 5 دقائق. Ctrl+Click لتقليل الفاصل الزمني للخدمة بمقدار دقيقة واحدة
+STR_VEHICLE_DETAILS_DECREASE_SERVICING_INTERVAL_TOOLTIP_PERCENT:{BLACK}تقليل الفاصل الزمني للخدمة بنسبة 10 بالمائة. Ctrl+Click لتقليل الفاصل الزمني للخدمة بنسبة 5 بالمائة
+STR_VEHICLE_DETAILS_DEFAULT                                 :تقصير
+STR_VEHICLE_DETAILS_DAYS                                    :أيام
+STR_VEHICLE_DETAILS_MINUTES                                 :دقائق
+STR_VEHICLE_DETAILS_TRAIN_LENGTH                            :{BLACK}طول القطار: بلاط {LTBLUE}{DECIMAL} {P "" s}
+STR_VEHICLE_DETAILS_TRAIN_CARGO_EMPTY                       :{LTBLUE}فارغة ({CARGO_LONG}){STRING}
+STR_VEHICLE_DETAILS_TRAIN_CARGO_FROM                        :{LTBLUE}{CARGO_LONG} ({CARGO_SHORT}) من {STATION}{STRING}
+STR_VEHICLE_DETAIL_TAB_TOTALS                               :{BLACK}إجماليات
+STR_VEHICLE_DETAILS_TRAIN_TOTALS_TOOLTIP                    :{BLACK}عرض إجمالي الحمولة والقدرة وطول القطار
+STR_REFIT_NEW_CAPACITY_INCOME_FROM_AIRCRAFT_REFIT           :{BLACK}السعة الجديدة: {GOLD}{CARGO_LONG}، {GOLD}{CARGO_LONG}{}{BLACK}الدخل من التجديد: {GREEN}{CURRENCY_LONG}
+STR_ORDER_DROP_UNBUNCH                                      :فك
+STR_ORDER_TRAIN_DEPOT_ACTION_TOOLTIP                        :{BLACK}حدد الإجراء الذي تريد اتخاذه في هذا المستودع
+STR_ORDER_ROAD_DEPOT_ACTION_TOOLTIP                         :{BLACK}حدد الإجراء الذي تريد اتخاذه في هذا المستودع
+STR_ORDER_SHIP_DEPOT_ACTION_TOOLTIP                         :{BLACK}حدد الإجراء الذي تريد اتخاذه في هذا المستودع
+STR_ORDER_HANGAR_ACTION_TOOLTIP                             :{BLACK}حدد الإجراء الذي سيتم اتخاذه في هذه الحظيرة
+STR_ORDER_CONDITIONAL_MAX_RELIABILITY                       :أقصى قدر من الموثوقية
+STR_ORDER_CONDITIONAL_DRIVING_BACKWARDS                     :القيادة إلى الخلف بسرعة منخفضة
+STR_ORDERS_DELETE_ALL_BUTTON                                :{BLACK}حذف الكل
+STR_ORDER_GO_TO_NEAREST_HANGAR_FORMAT                       :{STRING} أقرب حظيرة
+STR_ORDER_GO_TO_NEAREST_DEPOT_FORMAT                        :{STRING} أقرب {STRING}
+STR_ORDER_WAIT_TO_UNBUNCH                                   :{SPACE}(انتظر لفك الحزمة)
+STR_TIMETABLE_TRAVEL_NOT_TIMETABLED_SPEED                   :السفر (غير محدد زمنيًا) بحد أقصى {VELOCITY}
+STR_TIMETABLE_APPROX_TIME                                   :{BLACK}سيستغرق إكمال هذا الجدول الزمني حوالي {STRING1}
+STR_TIMETABLE_STATUS_START_AT_DATE                          :{BLACK}سيبدأ هذا الجدول الزمني في {STRING1}
+STR_TIMETABLE_STATUS_START_IN_SECONDS                       :{BLACK}سيبدأ هذا الجدول الزمني خلال {COMMA} ثانية
+STR_TIMETABLE_START_TOOLTIP                                 :{BLACK}حدد متى يبدأ هذا الجدول الزمني. Ctrl+Click لتوزيع بداية جميع المركبات التي تشارك هذا الطلب بالتساوي بناءً على ترتيبها النسبي، إذا كان الطلب محددًا زمنيًا بالكامل
+STR_TIMETABLE_START_SECONDS_QUERY                           :ثواني حتى يبدأ الجدول الزمني
+STR_TIMETABLE_CHANGE_TIME_QUERY                             :تغيير الوقت
+STR_TIMETABLE_CHANGE_SPEED_QUERY                            :تغيير الحد الأقصى للسرعة
+STR_TIMETABLE_ARRIVAL_DATE                                  :ج: {COLOUR}{DATE_TINY}
+STR_TIMETABLE_DEPARTURE_DATE                                :د: {COLOUR}{DATE_TINY}
+STR_TIMETABLE_DEPARTURE_SECONDS_IN_FUTURE                   :د: {COLOUR}{COMMA} ثانية
+STR_AI_GAME_SCRIPT                                          :{BLACK}لعبةالسيناريو
+STR_AI_GAME_SCRIPT_TOOLTIP                                  :{BLACK}تحقق من سجل البرنامج النصي للعبة. Ctrl+Click للفتح في نافذة جديدة
+STR_AI_LIST_CAPTION_GAMESCRIPT                              :مخطوطات اللعبة
+STR_SCREENSHOT_CAPTION                                      :{WHITE}التقط لقطة شاشة
+STR_SCREENSHOT_DEFAULTZOOM_SCREENSHOT                       :{BLACK}لقطة الشاشة للتكبير الافتراضي
+STR_SCREENSHOT_HEIGHTMAP_SCREENSHOT                         :{BLACK}لقطة شاشة لخريطة الارتفاع
+STR_SCREENSHOT_MINIMAP_SCREENSHOT                           :{BLACK}لقطة شاشة للخريطة المصغرة
+STR_AI_SETTINGS_CAPTION_AI                                  :{WHITE}معلمات الذكاء الاصطناعي
+STR_AI_SETTINGS_CAPTION_GAMESCRIPT                          :{WHITE}معلمات البرنامج النصي للعبة
+STR_TEXTFILE_JUMPLIST                                       :{WHITE}جدول المحتويات
+STR_TEXTFILE_JUMPLIST_TOOLTIP                               :{BLACK}انتقل بسرعة إلى قسم في الملف المعروض عبر هذه القائمة
+STR_TEXTFILE_JUMPLIST_ITEM                                  :{WHITE}{RAW_STRING}
+STR_TEXTFILE_NAVBACK_TOOLTIP                                :{BLACK}العودة إلى سجل التنقل
+STR_TEXTFILE_NAVFORWARD_TOOLTIP                             :{BLACK}العودة للأمام في سجل التنقل
+STR_TEXTFILE_WRAP_TEXT_TOOLTIP                              :{BLACK}قم بلف نص النافذة بحيث يتناسب مع كل شيء دون الحاجة إلى التمرير
+STR_TEXTFILE_VIEW_README_TOOLTIP                            :عرض التمهيدي لهذا المحتوى
+STR_TEXTFILE_VIEW_CHANGELOG_TOOLTIP                         :عرض سجل التغيير لهذا المحتوى
+STR_TEXTFILE_VIEW_LICENCE_TOOLTIP                           :عرض الترخيص لهذا المحتوى
+STR_TEXTFILE_SURVEY_RESULT_CAPTION                          :{WHITE}معاينة نتيجة الاستطلاع
+STR_TEXTFILE_GAME_MANUAL_CAPTION                            :{WHITE}مستندOpenTTD '{RAW_STRING}'
+STR_FEEDER_INCOME                                           :{YELLOW}التحويل: {CURRENCY_LONG}{WHITE} / {GREEN}الدخل: {CURRENCY_LONG}
+STR_FEEDER_COST                                             :{YELLOW}التحويل: {CURRENCY_LONG}{WHITE} / {RED}التكلفة: {CURRENCY_LONG}
+STR_ERROR_GAME_SAVE_FAILED                                  :فشل حفظ اللعبة...
+STR_ERROR_CANNOT_CREATE_DIRECTORY                           :لا يمكن إنشاء مجلد...
+STR_ERROR_DIRECTORY_NAME_IN_USE                             :يوجد ملف أو مجلد بهذا الاسم بالفعل
+STR_ERROR_DIRECTORY_ILLEGAL_NAME                            :لا يمكن أن يحتوي اسم المجلد على أحرف خاصة
+STR_ERROR_DIRECTORY_LEADING_DOT                             :لا يمكن أن يبدأ اسم المجلد بنقطة
+STR_ERROR_DIRECTORY_PERMISSION_DENIED                       :ليس لديك الإذن لإنشاء مجلد هنا
+STR_ERROR_GAME_LOAD_FAILED                                  :فشل تحميل اللعبة...
+STR_GAME_SAVELOAD_ERROR_PATCHPACK                           :Savegame مصنوع بنسخة معدلة
+STR_WARNING_SCREENSHOT_SIZE_MESSAGE                         :{YELLOW}ستكون دقة لقطة الشاشة هي {COMMA} × {COMMA} بكسل. قد يستغرق التقاط لقطة الشاشة بعض الوقت. هل تريد الاستمرار؟
+STR_ERROR_MESSAGE_CAPTION_OTHER_COMPANY                     :{YELLOW}رسالة من {COMPANY}
+STR_ERROR_BUILDING_IS_PROTECTED                             :المبنى محمي
+STR_ERROR_GENERIC_OBJECT_IN_THE_WAY                         :{STRING} في الطريق
+STR_ERROR_BRIDGE_TOO_HIGH_AFTER_LOWER_LAND                  :بعد ذلك سيكون الجسر فوقه مرتفعًا جدًا.
+STR_ERROR_MUST_DEMOLISH_RIVER_FIRST                         :يجب هدم النهر أولا
+STR_ERROR_CAN_T_GIVE_MONEY                                  :لا يمكن التبرع بالمال لهذه الشركة...
+STR_ERROR_CAN_T_BUILD_HOUSE                                 :لا يستطيع بناء منزل...
+STR_ERROR_CAN_T_PROSPECT_INDUSTRY                           :لا يمكن التنقيب عن الصناعة...
+STR_ERROR_PROSPECTING_WAS_UNLUCKY                           :فشل التمويل في التنقيب بسبب سوء الحظ؛ حاول ثانية
+STR_ERROR_STATION_DISALLOWED_NUMBER_TRACKS                  :عدد غير معتمد من المسارات
+STR_ERROR_STATION_DISALLOWED_LENGTH                         :طول غير معتمد
+STR_ERROR_CAN_T_MOVE_STATION_NAME                           :لا يمكن تحريك إشارة المحطة...
+STR_ERROR_CAN_T_BUILD_ROAD_WAYPOINT                         :لا يمكن بناء نقطة الطريق هنا ...
+STR_ERROR_CAN_T_MOVE_WAYPOINT_NAME                          :لا يمكن تحريك علامة إحداثية...
+STR_ERROR_CAN_T_REMOVE_ROAD_WAYPOINT                        :لا يمكن إزالة إحداثية الطريق هنا...
+STR_ERROR_MUST_REMOVE_ROADWAYPOINT_FIRST                    :يجب إزالة إحداثية الطريق أولاً
+STR_ERROR_UNABLE_TO_FIND_LOCAL_HANGAR                       :غير قادر على العثور على حظيرة محلية
+STR_ERROR_UNBUNCHING_ONLY_ONE_ALLOWED                       :يمكن أن يكون لها أمر فك الارتباط واحد فقط
+STR_ERROR_UNBUNCHING_NO_FULL_LOAD                           :لا يمكن استخدام أوامر التحميل الكامل عندما يكون للمركبة أمر تفكيك
+STR_ERROR_UNBUNCHING_NO_UNBUNCHING_FULL_LOAD                :لا يمكن فك مركبة بأمر حمولة كاملة
+STR_ERROR_UNBUNCHING_NO_CONDITIONAL                         :لا يمكن استخدام الأوامر المشروطة عندما يكون للمركبة أمر فك المجموعة
+STR_ERROR_UNBUNCHING_NO_UNBUNCHING_CONDITIONAL              :لا يمكن فك السيارة بأمر مشروط
+STR_ERROR_CAN_T_CONVERT_ROAD                                :لا يمكن تحويل نوع الطريق هنا...
+STR_ERROR_CAN_T_CONVERT_TRAMWAY                             :لا يمكن تحويل نوع الترام هنا...
+STR_ERROR_BRIDGE_TOO_HIGH_FOR_TERRAIN                       :الجسر مرتفع جدًا بالنسبة لهذه التضاريس.
+STR_ERROR_BRIDGE_TOO_LOW_FOR_STATION                        :الجسر {HEIGHT} منخفض جدًا بالنسبة للمحطة
+STR_ERROR_BRIDGE_TOO_LOW_FOR_ROADSTOP                       :الجسر {HEIGHT} منخفض جدًا بحيث لا يمكن التوقف على الطريق
+STR_ERROR_BRIDGE_TOO_LOW_FOR_DOCK                           :الجسر {HEIGHT} منخفض جدًا بالنسبة للرصيف
+STR_ERROR_BRIDGE_TOO_LOW_FOR_BUOY                           :الجسر {HEIGHT} منخفض جدًا بالنسبة للعوامة
+STR_ERROR_BRIDGE_TOO_LOW_FOR_RAIL_WAYPOINT                  :الجسر {HEIGHT} منخفض جدًا بالنسبة لنقطة طريق السكك الحديدية
+STR_ERROR_BRIDGE_TOO_LOW_FOR_ROAD_WAYPOINT                  :الجسر {HEIGHT} منخفض جدًا بالنسبة لإحداثية الطريق
+STR_ERROR_BRIDGE_TOO_LOW_FOR_LOCK                           :الجسر {HEIGHT} منخفض جدًا بحيث لا يمكن قفله
+STR_ERROR_BRIDGE_TOO_LOW_FOR_TRAIN_DEPOT                    :الجسر {HEIGHT} منخفض جدًا بالنسبة لمستودع القطار
+STR_ERROR_BRIDGE_TOO_LOW_FOR_ROADVEH_DEPOT                  :الجسر {HEIGHT} منخفض جدًا بالنسبة لمستودع مركبات الطرق
+STR_ERROR_BRIDGE_TOO_LOW_FOR_SHIP_DEPOT                     :الجسر {HEIGHT} منخفض جدًا بالنسبة لمستودع السفن
+STR_ERROR_BRIDGE_TOO_LOW_FOR_OBJECT                         :الجسر {HEIGHT} منخفض جدًا بالنسبة للكائن
+STR_ERROR_BUILD_OBJECT_LIMIT_REACHED                        :تم الوصول إلى الحد الأقصى لبناء الكائن
+STR_ERROR_GROUP_CAN_T_SET_PARENT_RECURSION                  :الحلقات في التسلسل الهرمي للمجموعة غير مسموح بها
+STR_ERROR_CAN_T_SELL_ALL_TRAIN                              :لا يمكن بيع جميع عربات السكك الحديدية ...
+STR_ERROR_CAN_T_SELL_ALL_ROAD_VEHICLE                       :لا يمكن بيع جميع المركبات على الطرق ...
+STR_ERROR_CAN_T_SELL_ALL_SHIP                               :لا يمكن بيع جميع السفن...
+STR_ERROR_CAN_T_SELL_ALL_AIRCRAFT                           :لا يمكن بيع جميع الطائرات...
+STR_ERROR_CAN_T_AUTOREPLACE_TRAIN                           :لا يمكن استبدال مركبات السكك الحديدية تلقائيًا ...
+STR_ERROR_CAN_T_AUTOREPLACE_ROAD_VEHICLE                    :لا يمكن استبدال مركبات الطريق تلقائيًا ...
+STR_ERROR_CAN_T_AUTOREPLACE_SHIP                            :لا يمكن استبدال السفن تلقائيًا...
+STR_ERROR_CAN_T_AUTOREPLACE_AIRCRAFT                        :لا يمكن استبدال الطائرة تلقائيًا...
+STR_ERROR_NO_VEHICLES_AVAILABLE_YET_EXPLANATION             :ابدأ لعبة جديدة بعد {DATE_SHORT} أو استخدم NewGRF الذي يوفر مركبات مبكرة
+STR_ERROR_NO_TOWN_ROADTYPES_AVAILABLE_AT_ALL                :لا تتوفر أنواع طرق قابلة للبناء في المدينة
+STR_ERROR_NO_TOWN_ROADTYPES_AVAILABLE_AT_ALL_EXPLANATION    :قم بتغيير تكوين NewGRF الخاص بك
+STR_ERROR_NO_TOWN_ROADTYPES_AVAILABLE_YET                   :لا توجد أنواع طرق قابلة للبناء في المدينة متاحة حتى الآن
+STR_ERROR_NO_TOWN_ROADTYPES_AVAILABLE_YET_EXPLANATION       :ابدأ لعبة جديدة بعد {DATE_SHORT} أو استخدم NewGRF الذي يوفر أنواع طرق مبكرة قابلة للبناء في المدينة
+STR_ERROR_CAN_T_SHARE_ORDER_VEHICLE_LIST                    :ليست كل المركبات تتقاسم الأوامر
+STR_ERROR_NO_RAIL_STATION                                   :لا توجد محطة للسكك الحديدية
+STR_ERROR_NO_BUS_STATION                                    :لا توجد محطة للحافلات
+STR_ERROR_NO_TRUCK_STATION                                  :لا توجد محطة شاحنة
+STR_ERROR_NO_DOCK                                           :لا يوجد قفص الاتهام
+STR_ERROR_NO_AIRPORT                                        :لا يوجد مطار / مهبط طائرات الهليكوبتر
+STR_ERROR_NO_STOP_COMPATIBLE_ROAD_TYPE                      :لا توجد محطات توقف مع نوع طريق متوافق
+STR_ERROR_NO_STOP_COMPATIBLE_TRAM_TYPE                      :لا توجد محطات توقف مع نوع ترام متوافق
+STR_ERROR_NO_STOP_ARTICULATED_VEHICLE                       :لا توجد محطات توقف مناسبة لمركبات الطرق المفصلية.{}تتطلب مركبات الطرق المفصلية التوقف أثناء القيادة، وليس التوقف في الخليج
+STR_ERROR_AIRPORT_NO_PLANES                                 :لا يمكن لهذه الطائرة أن تهبط في مهبط طائرات الهليكوبتر هذا
+STR_ERROR_AIRPORT_NO_HELICOPTERS                            :لا يمكن لهذه المروحية أن تهبط في هذا المطار
+STR_ERROR_NO_RAIL_WAYPOINT                                  :لا توجد نقطة طريق للسكك الحديدية
+STR_ERROR_NO_ROAD_WAYPOINT                                  :لا توجد نقطة الطريق
+STR_ERROR_NO_BUOY                                           :لا يوجد العوامة
+STR_ERROR_TIMETABLE_INCOMPLETE                              :الجدول الزمني غير مكتمل
+STR_BASEMUSIC_DOS_DESCRIPTION                               :الموسيقى الأصلية لإصدار Transport Tycoon Deluxe DOS.
+STR_BASEMUSIC_TTO_DESCRIPTION                               :قطب النقل الأصلي (المحرر الأصلي/العالمي) موسيقى إصدار DOS.
+STR_SAVEGAME_DURATION_REALTIME                              :{NUM}ح {NUM}م
+STR_VIEWPORT_TOWN_CITY                                      :{TOWN} {CITY_ICON}
+STR_VIEWPORT_TOWN_CITY_POP                                  :{TOWN} ({COMMA}) {CITY_ICON}
+STR_CURRENCY_SHORT_KILO                                     :{NBSP}ك
+STR_CURRENCY_SHORT_MEGA                                     :{NBSP}م
+STR_CURRENCY_SHORT_GIGA                                     :{NBSP}مليار
+STR_CURRENCY_SHORT_TERA                                     :{NBSP}تينيسي
+STR_JUST_LEFT_ARROW                                         :{LEFT_ARROW}
+STR_JUST_RIGHT_ARROW                                        :{RIGHT_ARROW}
+STR_JUST_DECIMAL                                            :{DECIMAL}
+STR_JUST_STRING1                                            :{STRING1}
+STR_TOOLBAR_ROADTYPE_VELOCITY                               :{STRING} {YELLOW}({VELOCITY})
+STR_BADGE_NAME_LIST                                         :{STRING}: {GOLD}{RAW_STRING}
+STR_BADGE_CONFIG_MENU_TOOLTIP                               :فتح تكوين الشارة
+STR_BADGE_CONFIG_RESET                                      :إعادة ضبط
+STR_BADGE_CONFIG_ICONS                                      :{WHITE}أيقونات شارة
+STR_BADGE_CONFIG_FILTERS                                    :{WHITE}مرشحات شارة
+STR_BADGE_CONFIG_PREVIEW                                    :معاينة الصورة
+STR_BADGE_CONFIG_NAME                                       :اسم
+STR_BADGE_FILTER_ANY_LABEL                                  :أي {STRING}
+STR_FORK_BUSINESS_TOOLTIP                                   :{BLACK}الأعمال: السوق، الأصول ودفتر الحسابات
+STR_FORK_BUSINESS_CAPTION                                   :الأعمال
+STR_FORK_BUSINESS_MARKET                                    :السوق: {STRING} ({NUM}%)
+STR_FORK_BUSINESS_ASSETS                                    :الأصول المملوكة: {NUM}
+STR_FORK_LEDGER_ROW                                         :{STRING}، الشهر الماضي: {CURRENCY_LONG}
+STR_FORK_CATEGORY_TAX                                       :الضرائب
+STR_FORK_CATEGORY_RENT                                      :الإيجار
+STR_FORK_CATEGORY_SALARIES                                  :الرواتب
+STR_FORK_CATEGORY_DIVIDENDS                                 :الأرباح الموزعة
+STR_FORK_CATEGORY_ADVERTISING                               :الإعلانات
+STR_FORK_CATEGORY_TRADE                                     :التجارة والجمارك
+STR_FORK_CATEGORY_LEASING                                   :التأجير التمويلي
+STR_FORK_CATEGORY_OTHER                                     :أخرى
+STR_FORK_PHASE_NORMAL                                       :مستقر
+STR_FORK_PHASE_BOOM                                         :ازدهار
+STR_FORK_PHASE_RECESSION                                    :كساد
+STR_FORK_NEWS_BOOM                                          :{BIG_FONT}{BLACK}ازدهار اقتصادي! مدفوعات البضائع والإيجارات وأسعار الأسهم في ارتفاع
+STR_FORK_NEWS_RECESSION                                     :{BIG_FONT}{BLACK}كساد اقتصادي! مدفوعات البضائع والإيجارات وأسعار الأسهم في انخفاض
+STR_FORK_NEWS_STABLE                                        :{BIG_FONT}{BLACK}استقر الاقتصاد
+
+## Fork: products, company overview and statistics (added by the unified update).
+STR_FORK_COMPANY_CAPTION                                  :{BLACK}الشركة: {STRING}
+STR_FORK_COMPANY_INFO                                     :{BLACK}الموظفون: {NUM}   الربح السنوي المتوقع: {CURRENCY_LONG}   الربح الآني: {CURRENCY_LONG}
+STR_FORK_COMPANY_VALUE                                    :{BLACK}قيمة الشركة: {CURRENCY_LONG}
+STR_FORK_COMPANY_SELL                                     :بيع الشركة
+STR_FORK_COMPANY_SELL_TOOLTIP                             :بيع كل ما تملكه الشركة بقيمة السوق الجديدة
+STR_FORK_COMPANY_PRODUCTS                                 :صناعة منتج / إدارة المنتجات
+STR_FORK_COMPANY_PRODUCTS_TOOLTIP                         :أنشئ منتجات الشركة وعدّل كميتها وسعرها وجودتها
+STR_FORK_COMPANY_STATS                                    :الإحصائيات
+STR_FORK_COMPANY_STATS_TOOLTIP                            :شعبية منتجات الشركة على شكل رسم بياني
+STR_FORK_PRODUCTS_CAPTION                                 :{BLACK}منتجات الشركة
+STR_FORK_PRODUCTS_NEW                                     :صناعة منتج
+STR_FORK_PRODUCTS_NEW_TOOLTIP                             :اختر منتجًا من قائمة الصناعات المتاحة في هذا العام
+STR_FORK_PRODUCTS_ROW                                     :{BLACK}{STRING}   الكمية: {NUM}   السعر: {CURRENCY_LONG}   الجودة: {NUM}   الخصم: {NUM}%   الشعبية: {NUM}%
+STR_FORK_PRODUCTS_EMPTY                                   :{BLACK}لا توجد منتجات بعد. اضغط «صناعة منتج» للبدء.
+STR_FORK_PRODUCTS_QTY_DOWN                                :الكمية -
+STR_FORK_PRODUCTS_QTY_UP                                  :الكمية +
+STR_FORK_PRODUCTS_PRICE_DOWN                              :السعر -
+STR_FORK_PRODUCTS_PRICE_UP                                :السعر +
+STR_FORK_PRODUCTS_QUALITY_DOWN                            :الجودة -
+STR_FORK_PRODUCTS_QUALITY_UP                              :الجودة +
+STR_FORK_PRODUCTS_DISCOUNT_DOWN                           :خصم -
+STR_FORK_PRODUCTS_DISCOUNT_UP                             :خصم +
+STR_FORK_PRODUCTS_RENAME                                  :إعادة التسمية
+STR_FORK_PRODUCTS_SELL_SHARE                              :بيع سهم
+STR_FORK_PRODUCTS_SELL_SHARE_TOOLTIP                      :بيع جزء من شركتك مقابل قيمة السوق
+STR_FORK_PRODUCT_CREATE_CAPTION                           :{BLACK}صناعة منتج جديد
+STR_FORK_PRODUCT_CREATE_INDUSTRY                          :{BLACK}نوع الصناعة: {STRING}
+STR_FORK_PRODUCT_CREATE_LIST                              :{BLACK}المنتج: {STRING}   السعر الأساسي: {CURRENCY_LONG}
+STR_FORK_PRODUCT_CREATE_NAME                              :اسم المنتج
+STR_FORK_PRODUCT_CREATE_MAKE                              :اصنع المنتج
+STR_FORK_PRODUCT_CREATE_LOCKED                            :{BLACK}تفتح في عام {NUM}
+STR_FORK_INDUSTRY_HOUSEHOLD                               :صناعات منزلية
+STR_FORK_INDUSTRY_LIFE_TECH                               :تقنيات حياتية
+STR_FORK_INDUSTRY_COMMUNICATIONS                          :الاتصالات
+STR_FORK_INDUSTRY_BEVERAGES                               :المشروبات والمطيبات
+STR_FORK_INDUSTRY_FOOD                                    :صناعات غذائية
+STR_FORK_INDUSTRY_CLOTHING                                :الملابس والأقمشة
+STR_FORK_INDUSTRY_MEDICAL                                 :الصناعات الطبية
+STR_FORK_INDUSTRY_GAMES                                   :البرمجة والألعاب
+STR_FORK_INDUSTRY_APPS                                    :البرمجة التطبيقات
+STR_FORK_INDUSTRY_BUILDING                                :مواد البناء
+STR_FORK_INDUSTRY_ENERGY                                  :الطاقة
+STR_FORK_STATS_CAPTION                                    :{BLACK}إحصائيات المنتجات
+STR_FORK_STATS_FILTER                                     :فلترة
+STR_FORK_STATS_ALL                                        :كل المنتجات
+STR_FORK_STATS_LABEL                                      :{BLACK}{STRING}   الشعبية: {NUM}%   الدخل: {CURRENCY_LONG}
+STR_FORK_STATS_EMPTY                                      :{BLACK}لا توجد بيانات كافية بعد.
+STR_ERROR_FORK_PRODUCT_LOCKED                             :{WHITE}هذا المنتج لم يخترع بعد...
+STR_ERROR_FORK_PRODUCT_NAME                               :{WHITE}اسم المنتج غير صالح...
+STR_FORK_PRODUCT_CREATE_SETTINGS                          :{BLACK}الكمية: {NUM}   السعر: {CURRENCY_LONG}

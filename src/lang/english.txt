@@ -6091,3 +6091,471 @@ STR_BADGE_CONFIG_FILTERS                                        :{WHITE}Badge Fi
 STR_BADGE_CONFIG_PREVIEW                                        :Preview Image
 STR_BADGE_CONFIG_NAME                                           :Name
 STR_BADGE_FILTER_ANY_LABEL                                      :Any {STRING}
+
+STR_FORK_BUSINESS_TOOLTIP                                       :{BLACK}Business: market, assets and ledger
+STR_FORK_BUSINESS_CAPTION                                       :Business
+STR_FORK_BUSINESS_MARKET                                        :Market: {STRING} ({NUM}%)
+STR_FORK_BUSINESS_ASSETS                                        :Assets owned: {NUM}
+STR_FORK_LEDGER_ROW                                             :{STRING}, last month: {CURRENCY_LONG}
+STR_FORK_CATEGORY_TAX                                           :Taxes
+STR_FORK_TOWN_TAX_RATE                                          :{BLACK}Local tax rate: {NUM}.{NUM}% (property: {NUM}.{NUM}% a year)
+STR_FORK_REAL_ESTATE_BUTTON                                     :{BLACK}Real estate
+STR_FORK_REAL_ESTATE_TOOLTIP                                    :{BLACK}Buy and sell houses in this town and set the rent
+STR_FORK_RE_CAPTION                                             :Real estate: {TOWN}
+STR_FORK_RE_BUY_1                                               :{BLACK}Buy 1 house
+STR_FORK_RE_BUY_10                                              :{BLACK}Buy 10 houses
+STR_FORK_RE_SELL_1                                              :{BLACK}Sell 1 house
+STR_FORK_RE_SELL_10                                             :{BLACK}Sell 10 houses
+STR_FORK_RE_BUY_TOOLTIP                                         :{BLACK}Buy houses in this town. They are rented out to the inhabitants
+STR_FORK_RE_SELL_TOOLTIP                                        :{BLACK}Sell the houses you have owned the longest
+STR_FORK_RE_RENT_DOWN                                           :{BLACK}Rent -10%
+STR_FORK_RE_RENT_UP                                             :{BLACK}Rent +10%
+STR_FORK_RE_RENT_DOWN_TOOLTIP                                   :{BLACK}Lower the rent: more people want your houses, but you earn less from each one
+STR_FORK_RE_RENT_UP_TOOLTIP                                     :{BLACK}Raise the rent: you earn more from each house, but fewer tenants stay
+STR_FORK_RE_OWNED                                               :{BLACK}Houses you own: {NUM} of {NUM}   Value: {CURRENCY_LONG}
+STR_FORK_RE_PRICE                                               :{BLACK}Price per house: {CURRENCY_LONG}   You sell for: {CURRENCY_LONG}
+STR_FORK_RE_MARKET_UP                                           :{BLACK}Property market this month: up {NUM}.{NUM}%
+STR_FORK_RE_MARKET_DOWN                                         :{BLACK}Property market this month: down {NUM}.{NUM}%
+STR_FORK_RE_MARKET_RENT                                         :{BLACK}Market rent: {CURRENCY_LONG} per house per month
+STR_FORK_RE_YOUR_RENT                                           :{BLACK}Your rent: {NUM}% of market   Occupancy: {NUM}%
+STR_FORK_RE_INCOME                                              :{BLACK}Rent income: {CURRENCY_LONG} per month   Property tax: {CURRENCY_LONG} per month
+STR_ERROR_FORK_CAN_T_BUY_HOUSES                                 :{WHITE}Can't buy houses here...
+STR_ERROR_FORK_CAN_T_SELL_HOUSES                                :{WHITE}Can't sell houses here...
+STR_ERROR_FORK_CAN_T_SET_RENT                                   :{WHITE}Can't change the rent here...
+STR_ERROR_FORK_TOWN_TOO_SMALL                                   :{WHITE}The town is too small, houses are only sold in towns with at least 100 inhabitants
+STR_ERROR_FORK_HOUSE_LIMIT                                      :{WHITE}You can't own more houses here than the town has
+STR_ERROR_FORK_NO_HOUSES                                        :{WHITE}You don't own enough houses in this town
+STR_FORK_UM_TOOLTIP                                             :{BLACK}Used vehicle market: second-hand vehicles from three dealers
+STR_FORK_UM_CAPTION                                             :Used vehicle market
+STR_FORK_UM_DEALER_TOOLTIP                                      :{BLACK}Show the offers of this dealer
+STR_FORK_UM_DEALER_0                                            :{BLACK}TTD MAX: used trains and wagons
+STR_FORK_UM_DEALER_1                                            :{BLACK}TAJCAR: used cars, buses and trucks
+STR_FORK_UM_DEALER_2                                            :{BLACK}LIMANO: used vehicles of every kind
+STR_FORK_UM_DEALER_3                                            :{BLACK}SEAMAR: used ships
+STR_FORK_UM_DEALER_4                                            :{BLACK}AIRIX: used aircraft
+STR_FORK_UM_OFFERS_HINT                                         :{BLACK}Offers of this month. Tap an offer, then press Buy.
+STR_FORK_UM_NO_OFFERS                                           :{BLACK}This dealer has nothing to offer right now
+STR_FORK_UM_PICK_DEPOT                                          :{BLACK}Tap one of your depots to receive the vehicle...
+STR_FORK_UM_OFFER_LINE1                                         :{BLACK}{ENGINE}   {NUM} years {NUM} months old
+STR_FORK_UM_OFFER_FAIR                                          :{BLACK}   {NUM}% of the new price: {CURRENCY_LONG} (new: {CURRENCY_LONG})   Left: {NUM}
+STR_FORK_UM_OFFER_BARGAIN                                       :{GREEN}   Bargain! {NUM}% of the new price: {CURRENCY_LONG} (new: {CURRENCY_LONG})   Left: {NUM}
+STR_FORK_UM_OFFER_PRICEY                                        :{RED}   {NUM}% of the new price: {CURRENCY_LONG} (new: {CURRENCY_LONG})   Left: {NUM}
+STR_FORK_UM_OFFER_SOLD                                          :{SILVER}   Sold out
+STR_FORK_UM_BUY                                                 :{BLACK}Buy selected
+STR_FORK_UM_BUY_TOOLTIP                                         :{BLACK}Buy the selected vehicle, then tap one of your depots to receive it
+STR_ERROR_FORK_UM_CAN_T_BUY                                     :{WHITE}Can't buy this used vehicle...
+STR_ERROR_FORK_UM_NO_OFFER                                      :{WHITE}This offer is no longer available
+STR_ERROR_FORK_UM_SOLD_OUT                                      :{WHITE}This vehicle has already been sold
+STR_FORK_MEDIA_BUTTON                                           :{BLACK}Channels
+STR_FORK_MEDIA_TOOLTIP                                          :{BLACK}Build and run television and radio channels in this town
+STR_FORK_MEDIA_CAPTION                                          :Channels: {TOWN}
+STR_FORK_MEDIA_HINT                                             :{BLACK}Tap a channel to build it, or to manage your own.{}Only one channel of each kind fits in a town.
+STR_FORK_MEDIA_TOO_SMALL                                        :{BLACK}Channels can only be built in big towns with at least {NUM} inhabitants. This town has {NUM}.
+STR_FORK_MEDIA_KIND_0                                           :{BLACK}Entertainment channel
+STR_FORK_MEDIA_KIND_1                                           :{BLACK}Radio station
+STR_FORK_MEDIA_KIND_2                                           :{BLACK}News channel
+STR_FORK_MEDIA_KIND_3                                           :{BLACK}Sport channel
+STR_FORK_MEDIA_DEFAULT_NAME_0                                   :{TOWN} Entertainment
+STR_FORK_MEDIA_DEFAULT_NAME_1                                   :{TOWN} Radio
+STR_FORK_MEDIA_DEFAULT_NAME_2                                   :{TOWN} News
+STR_FORK_MEDIA_DEFAULT_NAME_3                                   :{TOWN} Sport
+STR_FORK_MEDIA_ROW_AVAILABLE                                    :{BLACK}Free to build: costs {CURRENCY_LONG}
+STR_FORK_MEDIA_ROW_OTHER                                        :{BLACK}{RAW_STRING}, owned by {COMPANY}
+STR_FORK_MEDIA_ROW_BUILDING                                     :{BLACK}{RAW_STRING}: under construction ({NUM} of {NUM} months)
+STR_FORK_MEDIA_ROW_ON_AIR                                       :{BLACK}{RAW_STRING}: on air, audience {NUM}
+STR_FORK_CREATE_CAPTION                                         :Build: {STRING}
+STR_FORK_CREATE_COST                                            :{BLACK}Cost: {CURRENCY_LONG}   Building time: {NUM} months
+STR_FORK_CREATE_NAME                                            :{BLACK}Name: {RAW_STRING}
+STR_FORK_CREATE_NAME_BUTTON                                     :{BLACK}Name
+STR_FORK_CREATE_NAME_TOOLTIP                                    :{BLACK}Choose the name of the channel
+STR_FORK_CREATE_NAME_CAPTION                                    :Name of the channel
+STR_FORK_CREATE_FREE                                            :{BLACK}Free
+STR_FORK_CREATE_FREE_TOOLTIP                                    :{BLACK}Everybody can watch. Reaches more people, which makes the channel more popular. Reputation is not affected.
+STR_FORK_CREATE_PAID                                            :{BLACK}Paid package
+STR_FORK_CREATE_PAID_TOOLTIP                                    :{BLACK}The channel is encrypted. Viewers pay for a package, fewer people subscribe the dearer it is.
+STR_FORK_CREATE_PACKAGE_DOWN                                    :{BLACK}Package -
+STR_FORK_CREATE_PACKAGE_UP                                      :{BLACK}Package +
+STR_FORK_CREATE_PACKAGE_TOOLTIP                                 :{BLACK}Change the price of the package (1 to 800)
+STR_FORK_CREATE_CONFIRM                                         :{BLACK}Confirm and build
+STR_FORK_CREATE_CONFIRM_TOOLTIP                                 :{BLACK}Build the channel in this town
+STR_FORK_CREATE_CANCEL                                          :{BLACK}Cancel
+STR_FORK_CREATE_FREE_INFO                                       :{BLACK}Free channel: reaches more people and becomes more popular. Reputation is not affected. Income only from advertising.
+STR_FORK_CREATE_PAID_INFO                                       :{BLACK}Paid package: {CURRENCY_LONG}. Income from subscriptions and advertising. The higher the price, the fewer subscribers.
+STR_FORK_CHANNEL_CAPTION                                        :Channel: {RAW_STRING}
+STR_FORK_CHANNEL_TOWN                                           :{BLACK}{STRING} in {TOWN}
+STR_FORK_CHANNEL_STATUS_BUILDING                                :{BLACK}Under construction: {NUM} of {NUM} months
+STR_FORK_CHANNEL_STATUS_ON_AIR                                  :{BLACK}On air
+STR_FORK_CHANNEL_AUDIENCE                                       :{BLACK}Audience: {NUM}   Popularity: {NUM}%   Reputation: {NUM}%
+STR_FORK_CHANNEL_ACCESS_FREE                                    :{BLACK}Access: free for everybody
+STR_FORK_CHANNEL_ACCESS_PAID                                    :{BLACK}Access: paid package {CURRENCY_LONG}, {NUM} subscribers
+STR_FORK_CHANNEL_STAFF                                          :{BLACK}Staff efficiency: {NUM}% (every channel needs {NUM} staff in the town)
+STR_FORK_CHANNEL_INCOME                                         :{BLACK}Subscriptions: {CURRENCY_LONG}   Advertising: {CURRENCY_LONG} per month
+STR_FORK_CHANNEL_COSTS                                          :{BLACK}Running costs: {CURRENCY_LONG}   Result: {CURRENCY_LONG} per month
+STR_FORK_CHANNEL_VALUE                                          :{BLACK}Value of the building: {CURRENCY_LONG}
+STR_FORK_CHANNEL_PROGRAMS                                       :{BLACK}Programs (soon)
+STR_FORK_CHANNEL_SCHEDULE                                       :{BLACK}Schedule (soon)
+STR_FORK_CHANNEL_PROMOTION                                      :{BLACK}Promotion (soon)
+STR_FORK_CHANNEL_SOON_TOOLTIP                                   :{BLACK}This comes in the next update
+STR_ERROR_FORK_MEDIA_CAN_T_BUILD                                :{WHITE}Can't build a channel here...
+STR_ERROR_FORK_MEDIA_CAN_T_CHANGE                               :{WHITE}Can't change the package...
+STR_ERROR_FORK_MEDIA_TOWN_TOO_SMALL                             :{WHITE}Channels can only be built in big towns
+STR_ERROR_FORK_MEDIA_KIND_TAKEN                                 :{WHITE}This town already has a channel of this kind
+STR_ERROR_FORK_TOO_MANY_ASSETS                                  :{WHITE}There are too many assets in the game
+STR_FORK_CATEGORY_RENT                                          :Rent
+STR_FORK_CATEGORY_SALARIES                                      :Salaries
+STR_FORK_CATEGORY_DIVIDENDS                                     :Dividends
+STR_FORK_CATEGORY_ADVERTISING                                   :Advertising
+STR_FORK_CATEGORY_TRADE                                         :Trade and customs
+STR_FORK_CATEGORY_LEASING                                       :Leasing
+STR_FORK_CATEGORY_OTHER                                         :Other
+STR_FORK_PHASE_NORMAL                                           :Stable
+STR_FORK_PHASE_BOOM                                             :Boom
+STR_FORK_PHASE_RECESSION                                        :Recession
+STR_FORK_NEWS_BOOM                                              :{BIG_FONT}{BLACK}Economic boom! Cargo payments, rents and share prices are rising
+STR_FORK_NEWS_RECESSION                                         :{BIG_FONT}{BLACK}Recession! Cargo payments, rents and share prices are falling
+STR_FORK_NEWS_STABLE                                            :{BIG_FONT}{BLACK}The economy has stabilised
+STR_FORK_SHOP_BUTTON                                            :{BLACK}Shops
+STR_FORK_SHOP_TOOLTIP                                           :{BLACK}Open and sell shops in this town and set the prices
+STR_FORK_SHOP_CAPTION                                           :Shops: {TOWN}
+STR_FORK_SHOP_BUY_1                                             :{BLACK}Open 1 shop
+STR_FORK_SHOP_BUY_10                                            :{BLACK}Open 10 shops
+STR_FORK_SHOP_SELL_1                                            :{BLACK}Sell 1 shop
+STR_FORK_SHOP_SELL_10                                           :{BLACK}Sell 10 shops
+STR_FORK_SHOP_BUY_TOOLTIP                                       :{BLACK}Open shops in this town. They earn from what the inhabitants spend
+STR_FORK_SHOP_SELL_TOOLTIP                                      :{BLACK}Sell shops in this town
+STR_FORK_SHOP_PRICE_DOWN                                        :{BLACK}Prices -10%
+STR_FORK_SHOP_PRICE_UP                                          :{BLACK}Prices +10%
+STR_FORK_SHOP_PRICE_DOWN_TOOLTIP                                :{BLACK}Lower the prices: more customers, but less profit per sale
+STR_FORK_SHOP_PRICE_UP_TOOLTIP                                  :{BLACK}Raise the prices: more profit per sale, but customers go to the competition
+STR_FORK_SHOP_OWNED                                             :{BLACK}Shops you own: {NUM} of {NUM}   Value: {CURRENCY_LONG}
+STR_FORK_SHOP_PRICE                                             :{BLACK}Price per shop: {CURRENCY_LONG}   You sell for: {CURRENCY_LONG}
+STR_FORK_SHOP_SPENDING                                          :{BLACK}Inhabitants spend in shops: {CURRENCY_LONG} per month
+STR_FORK_SHOP_YOUR_PRICES                                       :{BLACK}Your prices: {NUM}% of normal   Your share of the market: {NUM}.{NUM}%
+STR_FORK_SHOP_SALES                                             :{BLACK}Sales: {CURRENCY_LONG} per month   Costs: {CURRENCY_LONG} per month
+STR_FORK_SHOP_PROFIT                                            :{BLACK}Profit: {CURRENCY_LONG} per month   Property tax: {CURRENCY_LONG} per month
+STR_ERROR_FORK_CAN_T_BUY_SHOPS                                  :{WHITE}Can't open shops here...
+STR_ERROR_FORK_CAN_T_SELL_SHOPS                                 :{WHITE}Can't sell shops here...
+STR_ERROR_FORK_CAN_T_SET_SHOP_PRICE                             :{WHITE}Can't change the prices here...
+STR_ERROR_FORK_SHOP_TOWN_TOO_SMALL                              :{WHITE}The town is too small, shops can only be opened in towns with at least 300 inhabitants
+STR_ERROR_FORK_SHOP_LIMIT                                       :{WHITE}You can't own more shops here: at most half the number of houses in the town, and 40
+STR_ERROR_FORK_NO_SHOPS                                         :{WHITE}You don't own enough shops in this town
+STR_FORK_STAFF_BUTTON                                           :{BLACK}Staff
+STR_FORK_STAFF_TOOLTIP                                          :{BLACK}Hire and fire managers and administrative staff in this town
+STR_FORK_STAFF_CAPTION                                          :Staff: {TOWN}
+STR_FORK_STAFF_HIRE_1                                           :{BLACK}Hire 1
+STR_FORK_STAFF_HIRE_5                                           :{BLACK}Hire 5
+STR_FORK_STAFF_FIRE_1                                           :{BLACK}Fire 1
+STR_FORK_STAFF_FIRE_5                                           :{BLACK}Fire 5
+STR_FORK_STAFF_HIRE_TOOLTIP                                     :{BLACK}Hire staff. Hiring costs two monthly salaries per person
+STR_FORK_STAFF_FIRE_TOOLTIP                                     :{BLACK}Fire staff. Severance pay is one monthly salary per person
+STR_FORK_STAFF_EMPLOYED                                         :{BLACK}Staff you employ: {NUM} of {NUM}   Needed for your assets: {NUM}
+STR_FORK_STAFF_WAGE                                             :{BLACK}Salary per person: {CURRENCY_LONG} per month
+STR_FORK_STAFF_COSTS                                            :{BLACK}Hiring costs: {CURRENCY_LONG} per person   Severance pay: {CURRENCY_LONG} per person
+STR_FORK_STAFF_ASSETS                                           :{BLACK}Your assets here: {NUM} houses, {NUM} shops
+STR_FORK_STAFF_EFFICIENCY                                       :{BLACK}Efficiency of your assets here: {NUM}%
+STR_FORK_STAFF_SALARIES                                         :{BLACK}Salaries: {CURRENCY_LONG} per month
+STR_ERROR_FORK_CAN_T_HIRE                                       :{WHITE}Can't hire staff here...
+STR_ERROR_FORK_CAN_T_FIRE                                       :{WHITE}Can't fire staff here...
+STR_ERROR_FORK_STAFF_TOWN_TOO_SMALL                             :{WHITE}The town is too small, staff can only be hired in towns with at least 100 inhabitants
+STR_ERROR_FORK_STAFF_LIMIT                                      :{WHITE}You can't employ more staff here: the town has too few workers
+STR_ERROR_FORK_NO_STAFF                                         :{WHITE}You don't employ that many staff in this town
+STR_FORK_TOWN_CUSTOMS_RATE                                      :{BLACK}Customs duty on goods delivered here from other towns: {NUM}%
+STR_FORK_RIGHTS_BUTTON                                          :{BLACK}Licenses
+STR_FORK_RIGHTS_TOOLTIP                                         :{BLACK}Buy rights or sign annual licenses to transport cargo that comes from this town
+STR_FORK_RIGHTS_CAPTION                                         :Licenses: {TOWN}
+STR_FORK_RIGHT_NAME_MINING                                      :Mining right: coal, iron ore, copper ore
+STR_FORK_RIGHT_NAME_LOGGING                                     :Logging right: wood
+STR_FORK_RIGHT_NAME_OIL                                         :Oil right: extraction and transport of oil
+STR_FORK_RIGHT_NAME_WATER                                       :Water right: transport of water
+STR_FORK_RIGHT_NAME_FOODGOODS                                   :Food and goods right
+STR_FORK_RIGHT_NAME_VALUABLES                                   :Valuables right: jewelry and precious goods
+STR_FORK_RIGHT_NAME_PEOPLEMAIL                                  :People and mail right
+STR_FORK_RIGHT_LINE_NAME                                        :{BLACK}{STRING}
+STR_FORK_RIGHT_STATUS_OWNED                                     :{GREEN}You own this right
+STR_FORK_RIGHT_STATUS_LICENSED                                  :{GREEN}Licensed, {NUM} months left
+STR_FORK_RIGHT_STATUS_NONE                                      :{RED}Not held
+STR_FORK_RIGHT_PRICE                                            :{BLACK}Price: {CURRENCY_LONG}
+STR_FORK_RIGHT_LICENSE_LINE                                     :{BLACK}Annual license: {CURRENCY_LONG} per month
+STR_FORK_RIGHT_BUY                                              :Buy
+STR_FORK_RIGHT_LICENSE_BTN                                      :Annual license
+STR_FORK_LICENSE_CAPTION                                        :License: {TOWN}
+STR_FORK_LICENSE_TYPE                                           :{BLACK}Type of license: {STRING}
+STR_FORK_LICENSE_RENT                                           :{BLACK}Monthly rent: {CURRENCY_LONG}
+STR_FORK_LICENSE_DURATION                                       :{BLACK}Duration: {NUM} year(s), up to 3 years
+STR_FORK_LICENSE_TOTAL                                          :{BLACK}Total rent over the whole duration: {CURRENCY_LONG}
+STR_FORK_LICENSE_NOTE                                           :{BLACK}The rent is paid every month; nothing is paid when signing
+STR_FORK_LICENSE_YEAR_DOWN                                      :{BLACK}-1 year
+STR_FORK_LICENSE_YEAR_UP                                        :{BLACK}+1 year
+STR_FORK_LICENSE_YEAR_TOOLTIP                                   :{BLACK}Change the duration of the license before signing (1 to 3 years)
+STR_FORK_LICENSE_SIGN                                           :{BLACK}Sign the agreement
+STR_FORK_LICENSE_SIGN_TOOLTIP                                   :{BLACK}Sign the license for the chosen duration
+STR_FORK_NEWS_LICENSE_EXPIRED                                   :{BIG_FONT}{BLACK}Your license ({STRING}) in {TOWN} has expired
+STR_FORK_NEWS_CONFISCATED                                       :{BIG_FONT}{BLACK}{NUM} deliveries were confiscated last month: you hold no right or license for that cargo. See the Licenses button in the town windows
+STR_ERROR_FORK_CAN_T_BUY_RIGHT                                  :{WHITE}Can't buy this right...
+STR_ERROR_FORK_CAN_T_SIGN_LICENSE                               :{WHITE}Can't sign this license...
+STR_ERROR_FORK_RIGHT_ALREADY_OWNED                              :{WHITE}You already own this right
+STR_ERROR_FORK_RIGHT_NOT_AVAILABLE                              :{WHITE}This right is not sold in this town
+STR_FORK_UM_MODE_USED                                           :{BLACK}Used vehicles
+STR_FORK_UM_MODE_LEASE                                          :{BLACK}Installment vehicles
+STR_FORK_UM_MODE_RENT                                           :{BLACK}Rented vehicles
+STR_FORK_UM_MODE_TOOLTIP                                        :{BLACK}Choose how to get a vehicle: buy it used, pay it in installments, or rent it
+STR_FORK_UM_LEASE_BUY                                           :{BLACK}Take on installments
+STR_FORK_UM_RENT_BUY                                            :{BLACK}Rent selected
+STR_FORK_UM_MONTH_DOWN                                          :{BLACK}- month
+STR_FORK_UM_MONTH_UP                                            :{BLACK}+ month
+STR_FORK_UM_MONTH_TOOLTIP                                       :{BLACK}Change the duration of the contract. The longer the contract, the more it costs
+STR_FORK_UM_LEASE_HINT                                          :{BLACK}Pay about 25% now and the rest in installments (10 to 24 months). After the last installment the vehicle is yours. Repairs are yours
+STR_FORK_UM_RENT_HINT                                           :{BLACK}No down payment. A longer contract than offered costs a surcharge. At the end you can renew at a higher rent, or the vehicle is taken back
+STR_FORK_UM_CONTRACTS                                           :{BLACK}Your contracts: {NUM} installment, {NUM} rented   Paid per month: {CURRENCY_LONG}
+STR_FORK_UM_LEASE_LINE                                          :{BLACK}Down payment: {CURRENCY_LONG}   Installment: {CURRENCY_LONG} for {NUM} months   Interest: {NUM}%   Total: {CURRENCY_LONG}
+STR_FORK_UM_RENT_LINE                                           :{BLACK}Rent: {CURRENCY_LONG} per month for {NUM} months (offered: {NUM})   Extension surcharge: {NUM}%
+STR_FORK_LEASE_RENEW_CAPTION                                    :Rental contract ended
+STR_FORK_LEASE_RENEW_TEXT                                       :{BLACK}The rental contract of {ENGINE} has ended
+STR_FORK_LEASE_RENEW_OFFER                                      :{BLACK}Renew for {NUM} months at {CURRENCY_LONG} per month
+STR_FORK_LEASE_RENEW_OLD                                        :{BLACK}The rent was {CURRENCY_LONG} per month; a renewal costs 40% more
+STR_FORK_LEASE_RENEW_HINT                                       :{BLACK}If you do not decide this month, the vehicle is taken back
+STR_FORK_LEASE_RENEW_BTN                                        :{BLACK}Renew
+STR_FORK_LEASE_RENEW_BTN_TOOLTIP                                :{BLACK}Renew the contract for a higher rent
+STR_FORK_LEASE_RETURN_BTN                                       :{BLACK}Return the vehicle
+STR_FORK_LEASE_RETURN_BTN_TOOLTIP                               :{BLACK}The vehicle goes to a depot and is taken back
+STR_FORK_NEWS_LEASE_OWNED                                       :{BIG_FONT}{BLACK}The last installment of {ENGINE} is paid: the vehicle is yours now
+STR_FORK_NEWS_LEASE_RETURNED                                    :{BIG_FONT}{BLACK}The rented vehicle {ENGINE} is taken back
+STR_ERROR_FORK_LEASE_CAN_T                                      :{WHITE}Can't take this vehicle on a contract...
+STR_ERROR_FORK_LEASE_MONTHS                                     :{WHITE}The duration of the contract is not allowed
+STR_ERROR_FORK_LEASE_NOT_PENDING                                :{WHITE}This contract does not wait for a decision
+STR_ERROR_FORK_LEASE_CAN_T_RENEW                                :{WHITE}Can't change this contract...
+STR_FORK_PRODUCT_DISHWASHER                                     :Dishwashers
+STR_FORK_PRODUCT_WASHING_MACHINE                                :Washing machines
+STR_FORK_PRODUCT_LAWN_MOWER                                     :Lawn mowers
+STR_FORK_PRODUCT_LAMPS                                          :Lamps
+STR_FORK_PRODUCT_TELEVISION                                     :Television sets
+STR_FORK_PRODUCT_RADIO                                          :Radios
+STR_FORK_QUALITY_1                                              :Economy
+STR_FORK_QUALITY_2                                              :Standard
+STR_FORK_QUALITY_3                                              :Good
+STR_FORK_QUALITY_4                                              :Premium
+STR_FORK_QUALITY_5                                              :Luxury
+STR_FORK_FIRMS_BUTTON                                           :{BLACK}Companies
+STR_FORK_FIRMS_TOOLTIP                                          :{BLACK}See the companies of this town and found your own
+STR_FORK_FIRMS_CAPTION                                          :Companies: {TOWN}
+STR_FORK_FIRMS_HINT                                             :{BLACK}Tap one of your own companies to run it. Companies can be founded in towns with {NUM} or more inhabitants
+STR_FORK_FIRMS_TOO_SMALL                                        :{BLACK}This town is too small for companies: it needs {NUM} inhabitants
+STR_FORK_FIRMS_NONE                                             :{BLACK}There are no companies in this town yet
+STR_FORK_FIRMS_ROW1                                             :{BLACK}{RAW_STRING}: {STRING}   {STRING}
+STR_FORK_FIRMS_OWN                                              :{GREEN}Your company
+STR_FORK_FIRMS_INDEPENDENT                                      :{ORANGE}Independent
+STR_FORK_FIRMS_ROW2                                             :{BLACK}Price: {CURRENCY_LONG}   Quality: {NUM}/5   Value: {CURRENCY_LONG}
+STR_FORK_FIRMS_CREATE                                           :{BLACK}Found a company
+STR_FORK_FIRMS_CREATE_TOOLTIP                                   :{BLACK}Found a technology company in this town
+STR_FORK_FIRM_CREATE_CAPTION                                    :Found a company: {TOWN}
+STR_FORK_FIRM_CREATE_SPECIALIZATION                             :{BLACK}Specialization: Technology (home technologies)
+STR_FORK_FIRM_CREATE_COST                                       :{BLACK}Cost of founding: {CURRENCY_LONG}
+STR_FORK_FIRM_CREATE_PRODUCT                                    :{BLACK}Product: {STRING}
+STR_FORK_FIRM_CREATE_HINT                                       :{BLACK}The company needs a manager (see Staff) and sells more with your shops in the town
+STR_FORK_FIRM_NAME_BUTTON                                       :{BLACK}Name: {RAW_STRING}
+STR_FORK_FIRM_NAME_TOOLTIP                                      :{BLACK}Tap to choose the name of the company
+STR_FORK_FIRM_NAME_CAPTION                                      :Name of the company
+STR_FORK_FIRM_DEFAULT_NAME                                      :Tech {TOWN}
+STR_FORK_FIRM_PRODUCT_TOOLTIP                                   :{BLACK}Choose the product of the company
+STR_FORK_FIRM_FOUND                                             :{BLACK}Found the company
+STR_FORK_FIRM_FOUND_TOOLTIP                                     :{BLACK}Found the company with this name and product
+STR_FORK_FIRM_LINE_PRODUCT                                      :{BLACK}Product: {STRING} (Technology)   Value of the company: {CURRENCY_LONG}
+STR_FORK_FIRM_LINE_QUALITY                                      :{BLACK}Quality: {STRING} ({NUM}/5)   Production: {NUM}% of {NUM} units per month
+STR_FORK_FIRM_LINE_PRICE                                        :{BLACK}Price: {CURRENCY_LONG} ({NUM}% of the base)   Discount: {NUM}%   Customers pay: {CURRENCY_LONG}
+STR_FORK_FIRM_LINE_MARKET                                       :{BLACK}Market price: {NUM}% of the base price (set by all companies together)
+STR_FORK_FIRM_LINE_STOCK                                        :{BLACK}In stock: {NUM} units   Made last month: {NUM}   Sold: {NUM}
+STR_FORK_FIRM_LINE_MONEY                                        :{BLACK}Sales last month: {CURRENCY_LONG}   Profit: {CURRENCY_LONG}
+STR_FORK_FIRM_COMPETITORS                                       :{BLACK}Competitors with the same product:
+STR_FORK_FIRM_NO_COMPETITORS                                    :{BLACK}No competitors make this product
+STR_FORK_FIRM_COMPETITOR_LINE                                   :{BLACK}{RAW_STRING}: {CURRENCY_LONG} per unit, quality {NUM}/5
+STR_FORK_FIRM_RATE_DOWN                                         :{BLACK}Production -10%
+STR_FORK_FIRM_RATE_UP                                           :{BLACK}Production +10%
+STR_FORK_FIRM_RATE_TOOLTIP                                      :{BLACK}Make less or more per month. Making more costs more
+STR_FORK_FIRM_QUALITY_DOWN                                      :{BLACK}Quality -
+STR_FORK_FIRM_QUALITY_UP                                        :{BLACK}Quality +
+STR_FORK_FIRM_QUALITY_TOOLTIP                                   :{BLACK}Better quality attracts customers but costs more to make
+STR_FORK_FIRM_PRICE_DOWN                                        :{BLACK}Price -5%
+STR_FORK_FIRM_PRICE_UP                                          :{BLACK}Price +5%
+STR_FORK_FIRM_PRICE_TOOLTIP                                     :{BLACK}A high price means fewer customers, a low price more customers
+STR_FORK_FIRM_DISCOUNT_DOWN                                     :{BLACK}Discount -5%
+STR_FORK_FIRM_DISCOUNT_UP                                       :{BLACK}Discount +5%
+STR_FORK_FIRM_DISCOUNT_TOOLTIP                                  :{BLACK}A sale (up to 50%) gets rid of stock that does not sell, without throwing it away
+STR_FORK_FIRM_DUMP                                              :{BLACK}Throw away the stock
+STR_FORK_FIRM_DUMP_TOOLTIP                                      :{BLACK}Throw away everything in the warehouse. What was paid for it is lost
+STR_FORK_NEWS_FIRM_OWN                                          :{BIG_FONT}{BLACK}{RAW_STRING}, a subsidiary of {COMPANY}, has launched a new product: {STRING}
+STR_FORK_NEWS_FIRM_NPC                                          :{BIG_FONT}{BLACK}{RAW_STRING} has launched a new product in {TOWN}: {STRING}
+STR_ERROR_FORK_FIRM_NAME                                        :{WHITE}The name is empty or too long
+STR_ERROR_FORK_FIRM_TOWN_TOO_SMALL                              :{WHITE}The town is too small for a company
+STR_ERROR_FORK_FIRM_TOWN_FULL                                   :{WHITE}This town has no room for more companies
+STR_ERROR_FORK_FIRM_CAN_T_FOUND                                 :{WHITE}Can't found a company here...
+STR_ERROR_FORK_FIRM_CAN_T_CHANGE                                :{WHITE}Can't change this company...
+STR_FORK_STOCK_NAME_0                                           :Pears
+STR_FORK_STOCK_NAME_1                                           :WenDoor
+STR_FORK_STOCK_NAME_2                                           :Zookal
+STR_FORK_STOCK_NAME_3                                           :Inter Mains
+STR_FORK_STOCK_NAME_4                                           :Samsong
+STR_FORK_STOCK_NAME_5                                           :Sunny
+STR_FORK_STOCK_NAME_6                                           :Tezla
+STR_FORK_STOCK_NAME_7                                           :Amazoon
+STR_FORK_STOCK_NAME_8                                           :Netflux
+STR_FORK_STOCK_NAME_9                                           :Faceboot
+STR_FORK_STOCK_NAME_10                                          :Nikee
+STR_FORK_STOCK_NAME_11                                          :Cola-Koala
+STR_FORK_INVEST_BUTTON                                          :{BLACK}Investment
+STR_FORK_INVEST_TOOLTIP                                         :{BLACK}Invest in the stock exchange or in the companies of the towns
+STR_FORK_EXCHANGE_CAPTION                                       :Stock exchange
+STR_FORK_EXCHANGE_TAB_LISTED                                    :{BLACK}Stock exchange
+STR_FORK_EXCHANGE_TAB_LOCAL                                     :{BLACK}Local companies
+STR_FORK_EXCHANGE_TAB_TOOLTIP                                   :{BLACK}Choose what to invest in
+STR_FORK_EXCHANGE_BUTTON_TOOLTIP                                :{BLACK}Choose a company in the list first
+STR_FORK_EXCHANGE_HINT_LISTED                                   :{BLACK}Tap a company, then buy or sell shares. Prices follow the economy; dividends are paid every month
+STR_FORK_EXCHANGE_HINT_LOCAL                                    :{BLACK}Buy up to 50% of a local company. With 50% you can take it over for 25 times the price of 1%
+STR_FORK_STOCK_ROW1                                             :{BLACK}{STRING}   {CURRENCY_LONG}   {RAW_STRING}
+STR_FORK_STOCK_UP                                               :{GREEN}+{NUM}.{NUM}%
+STR_FORK_STOCK_DOWN                                             :{RED}-{NUM}.{NUM}%
+STR_FORK_STOCK_ROW2                                             :{BLACK}You hold {NUM} shares worth {CURRENCY_LONG}   Dividend: {NUM}.{NUM}% a year
+STR_FORK_STOCK_INFO1                                            :{BLACK}{STRING}: price of a share {CURRENCY_LONG}
+STR_FORK_STOCK_INFO2                                            :{BLACK}You hold {NUM} shares worth {CURRENCY_LONG}   Paid so far: {CURRENCY_LONG}
+STR_FORK_LOCAL_ROW1                                             :{BLACK}{RAW_STRING} ({TOWN}): {STRING}   Value: {CURRENCY_LONG}
+STR_FORK_LOCAL_ROW2                                             :{BLACK}Your stake: {NUM}%   Price of 1%: {CURRENCY_LONG}
+STR_FORK_LOCAL_INFO1                                            :{BLACK}{RAW_STRING}: 5% costs about {CURRENCY_LONG}   Profit last month: {CURRENCY_LONG}
+STR_FORK_LOCAL_INFO2                                            :{BLACK}Your stake: {NUM}%   All investors: {NUM}%   Takeover price: {CURRENCY_LONG}
+STR_FORK_STOCK_BUY_10                                           :{BLACK}Buy 10
+STR_FORK_STOCK_BUY_100                                          :{BLACK}Buy 100
+STR_FORK_STOCK_SELL_10                                          :{BLACK}Sell 10
+STR_FORK_STOCK_SELL_100                                         :{BLACK}Sell 100
+STR_FORK_LOCAL_BUY                                              :{BLACK}Buy 5%
+STR_FORK_LOCAL_SELL                                             :{BLACK}Sell 5%
+STR_FORK_LOCAL_TAKEOVER                                         :{BLACK}Take over
+STR_FORK_STOCK_NO_ACTION                                        :{BLACK}-
+STR_FORK_NEWS_TAKEOVER                                          :{BIG_FONT}{BLACK}{COMPANY} has taken over the company {RAW_STRING}
+STR_ERROR_FORK_STOCK_CAN_T_BUY                                  :{WHITE}Can't buy these shares...
+STR_ERROR_FORK_STOCK_CAN_T_SELL                                 :{WHITE}Can't sell these shares...
+STR_ERROR_FORK_STOCK_CAN_T_TAKEOVER                             :{WHITE}Can't take over this company...
+STR_ERROR_FORK_STOCK_NOT_ENOUGH                                 :{WHITE}You don't hold that many
+STR_ERROR_FORK_STOCK_NOT_INDEPENDENT                            :{WHITE}This company belongs to a company already
+STR_ERROR_FORK_STOCK_FIRM_LIMIT                                 :{WHITE}Investors can hold at most 50% of a company; more needs a takeover
+STR_ERROR_FORK_STOCK_NEED_HALF                                  :{WHITE}You need 50% of the company before you can take it over
+STR_FORK_EDU_BUTTON                                             :{BLACK}Education
+STR_FORK_EDU_TOOLTIP                                            :{BLACK}Build and run private schools and a university in this town
+STR_FORK_EDU_CAPTION                                            :Education: {TOWN}
+STR_FORK_EDU_TAB_PRIMARY                                        :{BLACK}Primary school
+STR_FORK_EDU_TAB_SECONDARY                                      :{BLACK}Secondary school
+STR_FORK_EDU_TAB_UNIVERSITY                                     :{BLACK}University
+STR_FORK_EDU_TAB_TOOLTIP                                        :{BLACK}Show this kind of institution
+STR_FORK_EDU_BUILD                                              :{BLACK}Build
+STR_FORK_EDU_BUILD_TOOLTIP                                      :{BLACK}Build this institution in the town
+STR_FORK_EDU_SELL                                               :{BLACK}Sell
+STR_FORK_EDU_SELL_TOOLTIP                                       :{BLACK}Sell this institution; you get 70% of its value
+STR_FORK_EDU_RENAME                                             :{BLACK}Rename
+STR_FORK_EDU_RENAME_TOOLTIP                                     :{BLACK}Give this institution a name
+STR_FORK_EDU_RENAME_CAPTION                                     :Name of the institution
+STR_FORK_EDU_UPGRADE                                            :{BLACK}Enlarge
+STR_FORK_EDU_UPGRADE_TOOLTIP                                    :{BLACK}Enlarge the school once, for more seats. Also makes the buildings younger
+STR_FORK_EDU_SHIFT                                              :{BLACK}Double shift
+STR_FORK_EDU_SHIFT_TOOLTIP                                      :{BLACK}Teach in two shifts: twice the seats, but also twice the running costs
+STR_FORK_EDU_FACULTY                                            :{BLACK}Open/close faculty
+STR_FORK_EDU_FACULTY_TOOLTIP                                    :{BLACK}Open or close the selected faculty (click a faculty in the list to select it)
+STR_FORK_EDU_FEE_DOWN_BIG                                       :{BLACK}Fee --
+STR_FORK_EDU_FEE_DOWN                                           :{BLACK}Fee -
+STR_FORK_EDU_FEE_UP                                             :{BLACK}Fee +
+STR_FORK_EDU_FEE_UP_BIG                                         :{BLACK}Fee ++
+STR_FORK_EDU_FEE_TOOLTIP                                        :{BLACK}Change the fee. Too high a fee for what is offered makes people stay away
+STR_FORK_EDU_NAME_PRIMARY                                       :Private primary school
+STR_FORK_EDU_NAME_SECONDARY                                     :Private secondary school
+STR_FORK_EDU_NAME_UNIVERSITY                                    :Private university
+STR_FORK_EDU_YES                                                :yes
+STR_FORK_EDU_NO                                                 :no
+STR_FORK_EDU_NOT_APPLICABLE                                     :-
+STR_FORK_EDU_NO_INSTITUTION                                     :{BLACK}You have no institution of this kind in this town
+STR_FORK_EDU_BUILD_INFO                                         :{BLACK}Building cost: {CURRENCY_LONG}   Needs {NUM} inhabitants (the town has {NUM})
+STR_FORK_EDU_NAME_LINE                                          :{BLACK}{RAW_STRING}   Value: {CURRENCY_LONG}   Sells for: {CURRENCY_LONG}
+STR_FORK_EDU_SEATS                                              :{BLACK}Students: {NUM} of {NUM} seats
+STR_FORK_EDU_OPTIONS                                            :{BLACK}Enlarged: {STRING}   Double shift: {STRING}
+STR_FORK_EDU_FACULTIES                                          :{BLACK}Faculties open: {NUM} of {NUM}   (click a faculty to select it)
+STR_FORK_EDU_FEE                                                :{BLACK}Fee per seat and year: {CURRENCY_LONG}   (highest: {CURRENCY_LONG})
+STR_FORK_EDU_QUALITY                                            :{BLACK}Quality: {NUM}%   Popularity: {NUM}%
+STR_FORK_EDU_INCOME                                             :{BLACK}Tuition: {CURRENCY_LONG} per month   Running costs: {CURRENCY_LONG} per month
+STR_FORK_EDU_TAX                                                :{BLACK}Town tax this year: {NUM}% of the tuition = {CURRENCY_LONG} per month
+STR_FORK_EDU_PROFIT                                             :{BLACK}Profit: {CURRENCY_LONG} per month
+STR_FORK_EDU_FACULTY_OPEN_ROW                                   :{BLACK}{RAW_STRING} {STRING}   Interest {NUM}%   Tuition {CURRENCY_LONG}   Students {NUM}   Popularity {NUM}%
+STR_FORK_EDU_FACULTY_CLOSED_ROW                                 :{SILVER}{RAW_STRING} {STRING}   Interest {NUM}%   Opening costs {CURRENCY_LONG}
+STR_FORK_FACULTY_MEDICINE                                       :Medicine
+STR_FORK_FACULTY_PHARMACY                                       :Pharmacy
+STR_FORK_FACULTY_ENGINEERING                                    :Engineering
+STR_FORK_FACULTY_ENGINEERING_TECH                               :Engineering technologies
+STR_FORK_FACULTY_TEACHING_SCIENCES                              :Teaching sciences
+STR_FORK_FACULTY_EDUCATION                                      :Education
+STR_FORK_FACULTY_ARTS                                           :Arts
+STR_FORK_FACULTY_LAW                                            :Law
+STR_FORK_FACULTY_BUSINESS                                       :Management and economics
+STR_FORK_FACULTY_VOCATIONAL                                     :Vocational education
+STR_ERROR_FORK_EDU_CAN_T_BUILD                                  :{WHITE}Can't build this institution here...
+STR_ERROR_FORK_EDU_CAN_T_SELL                                   :{WHITE}Can't sell this institution...
+STR_ERROR_FORK_EDU_CAN_T_CHANGE                                 :{WHITE}Can't do that...
+STR_ERROR_FORK_EDU_CAN_T_RENAME                                 :{WHITE}Can't rename this institution...
+STR_ERROR_FORK_EDU_TOWN_TOO_SMALL                               :{WHITE}The town has too few inhabitants for this institution
+STR_ERROR_FORK_EDU_ALREADY_BUILT                                :{WHITE}You already own this kind of institution in this town
+STR_ERROR_FORK_EDU_NONE                                         :{WHITE}You have no institution of this kind in this town
+STR_ERROR_FORK_EDU_FACULTY_ONLY                                 :{WHITE}Universities don't have a single fee or size: open faculties and set their tuition
+STR_ERROR_FORK_EDU_UNIVERSITY_ONLY                              :{WHITE}Only a university has faculties
+STR_ERROR_FORK_EDU_ALREADY_UPGRADED                             :{WHITE}This school was already enlarged
+STR_ERROR_FORK_EDU_FACULTY_OPEN                                 :{WHITE}This faculty is already open
+STR_ERROR_FORK_EDU_FACULTY_CLOSED                               :{WHITE}This faculty is not open
+STR_FORK_EDU_STATUS                                              :{BLACK}Building: {STRING}
+STR_FORK_EDU_STAGE_FOUNDATION                                   :foundations are being laid, no students yet
+STR_FORK_EDU_STAGE_FRAME                                        :under construction, no students yet
+STR_FORK_EDU_STAGE_OPEN                                         :finished and open
+STR_ERROR_FORK_EDU_NO_SPACE                                     :{WHITE}There is no free flat land (2x2 tiles) near the middle of this town
+
+## Fork: products, company overview and statistics (added by the unified update).
+STR_FORK_COMPANY_CAPTION                                  :{BLACK}Company: {STRING}
+STR_FORK_COMPANY_INFO                                     :{BLACK}Staff: {NUM}   Expected yearly profit: {CURRENCY_LONG}   Current profit: {CURRENCY_LONG}
+STR_FORK_COMPANY_VALUE                                    :{BLACK}Company value: {CURRENCY_LONG}
+STR_FORK_COMPANY_SELL                                     :Sell company
+STR_FORK_COMPANY_SELL_TOOLTIP                             :Sell everything the company owns at the new market valuation
+STR_FORK_COMPANY_PRODUCTS                                 :Make / manage products
+STR_FORK_COMPANY_PRODUCTS_TOOLTIP                         :Create products and change their quantity, price and quality
+STR_FORK_COMPANY_STATS                                    :Statistics
+STR_FORK_COMPANY_STATS_TOOLTIP                            :Popularity of your products as a chart
+STR_FORK_PRODUCTS_CAPTION                                 :{BLACK}Company products
+STR_FORK_PRODUCTS_NEW                                     :Make a product
+STR_FORK_PRODUCTS_NEW_TOOLTIP                             :Choose a product from the industries available this year
+STR_FORK_PRODUCTS_ROW                                     :{BLACK}{STRING}   Quantity: {NUM}   Price: {CURRENCY_LONG}   Quality: {NUM}   Discount: {NUM}%   Popularity: {NUM}%
+STR_FORK_PRODUCTS_EMPTY                                   :{BLACK}No products yet. Press "Make a product" to start.
+STR_FORK_PRODUCTS_QTY_DOWN                                :Quantity -
+STR_FORK_PRODUCTS_QTY_UP                                  :Quantity +
+STR_FORK_PRODUCTS_PRICE_DOWN                              :Price -
+STR_FORK_PRODUCTS_PRICE_UP                                :Price +
+STR_FORK_PRODUCTS_QUALITY_DOWN                            :Quality -
+STR_FORK_PRODUCTS_QUALITY_UP                              :Quality +
+STR_FORK_PRODUCTS_DISCOUNT_DOWN                           :Discount -
+STR_FORK_PRODUCTS_DISCOUNT_UP                             :Discount +
+STR_FORK_PRODUCTS_RENAME                                  :Rename
+STR_FORK_PRODUCTS_SELL_SHARE                              :Sell share
+STR_FORK_PRODUCTS_SELL_SHARE_TOOLTIP                      :Sell part of your company for its market value
+STR_FORK_PRODUCT_CREATE_CAPTION                           :{BLACK}Make a new product
+STR_FORK_PRODUCT_CREATE_INDUSTRY                          :{BLACK}Industry: {STRING}
+STR_FORK_PRODUCT_CREATE_LIST                              :{BLACK}Product: {STRING}   Base price: {CURRENCY_LONG}
+STR_FORK_PRODUCT_CREATE_NAME                              :Product name
+STR_FORK_PRODUCT_CREATE_MAKE                              :Make product
+STR_FORK_PRODUCT_CREATE_LOCKED                            :{BLACK}Available in year {NUM}
+STR_FORK_INDUSTRY_HOUSEHOLD                               :Household appliances
+STR_FORK_INDUSTRY_LIFE_TECH                               :Consumer electronics
+STR_FORK_INDUSTRY_COMMUNICATIONS                          :Communications
+STR_FORK_INDUSTRY_BEVERAGES                               :Drinks
+STR_FORK_INDUSTRY_FOOD                                    :Food
+STR_FORK_INDUSTRY_CLOTHING                                :Clothes and fabrics
+STR_FORK_INDUSTRY_MEDICAL                                 :Medicine
+STR_FORK_INDUSTRY_GAMES                                   :Game development
+STR_FORK_INDUSTRY_APPS                                    :Software
+STR_FORK_INDUSTRY_BUILDING                                :Building materials
+STR_FORK_INDUSTRY_ENERGY                                  :Energy
+STR_FORK_STATS_CAPTION                                    :{BLACK}Product statistics
+STR_FORK_STATS_FILTER                                     :Filter
+STR_FORK_STATS_ALL                                        :All products
+STR_FORK_STATS_LABEL                                      :{BLACK}{STRING}   Popularity: {NUM}%   Income: {CURRENCY_LONG}
+STR_FORK_STATS_EMPTY                                      :{BLACK}Not enough data yet.
+STR_ERROR_FORK_PRODUCT_LOCKED                             :{WHITE}This product has not been invented yet...
+STR_ERROR_FORK_PRODUCT_NAME                               :{WHITE}Invalid product name...
+STR_FORK_PRODUCT_CREATE_SETTINGS                          :{BLACK}Quantity: {NUM}   Price: {CURRENCY_LONG}

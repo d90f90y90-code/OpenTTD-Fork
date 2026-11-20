@@ -1,8 +1,13 @@
 package org.openttdfork.game;
 
 import android.content.res.AssetManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.system.Os;
+import android.view.View;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.view.WindowManager;
 
 import org.libsdl.app.SDLActivity;
 
@@ -46,6 +51,43 @@ public class OpenTTDActivity extends SDLActivity {
         }
 
         super.onCreate(savedInstanceState);
+        applyFullscreen();
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) applyFullscreen();
+    }
+
+    /** Use the whole display: draw under the camera cutout and hide the status and navigation bars. */
+    private void applyFullscreen() {
+        try {
+            if (Build.VERSION.SDK_INT >= 28) {
+                WindowManager.LayoutParams lp = getWindow().getAttributes();
+                lp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+                getWindow().setAttributes(lp);
+            }
+            View decor = getWindow().getDecorView();
+            if (Build.VERSION.SDK_INT >= 30) {
+                getWindow().setDecorFitsSystemWindows(false);
+                WindowInsetsController controller = decor.getWindowInsetsController();
+                if (controller != null) {
+                    controller.hide(WindowInsets.Type.systemBars());
+                    controller.setSystemBarsBehavior(WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+                }
+            } else {
+                decor.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void writeDefaultConfig(File cfg) throws IOException {

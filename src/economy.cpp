@@ -15,6 +15,7 @@
 #include "investment.h"
 #include "town.h"
 #include "news_func.h"
+#include "fork_economy.h"
 #include "network/network.h"
 #include "network/network_func.h"
 #include "ai/ai.hpp"
@@ -330,6 +331,7 @@ void ChangeOwnershipOfCompanyItems(Owner old_owner, Owner new_owner)
 	 * are the current local company. */
 	AutoRestoreBackup cur_company(_current_company, old_owner);
 	TransferIndustryInvestments(old_owner, new_owner);
+	TransferForkAssets(old_owner, new_owner);
 	/* In all cases, make spectators of clients connected to that company */
 	if (_networking) NetworkClientsToSpectators(old_owner);
 	if (old_owner == _local_company) {
@@ -821,10 +823,12 @@ static void CompaniesPayInterest()
 		 * taking a loan) we make companies pay interest on negative cash as well,
 		 * except if infinite money is enabled.
 		 */
-		Money yearly_fee = c->current_loan * _economy.interest_rate / 100;
+		/* The interest rate follows the economic cycle of the fork economy. */
+		const int interest_rate = static_cast<int>(_economy.interest_rate * GetForkMarketFactor(ForkMarketFactor::Interest) / 100);
+		Money yearly_fee = c->current_loan * interest_rate / 100;
 		Money available_money = GetAvailableMoney(c->index);
 		if (available_money < 0) {
-			yearly_fee += -available_money * _economy.interest_rate / 100;
+			yearly_fee += -available_money * interest_rate / 100;
 		}
 		Money up_to_previous_month = yearly_fee * TimerGameEconomy::month / 12;
 		Money up_to_this_month = yearly_fee * (TimerGameEconomy::month + 1) / 12;
@@ -956,7 +960,7 @@ Money GetPrice(Price index, uint cost_factor, const GRFFile *grf_file, int shift
 	return cost;
 }
 
-Money GetTransportedGoodsIncome(uint num_pieces, uint dist, uint16_t transit_periods, CargoType cargo_type)
+static Money GetTransportedGoodsIncomeBase(uint num_pieces, uint dist, uint16_t transit_periods, CargoType cargo_type)
 {
 	const CargoSpec *cs = CargoSpec::Get(cargo_type);
 	if (!cs->IsValid()) {
@@ -1018,6 +1022,33 @@ Money GetTransportedGoodsIncome(uint num_pieces, uint dist, uint16_t transit_per
 		const int time_factor = std::max(MAX_TIME_FACTOR - periods_over_periods1 - periods_over_periods2, MIN_TIME_FACTOR);
 		return BigMulS(dist * time_factor * num_pieces, cs->current_payment, 21);
 	}
+}
+
+/**
+ * Calculate the income of transporting cargo, including the effect of the economic cycle of the fork economy.
+ * @param num_pieces Number of cargo units.
+ * @param dist Distance in tiles.
+ * @param transit_periods Number of cargo aging periods the cargo was in transit.
+ * @param cargo_type Type of the cargo.
+ * @return Payment for the cargo.
+ */
+Money GetTransportedGoodsIncome(uint num_pieces, uint dist, uint16_t transit_periods, CargoType cargo_type)
+{
+	Money income = GetTransportedGoodsIncomeBase(num_pieces, dist, transit_periods, cargo_type) * GetForkMarketFactor(ForkMarketFactor::CargoPrice) / 100;
+	/* Spoiled food and rusty metal are worth less; what is not worth anything pays nothing. */
+	return income * GetForkCargoQuality(cargo_type, transit_periods) / 100;
+}
+
+/**
+ * Fee for getting rid of cargo that spoiled completely on its way: a fifth of what the cargo would have paid when fresh.
+ * @param num_pieces Number of cargo units.
+ * @param dist Distance in tiles.
+ * @param cargo_type Type of the cargo.
+ * @return The (positive) fee.
+ */
+Money GetForkSpoilageFee(uint num_pieces, uint dist, CargoType cargo_type)
+{
+	return GetTransportedGoodsIncomeBase(num_pieces, dist, 0, cargo_type) / 5;
 }
 
 /** The industries we've currently brought cargo to. */
@@ -1219,12 +1250,38 @@ CargoPayment::~CargoPayment()
  */
 void CargoPayment::PayFinalDelivery(CargoType cargo, const CargoPacket *cp, uint count, TileIndex current_tile)
 {
+	/* Cargo that spoiled completely is garbage: the owner pays for its disposal and it is thrown away on the spot.
+	 * It is not delivered to an industry or town, does not count as delivered and does not count for subsidies. */
+	if (GetForkCargoQuality(cargo, cp->GetPeriodsInTransit()) == 0) {
+		const Money fee = GetForkSpoilageFee(count, cp->GetDistance(current_tile), cargo);
+		ForkLedgerBook(this->front->owner, ForkLedgerCategory::Trade, -fee);
+
+		/* Nothing is earned; vehicle that carried it last loses what feeders were already paid, plus the fee (as shown in the floating text). */
+		this->visual_profit += -cp->GetFeederShare(count) - fee;
+		return;
+	}
+
 	/* Handle end of route payment */
 	Money profit = DeliverGoods(count, cargo, this->current_station, cp->GetDistance(current_tile), cp->GetPeriodsInTransit(), Company::Get(this->front->owner), cp->GetSource());
 	this->route_profit += profit;
 
 	/* The vehicle's profit is whatever route profit there is minus feeder shares. */
 	this->visual_profit += profit - cp->GetFeederShare(count);
+
+	/* A town only lets a company transport the cargo that comes from it with the right or a license. Without them the payment is confiscated. */
+	if (profit > 0 && !IsForkTransportAllowed(this->front->owner, cargo, cp->GetSource())) {
+		ForkLedgerBook(this->front->owner, ForkLedgerCategory::Trade, -profit);
+		this->visual_profit -= profit;
+		ForkNoteConfiscation(this->front->owner);
+		return;
+	}
+
+	/* Goods that cross from one town to another pay customs duty to the destination town. */
+	const Money duty = GetForkCustomsDuty(cargo, cp->GetSource(), this->current_station, profit);
+	if (duty > 0) {
+		ForkLedgerBook(this->front->owner, ForkLedgerCategory::Trade, -duty);
+		this->visual_profit -= duty;
+	}
 }
 
 /**

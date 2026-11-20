@@ -63,6 +63,12 @@ void ToggleWidgetOutlines();
 
 extern uint _toolbar_width;
 
+/* The Android port shows the toolbar as two button columns, at the left and right screen edge. */
+#if defined(__ANDROID__) && !defined(OPENTTD_SIDE_TOOLBARS)
+#	define OPENTTD_SIDE_TOOLBARS
+#endif
+bool AreSideToolbarsActive();
+
 extern RailType _last_built_railtype; ///< The most recently used type of rail.
 extern RoadType _last_built_roadtype; ///< The most recently used type of road.
 extern RoadType _last_built_tramtype; ///< The most recently used type of tram track.

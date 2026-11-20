@@ -1,0 +1,24 @@
+/*
+ * This file is part of OpenTTD.
+ * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <https://www.gnu.org/licenses/old-licenses/gpl-2.0>.
+ */
+
+/** @file fork_shop_cmd.h Command definitions of the retail shops. */
+
+#ifndef FORK_SHOP_CMD_H
+#define FORK_SHOP_CMD_H
+
+#include "command_type.h"
+#include "town_type.h"
+
+CommandCost CmdBuyForkShops(DoCommandFlags flags, TownID town_id, uint8_t count);
+CommandCost CmdSellForkShops(DoCommandFlags flags, TownID town_id, uint8_t count);
+CommandCost CmdSetForkShopPrice(DoCommandFlags flags, TownID town_id, uint16_t percent);
+
+DEF_CMD_TRAIT(Commands::BuyForkShops, CmdBuyForkShops, {}, CommandType::MoneyManagement)
+DEF_CMD_TRAIT(Commands::SellForkShops, CmdSellForkShops, {}, CommandType::MoneyManagement)
+DEF_CMD_TRAIT(Commands::SetForkShopPrice, CmdSetForkShopPrice, {}, CommandType::OtherManagement)
+
+#endif /* FORK_SHOP_CMD_H */

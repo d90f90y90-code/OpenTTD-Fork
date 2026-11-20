@@ -8,6 +8,7 @@
 /** @file spritecache.cpp Caching of sprites. */
 
 #include "stdafx.h"
+#include <map>
 #include "spriteloader/grf.hpp"
 #include "spriteloader/makeindexed.h"
 #include "error_func.h"
@@ -21,6 +22,7 @@
 
 #include "table/sprites.h"
 #include "table/palette_convert.h"
+#include "palette_func.h"
 
 #include "safeguards.h"
 
@@ -32,6 +34,7 @@ static std::vector<SpriteCache> _spritecache;
 static size_t _spritecache_bytes_used = 0;
 static uint32_t _sprite_lru_counter;
 static std::vector<std::unique_ptr<SpriteFile>> _sprite_files;
+static std::map<SpriteID, ForkMemorySprite> _fork_memory_sprites; ///< Sprites made from pictures in memory, by sprite number.
 
 static inline SpriteCache *GetSpriteCache(uint index)
 {
@@ -450,8 +453,96 @@ static void *ReadRecolourSprite(SpriteFile &file, size_t file_pos, uint num, Spr
  * @param encoder     Sprite encoder to use.
  * @return Read sprite data.
  */
+/**
+ * Make a sprite from a picture in memory, in the format of the current blitter.
+ * @param src The picture.
+ * @param sprite_type Type of the sprite.
+ * @param allocator Where the encoded sprite goes.
+ * @param encoder The blitter, or nullptr for the current one.
+ * @return The encoded sprite.
+ */
+static void *ReadForkMemorySprite(const ForkMemorySprite &src, SpriteType sprite_type, SpriteAllocator &allocator, SpriteEncoder *encoder)
+{
+	if (encoder == nullptr) encoder = BlitterFactory::GetCurrentBlitter();
+
+	SpriteLoader::SpriteCollection sprite;
+	ZoomLevels sprite_avail;
+	sprite_avail.Set(ZoomLevel::Min);
+
+	SpriteLoader::Sprite &s = sprite[ZoomLevel::Min];
+	s.width = src.width;
+	s.height = src.height;
+	s.x_offs = src.x_offs;
+	s.y_offs = src.y_offs;
+	s.colours = SpriteComponents({SpriteComponent::RGB, SpriteComponent::Alpha});
+	s.AllocateData(ZoomLevel::Min, static_cast<size_t>(src.width) * src.height);
+
+	/* Blitters that work with a palette need the nearest colour of the palette for every pixel. */
+	const bool indexed = !encoder->Is32BppSupported();
+	for (size_t i = 0; i < src.pixels.size(); i++) {
+		const uint32_t p = src.pixels[i];
+		SpriteLoader::CommonPixel &d = s.data[i];
+		d.a = static_cast<uint8_t>(p >> 24);
+		d.r = static_cast<uint8_t>(p >> 16);
+		d.g = static_cast<uint8_t>(p >> 8);
+		d.b = static_cast<uint8_t>(p);
+		d.m = (indexed && d.a >= 128) ? GetNearestColourIndex(d.r, d.g, d.b) : 0;
+	}
+
+	if (!ResizeSprites(sprite, sprite_avail, encoder)) return (void *)GetRawSprite(SPR_IMG_QUERY, SpriteType::Normal, &allocator, encoder);
+	return encoder->Encode(sprite_type, sprite, allocator);
+}
+
+/**
+ * Put sprites that are made from pictures in memory in the sprite cache, after all the sprites that are there.
+ * @param sprites The pictures.
+ * @return Number of the first sprite.
+ */
+SpriteID AddForkMemorySprites(std::vector<ForkMemorySprite> &&sprites)
+{
+	const SpriteID base = static_cast<SpriteID>(_spritecache.size());
+	if (sprites.empty()) return base;
+
+	AllocateSpriteCache(base + static_cast<uint>(sprites.size()) - 1);
+	for (size_t i = 0; i < sprites.size(); i++) {
+		SpriteCache *sc = GetSpriteCache(base + static_cast<uint>(i));
+		sc->ClearSpriteData();
+		sc->file = nullptr;
+		sc->file_pos = 1; // Not zero, so the sprite counts as existing.
+		sc->length = 0;
+		sc->id = 0;
+		sc->lru = 0;
+		sc->type = SpriteType::Normal;
+		sc->warned = false;
+		sc->control_flags = {};
+		_fork_memory_sprites[base + static_cast<uint>(i)] = std::move(sprites[i]);
+	}
+	return base;
+}
+
+/**
+ * Check that sprites from pictures in memory are still where they were put, as loading NewGRFs can overwrite them.
+ * @param base Number of the first sprite.
+ * @param count Number of sprites.
+ * @return True if all of them are there.
+ */
+bool ForkMemorySpritesIntact(SpriteID base, size_t count)
+{
+	if (base + count > _spritecache.size()) return false;
+	for (size_t i = 0; i < count; i++) {
+		const SpriteID id = base + static_cast<uint>(i);
+		if (GetSpriteCache(id)->file != nullptr || !_fork_memory_sprites.contains(id)) return false;
+	}
+	return true;
+}
+
 static void *ReadSprite(const SpriteCache *sc, SpriteID id, SpriteType sprite_type, SpriteAllocator &allocator, SpriteEncoder *encoder)
 {
+	if (sc->file == nullptr) {
+		auto it = _fork_memory_sprites.find(id);
+		if (it != _fork_memory_sprites.end()) return ReadForkMemorySprite(it->second, sprite_type, allocator, encoder);
+	}
+
 	/* Use current blitter if no other sprite encoder is given. */
 	if (encoder == nullptr) encoder = BlitterFactory::GetCurrentBlitter();
 
@@ -900,6 +991,7 @@ void GfxInitSpriteMem()
 	_spritecache.shrink_to_fit();
 
 	_sprite_files.clear();
+	_fork_memory_sprites.clear();
 	_spritecache_bytes_used = 0;
 }
 

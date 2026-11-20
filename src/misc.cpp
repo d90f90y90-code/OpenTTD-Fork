@@ -32,6 +32,8 @@
 #include "newgrf_profiling.h"
 #include "3rdparty/monocypher/monocypher.h"
 
+#include "fork_economy.h"
+
 #include "safeguards.h"
 
 extern TileIndex _cur_tileloop_tile;
@@ -99,6 +101,7 @@ void InitializeGame(uint size_x, uint size_y, bool reset_date, bool reset_settin
 
 	_pause_mode = {};
 	_game_speed = 100;
+	ResetForkEconomy();
 	TimerGameTick::counter = 0;
 	TimerGameEconomy::days_since_last_month = 0;
 	_cur_tileloop_tile = TileIndex{1};
