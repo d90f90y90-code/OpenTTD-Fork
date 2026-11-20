@@ -30,6 +30,7 @@ jobs:
 
     - name: Build host game (for language files and tools)
       run: |
+        set -o pipefail
         mkdir -p /tmp/logs
         cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release 2>&1 | tee /tmp/logs/data-configure.log
         cmake --build build -j4 2>&1 | tee /tmp/logs/data-build.log | tail -n 5
@@ -37,6 +38,7 @@ jobs:
 
     - name: Collect game data
       run: |
+        set -o pipefail
         mkdir -p assets/openttd
         langdir=$(find /tmp/inst -type d -name lang | head -1)
         echo "lang dir: $langdir" | tee -a /tmp/logs/data-collect.log
@@ -138,6 +140,7 @@ jobs:
           -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake \
           -DVCPKG_TARGET_TRIPLET=${{ matrix.triplet }} \
           -DANDROID_ABI=${{ matrix.abi }} -DANDROID_PLATFORM=$ANDROID_PLATFORM \
+          -DCMAKE_HAVE_LIBC_PTHREAD=1 \
           -DHOST_BINARY_DIR=$PWD/build-host \
           -DCMAKE_PREFIX_PATH=$PWD/sdl-install -DCMAKE_FIND_ROOT_PATH=$PWD/sdl-install \
           2>&1 | tee /tmp/logs/${{ matrix.abi }}-configure.log

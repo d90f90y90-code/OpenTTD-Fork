@@ -6507,7 +6507,7 @@ STR_FORK_NEWS_BOOM                                          :{BIG_FONT}{BLACK}ا
 STR_FORK_NEWS_RECESSION                                     :{BIG_FONT}{BLACK}كساد اقتصادي! مدفوعات البضائع والإيجارات وأسعار الأسهم في انخفاض
 STR_FORK_NEWS_STABLE                                        :{BIG_FONT}{BLACK}استقر الاقتصاد
 
-## Fork: products, company overview and statistics (added by the unified update).
+# Fork: products, company overview and statistics (added by the unified update).
 STR_FORK_COMPANY_CAPTION                                  :{BLACK}الشركة: {STRING}
 STR_FORK_COMPANY_INFO                                     :{BLACK}الموظفون: {NUM}   الربح السنوي المتوقع: {CURRENCY_LONG}   الربح الآني: {CURRENCY_LONG}
 STR_FORK_COMPANY_VALUE                                    :{BLACK}قيمة الشركة: {CURRENCY_LONG}
