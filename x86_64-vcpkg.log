@@ -1,0 +1,100 @@
+Downloading http://www.oberhumer.com/opensource/lzo/download/lzo-2.10.tar.gz -> lzo-2.10.tar.gz
+Successfully downloaded lzo-2.10.tar.gz
+-- Extracting source /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/downloads/lzo-2.10.tar.gz
+-- Applying patch always_install_pc.patch
+-- Using source at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/lzo/src/lzo-2-36820c2ee4.clean
+-- Configuring x64-android
+-- Building x64-android-dbg
+-- Building x64-android-rel
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/lzo_x64-android/lib/pkgconfig/lzo2.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/lzo_x64-android/debug/lib/pkgconfig/lzo2.pc
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/lzo_x64-android/share/lzo/copyright
+-- Performing post-build validation
+Starting submission of lzo:x64-android@2.10#9 to 1 binary cache(s) in the background
+Elapsed time to handle lzo:x64-android: 9.6 s
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+(FTL OR GPL-2.0-or-later)
+0BSD
+Apache-2.0
+ICU
+MIT
+MIT-Modern-Variant
+Zlib
+bzip2-1.0.6
+libpng-2.0
+zlib is compatible with built-in CMake targets:
+
+  find_package(ZLIB REQUIRED)
+  target_link_libraries(main PRIVATE ZLIB::ZLIB)
+
+zlib provides pkg-config modules:
+
+  # zlib compression library
+  zlib
+
+libpng provides CMake targets:
+
+  find_package(PNG REQUIRED)
+  target_link_libraries(main PRIVATE PNG::PNG)
+
+freetype is compatible with built-in CMake targets:
+
+    find_package(Freetype REQUIRED)
+    target_link_libraries(main PRIVATE Freetype::Freetype) # since CMake 3.10
+
+harfbuzz provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(harfbuzz CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE harfbuzz::harfbuzz harfbuzz::harfbuzz-subset)
+
+harfbuzz provides pkg-config modules:
+
+  # HarfBuzz GPU rasterization library
+  harfbuzz-gpu
+
+  # HarfBuzz CPU rasterizer
+  harfbuzz-raster
+
+  # HarfBuzz font subsetter
+  harfbuzz-subset
+
+  # HarfBuzz vector converter
+  harfbuzz-vector
+
+  # HarfBuzz text shaping library
+  harfbuzz
+
+icu provides pkg-config modules:
+
+  # International Components for Unicode: Internationalization library
+  icu-i18n
+
+  # International Components for Unicode: Stream and I/O Library
+  icu-io
+
+  # International Components for Unicode: Common and Data libraries
+  icu-uc
+
+liblzma is compatible with built-in CMake targets:
+
+    find_package(LibLZMA REQUIRED)
+    target_link_libraries(main PRIVATE LibLZMA::LibLZMA)
+
+liblzma provides CMake targets:
+
+    find_package(liblzma CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE liblzma::liblzma)
+
+lzo provides pkg-config modules:
+
+  # LZO - a real-time data compression library
+  lzo2
+
+Completed submission of icu:x64-android@79.1 to 1 binary cache(s) in 15 s
+Completed submission of liblzma:x64-android@5.8.4 to 1 binary cache(s) in 189 ms
+Waiting for 1 remaining binary cache submissions...
+Completed submission of lzo:x64-android@2.10#9 to 1 binary cache(s) in 83.5 ms (1/1)
+All requested installations completed successfully in: 11 min

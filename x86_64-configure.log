@@ -1,0 +1,300 @@
+Building vcpkg-make:x64-linux@2026-07-09#2...
+Downloading automake-1.17.tar.gz, trying https://ftpmirror.gnu.org/gnu/automake/automake-1.17.tar.gz
+Successfully downloaded automake-1.17.tar.gz
+-- Extracting source /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/downloads/automake-1.17.tar.gz
+-- Using source at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/vcpkg-make/src/automake-1-c362683103.clean
+-- Getting CMake variables for x64-linux
+-- Loading CMake variables from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/vcpkg-make/cmake-get-vars_C_CXX-x64-linux.cmake.log
+-- x64-linux autotools triplet: x86_64-pc-linux-gnu (from config.guess)
+-- Performing post-build validation
+Starting submission of vcpkg-make:x64-linux@2026-07-09#2 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-make:x64-linux: 1.3 s
+Installing 12/15 icu[core,tools]:x64-linux@79.1...
+icu[core,tools]:x64-linux@79.1 package ABI: c3a4359644dddd53571e9ac2717a451f4a2b38d2aa324eda087658db38bbeb23
+Building icu[core,tools]:x64-linux@79.1...
+Downloading https://github.com/unicode-org/icu/releases/download/release-79.1/icu4c-79.1-sources.tgz -> icu4c-79.1-sources.tgz
+Successfully downloaded icu4c-79.1-sources.tgz
+-- Extracting source /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/downloads/icu4c-79.1-sources.tgz
+-- Applying patch disable-static-prefix.patch
+-- Applying patch fix_parallel_build_on_windows.patch
+-- Applying patch fix-python-path-with-spaces.patch
+-- Applying patch fix-using-install-sh.diff
+-- Applying patch mh-darwin.patch
+-- Applying patch mh-mingw.patch
+-- Applying patch mh-msys-msvc.patch
+-- Applying patch subdirs.patch
+-- Applying patch vcpkg-cross-data.patch
+-- Using source at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/icu/src/icu4c-79-d54351476f.clean
+-- Getting CMake variables for x64-linux
+-- Loading CMake variables from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/icu/cmake-get-vars_C_CXX-x64-linux.cmake.log
+-- Configuring x64-linux-dbg
+-- Configuring x64-linux-rel
+-- Building/Installing x64-linux-dbg
+-- Making target 'all' for x64-linux-dbg
+-- Making target 'install' for x64-linux-dbg
+-- Building/Installing x64-linux-rel
+-- Making target 'all' for x64-linux-rel
+-- Making target 'install' for x64-linux-rel
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/config/icucross.inc
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/config/icucross.mk
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/lib/pkgconfig/icu-i18n.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/lib/pkgconfig/icu-io.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/lib/pkgconfig/icu-uc.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/debug/lib/pkgconfig/icu-i18n.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/debug/lib/pkgconfig/icu-io.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/debug/lib/pkgconfig/icu-uc.pc
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/share/icu/copyright
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/derb' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/genbrk' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/genccode' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/gencfu' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/gencmn' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/gencnval' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/gendict' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/gennorm2' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/genrb' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/gensprep' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/icuexportdata' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/icuinfo' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/icupkg' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/makeconv' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/pkgdata' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-linux/tools/icu/bin/uconv' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Performing post-build validation
+Starting submission of icu[core,tools]:x64-linux@79.1 to 1 binary cache(s) in the background
+Elapsed time to handle icu:x64-linux: 3.7 min
+Completed submission of harfbuzz[core,freetype]:x64-android@15.1.0#1 to 1 binary cache(s) in 20 s
+Completed submission of vcpkg-make:x64-linux@2026-07-09#2 to 1 binary cache(s) in 15.9 ms
+Installing 13/15 icu:x64-android@79.1...
+icu:x64-android@79.1 package ABI: 20d86b49d8cba0a1ce938c2d7a6b1fc34e18bd126eb7b6800acf0ffe0e7df5db
+Building icu:x64-android@79.1...
+-- Using cached icu4c-79.1-sources.tgz
+-- Cleaning sources at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/icu/src/icu4c-79-d54351476f.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/downloads/icu4c-79.1-sources.tgz
+-- Applying patch disable-static-prefix.patch
+-- Applying patch fix_parallel_build_on_windows.patch
+-- Applying patch fix-python-path-with-spaces.patch
+-- Applying patch fix-using-install-sh.diff
+-- Applying patch mh-darwin.patch
+-- Applying patch mh-mingw.patch
+-- Applying patch mh-msys-msvc.patch
+-- Applying patch subdirs.patch
+-- Applying patch vcpkg-cross-data.patch
+-- Using source at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/icu/src/icu4c-79-d54351476f.clean
+-- Getting CMake variables for x64-android
+-- Loading CMake variables from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/icu/cmake-get-vars_C_CXX-x64-android.cmake.log
+-- Configuring x64-android-dbg
+-- Configuring x64-android-rel
+-- Building/Installing x64-android-dbg
+-- Making target 'all' for x64-android-dbg
+-- Making target 'install' for x64-android-dbg
+-- Building/Installing x64-android-rel
+-- Making target 'all' for x64-android-rel
+-- Making target 'install' for x64-android-rel
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/tools/icu/config/icucross.inc
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/tools/icu/config/icucross.mk
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/lib/pkgconfig/icu-i18n.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/lib/pkgconfig/icu-io.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/lib/pkgconfig/icu-uc.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/debug/lib/pkgconfig/icu-i18n.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/debug/lib/pkgconfig/icu-io.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/debug/lib/pkgconfig/icu-uc.pc
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/icu_x64-android/share/icu/copyright
+-- Performing post-build validation
+Starting submission of icu:x64-android@79.1 to 1 binary cache(s) in the background
+Elapsed time to handle icu:x64-android: 3.1 min
+Completed submission of icu[core,tools]:x64-linux@79.1 to 1 binary cache(s) in 10 s
+Installing 14/15 liblzma:x64-android@5.8.4...
+liblzma:x64-android@5.8.4 package ABI: 6caf1864197ba552ceaa0ae63a8f8c58bf3f3e4cb9396ec3035527e1148f83bd
+Building liblzma:x64-android@5.8.4...
+Downloading https://github.com/tukaani-project/xz/archive/v5.8.4.tar.gz -> tukaani-project-xz-v5.8.4.tar.gz
+Successfully downloaded tukaani-project-xz-v5.8.4.tar.gz
+-- Extracting source /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/downloads/tukaani-project-xz-v5.8.4.tar.gz
+-- Applying patch build-tools.patch
+-- Using source at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/liblzma/src/v5.8.4-19a8d00df7.clean
+-- Configuring x64-android
+-- Building x64-android-dbg
+-- Building x64-android-rel
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/liblzma_x64-android/lib/pkgconfig/liblzma.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/liblzma_x64-android/debug/lib/pkgconfig/liblzma.pc
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/liblzma_x64-android/share/liblzma/copyright
+-- Performing post-build validation
+Starting submission of liblzma:x64-android@5.8.4 to 1 binary cache(s) in the background
+Elapsed time to handle liblzma:x64-android: 9.3 s
+Installing 15/15 lzo:x64-android@2.10#9...
+lzo:x64-android@2.10#9 package ABI: 9a2f37bf89f827950ec18dfe353baea51e5eeeff38e7329db80d074986792525
+Building lzo:x64-android@2.10#9...
+Downloading http://www.oberhumer.com/opensource/lzo/download/lzo-2.10.tar.gz -> lzo-2.10.tar.gz
+Successfully downloaded lzo-2.10.tar.gz
+-- Extracting source /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/downloads/lzo-2.10.tar.gz
+-- Applying patch always_install_pc.patch
+-- Using source at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/buildtrees/lzo/src/lzo-2-36820c2ee4.clean
+-- Configuring x64-android
+-- Building x64-android-dbg
+-- Building x64-android-rel
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/lzo_x64-android/lib/pkgconfig/lzo2.pc
+-- Fixing pkgconfig file: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/lzo_x64-android/debug/lib/pkgconfig/lzo2.pc
+-- Installing: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg/packages/lzo_x64-android/share/lzo/copyright
+-- Performing post-build validation
+Starting submission of lzo:x64-android@2.10#9 to 1 binary cache(s) in the background
+Elapsed time to handle lzo:x64-android: 9.6 s
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+(FTL OR GPL-2.0-or-later)
+0BSD
+Apache-2.0
+ICU
+MIT
+MIT-Modern-Variant
+Zlib
+bzip2-1.0.6
+libpng-2.0
+zlib is compatible with built-in CMake targets:
+
+  find_package(ZLIB REQUIRED)
+  target_link_libraries(main PRIVATE ZLIB::ZLIB)
+
+zlib provides pkg-config modules:
+
+  # zlib compression library
+  zlib
+
+libpng provides CMake targets:
+
+  find_package(PNG REQUIRED)
+  target_link_libraries(main PRIVATE PNG::PNG)
+
+freetype is compatible with built-in CMake targets:
+
+    find_package(Freetype REQUIRED)
+    target_link_libraries(main PRIVATE Freetype::Freetype) # since CMake 3.10
+
+harfbuzz provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(harfbuzz CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE harfbuzz::harfbuzz harfbuzz::harfbuzz-subset)
+
+harfbuzz provides pkg-config modules:
+
+  # HarfBuzz GPU rasterization library
+  harfbuzz-gpu
+
+  # HarfBuzz CPU rasterizer
+  harfbuzz-raster
+
+  # HarfBuzz font subsetter
+  harfbuzz-subset
+
+  # HarfBuzz vector converter
+  harfbuzz-vector
+
+  # HarfBuzz text shaping library
+  harfbuzz
+
+icu provides pkg-config modules:
+
+  # International Components for Unicode: Internationalization library
+  icu-i18n
+
+  # International Components for Unicode: Stream and I/O Library
+  icu-io
+
+  # International Components for Unicode: Common and Data libraries
+  icu-uc
+
+liblzma is compatible with built-in CMake targets:
+
+    find_package(LibLZMA REQUIRED)
+    target_link_libraries(main PRIVATE LibLZMA::LibLZMA)
+
+liblzma provides CMake targets:
+
+    find_package(liblzma CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE liblzma::liblzma)
+
+lzo provides pkg-config modules:
+
+  # LZO - a real-time data compression library
+  lzo2
+
+Completed submission of icu:x64-android@79.1 to 1 binary cache(s) in 15 s
+Completed submission of liblzma:x64-android@5.8.4 to 1 binary cache(s) in 189 ms
+Waiting for 1 remaining binary cache submissions...
+Completed submission of lzo:x64-android@2.10#9 to 1 binary cache(s) in 83.5 ms (1/1)
+All requested installations completed successfully in: 11 min
+-- Running vcpkg install - done
+-- The CXX compiler identification is Clang 21.0.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/local/lib/android/sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting Personal Data directory - .openttd
+-- Detecting Shared Data directory - (not set)
+-- Detecting Global Data directory - /usr/local/share/games/openttd
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Found Threads: TRUE
+-- Found ZLIB: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/libz.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/debug/lib/libz.a (found version "1.4")
+-- Found LibLZMA: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/liblzma.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/debug/lib/liblzma.a (found version "5.8.4")
+-- Found LZO: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/liblzo2.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/debug/lib/liblzo2.a (found version "2.10")
+-- Found PNG: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/libpng16.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/debug/lib/libpng16d.a (found version "1.6.59")
+-- Could NOT find CURL (missing: CURL_LIBRARY CURL_INCLUDE_DIR) 
+-- Could NOT find unofficial-breakpad (missing: unofficial-breakpad_DIR)
+-- Could NOT find Allegro (missing: Allegro_LIBRARY Allegro_INCLUDE_DIR) 
+-- Found BZip2: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/libbz2.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/debug/lib/libbz2d.a (found version "1.0.8")
+-- Looking for BZ2_bzCompressInit
+-- Looking for BZ2_bzCompressInit - not found
+-- Could NOT find Fluidsynth (missing: Fluidsynth_LIBRARY Fluidsynth_INCLUDE_DIR) 
+-- Could NOT find Fontconfig (missing: Fontconfig_LIBRARY Fontconfig_INCLUDE_DIR) 
+-- Found Harfbuzz: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/libharfbuzz.a (found version "15.1.0")
+-- Found ICU: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/include (found version "79.1") found components: i18n uc data
+-- Could NOT find OpusFile (missing: OpusFile_LIBRARY OpusFile_INCLUDE_PATH) 
+-- Could NOT find Ogg (missing: Ogg_LIBRARY Ogg_INCLUDE_PATH) 
+-- Could NOT find Opus (missing: Opus_LIBRARY Opus_INCLUDE_PATH) 
+-- Could NOT find Soxr (missing: Soxr_LIBRARY Soxr_INCLUDE_PATH) 
+-- Could NOT find OpenGL (missing: OPENGL_opengl_LIBRARY OPENGL_INCLUDE_DIR OpenGL) 
+-- Performing Test SSE_FOUND
+-- Performing Test SSE_FOUND - Failed
+-- Could NOT find Grfcodec (missing: GRFCODEC_EXECUTABLE GRFID_EXECUTABLE NFORENUM_EXECUTABLE) 
+-- Option Package Dependencies - OFF
+-- Option Dedicated - OFF
+-- Option Install FHS - ON
+-- Option Use assert - ON
+-- Option Use NSIS - OFF
+-- Option Survey Key - NOT USED
+-- PNG found -- -DWITH_PNG -- PNG::PNG
+-- ZLIB found -- -DWITH_ZLIB -- ZLIB::ZLIB
+-- LIBLZMA found -- -DWITH_LIBLZMA -- LibLZMA::LibLZMA
+-- LZO found -- -DWITH_LZO -- /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/include /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/include -- optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/liblzo2.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/debug/lib/liblzo2.a optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/liblzo2.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/debug/lib/liblzo2.a
+CMake Warning at cmake/LinkPackage.cmake:24 (message):
+  CURL not found; compiling OpenTTD without CURL is strongly discouraged
+Call Stack (most recent call first):
+  CMakeLists.txt:330 (link_package)
+
+
+-- SDL3 found -- -DWITH_SDL3 -- SDL3::SDL3
+-- FREETYPE found -- -DWITH_FREETYPE -- Freetype::Freetype
+-- Harfbuzz found -- -DWITH_HARFBUZZ -- /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/include/harfbuzz /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/include/harfbuzz -- /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/libharfbuzz.a /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/x64-android/lib/libharfbuzz.a
+-- ICU_I18N found -- -DWITH_ICU_I18N -- ICU::i18n
+-- ICU_UC found -- -DWITH_ICU_UC -- ICU::uc
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB - Failed
+-- The C compiler identification is Clang 21.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/local/lib/android/sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Looking for __atomic_fetch_add_4 in atomic
+-- Looking for __atomic_fetch_add_4 in atomic - found
+-- Performing Test HAVE_CXX_ATOMICS_WITH_LIB
+-- Performing Test HAVE_CXX_ATOMICS_WITH_LIB - Failed
+CMake Error at cmake/3rdparty/llvm/CheckAtomic.cmake:66 (message):
+  Host compiler must support std::atomic!
+Call Stack (most recent call first):
+  CMakeLists.txt:361 (include)
+
+
+-- Configuring incomplete, errors occurred!
