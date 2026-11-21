@@ -1,0 +1,20 @@
+#COMPILER_HASH#e5839d7eb6f46bccc00f13afe7f745121195a977
+#COMPILER_C_HASH#a1760111bb8af6d6d36ec4781286a186679de6bc
+#COMPILER_C_VERSION#21.0.0
+#COMPILER_C_ID#Clang
+#COMPILER_C_PATH#/usr/local/lib/android/sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
+#COMPILER_CXX_HASH#a1760111bb8af6d6d36ec4781286a186679de6bc
+#COMPILER_CXX_VERSION#21.0.0
+#COMPILER_CXX_ID#Clang
+#COMPILER_CXX_PATH#/usr/local/lib/android/sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++
+CMake Warning (unused-cli):
+  Manually-specified variables were not used by the project:
+
+    BUILD_SHARED_LIBS
+    CMAKE_INSTALL_BINDIR
+    CMAKE_INSTALL_LIBDIR
+    VCPKG_PLATFORM_TOOLSET
+    VCPKG_SET_CHARSET_FLAG
+    _VCPKG_ROOT_DIR
+
+

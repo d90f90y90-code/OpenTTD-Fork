@@ -1,0 +1,212 @@
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/c++
+Detecting compiler hash for triplet arm-neon-android...
+Compiler found: /usr/local/lib/android/sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++
+The following packages will be built and installed:
+  * brotli:arm-neon-android@1.2.1
+  * bzip2[core,tool]:arm-neon-android@1.0.8#6
+    freetype[brotli,bzip2,core,png,zlib]:arm-neon-android@2.15.0
+    harfbuzz[core,freetype]:arm-neon-android@15.1.0#1
+  * icu[core,tools]:x64-linux@79.1
+    icu:arm-neon-android@79.1
+    liblzma:arm-neon-android@5.8.4
+    libpng:arm-neon-android@1.6.59#1
+    lzo:arm-neon-android@2.10#9
+  * vcpkg-cmake:x64-linux@2026-11-09
+  * vcpkg-cmake-config:x64-linux@2026-07-21
+  * vcpkg-cmake-get-vars:x64-linux@2025-05-29
+  * vcpkg-make:x64-linux@2026-07-09#2
+  * vcpkg-tool-meson:x64-linux@1.12.1#2
+    zlib:arm-neon-android@1.4
+Additional packages (*) will be modified to complete this operation.
+Restored 15 package(s) from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/vcpkg-cache in 2.3 s. Use --debug to see more details.
+Installing 1/15 vcpkg-cmake-config:x64-linux@2026-07-21...
+vcpkg-cmake-config:x64-linux@2026-07-21 package ABI: a74b09acb6cc39f426fea7f4d1c72c94ee675931ccb175cdf807dcc20b50fbde
+Elapsed time to handle vcpkg-cmake-config:x64-linux: 712 us
+Installing 2/15 vcpkg-cmake:x64-linux@2026-11-09...
+vcpkg-cmake:x64-linux@2026-11-09 package ABI: c97d001bed3cdee529a64a89f7d2320e8bb5197cf7783f481fd0af004b8b8e97
+Elapsed time to handle vcpkg-cmake:x64-linux: 584 us
+Installing 3/15 zlib:arm-neon-android@1.4...
+zlib:arm-neon-android@1.4 package ABI: f019b8213bba95ab22bb526a5a1f6e66698c38eee15cd40aa4c84cf33861deee
+Elapsed time to handle zlib:arm-neon-android: 1.14 ms
+Installing 4/15 vcpkg-cmake-get-vars:x64-linux@2025-05-29...
+vcpkg-cmake-get-vars:x64-linux@2025-05-29 package ABI: e3bee4ff878dcd6b71352d9a8c38cfce9967829618fe68d33b3074f1a05ebf88
+Elapsed time to handle vcpkg-cmake-get-vars:x64-linux: 617 us
+Installing 5/15 libpng:arm-neon-android@1.6.59#1...
+libpng:arm-neon-android@1.6.59#1 package ABI: afcc4433bd503876e661b43a32ef9fdae61c3c99b6d620cfcaa21cdd3db416fc
+Elapsed time to handle libpng:arm-neon-android: 990 us
+Installing 6/15 bzip2[core,tool]:arm-neon-android@1.0.8#6...
+bzip2[core,tool]:arm-neon-android@1.0.8#6 package ABI: 90e4a6543b0d3d84a18b9e8bc34c5e0aa38efee37101f1c8d1419f93488e26b5
+Elapsed time to handle bzip2:arm-neon-android: 885 us
+Installing 7/15 brotli:arm-neon-android@1.2.1...
+brotli:arm-neon-android@1.2.1 package ABI: 2f4ffb1b0dc90f3373d93f2bdfa5c5ba991588130714beb4f04656de2132f1bd
+Elapsed time to handle brotli:arm-neon-android: 970 us
+Installing 8/15 freetype[brotli,bzip2,core,png,zlib]:arm-neon-android@2.15.0...
+freetype[brotli,bzip2,core,png,zlib]:arm-neon-android@2.15.0 package ABI: 3cd98bf8ef1286bbc563eeeba08f4b565f1ff28f7061855d1723a8bfeed3a4b9
+Elapsed time to handle freetype:arm-neon-android: 1.92 ms
+Installing 9/15 vcpkg-tool-meson:x64-linux@1.12.1#2...
+vcpkg-tool-meson:x64-linux@1.12.1#2 package ABI: 180c05bf899cda899b3b28315b1eebc14e5a5aa935d2bb8b0b56f4c3492bcce9
+Elapsed time to handle vcpkg-tool-meson:x64-linux: 751 us
+Installing 10/15 harfbuzz[core,freetype]:arm-neon-android@15.1.0#1...
+harfbuzz[core,freetype]:arm-neon-android@15.1.0#1 package ABI: 29586833359b2ab5512dd2bd99fa2aa4320d6237086de0e0ca4f6eeed70fb3c0
+Elapsed time to handle harfbuzz:arm-neon-android: 1.63 ms
+Installing 11/15 vcpkg-make:x64-linux@2026-07-09#2...
+vcpkg-make:x64-linux@2026-07-09#2 package ABI: 4218c76f5d554aed937b567fe8e9430446f835593b90fe71ffefe60075d1c034
+Elapsed time to handle vcpkg-make:x64-linux: 791 us
+Installing 12/15 icu[core,tools]:x64-linux@79.1...
+icu[core,tools]:x64-linux@79.1 package ABI: c3a4359644dddd53571e9ac2717a451f4a2b38d2aa324eda087658db38bbeb23
+Elapsed time to handle icu:x64-linux: 5.22 ms
+Installing 13/15 icu:arm-neon-android@79.1...
+icu:arm-neon-android@79.1 package ABI: 19f72e68a34b7a8b51915211a6a32614a70d468fac54740502b1949da339e699
+Elapsed time to handle icu:arm-neon-android: 4.81 ms
+Installing 14/15 liblzma:arm-neon-android@5.8.4...
+liblzma:arm-neon-android@5.8.4 package ABI: a8fa85e99a5d080c892e4ab83d3d98393f5b1fcfec782b7e1e478c909569a7af
+Elapsed time to handle liblzma:arm-neon-android: 1.58 ms
+Installing 15/15 lzo:arm-neon-android@2.10#9...
+lzo:arm-neon-android@2.10#9 package ABI: 1e6c14fdbbc8e158116a0b0638a0f3c7326beaa44973d80da67e99f60492d73f
+Elapsed time to handle lzo:arm-neon-android: 1.16 ms
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+(FTL OR GPL-2.0-or-later)
+0BSD
+Apache-2.0
+ICU
+MIT
+MIT-Modern-Variant
+Zlib
+bzip2-1.0.6
+libpng-2.0
+zlib is compatible with built-in CMake targets:
+
+  find_package(ZLIB REQUIRED)
+  target_link_libraries(main PRIVATE ZLIB::ZLIB)
+
+zlib provides pkg-config modules:
+
+  # zlib compression library
+  zlib
+
+libpng provides CMake targets:
+
+  find_package(PNG REQUIRED)
+  target_link_libraries(main PRIVATE PNG::PNG)
+
+freetype is compatible with built-in CMake targets:
+
+    find_package(Freetype REQUIRED)
+    target_link_libraries(main PRIVATE Freetype::Freetype) # since CMake 3.10
+
+harfbuzz provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(harfbuzz CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE harfbuzz::harfbuzz harfbuzz::harfbuzz-subset)
+
+harfbuzz provides pkg-config modules:
+
+  # HarfBuzz GPU rasterization library
+  harfbuzz-gpu
+
+  # HarfBuzz CPU rasterizer
+  harfbuzz-raster
+
+  # HarfBuzz font subsetter
+  harfbuzz-subset
+
+  # HarfBuzz vector converter
+  harfbuzz-vector
+
+  # HarfBuzz text shaping library
+  harfbuzz
+
+icu provides pkg-config modules:
+
+  # International Components for Unicode: Internationalization library
+  icu-i18n
+
+  # International Components for Unicode: Stream and I/O Library
+  icu-io
+
+  # International Components for Unicode: Common and Data libraries
+  icu-uc
+
+liblzma is compatible with built-in CMake targets:
+
+    find_package(LibLZMA REQUIRED)
+    target_link_libraries(main PRIVATE LibLZMA::LibLZMA)
+
+liblzma provides CMake targets:
+
+    find_package(liblzma CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE liblzma::liblzma)
+
+lzo provides pkg-config modules:
+
+  # LZO - a real-time data compression library
+  lzo2
+
+All requested installations completed successfully in: 25.2 ms
+-- Running vcpkg install - done
+-- The CXX compiler identification is Clang 21.0.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/local/lib/android/sdk/ndk/30.0.16248370/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting Personal Data directory - .openttd
+-- Detecting Shared Data directory - (not set)
+-- Detecting Global Data directory - /usr/local/share/games/openttd
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Found Threads: TRUE
+-- Found ZLIB: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/libz.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/debug/lib/libz.a (found version "1.4")
+-- Found LibLZMA: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/liblzma.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/debug/lib/liblzma.a (found version "5.8.4")
+-- Found LZO: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/liblzo2.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/debug/lib/liblzo2.a (found version "2.10")
+-- Found PNG: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/libpng16.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/debug/lib/libpng16d.a (found version "1.6.59")
+-- Could NOT find CURL (missing: CURL_LIBRARY CURL_INCLUDE_DIR) 
+-- Could NOT find unofficial-breakpad (missing: unofficial-breakpad_DIR)
+-- Could NOT find Allegro (missing: Allegro_LIBRARY Allegro_INCLUDE_DIR) 
+-- Found BZip2: optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/libbz2.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/debug/lib/libbz2d.a (found version "1.0.8")
+-- Looking for BZ2_bzCompressInit
+-- Looking for BZ2_bzCompressInit - found
+-- Could NOT find Fluidsynth (missing: Fluidsynth_LIBRARY Fluidsynth_INCLUDE_DIR) 
+-- Could NOT find Fontconfig (missing: Fontconfig_LIBRARY Fontconfig_INCLUDE_DIR) 
+-- Found Harfbuzz: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/libharfbuzz.a (found version "15.1.0")
+-- Found ICU: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/include (found version "79.1") found components: i18n uc data
+-- Could NOT find OpusFile (missing: OpusFile_LIBRARY OpusFile_INCLUDE_PATH) 
+-- Could NOT find Ogg (missing: Ogg_LIBRARY Ogg_INCLUDE_PATH) 
+-- Could NOT find Opus (missing: Opus_LIBRARY Opus_INCLUDE_PATH) 
+-- Could NOT find Soxr (missing: Soxr_LIBRARY Soxr_INCLUDE_PATH) 
+-- Could NOT find OpenGL (missing: OPENGL_opengl_LIBRARY OPENGL_INCLUDE_DIR OpenGL) 
+-- Performing Test SSE_FOUND
+-- Performing Test SSE_FOUND - Failed
+-- Could NOT find Grfcodec (missing: GRFCODEC_EXECUTABLE GRFID_EXECUTABLE NFORENUM_EXECUTABLE) 
+-- Option Package Dependencies - OFF
+-- Option Dedicated - OFF
+-- Option Install FHS - ON
+-- Option Use assert - ON
+-- Option Use NSIS - OFF
+-- Option Survey Key - NOT USED
+-- PNG found -- -DWITH_PNG -- PNG::PNG
+-- ZLIB found -- -DWITH_ZLIB -- ZLIB::ZLIB
+-- LIBLZMA found -- -DWITH_LIBLZMA -- LibLZMA::LibLZMA
+-- LZO found -- -DWITH_LZO -- /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/include /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/include -- optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/liblzo2.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/debug/lib/liblzo2.a optimized;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/liblzo2.a;debug;/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/debug/lib/liblzo2.a
+CMake Warning at cmake/LinkPackage.cmake:24 (message):
+  CURL not found; compiling OpenTTD without CURL is strongly discouraged
+Call Stack (most recent call first):
+  CMakeLists.txt:330 (link_package)
+
+
+-- SDL3 found -- -DWITH_SDL3 -- SDL3::SDL3
+-- FREETYPE found -- -DWITH_FREETYPE -- Freetype::Freetype
+-- Harfbuzz found -- -DWITH_HARFBUZZ -- /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/include/harfbuzz /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/include/harfbuzz -- /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/libharfbuzz.a /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android/vcpkg_installed/arm-neon-android/lib/libharfbuzz.a
+-- ICU_I18N found -- -DWITH_ICU_I18N -- ICU::i18n
+-- ICU_UC found -- -DWITH_ICU_UC -- ICU::uc
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB - Success
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB - Success
+-- Configuring done (19.7s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build-android

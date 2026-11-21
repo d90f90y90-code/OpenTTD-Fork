@@ -1,0 +1,100 @@
+Installing 10/15 harfbuzz[core,freetype]:arm-neon-android@15.1.0#1...
+harfbuzz[core,freetype]:arm-neon-android@15.1.0#1 package ABI: 29586833359b2ab5512dd2bd99fa2aa4320d6237086de0e0ca4f6eeed70fb3c0
+Elapsed time to handle harfbuzz:arm-neon-android: 1.63 ms
+Installing 11/15 vcpkg-make:x64-linux@2026-07-09#2...
+vcpkg-make:x64-linux@2026-07-09#2 package ABI: 4218c76f5d554aed937b567fe8e9430446f835593b90fe71ffefe60075d1c034
+Elapsed time to handle vcpkg-make:x64-linux: 791 us
+Installing 12/15 icu[core,tools]:x64-linux@79.1...
+icu[core,tools]:x64-linux@79.1 package ABI: c3a4359644dddd53571e9ac2717a451f4a2b38d2aa324eda087658db38bbeb23
+Elapsed time to handle icu:x64-linux: 5.22 ms
+Installing 13/15 icu:arm-neon-android@79.1...
+icu:arm-neon-android@79.1 package ABI: 19f72e68a34b7a8b51915211a6a32614a70d468fac54740502b1949da339e699
+Elapsed time to handle icu:arm-neon-android: 4.81 ms
+Installing 14/15 liblzma:arm-neon-android@5.8.4...
+liblzma:arm-neon-android@5.8.4 package ABI: a8fa85e99a5d080c892e4ab83d3d98393f5b1fcfec782b7e1e478c909569a7af
+Elapsed time to handle liblzma:arm-neon-android: 1.58 ms
+Installing 15/15 lzo:arm-neon-android@2.10#9...
+lzo:arm-neon-android@2.10#9 package ABI: 1e6c14fdbbc8e158116a0b0638a0f3c7326beaa44973d80da67e99f60492d73f
+Elapsed time to handle lzo:arm-neon-android: 1.16 ms
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+(FTL OR GPL-2.0-or-later)
+0BSD
+Apache-2.0
+ICU
+MIT
+MIT-Modern-Variant
+Zlib
+bzip2-1.0.6
+libpng-2.0
+zlib is compatible with built-in CMake targets:
+
+  find_package(ZLIB REQUIRED)
+  target_link_libraries(main PRIVATE ZLIB::ZLIB)
+
+zlib provides pkg-config modules:
+
+  # zlib compression library
+  zlib
+
+libpng provides CMake targets:
+
+  find_package(PNG REQUIRED)
+  target_link_libraries(main PRIVATE PNG::PNG)
+
+freetype is compatible with built-in CMake targets:
+
+    find_package(Freetype REQUIRED)
+    target_link_libraries(main PRIVATE Freetype::Freetype) # since CMake 3.10
+
+harfbuzz provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(harfbuzz CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE harfbuzz::harfbuzz harfbuzz::harfbuzz-subset)
+
+harfbuzz provides pkg-config modules:
+
+  # HarfBuzz GPU rasterization library
+  harfbuzz-gpu
+
+  # HarfBuzz CPU rasterizer
+  harfbuzz-raster
+
+  # HarfBuzz font subsetter
+  harfbuzz-subset
+
+  # HarfBuzz vector converter
+  harfbuzz-vector
+
+  # HarfBuzz text shaping library
+  harfbuzz
+
+icu provides pkg-config modules:
+
+  # International Components for Unicode: Internationalization library
+  icu-i18n
+
+  # International Components for Unicode: Stream and I/O Library
+  icu-io
+
+  # International Components for Unicode: Common and Data libraries
+  icu-uc
+
+liblzma is compatible with built-in CMake targets:
+
+    find_package(LibLZMA REQUIRED)
+    target_link_libraries(main PRIVATE LibLZMA::LibLZMA)
+
+liblzma provides CMake targets:
+
+    find_package(liblzma CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE liblzma::liblzma)
+
+lzo provides pkg-config modules:
+
+  # LZO - a real-time data compression library
+  lzo2
+
+All requested installations completed successfully in: 25.2 ms
