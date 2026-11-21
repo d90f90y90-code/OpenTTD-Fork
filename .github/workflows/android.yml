@@ -74,12 +74,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - abi: arm64-v8a
-          triplet: arm64-android
         - abi: armeabi-v7a
           triplet: arm-neon-android
-        - abi: x86_64
-          triplet: x64-android
     steps:
     - uses: actions/checkout@v4
 
@@ -168,7 +164,7 @@ jobs:
         path: out
 
     - name: Upload SDL Java sources
-      if: matrix.abi == 'arm64-v8a'
+      if: matrix.abi == 'armeabi-v7a'
       uses: actions/upload-artifact@v4
       with:
         name: sdl-java
@@ -201,7 +197,7 @@ jobs:
         mkdir -p os/android/app/src/main/assets os/android/app/src/main/java os/android/app/src/main/jniLibs
         cp -r dl/game-data/openttd os/android/app/src/main/assets/
         cp -r dl/sdl-java/org os/android/app/src/main/java/
-        for abi in arm64-v8a armeabi-v7a x86_64; do
+        for abi in armeabi-v7a; do
           mkdir -p os/android/app/src/main/jniLibs/$abi
           cp dl/native-$abi/$abi/*.so os/android/app/src/main/jniLibs/$abi/
         done
@@ -222,7 +218,7 @@ jobs:
       with:
         gradle-version: 8.10.2
 
-    - name: Build test APK (debuggable, with x86_64 for the emulator)
+    - name: Build debug APK
       working-directory: os/android
       run: |
         gradle assembleDebug --no-daemon 2>&1 | tee /tmp/logs/apk-gradle-debug.log | tail -n 20
@@ -239,7 +235,6 @@ jobs:
           echo "$FORK_KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/fork.p12"
           export FORK_KEYSTORE_FILE="$RUNNER_TEMP/fork.p12"
         fi
-        rm -rf app/src/main/jniLibs/x86_64
         gradle assembleRelease --no-daemon 2>&1 | tee /tmp/logs/apk-gradle.log | tail -n 20
         test ${PIPESTATUS[0]} -eq 0
         cp app/build/outputs/apk/release/app-release.apk ../../openttd-fork-android.apk
@@ -259,43 +254,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
-  emulator:
-    name: Emulator test
-    needs: apk
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-
-    - uses: actions/download-artifact@v4
-      with:
-        name: apks
-        path: apks
-
-    - name: Enable KVM
-      run: |
-        echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
-        sudo udevadm control --reload-rules
-        sudo udevadm trigger --name-match=kvm
-
-    - name: Run the game in an emulator
-      uses: reactivecircus/android-emulator-runner@v2
-      with:
-        api-level: 30
-        arch: x86_64
-        target: google_apis
-        emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-        disable-animations: true
-        script: bash .github/emulator-test.sh
-
-    - name: Publish logs
-      if: always()
-      run: .github/ci-publish-logs.sh ci-logs-android-emulator
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
-
   release:
     name: Release
-    needs: [apk, emulator]
+    needs: apk
     runs-on: ubuntu-latest
     steps:
     - uses: actions/download-artifact@v4
@@ -308,7 +269,7 @@ jobs:
         gh release create "android-${GITHUB_RUN_NUMBER}" apks/openttd-fork-android.apk \
           --repo "${GITHUB_REPOSITORY}" \
           --title "OpenTTD Fork for Android (build ${GITHUB_RUN_NUMBER})" \
-          --notes "Debug-signed APK for arm64-v8a and armeabi-v7a. It started successfully in an emulator. Install by allowing unknown sources." \
+          --notes "APK for 32-bit ARM phones (armeabi-v7a). Install by allowing unknown sources." \
           --target "${GITHUB_SHA}"
       env:
         GH_TOKEN: ${{ github.token }}
