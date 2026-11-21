@@ -197,7 +197,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_rights_widgets 
 };
 
 static WindowDesc _fork_rights_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_rights", 0, 0,
 	WindowClass::ForkRights, WindowClass::None,
 	{},
 	_nested_fork_rights_widgets
@@ -307,7 +307,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_license_widgets
 };
 
 static WindowDesc _fork_license_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_license", 0, 0,
 	WindowClass::ForkLicense, WindowClass::None,
 	{},
 	_nested_fork_license_widgets

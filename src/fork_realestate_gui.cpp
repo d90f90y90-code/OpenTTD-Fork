@@ -157,7 +157,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_real_estate_wid
 };
 
 static WindowDesc _fork_real_estate_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_real_estate", 0, 0,
 	WindowClass::ForkRealEstate, WindowClass::None,
 	{},
 	_nested_fork_real_estate_widgets

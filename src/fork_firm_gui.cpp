@@ -147,7 +147,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_firms_widgets =
 };
 
 static WindowDesc _fork_firms_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_firms", 0, 0,
 	WindowClass::ForkFirms, WindowClass::None,
 	{},
 	_nested_fork_firms_widgets
@@ -277,7 +277,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_firm_create_wid
 };
 
 static WindowDesc _fork_firm_create_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_firm_create", 0, 0,
 	WindowClass::ForkFirmCreate, WindowClass::None,
 	{},
 	_nested_fork_firm_create_widgets
@@ -456,7 +456,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_firm_widgets = 
 };
 
 static WindowDesc _fork_firm_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_firm", 0, 0,
 	WindowClass::ForkFirm, WindowClass::None,
 	{},
 	_nested_fork_firm_widgets

@@ -110,7 +110,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_lease_renew_wid
 };
 
 static WindowDesc _fork_lease_renew_desc(
-	WindowPosition::Center, {}, 0, 0,
+	WindowPosition::Center, "fork_lease_renew", 0, 0,
 	WindowClass::ForkLeaseRenew, WindowClass::None,
 	{},
 	_nested_fork_lease_renew_widgets

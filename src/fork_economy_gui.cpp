@@ -90,7 +90,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_business_widget
 };
 
 static WindowDesc _fork_business_desc(
-	WindowPosition::Center, {}, 0, 0,
+	WindowPosition::Center, "fork_business", 0, 0,
 	WindowClass::ForkBusiness, WindowClass::None,
 	{},
 	_nested_fork_business_widgets

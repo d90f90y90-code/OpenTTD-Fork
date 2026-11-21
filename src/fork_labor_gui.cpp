@@ -136,7 +136,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_staff_widgets =
 };
 
 static WindowDesc _fork_staff_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_staff", 0, 0,
 	WindowClass::ForkStaff, WindowClass::None,
 	{},
 	_nested_fork_staff_widgets

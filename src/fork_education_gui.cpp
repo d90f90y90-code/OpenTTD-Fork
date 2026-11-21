@@ -263,7 +263,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_education_widge
 };
 
 static WindowDesc _fork_education_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_education", 0, 0,
 	WindowClass::ForkEducation, WindowClass::None,
 	{},
 	_nested_fork_education_widgets

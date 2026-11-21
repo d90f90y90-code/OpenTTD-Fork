@@ -308,7 +308,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_used_market_wid
 };
 
 static WindowDesc _fork_used_market_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_used_market", 0, 0,
 	WindowClass::ForkUsedMarket, WindowClass::None,
 	{},
 	_nested_fork_used_market_widgets

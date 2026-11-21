@@ -266,7 +266,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_exchange_widget
 };
 
 static WindowDesc _fork_exchange_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_exchange", 0, 0,
 	WindowClass::ForkExchange, WindowClass::None,
 	{},
 	_nested_fork_exchange_widgets

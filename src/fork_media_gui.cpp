@@ -153,7 +153,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_media_widgets =
 };
 
 static WindowDesc _fork_media_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_media", 0, 0,
 	WindowClass::ForkMedia, WindowClass::None,
 	{},
 	_nested_fork_media_widgets
@@ -316,7 +316,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_channel_create_
 };
 
 static WindowDesc _fork_channel_create_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_channel_create", 0, 0,
 	WindowClass::ForkChannelCreate, WindowClass::ForkMedia,
 	{},
 	_nested_fork_channel_create_widgets
@@ -515,7 +515,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_fork_channel_widgets
 };
 
 static WindowDesc _fork_channel_desc(
-	WindowPosition::Automatic, {}, 0, 0,
+	WindowPosition::Automatic, "fork_channel", 0, 0,
 	WindowClass::ForkChannel, WindowClass::ForkMedia,
 	{},
 	_nested_fork_channel_widgets
