@@ -373,6 +373,11 @@ static WindowDesc _fork_products_desc(
 	_nested_fork_products_widgets
 );
 
+void ShowForkProductsWindow()
+{
+	AllocateWindowDescFront<ForkProductsWindow>(_fork_products_desc, 0);
+}
+
 /* ---------------------------------------------------------------------------------------------------------------- */
 /* Create a product.                                                                                                 */
 
@@ -398,7 +403,7 @@ struct ForkProductCreateWindow : Window {
 	uint32_t price = 100;  ///< Price of one unit.
 	std::string name;      ///< Name of the new product.
 
-	ForkProductCreateWindow(WindowDesc *desc, WindowNumber number) : Window(*desc)
+	ForkProductCreateWindow(WindowDesc &desc, WindowNumber number) : Window(desc)
 	{
 		this->InitNested(number);
 		this->SelectFirstProduct();

@@ -222,6 +222,7 @@ add_files(
     fork_education_cmd.h
     fork_education_gui.cpp
     fork_products.cpp
+    fork_products_gui.cpp
     fork_products.h
     fork_products_cmd.h
     fork_valuation.cpp

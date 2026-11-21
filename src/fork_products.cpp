@@ -293,8 +293,8 @@ void ForkProductsMonthly()
 
 		const uint32_t sold = std::max<uint32_t>(1, static_cast<uint32_t>(static_cast<uint64_t>(p->quantity) * p->popularity / 100));
 		const Money price = static_cast<Money>(std::max<uint32_t>(1, p->price)) * (100 - p->discount) / 100;
-		p->income_last = price * static_cast<Money>(sold);
-		p->cost_last = static_cast<Money>(entry->base_price) * static_cast<Money>(p->quantity) / 2;
+		p->income_last = price * static_cast<int64_t>(sold);
+		p->cost_last = static_cast<Money>(static_cast<int64_t>(entry->base_price) * static_cast<int64_t>(p->quantity) / 2);
 
 		ForkLedgerBook(p->owner, ForkLedgerCategory::Trade, p->income_last - p->cost_last);
 	}

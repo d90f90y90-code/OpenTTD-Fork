@@ -5377,14 +5377,14 @@ STR_UNITS_VELOCITY_GAMEUNITS_DAY                            :{DECIMAL}{NBSP} ب�
 STR_UNITS_VELOCITY_GAMEUNITS_SEC                            :{DECIMAL}{NBSP} بلاط/ثانية
 STR_UNITS_VELOCITY_KNOTS                                    :{DECIMAL}{NBSP} عقدة
 STR_UNITS_POWER_METRIC_TO_WEIGHT_METRIC                     :{DECIMAL}{NBSP} حصان/طن
-STR_UNITS_HEIGHT_GAMEUNITS                                  :{DECIMAL}{NBSP} مستوى{P "" s}
-STR_UNITS_DAYS                                              :{COMMA}{NBSP} يوم{P "" s}
-STR_UNITS_SECONDS                                           :{COMMA}{NBSP} ثانية{P "" s}
-STR_UNITS_TICKS                                             :{COMMA}{NBSP} نبضة{P "" s}
-STR_UNITS_MONTHS                                            :{NUM}{NBSP} شهر{P "" s}
-STR_UNITS_MINUTES                                           :{NUM}{NBSP} دقيقة{P "" s}
-STR_UNITS_YEARS                                             :{NUM}{NBSP} سنة{P "" s}
-STR_UNITS_PERIODS                                           :{NUM}{NBSP} فترة{P "" s}
+STR_UNITS_HEIGHT_GAMEUNITS                                  :{DECIMAL}{NBSP} مستوى
+STR_UNITS_DAYS                                              :{COMMA}{NBSP} يوم
+STR_UNITS_SECONDS                                           :{COMMA}{NBSP} ثانية
+STR_UNITS_TICKS                                             :{COMMA}{NBSP} نبضة
+STR_UNITS_MONTHS                                            :{NUM}{NBSP} شهر
+STR_UNITS_MINUTES                                           :{NUM}{NBSP} دقيقة
+STR_UNITS_YEARS                                             :{NUM}{NBSP} سنة
+STR_UNITS_PERIODS                                           :{NUM}{NBSP} فترة
 STR_LIST_SEPARATOR                                          :،{SPACE}
 STR_TRUNCATION_ELLIPSIS                                     :...
 STR_BUTTON_MOVE                                             :{BLACK}نقل
@@ -5516,7 +5516,7 @@ STR_GAME_OPTIONS_SOCIAL_PLUGIN_TITLE                        :{RAW_STRING} ({RAW_
 STR_GAME_OPTIONS_SOCIAL_PLUGIN_STATE_RUNNING                :{GREEN}تشغيل
 STR_GAME_OPTIONS_SOCIAL_PLUGIN_STATE_UNLOADED               :{RED}تم تفريغ
 STR_GAME_OPTIONS_SOCIAL_PLUGIN_STATE_UNSUPPORTED_API        :{RED}نسخة غير مدعومة
-STR_BASESET_STATUS                                          :{RAW_STRING} {RED}(ملف{NUM} مفقود/تالف{P "" s})
+STR_BASESET_STATUS                                          :{RAW_STRING} {RED}(ملف{NUM} مفقود/تالف)
 STR_CURRENCY_SEPARATOR                                      :{LTBLUE}فاصل: {ORANGE}{RAW_STRING}
 STR_CURRENCY_SET_CUSTOM_CURRENCY_SEPARATOR_TOOLTIP          :{BLACK}قم بتعيين الفاصل لعملتك
 STR_TERRAIN_TYPE_CUSTOM_VALUE                               :الارتفاع المخصص ({NUM})
@@ -5536,7 +5536,7 @@ STR_CONFIG_SETTING_RESTRICT_CHANGED_AGAINST_DEFAULT         :إعدادات ذا
 STR_CONFIG_SETTING_RESTRICT_CHANGED_AGAINST_NEW             :إعدادات ذات قيمة مختلفة عن إعدادات اللعبة الجديدة
 STR_CONFIG_SETTING_CATEGORY_HIDES                           :عرض جميع نتائج البحث عن طريق ضبط{}{PUSH_COLOUR}{SILVER}الفئة {POP_COLOUR}على {WHITE}{STRING}
 STR_CONFIG_SETTING_TYPE_HIDES                               :عرض جميع نتائج البحث عن طريق ضبط{}{PUSH_COLOUR}{SILVER}اكتب {POP_COLOUR}إلى {WHITE}جميع أنواع الإعدادات
-STR_CONFIG_SETTING_SECONDS_VALUE                            :{COMMA}{NBSP}{P 0 "" s}الثانية
+STR_CONFIG_SETTING_SECONDS_VALUE                            :{COMMA}{NBSP}الثانية
 STR_CONFIG_SETTING_INFINITE_MONEY                           :المال اللانهائي: {STRING2}
 STR_CONFIG_SETTING_INFINITE_MONEY_HELPTEXT                  :السماح بالإنفاق غير المحدود وتعطيل إفلاس الشركات
 STR_CONFIG_SETTING_MAXIMUM_INITIAL_LOAN                     :الحد الأقصى للقرض الأولي: {STRING2}
@@ -5575,7 +5575,7 @@ STR_CONFIG_SETTING_SERVE_NEUTRAL_INDUSTRIES_HELPTEXT        :عند تمكينه
 STR_CONFIG_SETTING_EXTRADYNAMITE_HELPTEXT                   :تسهيل إزالة البنية التحتية والمباني المملوكة للمدينة
 STR_CONFIG_SETTING_TRAIN_LENGTH                             :الحد الأقصى لطول القطارات: {STRING2}
 STR_CONFIG_SETTING_TRAIN_LENGTH_HELPTEXT                    :تعيين الحد الأقصى لطول القطارات
-STR_CONFIG_SETTING_TILE_LENGTH                              :{COMMA}بلاط {P 0 "" s}
+STR_CONFIG_SETTING_TILE_LENGTH                              :{COMMA}بلاط 
 STR_CONFIG_SETTING_TRAIN_ACCELERATION_MODEL_HELPTEXT        :حدد النموذج الفيزيائي لتسريع القطار. النموذج "الأصلي" يعاقب المنحدرات بالتساوي لجميع المركبات. النموذج "الواقعي" يعاقب المنحدرات والمنحنيات اعتمادًا على الخصائص المختلفة للتكوين، مثل الطول وجهد الجر
 STR_CONFIG_SETTING_ROAD_VEHICLE_ACCELERATION_MODEL_HELPTEXT :حدد النموذج الفيزيائي لتسريع المركبات على الطرق. النموذج "الأصلي" يعاقب المنحدرات بالتساوي لجميع المركبات. النموذج "الواقعي" يعاقب المنحدرات اعتمادًا على الخصائص المختلفة للمحرك، على سبيل المثال "جهد الجر"
 STR_CONFIG_SETTING_TRAIN_SLOPE_STEEPNESS                    :انحدار المنحدر للقطارات: {STRING2}
@@ -5639,14 +5639,14 @@ STR_CONFIG_SETTING_CARGO_AGING_RATE_VALUE                   :{NUM}%
 STR_CONFIG_SETTING_CARGO_AGING_RATE_ZERO                    :لا الاضمحلال
 STR_CONFIG_SETTING_AUTORENEW_MONTHS                         :التجديد التلقائي عندما تكون السيارة هي الحد الأقصى لعمر {STRING2}
 STR_CONFIG_SETTING_AUTORENEW_MONTHS_HELPTEXT                :العمر النسبي الذي ينبغي فيه النظر في تجديد السيارة تلقائيًا
-STR_CONFIG_SETTING_AUTORENEW_MONTHS_VALUE_BEFORE            :{COMMA} الشهر{P 0 "" s} من قبل
-STR_CONFIG_SETTING_AUTORENEW_MONTHS_VALUE_AFTER             :{COMMA} شهر{P 0 "" s} بعد
+STR_CONFIG_SETTING_AUTORENEW_MONTHS_VALUE_BEFORE            :{COMMA} الشهر من قبل
+STR_CONFIG_SETTING_AUTORENEW_MONTHS_VALUE_AFTER             :{COMMA} شهر بعد
 STR_CONFIG_SETTING_AUTORENEW_MONEY_HELPTEXT                 :الحد الأدنى من المبلغ المالي الذي يجب أن يبقى في البنك قبل التفكير في تجديد المركبات تلقائيًا
 STR_CONFIG_SETTING_ERRMSG_DURATION                          :مدة رسالة الخطأ: {STRING2}
 STR_CONFIG_SETTING_ERRMSG_DURATION_HELPTEXT                 :مدة عرض رسائل الخطأ في نافذة حمراء. لاحظ أن بعض رسائل الخطأ (الحرجة) لا يتم إغلاقها تلقائيًا بعد هذا الوقت، ولكن يجب إغلاقها يدويًا
 STR_CONFIG_SETTING_HOVER_DELAY                              :عرض تلميحات الأدوات: {STRING2}
 STR_CONFIG_SETTING_HOVER_DELAY_HELPTEXT                     :تأخير قبل عرض تلميحات الأدوات عند تحريك الماوس فوق بعض عناصر الواجهة. وبدلاً من ذلك، يتم ربط تلميحات الأدوات بزر الفأرة الأيمن عند تعيين هذه القيمة على 0
-STR_CONFIG_SETTING_HOVER_DELAY_VALUE                        :قم بالتحويم لمدة {COMMA} ملي ثانية{P 0 "" s}
+STR_CONFIG_SETTING_HOVER_DELAY_VALUE                        :قم بالتحويم لمدة {COMMA} ملي ثانية
 STR_CONFIG_SETTING_HOVER_DELAY_DISABLED                     :انقر بزر الماوس الأيمن
 STR_CONFIG_SETTING_GRAPH_LINE_THICKNESS_HELPTEXT            :عرض الخط في الرسوم البيانية. يكون الخط الرفيع أكثر دقة للقراءة، والخط السميك يكون أسهل في الرؤية والألوان أسهل في التمييز
 STR_CONFIG_SETTING_SHOW_NEWGRF_NAME                         :أظهر اسم NewGRF في نافذة بناء السيارة: {STRING2}
@@ -5741,8 +5741,8 @@ STR_CONFIG_SETTING_SERVINT_ROAD_VEHICLES                    :الفاصل الز
 STR_CONFIG_SETTING_SERVINT_ROAD_VEHICLES_HELPTEXT           :قم بتعيين الفاصل الزمني للخدمة الافتراضية لمركبات الطريق الجديدة، إذا لم يتم تعيين فاصل زمني واضح للخدمة للمركبة
 STR_CONFIG_SETTING_SERVINT_AIRCRAFT_HELPTEXT                :قم بتعيين الفاصل الزمني للخدمة الافتراضية للطائرات الجديدة، إذا لم يتم تعيين فاصل زمني واضح للخدمة للمركبة
 STR_CONFIG_SETTING_SERVINT_SHIPS_HELPTEXT                   :قم بتعيين الفاصل الزمني للخدمة الافتراضية للسفن الجديدة، إذا لم يتم تعيين فاصل زمني واضح للخدمة للمركبة
-STR_CONFIG_SETTING_SERVINT_VALUE_DAYS                       :{COMMA}{NBSP}يوم{P 0 "" s}
-STR_CONFIG_SETTING_SERVINT_VALUE_MINUTES                    :{COMMA}{NBSP}دقيقة{P 0 "" s}
+STR_CONFIG_SETTING_SERVINT_VALUE_DAYS                       :{COMMA}{NBSP}يوم
+STR_CONFIG_SETTING_SERVINT_VALUE_MINUTES                    :{COMMA}{NBSP}دقيقة
 STR_CONFIG_SETTING_SERVINT_VALUE_PERCENTAGE                 :{COMMA}{NBSP}%
 STR_CONFIG_SETTING_NOSERVICE_HELPTEXT                       :عند تمكينه، لا تتم صيانة المركبات إذا لم تتعطل
 STR_CONFIG_SETTING_STATION_LENGTH_LOADING_PENALTY           :تحميل عقوبة السرعة للقطارات الأطول من المحطة: {STRING2}
@@ -5775,7 +5775,7 @@ STR_CONFIG_SETTING_ECONOMY_TYPE_SMOOTH                      :سلس
 STR_CONFIG_SETTING_FEEDER_PAYMENT_SHARE                     :النسبة المئوية لربح الساق الذي سيتم دفعه في أنظمة التغذية: {STRING2}
 STR_CONFIG_SETTING_FEEDER_PAYMENT_SHARE_HELPTEXT            :نسبة الدخل الممنوحة للأرجل الوسيطة في أنظمة التغذية، مما يمنح مزيدًا من التحكم في الدخل
 STR_CONFIG_SETTING_DRAG_SIGNALS_DENSITY_HELPTEXT            :ضبط المسافة التي سيتم بناء الإشارات عندها على المسار حتى العائق التالي (الإشارة، التقاطع)، في حالة سحب الإشارات
-STR_CONFIG_SETTING_DRAG_SIGNALS_DENSITY_VALUE               :{COMMA}بلاط {P 0 "" s}
+STR_CONFIG_SETTING_DRAG_SIGNALS_DENSITY_VALUE               :{COMMA}بلاط 
 STR_CONFIG_SETTING_DRAG_SIGNALS_FIXED_DISTANCE              :عند السحب، حافظ على مسافة ثابتة بين الإشارات: {STRING2}
 STR_CONFIG_SETTING_DRAG_SIGNALS_FIXED_DISTANCE_HELPTEXT     :حدد سلوك وضع الإشارة عند الضغط على Ctrl + إشارات السحب. في حالة تعطيله، يتم وضع الإشارات حول الأنفاق أو الجسور لتجنب الامتدادات الطويلة بدون إشارات. في حالة التمكين، يتم وضع الإشارات كل عدد n من المربعات، مما يجعل محاذاة الإشارات في المسارات المتوازية أسهل
 STR_CONFIG_SETTING_SEMAPHORE_BUILD_BEFORE_DATE_HELPTEXT     :اضبط العام الذي سيتم فيه استخدام الإشارات الكهربائية للمسارات. قبل هذا العام، سيتم استخدام الإشارات غير الكهربائية (التي لها نفس الوظيفة تمامًا، ولكن بشكل مختلف).
@@ -5800,7 +5800,7 @@ STR_CONFIG_SETTING_EXTRA_TREE_PLACEMENT_NO_GROWTH_NO_SPREAD :لا تنمو، ل�
 STR_CONFIG_SETTING_TOOLBAR_POS_HELPTEXT                     :الوضع الأفقي لشريط الأدوات الرئيسي في أعلى الشاشة
 STR_CONFIG_SETTING_STATUSBAR_POS_HELPTEXT                   :الوضع الأفقي لشريط الحالة في أسفل الشاشة
 STR_CONFIG_SETTING_SNAP_RADIUS_HELPTEXT                     :تتم محاذاة المسافة بين النوافذ قبل نقل النافذة تلقائيًا إلى النوافذ القريبة
-STR_CONFIG_SETTING_SNAP_RADIUS_VALUE                        :{COMMA} بكسل{P 0 "" s}
+STR_CONFIG_SETTING_SNAP_RADIUS_VALUE                        :{COMMA} بكسل
 STR_CONFIG_SETTING_SOFT_LIMIT_VALUE                         :{COMMA}
 STR_CONFIG_SETTING_ZOOM_MIN_HELPTEXT                        :الحد الأقصى لمستوى التكبير لإطارات العرض. لاحظ أن تمكين مستويات التكبير الأعلى يزيد من متطلبات الذاكرة
 STR_CONFIG_SETTING_ZOOM_MAX_HELPTEXT                        :الحد الأقصى لمستوى التصغير لإطارات العرض. قد تتسبب مستويات التصغير الأعلى في حدوث تأخير عند استخدامها
@@ -5868,7 +5868,7 @@ STR_INTRO_CAPTION                                           :{WHITE}OpenTTD
 STR_INTRO_VERSION                                           :أوبن تي تي دي {REV}
 STR_INTRO_HELP                                              :{BLACK}المساعدة والأدلة
 STR_INTRO_TOOLTIP_HELP                                      :{BLACK}احصل على إمكانية الوصول إلى الوثائق والموارد عبر الإنترنت
-STR_INTRO_BASESET                                           :{BLACK}مجموعة الرسومات الأساسية المحددة حاليًا تفتقد {NUM} sprite{P "" s}. يرجى التحقق من وجود تحديثات للمجموعة الأساسية.
+STR_INTRO_BASESET                                           :{BLACK}مجموعة الرسومات الأساسية المحددة حاليًا تفتقد {NUM} sprite. يرجى التحقق من وجود تحديثات للمجموعة الأساسية.
 STR_HELP_WINDOW_CAPTION                                     :{WHITE}المساعدة والأدلة
 STR_HELP_WINDOW_WEBSITES                                    :{BLACK}مواقع
 STR_HELP_WINDOW_DOCUMENTS                                   :{BLACK}وثائق
@@ -5928,7 +5928,7 @@ STR_NETWORK_CLIENT_LIST_CHAT_SPECTATOR_TOOLTIP              :{BLACK}أرسل ر�
 STR_NETWORK_CLIENT_LIST_NEW_COMPANY_TOOLTIP                 :{BLACK}قم بإنشاء شركة جديدة والانضمام إليها
 STR_NETWORK_CLIENT_LIST_PLAYER_ICON_SELF_TOOLTIP            :{BLACK}هذا أنت
 STR_NETWORK_CLIENT_LIST_PLAYER_ICON_HOST_TOOLTIP            :{BLACK}هذا هو مضيف اللعبة
-STR_NETWORK_CLIENT_LIST_CLIENT_COMPANY_COUNT                :{BLACK}{NUM} العميل{P "" s} - {NUM}/{NUM} الشركة{P y ies}
+STR_NETWORK_CLIENT_LIST_CLIENT_COMPANY_COUNT                :{BLACK}{NUM} العميل - {NUM}/{NUM} الشركة
 STR_NETWORK_CLIENT_LIST_CLIENT_COMPANY_COUNT_TOOLTIP        :{BLACK}عدد العملاء المتصلين حاليًا وعدد الشركات والحد الأقصى لعدد الشركات المسموح به من قبل مسؤول الخادم
 STR_NETWORK_CLIENT_LIST_SERVER_CONNECTION_TYPE_UNKNOWN      :{BLACK}محلي
 STR_NETWORK_CLIENT_LIST_SERVER_CONNECTION_TYPE_ISOLATED     :{RED}لا يمكن للاعبين عن بعد الاتصال
@@ -6122,7 +6122,7 @@ STR_TOWN_DATA_ERROR_LOAD_FAILED                             :فشل تحميل �
 STR_TOWN_DATA_ERROR_JSON_FORMATTED_INCORRECTLY              :تنسيق ملف JSON غير صحيح
 STR_TOWN_DATA_ERROR_TOWN_FORMATTED_INCORRECTLY              :{RAW_STRING}تم تنسيق بيانات بشكل غير صحيح
 STR_TOWN_DATA_ERROR_BAD_COORDINATE                          :{RAW_STRING}تم تنسيق إحداثيات بشكل غير صحيح، يجب أن تكون من 0 إلى 1 كنسبة من إجمالي بُعد خريطة الارتفاع
-STR_TOWN_DATA_ERROR_FAILED_TO_FOUND_TOWN                    :تعذر العثور على موقع صالح للعثور على مدينة {NUM} {P "" s}. تم إنشاء علامة {P "a " ""}{P "" s} في الموقع المقصود{P "" s} بدلاً من ذلك
+STR_TOWN_DATA_ERROR_FAILED_TO_FOUND_TOWN                    :تعذر العثور على موقع صالح للعثور على مدينة {NUM} . تم إنشاء علامة  في الموقع المقصود بدلاً من ذلك
 STR_NEWGRF_SETTINGS_SHOW_PARAMETERS                         :{BLACK}إظهار المعلمات
 STR_NEWGRF_SETTINGS_PARAMETER_NONE                          :لا أحد
 STR_BASEGRF_PARAMETERS_CAPTION                              :{WHITE}تغيير معلمات الرسومات الأساسية
@@ -6327,10 +6327,10 @@ STR_VEHICLE_INFO_PROFIT_THIS_PERIOD_LAST_PERIOD             :{BLACK}ربح هذ�
 STR_VEHICLE_INFO_PROFIT_THIS_PERIOD_LAST_PERIOD_MIN_PERFORMANCE:{BLACK}الربح هذه الفترة: {LTBLUE}{CURRENCY_LONG} (الفترة الماضية: {CURRENCY_LONG}) {BLACK}الحد الأدنى. الأداء: {LTBLUE}{POWER_TO_WEIGHT}
 STR_VEHICLE_INFO_RELIABILITY_BREAKDOWNS                     :{BLACK}موثوقية: {LTBLUE}{COMMA}% (الحد الأقصى: {COMMA}%) {BLACK}الأعطال منذ آخر خدمة: {LTBLUE}{COMMA}
 STR_VEHICLE_DETAILS_SERVICING_INTERVAL_DAYS                 :{BLACK}الفاصل الزمني للخدمة: {LTBLUE}{COMMA}{NBSP}أيام{BLACK} {STRING1}
-STR_VEHICLE_DETAILS_SERVICING_INTERVAL_MINUTES              :{BLACK}الفاصل الزمني للخدمة: {LTBLUE}{COMMA}{NBSP}دقيقة{P "" s}{BLACK} {STRING1}
+STR_VEHICLE_DETAILS_SERVICING_INTERVAL_MINUTES              :{BLACK}الفاصل الزمني للخدمة: {LTBLUE}{COMMA}{NBSP}دقيقة{BLACK} {STRING1}
 STR_VEHICLE_DETAILS_SERVICING_INTERVAL_PERCENT              :{BLACK}الفاصل الزمني للخدمة: {LTBLUE}{COMMA}%{BLACK} {STRING1}
 STR_VEHICLE_DETAILS_LAST_SERVICE_DATE                       :آخر خدمة: {LTBLUE}{DATE_LONG}
-STR_VEHICLE_DETAILS_LAST_SERVICE_MINUTES_AGO                :آخر خدمة: {LTBLUE}{NUM} قبل دقيقة من{P "" s}
+STR_VEHICLE_DETAILS_LAST_SERVICE_MINUTES_AGO                :آخر خدمة: {LTBLUE}{NUM} قبل دقيقة من
 STR_VEHICLE_DETAILS_INCREASE_SERVICING_INTERVAL_TOOLTIP_DAYS:{BLACK}قم بزيادة الفاصل الزمني للخدمة بمقدار 10 أيام. Ctrl+Click لزيادة الفاصل الزمني للخدمة بمقدار 5 أيام
 STR_VEHICLE_DETAILS_INCREASE_SERVICING_INTERVAL_TOOLTIP_MINUTES:{BLACK}قم بزيادة الفاصل الزمني للصيانة بمقدار 5 دقائق. Ctrl+Click لزيادة الفاصل الزمني للخدمة بمقدار دقيقة واحدة
 STR_VEHICLE_DETAILS_INCREASE_SERVICING_INTERVAL_TOOLTIP_PERCENT:{BLACK}زيادة الفاصل الزمني للخدمة بنسبة 10 بالمائة. Ctrl+Click لزيادة الفاصل الزمني للخدمة بنسبة 5 بالمائة
@@ -6340,7 +6340,7 @@ STR_VEHICLE_DETAILS_DECREASE_SERVICING_INTERVAL_TOOLTIP_PERCENT:{BLACK}تقلي�
 STR_VEHICLE_DETAILS_DEFAULT                                 :تقصير
 STR_VEHICLE_DETAILS_DAYS                                    :أيام
 STR_VEHICLE_DETAILS_MINUTES                                 :دقائق
-STR_VEHICLE_DETAILS_TRAIN_LENGTH                            :{BLACK}طول القطار: بلاط {LTBLUE}{DECIMAL} {P "" s}
+STR_VEHICLE_DETAILS_TRAIN_LENGTH                            :{BLACK}طول القطار: بلاط {LTBLUE}{DECIMAL} 
 STR_VEHICLE_DETAILS_TRAIN_CARGO_EMPTY                       :{LTBLUE}فارغة ({CARGO_LONG}){STRING}
 STR_VEHICLE_DETAILS_TRAIN_CARGO_FROM                        :{LTBLUE}{CARGO_LONG} ({CARGO_SHORT}) من {STATION}{STRING}
 STR_VEHICLE_DETAIL_TAB_TOTALS                               :{BLACK}إجماليات

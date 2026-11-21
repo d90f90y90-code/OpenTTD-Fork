@@ -176,7 +176,7 @@ struct FKPRChunkHandler : ChunkHandler {
 
 	void Load() const override
 	{
-		static const std::vector<SaveLoad> no_compat{};
+		static const SaveLoadCompatTable no_compat{};
 		const std::vector<SaveLoad> slt = SlCompatTableHeader(_fork_product_desc, no_compat);
 
 		int index;

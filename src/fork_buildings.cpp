@@ -25,6 +25,7 @@
 
 #include "clear_func.h"
 #include "clear_map.h"
+#include "company_base.h"
 #include "company_func.h"
 #include "fork_building_sprites.h"
 #include "fork_building_sprites_data.h"
