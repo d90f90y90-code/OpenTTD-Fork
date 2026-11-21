@@ -1,0 +1,91 @@
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting Personal Data directory - .openttd
+-- Detecting Shared Data directory - (not set)
+-- Detecting Global Data directory - /usr/local/share/games/openttd
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3.1")
+-- Looking for lzma_auto_decoder in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_auto_decoder in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Looking for lzma_easy_encoder in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_easy_encoder in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Looking for lzma_lzma_preset in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_lzma_preset in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Found LibLZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.8.3")
+-- Found LZO: /usr/lib/x86_64-linux-gnu/liblzo2.so (found version "2.10")
+-- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.57")
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.18.0")
+-- Could NOT find unofficial-breakpad (missing: unofficial-breakpad_DIR)
+-- Found Allegro: /usr/lib/x86_64-linux-gnu/liballeg.so (found version "4.4.3")
+-- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.14.2")
+CMake Warning at CMakeLists.txt:150 (find_package):
+  By not providing "FindSDL3.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "SDL3", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "SDL3" with any of
+  the following names:
+
+    SDL3.cps
+    sdl3.cps
+    SDL3Config.cmake
+    sdl3-config.cmake
+
+  Add the installation prefix of "SDL3" to CMAKE_PREFIX_PATH or set
+  "SDL3_DIR" to a directory containing one of the above files.  If "SDL3"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+-- Could NOT find Fluidsynth (missing: Fluidsynth_LIBRARY Fluidsynth_INCLUDE_DIR) 
+-- Found Fontconfig: /usr/lib/x86_64-linux-gnu/libfontconfig.so (found version "2.17.1")
+-- Found Harfbuzz: /usr/lib/x86_64-linux-gnu/libharfbuzz.so (found version "12.3.2")
+-- Found ICU: /usr/include (found version "78.2") found components: i18n uc
+-- Found OpusFile: /usr/lib/x86_64-linux-gnu/libopusfile.so
+-- Found Ogg: /usr/lib/x86_64-linux-gnu/libogg.so
+-- Found Opus: /usr/lib/x86_64-linux-gnu/libopus.so
+-- Found Soxr: /usr/lib/x86_64-linux-gnu/libsoxr.so
+-- Could NOT find OpenGL (missing: OPENGL_opengl_LIBRARY OPENGL_INCLUDE_DIR OpenGL) 
+-- Performing Test SSE_FOUND
+-- Performing Test SSE_FOUND - Success
+-- Could NOT find Grfcodec (missing: GRFCODEC_EXECUTABLE GRFID_EXECUTABLE NFORENUM_EXECUTABLE) 
+-- Option Package Dependencies - OFF
+-- Option Dedicated - OFF
+-- Option Install FHS - ON
+-- Option Use assert - ON
+-- Option Use NSIS - OFF
+-- Option Survey Key - NOT USED
+-- The C compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- PNG found -- -DWITH_PNG -- PNG::PNG
+-- ZLIB found -- -DWITH_ZLIB -- ZLIB::ZLIB
+-- LIBLZMA found -- -DWITH_LIBLZMA -- LibLZMA::LibLZMA
+-- LZO found -- -DWITH_LZO -- /usr/include /usr/include -- /usr/lib/x86_64-linux-gnu/liblzo2.so /usr/lib/x86_64-linux-gnu/liblzo2.so
+-- CURL found -- -DWITH_CURL -- /usr/include/x86_64-linux-gnu /usr/include/x86_64-linux-gnu -- /usr/lib/x86_64-linux-gnu/libcurl.so /usr/lib/x86_64-linux-gnu/libcurl.so
+-- Allegro found -- -DWITH_ALLEGRO -- /usr/include /usr/include -- /usr/lib/x86_64-linux-gnu/liballeg.so /usr/lib/x86_64-linux-gnu/liballeg.so
+-- FREETYPE found -- -DWITH_FREETYPE -- Freetype::Freetype
+-- Fontconfig found -- -DWITH_FONTCONFIG -- Fontconfig::Fontconfig
+-- Harfbuzz found -- -DWITH_HARFBUZZ -- /usr/include/harfbuzz /usr/include/harfbuzz -- /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so
+-- ICU_I18N found -- -DWITH_ICU_I18N -- ICU::i18n
+-- ICU_UC found -- -DWITH_ICU_UC -- ICU::uc
+-- OpusFile found -- -DWITH_OPUSFILE -- OpusFile::opusfile
+-- Soxr found -- -DWITH_SOXR -- Soxr::soxr
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB - Success
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB - Success
+-- SSE found -- -DWITH_SSE --   --  
+-- Configuring done (5.7s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/build

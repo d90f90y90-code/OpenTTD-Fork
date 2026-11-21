@@ -1,0 +1,400 @@
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual RoadVehicle::~RoadVehicle()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/roadveh.h:121:51:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)this)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ is used uninitialized [-Wuninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual RoadVehicle::~RoadVehicle()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/roadveh.h:121:51,
+    inlined from ‘void DeleteLastRoadVeh(RoadVehicle*)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/roadveh_cmd.cpp:509:9,
+    inlined from ‘bool RoadVehIsCrashed(RoadVehicle*)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/roadveh_cmd.cpp:540:20,
+    inlined from ‘bool RoadVehController(RoadVehicle*)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/roadveh_cmd.cpp:1584:26,
+    inlined from ‘virtual bool RoadVehicle::Tick()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/roadveh_cmd.cpp:1666:27:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)v)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+[857/969] Building CXX object CMakeFiles/openttd_lib.dir/src/screenshot_pcx.cpp.o
+[858/969] Building CXX object CMakeFiles/openttd_lib.dir/src/screenshot.cpp.o
+[859/969] Building CXX object CMakeFiles/openttd_lib.dir/src/settingentry_gui.cpp.o
+[860/969] Building CXX object CMakeFiles/openttd_lib.dir/src/settings_gui.cpp.o
+[861/969] Building CXX object CMakeFiles/openttd_lib.dir/src/ship_cmd.cpp.o
+In file included from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/station_type.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/transparency.h:15,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/sprite.h:14,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/vehicle_base.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/ship.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/ship_cmd.cpp:11:
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual Ship::~Ship()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/ship.h:49:44:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)this)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ is used uninitialized [-Wuninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual SpecializedVehicle<Ship, VehicleType::Ship>::~SpecializedVehicle()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/vehicle_base.h:1051:8:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)this)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ is used uninitialized [-Wuninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+[862/969] Building CXX object CMakeFiles/openttd_lib.dir/src/settings.cpp.o
+[863/969] Building CXX object CMakeFiles/openttd_lib.dir/src/ship_gui.cpp.o
+[864/969] Building CXX object CMakeFiles/openttd_lib.dir/src/signal.cpp.o
+[865/969] Building CXX object CMakeFiles/openttd_lib.dir/src/signs.cpp.o
+In file included from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/company_type.h:14,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/command_type.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tile_cmd.h:15,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/landscape.h:14,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/signs.cpp:11:
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = SignIDTag; TBaseType TEnd = 64000; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, SignIDTag, 64000, 65535>; Titem = Sign; Tindex = PoolID<short unsigned int, SignIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 16; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _sign_pool); Titem = Sign; Tindex = PoolID<short unsigned int, SignIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 16; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _sign_pool); Titem = Sign; Tindex = PoolID<short unsigned int, SignIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 16; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::CleanPool() [with Titem = Sign; Tindex = PoolID<short unsigned int, SignIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 16; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_func.hpp:184:3:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, SignIDTag, 64000, 65535>*)*_46.PoolID<short unsigned int, SignIDTag, 64000, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+[866/969] Building CXX object CMakeFiles/openttd_lib.dir/src/signature.cpp.o
+[867/969] Building CXX object CMakeFiles/openttd_lib.dir/src/signs_cmd.cpp.o
+[868/969] Building CXX object CMakeFiles/openttd_lib.dir/src/slider.cpp.o
+[869/969] Building CXX object CMakeFiles/openttd_lib.dir/src/social_integration.cpp.o
+[870/969] Building CXX object CMakeFiles/openttd_lib.dir/src/signs_gui.cpp.o
+[871/969] Building CXX object CMakeFiles/openttd_lib.dir/src/soundloader.cpp.o
+[872/969] Building CXX object CMakeFiles/openttd_lib.dir/src/settings_table.cpp.o
+[873/969] Building CXX object CMakeFiles/openttd_lib.dir/src/soundloader_raw.cpp.o
+[874/969] Building CXX object CMakeFiles/openttd_lib.dir/src/soundloader_wav.cpp.o
+[875/969] Building CXX object CMakeFiles/openttd_lib.dir/src/smallmap_gui.cpp.o
+[876/969] Building CXX object CMakeFiles/openttd_lib.dir/src/sprite.cpp.o
+[877/969] Building CXX object CMakeFiles/openttd_lib.dir/src/sound.cpp.o
+[878/969] Building CXX object CMakeFiles/openttd_lib.dir/src/spritecache.cpp.o
+[879/969] Building CXX object CMakeFiles/openttd_lib.dir/src/statusbar_gui.cpp.o
+[880/969] Building CXX object CMakeFiles/openttd_lib.dir/src/station.cpp.o
+In file included from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/company_type.h:14,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/command_type.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/company_func.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/station.cpp:12:
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = LinkGraphIDTag; TBaseType TEnd = 65535; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, LinkGraphIDTag, 65535, 65535>; Titem = LinkGraph; Tindex = PoolID<short unsigned int, LinkGraphIDTag, 65535, 65535>; long unsigned int Tgrowth_step = 32; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _link_graph_pool); Titem = LinkGraph; Tindex = PoolID<short unsigned int, LinkGraphIDTag, 65535, 65535>; long unsigned int Tgrowth_step = 32; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _link_graph_pool); Titem = LinkGraph; Tindex = PoolID<short unsigned int, LinkGraphIDTag, 65535, 65535>; long unsigned int Tgrowth_step = 32; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘Station::~Station()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/station.cpp:119:11:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, LinkGraphIDTag, 65535, 65535>*)*_353.PoolID<short unsigned int, LinkGraphIDTag, 65535, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+[881/969] Building CXX object CMakeFiles/openttd_lib.dir/src/station_gui.cpp.o
+[882/969] Building CXX object CMakeFiles/openttd_lib.dir/src/story.cpp.o
+In file included from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/company_type.h:14,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/story_base.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/story.cpp:11:
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = StoryPageElementIDTag; TBaseType TEnd = 64000; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _story_page_element_pool); Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _story_page_element_pool); Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::CleanPool() [with Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_func.hpp:184:3:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>*)*_54.PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = StoryPageElementIDTag; TBaseType TEnd = 64000; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _story_page_element_pool); Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _story_page_element_pool); Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘StoryPage::~StoryPage()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/story.cpp:44:40:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>*)*_70.PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = StoryPageElementIDTag; TBaseType TEnd = 64000; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _story_page_element_pool); Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _story_page_element_pool); Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘CommandCost CmdRemoveStoryPage(DoCommandFlags, StoryPageID)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/story.cpp:433:12:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>*)*_155.PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = StoryPageElementIDTag; TBaseType TEnd = 64000; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _story_page_element_pool); Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _story_page_element_pool); Titem = StoryPageElement; Tindex = PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>; long unsigned int Tgrowth_step = 64; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘CommandCost CmdRemoveStoryPageElement(DoCommandFlags, StoryPageElementID)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/story.cpp:461:10:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>*)*_69.PoolID<short unsigned int, StoryPageElementIDTag, 64000, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+[883/969] Building CXX object CMakeFiles/openttd_lib.dir/src/stringfilter.cpp.o
+[884/969] Building CXX object CMakeFiles/openttd_lib.dir/src/string.cpp.o
+[885/969] Building CXX object CMakeFiles/openttd_lib.dir/src/story_gui.cpp.o
+[886/969] Building CXX object CMakeFiles/openttd_lib.dir/src/subsidy_gui.cpp.o
+[887/969] Building CXX object CMakeFiles/openttd_lib.dir/src/station_cmd.cpp.o
+[888/969] Building CXX object CMakeFiles/openttd_lib.dir/src/subsidy.cpp.o
+In file included from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/company_type.h:14,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/command_type.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/company_func.h:13,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/subsidy.cpp:11:
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = SubsidyIDTag; TBaseType TEnd = 256; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _subsidy_pool); Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _subsidy_pool); Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::CleanPool() [with Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_func.hpp:184:3:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, SubsidyIDTag, 256, 65535>*)*_46.PoolID<short unsigned int, SubsidyIDTag, 256, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = SubsidyIDTag; TBaseType TEnd = 256; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _subsidy_pool); Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _subsidy_pool); Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘void DeleteSubsidyWith(Source)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/subsidy.cpp:125:11:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, SubsidyIDTag, 256, 65535>*)*_67.PoolID<short unsigned int, SubsidyIDTag, 256, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = short unsigned int; TTag = SubsidyIDTag; TBaseType TEnd = 256; TBaseType TInvalid = 65535]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _subsidy_pool); Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _subsidy_pool); Titem = Subsidy; Tindex = PoolID<short unsigned int, SubsidyIDTag, 256, 65535>; long unsigned int Tgrowth_step = 1; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘<lambda(auto:80)> [with auto:80 = unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/subsidy.cpp:439:4,
+    inlined from ‘constexpr _Res std::__invoke_impl(__invoke_other, _Fn&&, _Args&& ...) [with _Res = void; _Fn = <lambda(auto:80)>&; _Args = {unsigned int}]’ at /usr/include/c++/15/bits/invoke.h:63:36,
+    inlined from ‘constexpr std::enable_if_t<((bool)is_invocable_r_v<_Res, _Callable, _Args ...>), _Res> std::__invoke_r(_Callable&&, _Args&& ...) [with _Res = void; _Callable = <lambda(auto:80)>&; _Args = {unsigned int}]’ at /usr/include/c++/15/bits/invoke.h:113:28,
+    inlined from ‘static _Res std::_Function_handler<_Res(_ArgTypes ...), _Functor>::_M_invoke(const std::_Any_data&, _ArgTypes&& ...) [with _Res = void; _Functor = <lambda(auto:80)>; _ArgTypes = {unsigned int}]’ at /usr/include/c++/15/bits/std_function.h:292:30:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘*(const PoolID<short unsigned int, SubsidyIDTag, 256, 65535>*)*_135.PoolID<short unsigned int, SubsidyIDTag, 256, 65535>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+[889/969] Building CXX object CMakeFiles/openttd_lib.dir/src/terraform_cmd.cpp.o
+[890/969] Building CXX object CMakeFiles/openttd_lib.dir/src/textbuf.cpp.o
+[891/969] Building CXX object CMakeFiles/openttd_lib.dir/src/strings.cpp.o
+[892/969] Building CXX object CMakeFiles/openttd_lib.dir/src/terraform_gui.cpp.o
+[893/969] Building CXX object CMakeFiles/openttd_lib.dir/src/texteff.cpp.o
+[894/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tile_map.cpp.o
+[895/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tgp.cpp.o
+[896/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tilearea.cpp.o
+[897/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tilearea_bitmap.cpp.o
+[898/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tilearea_diagonal.cpp.o
+[899/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tilearea_orthogonal.cpp.o
+[900/969] Building CXX object CMakeFiles/openttd_lib.dir/src/survey.cpp.o
+[901/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tilearea_spiral.cpp.o
+[902/969] Building CXX object CMakeFiles/openttd_lib.dir/src/timetable_cmd.cpp.o
+[903/969] Building CXX object CMakeFiles/openttd_lib.dir/src/timetable_gui.cpp.o
+[904/969] Building CXX object CMakeFiles/openttd_lib.dir/src/textfile_gui.cpp.o
+[905/969] Building CXX object CMakeFiles/openttd_lib.dir/src/toolbar_gui.cpp.o
+[906/969] Building CXX object CMakeFiles/openttd_lib.dir/src/town_gui.cpp.o
+[907/969] Building CXX object CMakeFiles/openttd_lib.dir/src/train_cmd.cpp.o
+In file included from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/company_type.h:14,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/error.h:14,
+                 from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/train_cmd.cpp:11:
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual SpecializedVehicle<Train, VehicleType::Begin>::~SpecializedVehicle()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/pathfinder/../vehicle_base.h:1051:8:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)this)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ is used uninitialized [-Wuninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual Train::~Train()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/pathfinder/../train.h:116:45:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)this)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ is used uninitialized [-Wuninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual Train::~Train()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/pathfinder/../train.h:116:45,
+    inlined from ‘CommandCost CmdSellRailWagon(DoCommandFlags, Vehicle*, bool, bool, ClientID)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/train_cmd.cpp:1532:10:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)part)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual Train::~Train()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/pathfinder/../train.h:116:45,
+    inlined from ‘void DeleteLastWagon(Train*)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/train_cmd.cpp:3733:9,
+    inlined from ‘bool HandleCrashedTrain(Train*)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/train_cmd.cpp:3844:18,
+    inlined from ‘bool TrainLocoHandler(Train*, bool)’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/train_cmd.cpp:4033:42:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)v)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+In member function ‘constexpr TBaseType PoolID<TBaseType, TTag, TEnd, TInvalid>::base() const [with TBaseType = unsigned int; TTag = VehicleIDTag; TBaseType TEnd = 1044480; TBaseType TInvalid = 1048575]’,
+    inlined from ‘static constexpr size_t Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::GetRawIndex(const T&) [with T = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:474:73,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:320:4,
+    inlined from ‘static void Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>::PoolItem<Tpool>::operator delete(void*, size_t) [with Pool<Titem, Tindex, Tgrowth_step, Tpool_type, Tcache>* Tpool = (& _vehicle_pool); Titem = Vehicle; Tindex = PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>; long unsigned int Tgrowth_step = 512; PoolType Tpool_type = PoolType::Normal; bool Tcache = false]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:316:15,
+    inlined from ‘virtual Train::~Train()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/pathfinder/../train.h:116:45,
+    inlined from ‘virtual bool Train::Tick()’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/train_cmd.cpp:4219:11:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/core/pool_type.hpp:63:66: warning: ‘((const PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>*)this)[21].PoolID<unsigned int, VehicleIDTag, 1044480, 1048575>::value’ may be used uninitialized [-Wmaybe-uninitialized]
+   63 |         constexpr TBaseType base() const noexcept { return this->value; }
+      |                                                                  ^~~~~
+[908/969] Building CXX object CMakeFiles/openttd_lib.dir/src/transparency_gui.cpp.o
+[909/969] Building CXX object CMakeFiles/openttd_lib.dir/src/town_cmd.cpp.o
+[910/969] Building CXX object CMakeFiles/openttd_lib.dir/src/train_gui.cpp.o
+[911/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tree_gui.cpp.o
+[912/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tunnel_map.cpp.o
+[913/969] Building CXX object CMakeFiles/openttd_lib.dir/src/townname.cpp.o
+[914/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tree_cmd.cpp.o
+[915/969] Building CXX object CMakeFiles/openttd_lib.dir/src/tunnelbridge_cmd.cpp.o
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tunnelbridge_cmd.cpp: In function ‘void DrawBridgeMiddle(const TileInfo*, BridgePillarFlags)’:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tunnelbridge_cmd.cpp:1671:35: warning: ‘is_custom_layout’ may be used uninitialized [-Wmaybe-uninitialized]
+ 1671 |                 DrawBridgeRoadBits(rampsouth, x, y, bridge_z, to_underlying(OtherAxis(axis)), false, is_custom_layout);
+      |                 ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tunnelbridge_cmd.cpp:1629:14: note: ‘is_custom_layout’ was declared here
+ 1629 |         bool is_custom_layout; // Set if rail/road bridge uses a custom layout.
+      |              ^~~~~~~~~~~~~~~~
+[916/969] Building CXX object CMakeFiles/openttd_lib.dir/src/vehicle_cmd.cpp.o
+[917/969] Building CXX object CMakeFiles/openttd_lib.dir/src/vehicle.cpp.o
+[918/969] Building CXX object CMakeFiles/openttd_lib.dir/src/vehiclelist.cpp.o
+[919/969] Building CXX object CMakeFiles/openttd_lib.dir/src/viewport_gui.cpp.o
+[920/969] Building CXX object CMakeFiles/openttd_lib.dir/src/void_cmd.cpp.o
+[921/969] Building CXX object CMakeFiles/openttd_lib.dir/src/vehicle_gui.cpp.o
+[922/969] Building CXX object CMakeFiles/openttd_lib.dir/src/viewport.cpp.o
+[923/969] Building CXX object CMakeFiles/openttd_lib.dir/src/waypoint.cpp.o
+[924/969] Building CXX object CMakeFiles/openttd_lib.dir/src/water_cmd.cpp.o
+[925/969] Building CXX object CMakeFiles/openttd_lib.dir/src/waypoint_gui.cpp.o
+[926/969] Building CXX object CMakeFiles/openttd_lib.dir/src/waypoint_cmd.cpp.o
+[927/969] Building CXX object CMakeFiles/openttd_lib.dir/src/widget.cpp.o
+[928/969] Building CXX object CMakeFiles/openttd_test.dir/src/3rdparty/icu/tests/test_srtest.cpp.o
+[929/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/bitmath_func.cpp.o
+[930/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/alternating_iterator.cpp.o
+[931/969] Building CXX object CMakeFiles/openttd_lib.dir/src/window.cpp.o
+[932/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/enum_over_optimisation.cpp.o
+[933/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/history_func.cpp.o
+In lambda function,
+    inlined from ‘constexpr _Tp std::accumulate(_InputIterator, _InputIterator, _Tp, _BinaryOperation) [with _InputIterator = __gnu_cxx::__normal_iterator<const short unsigned int*, span<const short unsigned int>::__iter_tag>; _Tp = int; _BinaryOperation = SumHistory<short unsigned int>(std::span<const short unsigned int>)::<lambda(uint32_t, const uint16_t&)>]’ at /usr/include/c++/15/bits/stl_numeric.h:169:22,
+    inlined from ‘T SumHistory(std::span<const T>) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:34,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:98:26,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:136: warning: ‘tmp_result’ may be used uninitialized [-Wmaybe-uninitialized]
+   22 |         uint32_t total = std::accumulate(std::begin(history), std::end(history), 0, [](uint32_t r, const uint16_t &value) { return r + value; });
+      |                                                                                                                                        ^~~~~
+In file included from /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:15:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp: In function ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:93:61: note: ‘tmp_result’ declared here
+   93 |                         std::array<T, HISTORY_MAX_DIVISION> tmp_result; // No need to clear as we fill every element we use.
+      |                                                             ^~~~~~~~~~
+In lambda function,
+    inlined from ‘constexpr _Tp std::accumulate(_InputIterator, _InputIterator, _Tp, _BinaryOperation) [with _InputIterator = __gnu_cxx::__normal_iterator<const short unsigned int*, span<const short unsigned int>::__iter_tag>; _Tp = int; _BinaryOperation = SumHistory<short unsigned int>(std::span<const short unsigned int>)::<lambda(uint32_t, const uint16_t&)>]’ at /usr/include/c++/15/bits/stl_numeric.h:169:22,
+    inlined from ‘T SumHistory(std::span<const T>) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:34,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:98:26,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:136: warning: ‘tmp_result’ may be used uninitialized [-Wmaybe-uninitialized]
+   22 |         uint32_t total = std::accumulate(std::begin(history), std::end(history), 0, [](uint32_t r, const uint16_t &value) { return r + value; });
+      |                                                                                                                                        ^~~~~
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp: In function ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:93:61: note: ‘tmp_result’ declared here
+   93 |                         std::array<T, HISTORY_MAX_DIVISION> tmp_result; // No need to clear as we fill every element we use.
+      |                                                             ^~~~~~~~~~
+In lambda function,
+    inlined from ‘constexpr _Tp std::accumulate(_InputIterator, _InputIterator, _Tp, _BinaryOperation) [with _InputIterator = __gnu_cxx::__normal_iterator<const short unsigned int*, span<const short unsigned int>::__iter_tag>; _Tp = int; _BinaryOperation = SumHistory<short unsigned int>(std::span<const short unsigned int>)::<lambda(uint32_t, const uint16_t&)>]’ at /usr/include/c++/15/bits/stl_numeric.h:169:22,
+    inlined from ‘T SumHistory(std::span<const T>) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:34,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:98:26,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:136: warning: ‘tmp_result’ may be used uninitialized [-Wmaybe-uninitialized]
+   22 |         uint32_t total = std::accumulate(std::begin(history), std::end(history), 0, [](uint32_t r, const uint16_t &value) { return r + value; });
+      |                                                                                                                                        ^~~~~
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp: In function ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:93:61: note: ‘tmp_result’ declared here
+   93 |                         std::array<T, HISTORY_MAX_DIVISION> tmp_result; // No need to clear as we fill every element we use.
+      |                                                             ^~~~~~~~~~
+In lambda function,
+    inlined from ‘constexpr _Tp std::accumulate(_InputIterator, _InputIterator, _Tp, _BinaryOperation) [with _InputIterator = __gnu_cxx::__normal_iterator<const short unsigned int*, span<const short unsigned int>::__iter_tag>; _Tp = int; _BinaryOperation = SumHistory<short unsigned int>(std::span<const short unsigned int>)::<lambda(uint32_t, const uint16_t&)>]’ at /usr/include/c++/15/bits/stl_numeric.h:169:22,
+    inlined from ‘T SumHistory(std::span<const T>) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:34,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:98:26,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:136: warning: ‘tmp_result’ may be used uninitialized [-Wmaybe-uninitialized]
+   22 |         uint32_t total = std::accumulate(std::begin(history), std::end(history), 0, [](uint32_t r, const uint16_t &value) { return r + value; });
+      |                                                                                                                                        ^~~~~
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp: In function ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:93:61: note: ‘tmp_result’ declared here
+   93 |                         std::array<T, HISTORY_MAX_DIVISION> tmp_result; // No need to clear as we fill every element we use.
+      |                                                             ^~~~~~~~~~
+In lambda function,
+    inlined from ‘constexpr _Tp std::accumulate(_InputIterator, _InputIterator, _Tp, _BinaryOperation) [with _InputIterator = __gnu_cxx::__normal_iterator<const short unsigned int*, span<const short unsigned int>::__iter_tag>; _Tp = int; _BinaryOperation = SumHistory<short unsigned int>(std::span<const short unsigned int>)::<lambda(uint32_t, const uint16_t&)>]’ at /usr/include/c++/15/bits/stl_numeric.h:169:22,
+    inlined from ‘T SumHistory(std::span<const T>) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:34,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:98:26,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:136: warning: ‘tmp_result’ may be used uninitialized [-Wmaybe-uninitialized]
+   22 |         uint32_t total = std::accumulate(std::begin(history), std::end(history), 0, [](uint32_t r, const uint16_t &value) { return r + value; });
+      |                                                                                                                                        ^~~~~
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp: In function ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:93:61: note: ‘tmp_result’ declared here
+   93 |                         std::array<T, HISTORY_MAX_DIVISION> tmp_result; // No need to clear as we fill every element we use.
+      |                                                             ^~~~~~~~~~
+In lambda function,
+    inlined from ‘constexpr _Tp std::accumulate(_InputIterator, _InputIterator, _Tp, _BinaryOperation) [with _InputIterator = __gnu_cxx::__normal_iterator<const short unsigned int*, span<const short unsigned int>::__iter_tag>; _Tp = int; _BinaryOperation = SumHistory<short unsigned int>(std::span<const short unsigned int>)::<lambda(uint32_t, const uint16_t&)>]’ at /usr/include/c++/15/bits/stl_numeric.h:169:22,
+    inlined from ‘T SumHistory(std::span<const T>) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:34,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:98:26,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:96:27:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:136: warning: ‘tmp_result’ may be used uninitialized [-Wmaybe-uninitialized]
+   22 |         uint32_t total = std::accumulate(std::begin(history), std::end(history), 0, [](uint32_t r, const uint16_t &value) { return r + value; });
+      |                                                                                                                                        ^~~~~
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp: In function ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:93:61: note: ‘tmp_result’ declared here
+   93 |                         std::array<T, HISTORY_MAX_DIVISION> tmp_result; // No need to clear as we fill every element we use.
+      |                                                             ^~~~~~~~~~
+In lambda function,
+    inlined from ‘constexpr _Tp std::accumulate(_InputIterator, _InputIterator, _Tp, _BinaryOperation) [with _InputIterator = __gnu_cxx::__normal_iterator<const short unsigned int*, span<const short unsigned int>::__iter_tag>; _Tp = int; _BinaryOperation = SumHistory<short unsigned int>(std::span<const short unsigned int>)::<lambda(uint32_t, const uint16_t&)>]’ at /usr/include/c++/15/bits/stl_numeric.h:169:22,
+    inlined from ‘T SumHistory(std::span<const T>) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:34,
+    inlined from ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’ at /home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:98:26:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/history_func.cpp:22:136: warning: ‘tmp_result’ may be used uninitialized [-Wmaybe-uninitialized]
+   22 |         uint32_t total = std::accumulate(std::begin(history), std::end(history), 0, [](uint32_t r, const uint16_t &value) { return r + value; });
+      |                                                                                                                                        ^~~~~
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp: In function ‘bool GetHistory(HistoryData<T>&, ValidHistoryMask, const HistoryRange&, uint, T&) [with T = short unsigned int]’:
+/home/runner/work/OpenTTD-Fork/OpenTTD-Fork/src/tests/../misc/history_func.hpp:93:61: note: ‘tmp_result’ declared here
+   93 |                         std::array<T, HISTORY_MAX_DIVISION> tmp_result; // No need to clear as we fill every element we use.
+      |                                                             ^~~~~~~~~~
+[934/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/flatset_type.cpp.o
+[935/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/math_func.cpp.o
+[936/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/landscape_partial_pixel_z.cpp.o
+[937/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/mock_spritecache.cpp.o
+[938/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/string_builder.cpp.o
+[939/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/string_inplace.cpp.o
+[940/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/test_network_crypto.cpp.o
+[941/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/string_func.cpp.o
+[942/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/test_window_desc.cpp.o
+[943/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/string_consumer.cpp.o
+[944/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/tilearea.cpp.o
+[945/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/test_script_admin.cpp.o
+[946/969] Copying regression/info.nut regression file
+[947/969] Copying regression/main.nut regression file
+[948/969] Copying regression/require.nut regression file
+[949/969] Copying regression/result.txt regression file
+[950/969] Copying regression/test.sav regression file
+[951/969] Copying stationlist/info.nut regression file
+[952/969] Copying stationlist/main.nut regression file
+[953/969] Copying stationlist/result.txt regression file
+[954/969] Copying stationlist/test.sav regression file
+[955/969] Copying gs/info.nut regression file
+[956/969] Copying gs/main.nut regression file
+[957/969] Copying gs/require.nut regression file
+[958/969] Copying gs/result.txt regression file
+[959/969] Copying gs/test.sav regression file
+[960/969] Copying gs_compat/info.nut regression file
+[961/969] Copying gs_compat/main.nut regression file
+[962/969] Copying gs_compat/result.txt regression file
+[963/969] Copying gs_compat/test.sav regression file
+[964/969] Copying regression.cfg regression file
+[965/969] Building CXX object CMakeFiles/openttd.dir/src/os/unix/unix_main.cpp.o
+[966/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/utf8.cpp.o
+[967/969] Linking CXX executable openttd
+[968/969] Building CXX object CMakeFiles/openttd_test.dir/src/tests/test_main.cpp.o
+[969/969] Linking CXX executable openttd_test
